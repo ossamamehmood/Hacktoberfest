@@ -50,3 +50,8 @@ github:USERNAME
 ## 4. Wait for Pull Request to merge
 
 ## 5. Celebrate - you've done your first pull request!!
+
+
+## Support 💓
+
+Support at <a href="https://www.patreon.com/ossamamehmood" target="_blank">Patreon</a>
