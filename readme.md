@@ -55,5 +55,5 @@ github:USERNAME
 
 Support at <a href="https://www.patreon.com/ossamamehmood" target="_blank">Patreon</a>
 
-<tr><td align="center"><a href="https://github.com/ossamamehmood"><kbd><img src="https://avatars3.githubusercontent.com/ossamamehmood?size=400" width="400px;" alt=""/></kbd><br /><sub><b>Ossama Mehmood</b></sub></a><br /><a href="https://github.com/keshavsingh4522/hacktoberfest2020/commits?author=ossamamehmood" title="Support"> :heart: </a> </td>
+<tr><td align="center"><a href="https://github.com/ossamamehmood"><kbd><img src="https://avatars3.githubusercontent.com/ossamamehmood?size=400" width="100px;" alt=""/></kbd><br /><sub><b>Ossama Mehmood</b></sub></a><br /></td>
 </tr> 
