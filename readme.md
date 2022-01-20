@@ -1,4 +1,4 @@
-# Hacktoberfest 2021 OPEN FIRST Pull Request --- its a very good project and get a free tshirt.
+# Hacktoberfest 2022 OPEN FIRST Pull Request --- its a very good project and get a free tshirt.
 ![Hacktoberfest 2021](static/logo.png)
 
 Make your first Pull Request and earn a free tee from GitHub!
