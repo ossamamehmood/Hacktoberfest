@@ -51,6 +51,16 @@ github:USERNAME
 
 ## 5. Celebrate - you've done your first pull request!!
 
+## Contributors
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+
+<table>
+<tr><td align="center"><a href="https://github.com/ossamamehmood"><kbd><img src="https://avatars3.githubusercontent.com/find-aman?size=400" width="100px;" alt=""/></kbd><br /><sub><b>Ossama Mehmood</b></sub></a><br /><a href="https://github.com/keshavsingh4522/hacktoberfest2020/commits?author=find-aman" title="Code"> :computer: </a> </td>
+</tr> 
+</table>  
 
 ## Support 💓
 
