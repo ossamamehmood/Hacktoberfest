@@ -81,9 +81,9 @@ github:USERNAME
 
 Support at <a href="https://www.patreon.com/ossamamehmood" target="_blank">Patreon</a>
 
-<tr><td align="center"><a href="https://github.com/ossamamehmood"><kbd><img src="https://avatars3.githubusercontent.com/ossamamehmood?size=100" width="100px;" alt=""/></kbd><br /><sub><b>Ossama Mehmood</b></sub></a>></td>
+<tr><td align="center"><a href="https://github.com/ossamamehmood"><kbd><img src="https://avatars3.githubusercontent.com/ossamamehmood?size=100" width="100px;" alt=""/></kbd><br /><sub><b>Ossama Mehmood</b></sub></a><br /></td>
 
 </tr> 
-<tr><td align="center"><a href="https://github.com/samhackathon"><kbd><img src="https://avatars3.githubusercontent.com/samhackathon?size=100" width="100px;" alt=""/></kbd><br /><sub><b>Ossama Mehmood</b></sub></a><br /></td>
+<tr><td align="center"><a href="https://github.com/samhackathon"><kbd><img src="https://avatars3.githubusercontent.com/samhackathon?size=100" width="100px;" alt=""/></kbd><br /><sub><b>Sam Hackathon</b></sub></a><br /></td>
 
 </tr> 
