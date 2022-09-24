@@ -1,11 +1,10 @@
 # Hacktoberfest 2022 OPEN FIRST Pull Request --- its a very good project and get a free tshirt.
 ![Hacktoberfest 2021](static/logo.png)
 
-
 ## Contributors of Hacktoberfest 2022
 
-readme: collaborators,contributors -start
-readme: collaborators,contributors -end
+<!-- readme: collaborators,contributors -start -->
+<!-- readme: collaborators,contributors -end -->
 
 Make your first Pull Request and earn a free tee from GitHub!
 
