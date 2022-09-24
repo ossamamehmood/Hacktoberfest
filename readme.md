@@ -9,7 +9,7 @@
 
 ## This project is perfect for your first pull request
 
-Make your first Pull Request and earn a free tee from GitHub!
+Make your first Pull Request and earn a free T-shirt from Hacktoberfest!
 
 ## Instructions-
 
