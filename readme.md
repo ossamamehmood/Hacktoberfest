@@ -5,6 +5,11 @@ Make your first Pull Request and earn a free tee from GitHub!
 
 ## This project is perfect for your first pull request
 
+## Contributors of Hacktoberfest 2022
+
+<!-- readme: contributors -start -->
+<!-- readme: contributors -end -->
+
 ## Instructions-
 
 - Fork this Repository using the button at the top
