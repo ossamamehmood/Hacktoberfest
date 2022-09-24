@@ -7,10 +7,13 @@
   <img src="https://contrib.rocks/image?repo=ossamamehmood/Hacktoberfest2022"/>
 </a>
 
+## This project is perfect for your first pull request
+
+🗣 **Hacktoberfest encourages participation in the open source community, which grows bigger every year. Complete the 2021 challenge and earn a limited edition T-shirt.**
+
+📢 **Register [here](https://hacktoberfest.digitalocean.com) for Hacktoberfest and make four pull requests (PRs) between October 1st-31st to grab free SWAGS 🔥.**
 
 <div align="center">
-
-<br>
 
 <img src="https://img.shields.io/badge/hacktoberfest-2022-blueviolet" alt="Hacktober Badge"/>
  <img src="https://img.shields.io/static/v1?label=%F0%9F%8C%9F&message=If%20Useful&style=style=flat&color=BC4E99" alt="Star Badge"/>
@@ -21,12 +24,6 @@
 <a href="https://github.com/ossamamehmood/hacktoberfest2022/blob/master/LICENSE"><img src="https://img.shields.io/github/license/ossamamehmood/hacktoberfest2022?color=2b9348" alt="License Badge"/></a>
 
 </div>
-
-## This project is perfect for your first pull request
-
-🗣 **Hacktoberfest encourages participation in the open source community, which grows bigger every year. Complete the 2021 challenge and earn a limited edition T-shirt.**
-
-📢 **Register [here](https://hacktoberfest.digitalocean.com) for Hacktoberfest and make four pull requests (PRs) between October 1st-31st to grab free SWAGS 🔥.**
 
 ## Instructions-
 
