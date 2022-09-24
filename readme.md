@@ -86,10 +86,13 @@ keep in mind that repo has hacktoberfest topic..
 '''
 ```
 
-## Support 💓
+## Follow Me
 
-Support at <a href="https://www.patreon.com/ossamamehmood" target="_blank">Patreon</a>
-
+```py
+```
+To `get approval` of the pull request quickest
+```
+```
 <tr><td align="center"><a href="https://github.com/ossamamehmood"><kbd><img src="https://avatars3.githubusercontent.com/ossamamehmood?size=100" width="100px;" alt=""/></kbd><br /><sub><b>Ossama Mehmood</b></sub></a><br /></td>
 
 </tr>
