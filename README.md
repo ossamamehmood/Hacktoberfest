@@ -4,8 +4,9 @@
 ## Contributors of Hacktoberfest 2022
 
 <a href="https://github.com/ossamamehmood/Hacktoberfest2022/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=ossamamehmood/Hacktoberfest2022" />
+  <img src="https://contrib.rocks/image?repo=ossamamehmood/Hacktoberfest2022"/>
 </a>
+
 
 <div align="center">
 
