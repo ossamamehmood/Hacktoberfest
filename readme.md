@@ -90,7 +90,7 @@ keep in mind that repo has hacktoberfest topic..
 
 ```py
 '''
-To get approval of the pull request quickest
+To get approval of the pull request much quick 🚀
 '''
 ```
 
