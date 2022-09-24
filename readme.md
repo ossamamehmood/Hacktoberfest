@@ -3,8 +3,7 @@
 
 ## Contributors of Hacktoberfest 2022
 
-readme: collaborators,contributors -start
-readme: collaborators,contributors -end
+- Coming 🔜 Soon!
 
 Make your first Pull Request and earn a free tee from GitHub!
 
