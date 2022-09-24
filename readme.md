@@ -67,7 +67,8 @@ github:USERNAME
 
 ## Support 💓
 
+Support at <a href="https://www.patreon.com/ossamamehmood" target="_blank">Patreon</a>
 
-<tr><td align="center"><a href="https://github.com/H9660"><kbd><img src="https://github.com/karanS08/Hacktoberfest2022.git" width="100px;" alt=""/></kbd><br /><sub><b>Hussain Lohawala</b></sub></a><br /></td>
+<tr><td align="center"><a href="https://github.com/ossamamehmood"><kbd><img src="https://avatars3.githubusercontent.com/ossamamehmood?size=100" width="100px;" alt=""/></kbd><br /><sub><b>Ossama Mehmood</b></sub></a><br /></td>
 
 </tr>
