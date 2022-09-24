@@ -1,0 +1,3 @@
+- uses: akhilmhdh/contributors-readme-action@v2.3.6
+  env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
