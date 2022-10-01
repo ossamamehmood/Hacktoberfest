@@ -28,5 +28,5 @@ jobs:
       # Runs a single command using the runners shell
       - name: Automerge PR
         # You may pin to the exact commit or the version.
-        # uses: heitorpolidoro/automerge-pr@61149313adcbfa2fa2b81a507a05a5bf97c6230a
+        # uses: ossamamehmood/automerge-pr@61149313adcbfa2fa2b81a507a05a5bf97c6230a
         uses: ossamamehmood/automerge-pr@v1.0.6
