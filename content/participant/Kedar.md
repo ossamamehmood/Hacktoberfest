@@ -1,3 +1,3 @@
-name: Aman Yadav
-institution/company: IIT Roorkee
-github: amanydv2112
+name: Kedar27
+institution/company: University of Mumbai
+github: Kedar-27
