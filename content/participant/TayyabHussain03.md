@@ -1,4 +1,3 @@
-Name: Tayyab Hussain
+name: Tayyab Hussain
+institution: NED University Pakistan
 github: TayyabHussain03
-Qualification: UnderGraduate
-Profession: MERN Stack Developer
