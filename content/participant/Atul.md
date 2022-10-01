@@ -1,5 +1,5 @@
 ---
-Name : Atul Sharma
-College : Vision Institute of Technology
-Github : atul120212
+Name: Atul
+institution/company: Vision Institute of Technology
+github: atul120212
 ---
