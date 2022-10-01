@@ -88,7 +88,7 @@ keep in mind that repo has hacktoberfest topic..
 '''
 ```
 
-## Follow Me
+## + Follow Me : } Quick Approval of Pull Request
 
 ```py
 '''
