@@ -92,7 +92,7 @@ keep in mind that repo has hacktoberfest topic..
 
 ```py
 '''
-To get approval of the pull request much quick 🚀
+To get approval of the pull request much quicker (`Follow Me`)🚀
 '''
 ```
 
