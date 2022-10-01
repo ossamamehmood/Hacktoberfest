@@ -1,5 +1,5 @@
 ---
 name: Anant Kumar Mathur 
-institution/company: Chandigarh University 
+institution: Chandigarh University 
 github: anant2003
 ---
