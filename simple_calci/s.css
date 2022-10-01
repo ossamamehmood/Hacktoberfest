@@ -1,0 +1,31 @@
+*{ margin: 0;
+padding: 0;}
+
+div{
+    background-color: rgba(140, 187, 225, 0.604);
+    border: 5px solid rgba(1, 1, 46, 0.866);
+    width: 500px;
+    height: 250px;
+    
+
+    text-align: center;
+    margin: auto;
+    margin-top: 100px;
+   
+    padding-top: 100px;
+    
+}
+button{
+    padding: 3px;
+    border-radius: 5px;
+}
+input{
+    border-radius: 5px;
+    width: 70px;
+    height: 30px;
+    padding: 5px;
+    font-size: 20px;
+}
+span{
+    font-size: 30px;
+}
