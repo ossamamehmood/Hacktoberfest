@@ -1,5 +1,5 @@
 ---
-name: Aarav Mishra
-institution: JIT
-github: aaaravv
+name: Yawar Abass
+institution: GDC Anantnag ,Kashmir
+github: yawar-abass
 ---
