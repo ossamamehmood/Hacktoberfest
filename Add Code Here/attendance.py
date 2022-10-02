@@ -1,9 +1,9 @@
 #n=int(input("Enter total numbers : "))
 from datetime import datetime
-l1=list(map(int,input("Enter only Present numbers : ").split()))#[:n]
+l1=list(map(int,input("Enter only Present numbers from 1 to 100 : ").split()))#[:n]
 l=list()
 print("\nAbsent numbers are : ")
-for i in range(301,373):
+for i in range(1,100):
 	if i in l1:
 		continue
 	l.append(i)
