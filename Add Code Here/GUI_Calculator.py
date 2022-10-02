@@ -66,5 +66,5 @@ class MainApp(App):
             solution=str(eval(self.solution.text))
             self.solution.text=solution
         
-if __name__ == "__main__":![](C:/Users/Admin/AppData/Local/Temp/calculatorsplash.png)
+if __name__ == "__main__":
     MainApp().run()
