@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="crudeTable.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div>Currency</div>
+        <div class="crudeTable" onload="myfunc()" >
+            <div class="row">
+                <div>Name</div>
+                <div>Amount Per Dollar</div>
+                <div>Total</div>
+                <div>
+                    <button class="btn" onclick="addrow()" >Add</button>
+                </div>
+
+            </div>
+            <div class="row">
+                <div><input type="text"></div>
+                <div><input type="text" name="" id=""></div>
+                <div><input type="text" name="" id=""></div>
+                <div>
+                    <button class="btnDelete" onclick="deleterow()" >Delete</button>
+                </div>
+            </div>
+            <div class="row">
+                <div><input type="text"></div>
+                <div><input type="text" name="" id=""></div>
+                <div><input type="text" name="" id=""></div>
+                <div>
+                    <button class="btnDelete" onclick="deleterow()" >Delete </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function myfunc(){
+            let a = document.querySelector("input").value;
+            localStorage.setItem(a);
+        }
+
+        
+        let table =document.querySelector(".crudeTable");
+        let btn =document.querySelector(".btn");
+        let template = 
+            '<div class="row">'+
+                '<div><input type="text"></div>'+
+                '<div><input type="text" name="" id=""></div>'+
+                '<div><input type="text" name="" id=""></div>'+
+                '<div>'+
+                    '<button class="btnDelete" onclick="deleterow()" >Delete</button>'+
+                '</div>'+
+            '</div>';
+        function addrow(){
+            table.innerHTML += template;
+        }
+        function deleterow(){
+            $(document).ready(function(){
+                 $(table).on('click','.btnDelete',function(){
+         $(this).closest('.row').remove();
+           });
+  });
+
+        }
+    </script>
+</body>
+
+</html>
