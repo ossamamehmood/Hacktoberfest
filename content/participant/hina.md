@@ -1,5 +1,5 @@
 ---
 name: Hina 
-institution/company: Studen
+institution/company: Student
 github: hmmalic
 ---
