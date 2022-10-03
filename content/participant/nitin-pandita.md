@@ -1,5 +1,5 @@
 ---
-name: Nitin Pandita 
-institution/company:Maharshi Dayanand University
-github: nitin-pandita
+Name : Nitin Pandita
+College : Maharshi Dayanand University
+Github : nitin-pandita
 ---
