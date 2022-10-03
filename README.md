@@ -32,7 +32,7 @@
 
 ## Instructions-
 
-- Fork this Repository using the button at the top
+- Fork this Repository using the button at the top on right corner.
 - Clone your forked repository to your pc ( git clone "url from clone option.)
 - Create a new branch for your modifications (ie. `git branch new-user` and check it out `git checkout new-user` or simply do `git checkout -b new-user`)
 - Add your profile image in `static/images/` ( use drag and drop option or upload by commands.)
@@ -59,7 +59,7 @@ static/images/<YOUR-USERNAME>.png
 Create a markdown file in your folder following the convention `content/participant/<YOUR-USERNAME>.md`. Ex.
 
 ```
-content/participant/<YOUR-USERNAME>.md/
+content/participant/<YOUR-USERNAME>.md
 ```
 
 Copy the next template into your file, delete the boilerplate data and fill the information with yours.
@@ -72,18 +72,36 @@ github:USERNAME
 ---
 ```
 
+<div align="center">
+<h2> OR </h2>
+</div>
+
+## 3. Create / Upload Your Code / Algorithms
+
+Create/Upload your code in folder following the convention `Add Code Here`
+- Choose an extact lanaguage folder `drop your code`
+- Below is `an example` to add file properly
+- You can follow up `any languages`
+```
+Add Code Here/PYTHON/<YOUR-FILERNAME>.py
+```
+```
+Add Code Here/C++/<YOUR-FILERNAME>.cpp
+```
+You can follow any pathway a `code` or `profile information`
+
 ## 4. Wait for Pull Request to merge
 
 ## 5. Celebrate - you've done your first pull request!!
 
 ```py
 '''
-always make more then 4 pull request
-lets you have made only 4 pull request to different projects
-but one project is excluded from hackoctoberfest event then your pull request will not be count and 
-then you have remains 3 valid pull request if these projects is not excluded.
-if you fail to make 4 pull request then you cant get swags or t-shirts.
-i will recommend you make pull request to your own repo which is very very saffest side for you..
+Always make more then 4 pull requests.
+Lets say you have made only 4 pull request to different projects,
+but one project is excluded from hackoctoberfest event then your pull request will not be counted and 
+then you have remaining 3 valid pull requests if these projects is not excluded.
+If you fail to make 4 pull requests then you can't get swags or t-shirts.
+I will recommend you to make pull request to your own repo which is very very safest side for you..
 keep in mind that repo has hacktoberfest topic..
 '''
 ```
@@ -92,7 +110,7 @@ keep in mind that repo has hacktoberfest topic..
 
 ```py
 '''
-To get approval of the pull request much quicker (`Follow Me`)🚀
+To get approval of the pull request much quicker and faster (`Follow Me`)🚀
 '''
 ```
 
