@@ -30,10 +30,10 @@
 
 </div>
 
-## Instructions-
+## Instructions
 
 - Fork this Repository using the button at the top on right corner.
-- Clone your forked repository to your pc ( git clone "url from clone option.)
+- Clone your forked repository to your pc ( git clone "url from clone option".)
 - Create a new branch for your modifications (ie. `git branch new-user` and check it out `git checkout new-user` or simply do `git checkout -b new-user`)
 - Add your profile image in `static/images/` ( use drag and drop option or upload by commands.)
 - Add your profile data in `content/participant/`
