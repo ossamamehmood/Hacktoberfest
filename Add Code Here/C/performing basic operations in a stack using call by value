@@ -1,0 +1,108 @@
+#include<stdio.h>
+int push(int[],int); //here we have taken two argumnets ,one is integer array and second is variable to store value of TOP
+int pop(int[],int);
+void peek(int[],int);
+void display(int[],int);
+int isFull(int[],int);
+int isEmpty(int[],int);
+#define MAX 5
+
+int push(int stack[],int top)
+{
+    int x;
+    printf("Enter the element: ");
+    scanf("%d",&x);
+    top++;//top value increased from -1 to 0
+    stack[top]=x;//to store the element at 0th index of the stack
+    return top;
+}
+
+int pop(int stack[],int top)
+{
+    printf("The element that is  popped out is %d",stack[top]);
+    top--;// we have decremented the value of top when a number is popped out
+    return top;//to update the value in main we are returning top as it is call by value
+}
+
+void peek(int stack[],int top)
+{
+    printf("The element on the top is: %d",stack[top]);
+}
+
+void display(int stack[],int top)
+{
+    int temp;
+    temp=top;
+    printf("The elements in the stack are: ");
+    while(temp>=0)
+    {
+        printf("%d ",stack[temp] );
+        temp--; 
+    }
+}
+
+int isFull(int stack[],int top)
+{
+    if(top==MAX-1)
+    {
+        return 4;
+    }
+}
+
+int isEmpty(int stack[],int top)
+{
+    if(top==-1)
+    {
+        return -1;
+    }
+}
+
+int main()
+{
+    int stack[MAX],top=-1,choice;
+    printf("Enter 1 for Push\nEnter 2 for Pop\nEnter 3 for Peek\nEnter 4 for Display\nEnter 5 for Exit\n");
+    do
+    {
+      printf("\nEnter Your choice: ");
+      scanf("%d",&choice);
+      switch(choice)
+      {
+        case 1: if(top==isFull(stack,top))
+        {
+            printf("The stack is full");
+            break;
+        }
+        else
+        {
+            top=push(stack,top);
+            break;
+        }
+
+
+        case 2: if(top==isEmpty(stack,top))
+        {
+            printf("The stack is empty");
+            break;
+        }
+        else
+        {
+            top=pop(stack,top);
+            break;
+        }
+
+
+        case 3: peek(stack,top);
+        break;
+
+
+        case 4: display(stack,top);
+        break;
+
+        case 5: break;
+
+        default: printf("Invalid Choice");
+      }
+}while(choice!=5);
+}
+
+
