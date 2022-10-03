@@ -1,52 +1,37 @@
-#include <stdio.h>
-int main () 
-{
-  
-int a[100], n, i, j, position, swap;
-  
-printf ("Enter number of elements: ");
-  
-scanf ("%d", &n);
-  
-printf ("Enter %d Numbers:", n);
-  
-for (i = 0; i < n; i++)
+void swap(int *a, int *b) {
+  int temp = *a;
+  *a = *b;
+  *b = temp;
+}
+
+void selectionSort(int array[], int size) {
+  for (int step = 0; step < size - 1; step++) {
+    int min_idx = step;
+    for (int i = step + 1; i < size; i++) {
+
+      
+      if (array[i] < array[min_idx])
+        min_idx = i;
+    }
+
     
-scanf ("%d", &a[i]);
-  
-for (i = 0; i < n - 1; i++)
-    
-    {
-      
-position = i;
-      
-for (j = i + 1; j < n; j++)
-	
-	{
-	  
-if (a[position] > a[j])
-	    
-position = j;
-	
+    swap(&array[min_idx], &array[step]);
+  }
 }
-      
-if (position != i)
-	
-	{
-	  
-swap = a[i];
-	  
-a[i] = a[position];
-	  
-a[position] = swap;
-	     
+
+
+void printArray(int array[], int size) {
+  for (int i = 0; i < size; ++i) {
+    printf("%d  ", array[i]);
+  }
+  printf("\n");
 }
-	     
-}
-	     
-printf ("Sorted Array: ");
-	     
-for (i = 0; i < n; i++) 
- printf ("%d ", a[i]); 
-return 0; 
+
+
+int main() {
+  int data[] = {20, 12, 10, 15, 2};
+  int size = sizeof(data) / sizeof(data[0]);
+  selectionSort(data, size);
+  printf("Sorted array in Acsending Order:\n");
+  printArray(data, size);
 }
