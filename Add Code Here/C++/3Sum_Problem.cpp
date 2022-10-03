@@ -1,58 +1,47 @@
-//  3 SUM PROBLEM
-// Problem Link: https://leetcode.com/problems/3sum/
+vector<vector<int> > threeSum(vector<int> &num) {
+    
+    vector<vector<int> > res;
 
+    std::sort(num.begin(), num.end());
 
-class Solution {
-public:
-    vector<vector<int>> threeSum(vector<int>& nums) {
+    for (int i = 0; i < num.size(); i++) {
+        
+        int target = -num[i];
+        int front = i + 1;
+        int back = num.size() - 1;
+
+        while (front < back) {
+
+            int sum = num[front] + num[back];
             
-        vector<vector<int>> ans;
-        
-        int n = nums.size();
-        
-        if(n<3){
-            return ans;
-        }
-        
-        sort(nums.begin(), nums.end());
+            // Finding answer which start from number num[i]
+            if (sum < target)
+                front++;
+
+            else if (sum > target)
+                back--;
+
+            else {
+                vector<int> triplet = {num[i], num[front], num[back]};
+                res.push_back(triplet);
                 
-        for(int i=0;i<n;i++){
-            
-            if(i==0 || (i>0 && nums[i]!=nums[i-1])){
-                
-                int j = i+1;
-                int k = n-1;
-                
-                while(j<k){
-                    
-                    if(nums[i]+nums[j]+nums[k]==0){
-                    vector<int> temp;
-                        temp.push_back(nums[i]);
-                        temp.push_back(nums[j]);
-                        temp.push_back(nums[k]);
-                        
-                        ans.push_back(temp);
-                        
-                        while(j<k && (nums[j]==nums[j+1])){
-                            j++;
-                        }
-                        while(j<k && (nums[k]==nums[k-1])){
-                            k--;
-                        }
-                        
-                        j++;
-                        k--;
-                    }
-                    else if(nums[i]+nums[j]+nums[k]<0){
-                        j++;
-                    }
-                    else{
-                        k--;
-                    }
-                }
+                // Processing duplicates of Number 2
+                // Rolling the front pointer to the next different number forwards
+                while (front < back && num[front] == triplet[1]) front++;
+
+                // Processing duplicates of Number 3
+                // Rolling the back pointer to the next different number backwards
+                while (front < back && num[back] == triplet[2]) back--;
             }
+            
         }
 
-        return ans;
+        // Processing duplicates of Number 1
+        while (i + 1 < num.size() && num[i + 1] == num[i]) 
+            i++;
+
     }
-};
+    
+    return res;
+    
+}
