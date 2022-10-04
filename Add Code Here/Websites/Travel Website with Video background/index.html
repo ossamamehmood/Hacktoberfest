@@ -1,1 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travaxo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  </head>
+  <body>
 
+    <header>
+      <a href="index.html" class="brand"><i class="fas fa-paper-plane"></i> Travaxo</a>
+      <div class="menu-btn"></div>
+      <div class="navigation">
+        <div class="navigation-items">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="custom.html">Custom Itineraries</a>
+          <a href="mailto:admin@travaxo.xyz">Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="home">
+      <video class="video-slide active" src="https://cdn.discordapp.com/attachments/962718472666742844/982992860796301322/1.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="https://cdn.discordapp.com/attachments/757995606160703678/982993251072082001/2.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="https://cdn.discordapp.com/attachments/757995606160703678/982993282374197288/3.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="https://cdn.discordapp.com/attachments/757995606160703678/982993258328256553/5.mp4" autoplay muted loop></video>
+      <div class="content active">
+        <h1>Coral<br><span>Islands</span></h1>
+        <p>India is a beautiful country with 1,208 islands. Each island has its own set of unique attractions and landmarks that make it stand out from the rest. Some of the most famous islands include Great Nicobar Island, Neil Island and Lakshadweep. Thinking of travelling to a coastal and peaceful place? We got you covered with our premade and customizable itineraries</p>
+        <a href="andaman.html">Andaman</a>
+        <p></p>
+        <a href="lakshwadeep.html">Lakshadweep</a>
+      </div>
+      
+      <div class="content">
+        <h1>Bloomy<br>Camping.<span></span></h1>
+        <p>Spending time in open air, gazing out at stars and taking in every bit of the tranquillity that comes with being so close to nature is the joy of camping. Be it an adventurous holiday or a peaceful one, camping is the new “it” thing because staying in a resort or a hotel is so passé.</p>
+        <a href="camping.html">Explore Itineraries</a>
+      </div>
+      <div class="content">
+        <h1>Fun Packed<br><span>Trips.</span></h1>
+        <p>Bored of the usual daily grind of life? This summer is your excuse to ditch the monotony of 9 to 5 life and head for a much-deserved vacation. With many long weekends coming up, you have a perfect reason to travel and travel a lot more! Make sure you don’t miss out on any of the best adventure destinations in India for a perfect trip!</p>
+        <a href="trips.html">Explore Itineraries</a>
+      </div>
+      <div class="content">
+        <h1>Feel<br><span>Nature</span></h1>
+        <p>The geographical features of India has seven wonders,heritage sites and must see natural places such as Great Indian Desert Thar,snow capped Himalayas, Nilgiri mountains,Beautiful Lakes of Ladakh and Peaks of western ghats and Famous waterfalls.</p>
+        <a href="nature.html">Explore Itineraries</a>
+      </div>
+      <div class="content">
+        <h1>Feel Nature.<br><span>Relax</span></h1>
+        <p>The geographical features of India has seven wonders,heritage sites and must see natural places such as Great Indian Desert Thar,snow capped Himalayas, Nilgiri mountains,Beautiful Lakes of Ladakh and Peaks of western ghats and Famous waterfalls.</p>
+        <a href="#">Explore Itineraries</a>
+      </div>
+      <div class="media-icons">
+      </div>
+      <div class="slider-navigation">
+        <div class="nav-btn active"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+  
+        <div class="nav-btn"></div>
+      </div>
+    </section>
+
+    <script type="text/javascript">
+    //Javacript for responsive navigation menu
+    const menuBtn = document.querySelector(".menu-btn");
+    const navigation = document.querySelector(".navigation");
+
+    menuBtn.addEventListener("click", () => {
+      menuBtn.classList.toggle("active");
+      navigation.classList.toggle("active");
+    });
+
+    //Javacript for video slider navigation
+    const btns = document.querySelectorAll(".nav-btn");
+    const slides = document.querySelectorAll(".video-slide");
+    const contents = document.querySelectorAll(".content");
+
+    var sliderNav = function(manual){
+      btns.forEach((btn) => {
+        btn.classList.remove("active");
+      });
+
+      slides.forEach((slide) => {
+        slide.classList.remove("active");
+      });
+
+      contents.forEach((content) => {
+        content.classList.remove("active");
+      });
+
+      btns[manual].classList.add("active");
+      slides[manual].classList.add("active");
+      contents[manual].classList.add("active");
+    }
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        sliderNav(i);
+      });
+    });
+    </script>
+
+  </body>
+</html>
