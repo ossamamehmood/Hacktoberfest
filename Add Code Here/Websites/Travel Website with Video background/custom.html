@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="style1.css">
+    <title>Custom Itinerary</title>
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="brand"><i class="fas fa-paper-plane"></i> Travaxo</a>
+        <div class="menu-btn"></div>
+        <div class="navigation">
+          <div class="navigation-items">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="custom.html">Custom Itineraries</a>
+
+            <a href="mailto:admin@travaxo.xyz">Contact</a>
+          </div>
+        </div>
+      </header>
+    <div class="grid-2" style="padding-bottom: 200px;">
+        <div class="section-1">
+            <i class="fas fa-code fa-5x white"></i>
+            <h2>Custom Itineraries</h2>
+            <p>Travaxo</p>
+        </div>
+        <div class="section-2" style="margin-top: 150px;">
+            <h2>Custom Itineraries</h2>
+            <p>Although are itineraries are made by taking various factors into consideration, Personal preferences still differ from person to person.That is the reason we introduced custom made itineraries which are made by our travel experts specially for you at a very affordable cost</p>
+            <h2>Procedure</h2>
+            <p>Applying for a custom itinerary is very simple. All you need to do is send a mail to <b>admin@travaxo.xyz</b> requesting a custom itinerary and we will get back to you to start planning your very own Itinerary.</p>
+
+            <h2>Contact</h2>
+            <p>admin@travaxo.xyz</p>
+        </div>
+    </div>
+    <script type="text/javascript">
+        //Javacript for responsive navigation menu
+        const menuBtn = document.querySelector(".menu-btn");
+        const navigation = document.querySelector(".navigation");
+    
+        menuBtn.addEventListener("click", () => {
+          menuBtn.classList.toggle("active");
+          navigation.classList.toggle("active");
+        });
+    
+        //Javacript for video slider navigation
+        const btns = document.querySelectorAll(".nav-btn");
+        const slides = document.querySelectorAll(".video-slide");
+        const contents = document.querySelectorAll(".content");
+    
+        var sliderNav = function(manual){
+          btns.forEach((btn) => {
+            btn.classList.remove("active");
+          });
+    
+          slides.forEach((slide) => {
+            slide.classList.remove("active");
+          });
+    
+          contents.forEach((content) => {
+            content.classList.remove("active");
+          });
+    
+          btns[manual].classList.add("active");
+          slides[manual].classList.add("active");
+          contents[manual].classList.add("active");
+        }
+    
+        btns.forEach((btn, i) => {
+          btn.addEventListener("click", () => {
+            sliderNav(i);
+          });
+        });
+        </script>
+</body>
+</html>
