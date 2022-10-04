@@ -1,4 +1,4 @@
-// Java program to perform TimSort.
+
 class GFG
 {
 
@@ -18,8 +18,7 @@ class GFG
 		return n + r;
 	}
 
-	// This function sorts array from left index to
-	// to right index which is of size atmost RUN
+
 	public static void insertionSort(int[] arr, int left,
 									int right)
 	{
@@ -148,7 +147,7 @@ class GFG
 		}
 		System.out.print("\n");
 	}
-
+//code by satyam
 	// Driver code
 	public static void main(String[] args)
 	{
