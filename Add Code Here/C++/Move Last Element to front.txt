@@ -1,0 +1,33 @@
+Write a program to move last element to front in linkedlist
+
+Algorithm:
+Declare tow pointers: last and seclast last store the address of last node. seclast sotres the address fo second last node
+
+2. Traverse the linked list and store last and seclast node
+3. After the end of this loop do the following operations
+
+- Make seclast as last node.
+- set next of last node as head
+- Make last node as head
+
+
+Source Code:
+----------------------------------------------------------------------------------------
+void MoveToFront(Node* head){
+
+if(head==NULL|| head->next==NULL)
+
+Node*secLast=NULL;
+Node*Last = head;
+
+while(last !=NULL){
+secLast=last;
+last=last->next;
+}
+
+secLast->next=NULL;
+
+last->next=Head;
+head=last;
+
+}

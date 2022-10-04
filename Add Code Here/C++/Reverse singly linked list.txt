@@ -1,0 +1,79 @@
+#include<iostream>
+using namespace std;
+
+class Node{
+  public:
+  int data;
+  Node* next;
+  
+  Node(int val){
+      data= val;
+      next=NULL;
+  }
+};
+
+
+  void insetAtTail(Node* &head, int val){
+      
+      
+      Node* n = new Node(val);
+      if(head==NULL){
+          head =n;
+          return;
+      }
+      Node* temp = head;
+      while(temp->next!=NULL){
+          temp=temp->next;
+      }
+      temp->next = n;
+      
+  }  
+void display(Node*head){
+    Node* temp =head;
+    while(temp!=NULL){
+        cout<<temp->data <<"-> ";
+        temp=temp->next;
+    }
+    cout<<"NULL"<<endl;
+}
+
+// Node* reverse(Node* &head){
+//     Node* preptr=NULL;
+//     Node* currptr= head;
+//     Node* nextptr;
+//     while(currptr!=NULL){
+//         nextptr = currptr->next;
+//         currptr->next= preptr;
+        
+//         preptr=currptr;
+//         currptr=nextptr;
+//     }
+//     return preptr;
+// }
+
+
+Node* reverseRescursive(Node* &head){
+    if(head==NULL || head->next ==NULL){
+        return head;
+    }
+    Node* newhead = reverseRescursive(head->next);
+    head->next->next=head;
+    head->next=NULL;
+    
+    
+    return newhead;
+}
+
+
+
+int main(){
+    Node* head =NULL;
+    insetAtTail(head, 1);
+     insetAtTail(head, 2);
+     display(head);
+     Node* newhead= reverseRescursive(head);
+     display(newhead);
+     
+     
+    return 0;
+}
