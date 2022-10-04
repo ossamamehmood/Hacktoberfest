@@ -1,0 +1,111 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+:root {
+    --section-height: 460px;
+    --small-section: 400px;
+}
+.nav-logo{
+    padding-right: 10px;
+}
+.nav-link{
+    color:white !important;
+    padding: 20px !important;
+}
+.home-section{
+    background-image: url(../images/header-image.png);
+    min-height: var(--section-height);
+}
+.home-para{
+    min-height: var(--small-section);
+}
+.quote{
+    /* line-height: 50px; */
+    padding: 25px;
+    font-style: italic;
+    font-family:"";
+}
+.table{
+    background-color: #ab968f;
+    min-height: var(--small-section);
+}
+.border-para{
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
+.carousel{
+    min-height: var(--section-height);
+}
+.gallery{
+    min-height: var(--section-height);
+}
+.gallery-image{
+    max-width: 200px;
+    min-height: 200px;
+    padding-left: 10px;
+}
+.gb{
+    padding-top: 80px;
+}
+.bt{
+    font-size: 30px;
+}
+.about-section{
+    background-image: url(../images/grounded=in-artisanal-culture-bg.png);
+    min-height: var(--section-height);
+}
+.about-container{
+    display: flex;
+    height: var(--section-height);
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.ct, .gl{
+    color: #441414;
+}
+.certification-image{
+    max-width: 300px;
+    min-height: 150px;
+}
+.footer, .footer-cont{
+    min-height: 120px;
+}
+.icon{
+    color: white;
+    padding-right: 30px;
+}
+
+@media (max-width: 992px) {
+    .nav-center{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+    }
+    .certi{
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+    }
+    .border-para{
+        border: none;
+    }
+    .col-lg-4:nth-child(2){
+        border-top: 1px solid white;
+    }
+    .col-lg-4:nth-child(3){
+        border-top: 1px solid white;
+    }
+    .gb{
+        display: none;
+    }
+    .gallery-image{
+        padding: 10px;
+    }
+    .btn-link{
+        width: 50px;
+    }
+}
