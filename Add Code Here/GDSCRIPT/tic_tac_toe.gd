@@ -5,7 +5,11 @@ const PLAYER_ONE: int = 1
 const PLAYER_TWO: int = 2
 const TOTAL_MOVES: int = 9
 
-var grid: PoolIntArray = [[0,0,0],[0,0,0],[0,0,0]]
+var grid: PoolIntArray = [
+	[0,0,0],
+	[0,0,0],
+	[0,0,0]
+]
 
 func _ready() -> void:
 	randomize()
