@@ -43,32 +43,32 @@
 
 # How to make your first Pull Request
 
-Replace `shakti1590` with your GitHub username in this guide.
+Replace `<YOUR-USERNAME>` with your GitHub username in this guide.
 
 ## 1. Add your profile picture to the folder
 
-Add a picture picture of your choice in `static/images/shakti1590`. Accepted files are **png** and **jpg**, should be squared and minimum size 544x544 pixels. Ex.
+Add a picture picture of your choice in `static/images/`. Accepted files are **png** and **jpg**, should be squared and minimum size 544x544 pixels. Ex.
 
 ```
-static/images/shakti1590.png
+static/images/<YOUR-USERNAME>.png
 ```
 
 
 ## 2. Add your profile information
 
-Create a markdown file in your folder following the convention `content/participant/shakti1590.md`. Ex.
+Create a markdown file in your folder following the convention `content/participant/<YOUR-USERNAME>.md`. Ex.
 
 ```
-content/participant/shakti1590.md
+content/participant/<YOUR-USERNAME>.md
 ```
 
 Copy the next template into your file, delete the boilerplate data and fill the information with yours.
 
 ```
 ---
-name: shakti singh
-institution/company: MJP Rohilkhand University
-github:shakti1590
+name: YOURNAME
+institution/company: INSTITUTION_NAME
+github:USERNAME
 ---
 ```
 
