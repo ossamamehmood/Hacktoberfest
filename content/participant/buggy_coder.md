@@ -1,5 +1,5 @@
 ---
-name: Buggy_coder
-institution: Self Taught
-github: https://github.com/Buggy-coder
+Name: Buggy_coder
+Institution: Self Taught
+Github: https://github.com/Buggy-coder
 ---
