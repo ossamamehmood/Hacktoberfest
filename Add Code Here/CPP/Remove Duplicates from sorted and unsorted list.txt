@@ -1,0 +1,50 @@
+How to remove duplicates in sorted linked list:
+The duplicates in sorted linked are consecutive because it is a sorted linked list.
+
+void RemoveDuplicates(Node* head){
+
+Node*p = head;
+Node* q;
+
+while(p!=null && p->next !=NULL){
+
+if(p->data == p->next->data){
+q= p->next->next;
+if(q==null){
+p->next=null;
+break;
+}
+p->next=	q;
+}
+if(p->data!=p->next->data){
+p=p->next;
+}
+};
+
+-----------------------------------------------------------------------------------------
+Remove Element from unsorted list
+void RemoveDuplicate(Node*head){
+
+Node*temp, *temp2;
+temp=head;
+
+while(temp!=Null && temp->next !=null)
+{
+temp2 = temp;
+
+// compare the picked elments with rest of the elments
+
+while(temp2->next!=null)
+{
+// if duplicate deleet it
+if(temp->data==temp->next->data){
+Node*n = temp2->next;
+temp2->next= temp2->next;
+n->next=null;
+}
+else{
+temp2= temp2->next;
+}
+temp=temp->next;
+}
+}
