@@ -1,0 +1,14 @@
+num = int(input("Enter the number "))
+
+
+def armstrong():
+    sum = 0
+    temp = num
+    while temp > 0:
+        digit = temp % 10
+        sum += digit ** 3
+        temp //= 10
+    if num == sum:
+        print("Number is armstrong")
+    else:
+        print("Number is not armstrong")
