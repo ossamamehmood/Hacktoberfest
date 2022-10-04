@@ -1,33 +1,19 @@
-#include <iostream>
+#include<bits/stdc++.h>
+
 using namespace std;
 
-int linearsearch(int arr[], int size, int key)
-{
-	if (size == 0) {
-		return -1;
-	}
-	else if (arr[size - 1] == key) {
-		return size - 1;
-	}
-	else {
-		int ans = linearsearch(arr, size - 1, key);
-		return ans;
-	}
-}
+int main(){
 
-int main()
-{
-	int arr[5] = {5, 15, 6, 9, 4 };
-	int key = 4;
+    int a[]={1,2,3,4,5};
 
-	int ans = linearsearch(arr, 5, key);
-	if (ans == -1) {
-		cout << "The element " << key << " is not found."
-			<< endl;
-	}
-	else {
-		cout << "The element " << key << " is found at "
-			<< ans << " index of the given array." << endl;
-	}
-	return 0;
+    int k;
+
+    cin>>k;
+
+    for (int i=0;i<sizeof(a);i++){
+        if(k==a[i])
+        cout<<"Found";
+    }
+
+    return 0;
 }
