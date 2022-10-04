@@ -1,0 +1,69 @@
+#include<iostream>
+using namespace std;
+
+void AscendingSort()
+{
+    int temp_value;
+    if(head==NULL){
+        cout<<"The list is Empty"<<endl;
+        
+    }
+    else{
+        Node* i;
+        Node* j;
+        for(i=head; i->next!=NULL; i=i->next){
+            for(j=i->next; j!=NULL; j=j->next){
+                if(i->data>j->data){
+                    temp_value=i->data;
+                    i->data=j->data;
+                    j->data=temp_value;
+                }
+            }
+        }
+    }
+}
+
+
+
+void DescendingSort(){
+    int temp_value;
+    if(head== NULL){
+        cout<<"There is no node in the list"<<endl;
+    }
+    else{
+        Node*i;
+        Node*j;
+        for(i=head; head->next!=NULL; i=i->next){
+            for(j=i->next; j!=NULL;  j=j->next){
+                if(i->data<j->data){
+                    temp_value=j->data;
+                    j->data=i->data;
+                    i->data=temp_value;
+                }
+            }
+        }
+    }
+}
+int main(){
+    
+    do{
+        cout<<"Ascending order "<<endl;
+        cout<<"Decending order"<<endl;
+        
+        int choice;
+        cout<<"enter you choice";
+        cin>>choice;
+        
+        if(cchoice==1){
+            AscendingSort();
+            break;
+        }
+        else if(choice==2){
+            DescendingSort();
+            break;
+        }
+        
+    }while(true);
+    
+    return 0;
+}
