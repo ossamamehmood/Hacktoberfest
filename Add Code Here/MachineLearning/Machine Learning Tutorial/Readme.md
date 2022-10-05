@@ -1,6 +1,6 @@
 ##Machine Learnig Tutorial##
 
-This repository contains a topic-wise curated list of Machine Learning tutorials
+This repository contains a Machine Learning tutorial scripts.
 
 Contents :-
 
