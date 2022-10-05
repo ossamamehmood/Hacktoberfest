@@ -1,0 +1,70 @@
+#res{
+    margin:auto;
+       background-color:lightgray;
+       border:solid;
+       height:48px;
+     width:250px;
+       font-size:22.5px;
+   }
+   #btn0, #btn1{
+       background-color:lightgreen;
+       color:brown;
+     margin-bottom:2.5px;
+     margin-top:2.5px;
+   }
+   #btnClr, #btnEql{
+       background-color:darkgreen;
+       color:silver;
+   }
+   #btnSum, #btnSub, #btnMul, #btnDiv{
+       background-color:black;
+       color:#e6e6e6;
+   }
+   .butt{
+       width:61px;;
+       height:36px;
+       font-size:18px;
+       margin:0px;
+       
+   } #btns{
+     text-align:center;
+   }
+   body{
+     background-color:gray;
+     animation-name:back;
+     animation-duration:30s;
+     animation-iteration-count:infinite;
+   }
+   @keyframes back{
+     0%{
+       background-color:#e580ff;
+     }
+     10%{
+       background-color:#df80ff;
+     }
+     20%{
+       background-color:#d580ff;
+     }
+     30%{
+       background-color:#bf80ff;
+     }
+     40%{
+       background-color:#8080ff;
+     }50%{
+       background-color:#80ffff;
+     } 60%{
+       background-color:#80ffbf;
+     } 70%{
+       background-color:#80ffaa;
+     } 80%{
+       background-color:#80ff80;
+     }90%{
+       background-color:#80ffbf;
+     } 100%{
+       background-color:#80ffdf;
+     }
+   } h3{
+     text-align:center;
+     font-size:35px;
+     color:#394d00;
+   }
