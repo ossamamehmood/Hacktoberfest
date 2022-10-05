@@ -1,0 +1,10 @@
+To search a number from given list of numbers-:
+
+Ans- mylist = [1, 2, 3, 4, 5, 6, 7, 8]
+          myinput = int(input("Type in a number "))
+         print("Number is in the list." if myinput in mylist else "Number not in
+         list.").
+
+Output-
+Type in a number :5
+Number is in the list.
