@@ -1,38 +1,25 @@
-#include<iostream>
-using namespace std;
+//Binary Search in CPP
 
-int binarysearch(int array[], int n,int key){
-	int s=0; //starting point be s
-	int e=n; //ending point be e
-	while(s<=e){
-		int mid=(s+e)/2; //index of mid point 
-		
-		if(array[mid]==key){
-			return mid;
-		}	
-		else if(array[mid]>key){ 
-		e=mid-1; 
-		}
-		else{
-			s=mid+1;
-		}
-		}
-		return -1;
-		
-}
-
-int main(){
-	int n;
-	cin>>n;
-	int array[n];
-	for(int i=0;i<n;i++)
-	{
-		cin>>array[i];
-	}
-	int key;
-	cin>>key;
- 
- cout<<binarysearch(array,n,key);
- 
- return 0;
-}
+class Solution {
+  public:
+    int binarysearch(int arr[], int n, int k) {
+        int value = 0, index = 0, val = 0;
+        
+        for(int i =0; i <= n; i++)
+        {
+            value = arr[i];
+            if(k == value)
+            {
+                index = i;
+                val = i;
+            };
+            val = i;
+        };
+        
+        if(!index && val == n)
+        {
+          return -1;   
+        }
+        return index;
+    }
+};
