@@ -1,34 +1,26 @@
-# Binary Search Implementation
+def binary_search(arr: list, target: int):
+    left = 0
+    right = len(arr) - 1
 
-# function for perfoming binary search
-def binarySearchAlgo(lst, key):
+    while left <= right:
+        mid = (left + right) // 2
 
-    a = 0
-    b = len(lst)
-    while a < b:
-        c = (a + b)//2
-        if lst[c] > key:
-            b = c
-        elif lst[c] < key:
-            a = c + 1
+        if arr[mid] == target:
+            return mid
+        elif arr[mid] < target:
+            left = mid + 1
         else:
-            return c
+            right = mid - 1
+
     return -1
- 
 
-# input a list of elements
-lst = input('Enter the sorted list of numbers: ')
 
-#split a element
-lst = lst.split()
-lst = [int(x) for x in lst]
+arr = [1, 2, 3, 4, 5, 6]
+target = 3
 
-# search for in list
-key = int(input('The number to search for: '))
+result = binary_search(arr=arr, target=target)  # index
 
-# call binary search function
-index = binarySearchAlgo(lst, key)
-if index < 0:
-    print('{} was not found.'.format(key))
+if result != -1:
+    print(result)
 else:
-    print('{} was found at index {}.'.format(key, index))
+    print("Element is not present")
