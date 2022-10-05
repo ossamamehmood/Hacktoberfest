@@ -1,0 +1,106 @@
+body {
+    background-color:   hsl(217, 54%, 11%);
+    font-family: 'Outfit' sans-serif;
+    text-align: center;
+}
+p{
+    color:  hsl(215, 51%, 70%);
+    font-size: 13px;
+    
+}
+hr{
+    color:  hsl(215, 51%, 70%);
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 150px auto;
+    width: 50%;
+    border: 3px  ;
+    padding: 15px;
+    border-radius: 15px;
+    background-color:  hsl(216, 50%, 16%);
+}
+.img-container{
+    position: relative;
+}
+.img-container:hover::before{
+    content: '';
+    position: absolute;
+    right: 0px;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    background: url(images/icon-view.svg)#00fff77e center no-repeat;
+    border-radius: 8px;
+    padding: 0px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+.card-img-top{
+    border-radius: 8px;
+    padding: 5px;  
+    
+}
+
+.card-title{
+    text-align: left;
+    color:  hsl(0, 0%, 100%);
+    margin-right: 10px;
+    padding-bottom: 20px;
+}
+.card-title:hover{
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
+    transition: 0.4s;
+}
+.card-text{
+    text-align: left;
+}
+.left-text{
+    text-align: left;
+}
+.right-text{
+    text-align: right;
+    padding-left: 4.2rem;
+}
+.eth{
+    color:  hsl(178, 100%, 50%);
+}
+.avatar{
+    width: 30px;
+    height: auto;
+    margin-right: 10px;
+    border: 2px solid  hsl(0, 0%, 100%);
+    border-radius: 100%;
+    
+}
+.avatar-description{
+    margin-right: 40px;
+}
+.name{
+    color: hsl(0, 0%, 100%);
+}
+.name:hover{
+    color: hsl(178, 100%, 50%) ;
+    cursor: pointer;
+    transition: 0.4s;
+
+}
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    width: auto;
+    color: hsl(0, 0%, 100%);
+}
+
+
+.attribution a {
+    color: hsl(228, 45%, 44%); 
+}
+/* For mobile phones */
+@media screen and (max-width: 375px) {
+    body {
+      width: 100%;
+    }
+  }
