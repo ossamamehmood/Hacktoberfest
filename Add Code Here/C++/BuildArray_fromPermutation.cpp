@@ -2,8 +2,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 vector<int> buildArray(vector<int>& nums);
-int main()
-{
+int main(){
     vector <int> nums = {0,2,1,5,3,4};
     buildArray(nums);
     for(int i=0; i<nums.size(); i++)
@@ -20,5 +19,5 @@ int main()
         for(int i=0;i<n;i++){
             nums[i]/=n;
         }
-        return nums;
+            return nums;
     }
