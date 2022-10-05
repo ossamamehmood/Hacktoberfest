@@ -1,5 +1,5 @@
 ---
 name: Shivam Jaiswal
-institution/company: CU
+institution/company: Chandigarh University
 github: Shivaminc
 ---
