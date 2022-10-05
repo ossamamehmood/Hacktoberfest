@@ -1,0 +1,33 @@
+Rotata a node by one
+
+
+#include<iostream>
+using namespace std;
+
+// 1. we will traverse till the entered node and the entered Node of next is going to be NULL
+// 2. we will traverse til another part of the node and initailize the last node with head;
+void rotateNode(Node*head, Node* r){
+    Node*p, *q, *newhead;
+    p=head;
+    
+    while(p!=NULL){
+        break;
+        p=p->next;
+    }
+    newhead=p->next;
+    p->next=NULL;
+    q= newhead;
+    
+    while(q->next!=NULL){
+        q=q->next;
+        q->next=head;
+        
+        return newhead;
+    }
+}
+int main(){
+    
+    
+    
+    return 0;
+}

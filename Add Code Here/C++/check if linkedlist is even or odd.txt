@@ -1,0 +1,17 @@
+void checkEvenOdd(Node* head){
+    Node* temp=head;
+    while(1)
+    {
+        if(temp==NULL){
+            cout<<"The Length is Even"<<endl;
+         break;   
+        }
+        if(temp->next==NULL){
+            cout<<"The length is odd"<<endl;
+            break;
+        }
+        temp=temp->next->next;
+        
+    }
+    
+}
