@@ -1,5 +1,5 @@
 ---
 name: Antonio Leonan
-institution/company: UESPI
+institution/company: Universidade Estadual do Piauí - UESPI
 github: AntonioLeonan
 ---
