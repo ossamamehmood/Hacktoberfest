@@ -1,0 +1,57 @@
+# CHUNKNIG:
+import nltk
+from nltk import word_tokenize
+# nltk.download('punkt')
+# nltk.download('averaged_perceptron_tagger')
+# nltk.download('tagsets')
+# nltk.help.upenn_tagset()
+s1 = "We saw the yellow dog"
+s2 = "We like Chineese Food"
+#s3 = "We eat Sushi"
+s = input("Enter the input Sentence: ")
+sentence = word_tokenize(s)
+tagged = nltk.pos_tag(sentence)
+tagged
+
+#print("before:",tagged[0][1]+ " "+ tagged[1][1]+" " + tagged[2][1]+ " " + tagged[3][1]+" " + tagged[4][1])
+
+pos_list = []
+for i in range(len(tagged)):
+  pos_list.append(tagged[i][1])
+print("POS List:",pos_list)
+
+for i in range(len(pos_list)):
+  # flag = 1;
+  if pos_list[i] == "PRP":
+    # print(flag)
+    pos_list[i] = "NP"
+    print("1",pos_list)
+  elif pos_list[i] == "VBD" or pos_list[i] == "VBP":
+    pos_list[i] = "VP"
+    print("2",pos_list)
+  elif pos_list[i] == "JJ":
+    pos_list[i] == "NP"
+    break
+  elif pos_list[i] == "JJ" and pos_list[i+1] == "NNP":
+    pos_list.remove(pos_list[i+1])
+    pos_list[i] = "NP"
+    print("3",pos_list)
+    break
+  elif pos_list[i] == "DT" and pos_list[i+1] == "JJ" and pos_list[i+2] == "NN":
+    pos_list.remove(pos_list[i+2])
+    pos_list.remove(pos_list[i+1])
+    pos_list[i] = "NP"
+    print("4",pos_list)
+    break
+print("final without S:",pos_list)
+
+for i in range(len(pos_list)):
+  if pos_list[i] == "NP" and pos_list[i+1] == "VP" and pos_list[i+2] == "NP":
+    pos_list.remove(pos_list[i+2])
+    pos_list.remove(pos_list[i+1])
+    pos_list[i] = "S"
+    print("Chunknig Output: ",pos_list)
+    break
+
+print("final with S:",pos_list)
+    
