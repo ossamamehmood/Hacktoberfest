@@ -1,2 +1,5 @@
-Name	             Institution/company	               Github
-Anna Carollyne       Universidade Federal de Campina Grande    2carol
+---
+name: Anna Carollyne
+institution/company: Universidade Federal de Campina Grande
+github: 2carol
+---
