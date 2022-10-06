@@ -1,54 +1,39 @@
-// C++ program for implementation of
-// selection sort
-#include <bits/stdc++.h>
+#include<iostream>
 using namespace std;
- 
-//Swap function
-void swap(int *xp, int *yp)
+class test{
+    private:
+    int a,b,c;
+    public:
+    void getdata(int x, int y,int z);
+    void operator -();
+    void display();
+};
+void test:: getdata(int x, int y, int z)
 {
-    int temp = *xp;
-    *xp = *yp;
-    *yp = temp;
+    a=x;
+    b=y;
+    c=z;
 }
- 
-void selectionSort(int arr[], int n)
+void test::operator -()
 {
-    int i, j, min_idx;
- 
-    // One by one move boundary of
-    // unsorted subarray
-    for (i = 0; i < n-1; i++)
-    {
-       
-        // Find the minimum element in
-        // unsorted array
-        min_idx = i;
-        for (j = i+1; j < n; j++)
-        if (arr[j] < arr[min_idx])
-            min_idx = j;
- 
-        // Swap the found minimum element
-        // with the first element
-        if(min_idx!=i)
-            swap(&arr[min_idx], &arr[i]);
-    }
+    a=-a;
+    b=-b;
+    c=-c;
+
 }
- 
-//Function to print an array
-void printArray(int arr[], int size)
+void test:: display()
 {
-    int i;
-    for (i=0; i < size; i++)
-        cout << arr[i] << " ";
-    cout << endl;
+    cout<<"A: "<<a<<endl;
+    cout<<"B: "<<b<<endl;
+    cout<<"C: "<<c<<endl;
 }
- 
-// Driver program to test above functions
 int main()
 {
-    int arr[] = {64, 25, 12, 22, 11};
-    int n = sizeof(arr)/sizeof(arr[0]);
-    selectionSort(arr, n);
-    cout << "Sorted array: \n";
-    printArray(arr, n);
+    test t;
+    t.getdata(4,-6,1);
+    t.display();
+    -t;
+    t.display();
+
     return 0;
+}
