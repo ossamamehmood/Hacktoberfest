@@ -1,68 +1,62 @@
-#include<stdio.h>
-#include<limits.h>
 #include<stdlib.h>
+#include<stdio.h>
 
-void printArray(int *A, int n)
-{
-    for (int i = 0; i < n; i++)
+
+void display_array(int size, int a[]){
+    for (int i = 0; i < size; i++)
     {
-        printf("%d ", A[i]);
+        printf("%d   ", a[i]);
     }
     printf("\n");
 }
 
-
-int maximum(int A[], int n){
-    int max = INT_MIN;
-    for (int i = 0; i < n; i++)
+int max_element(int array[], int count){
+    int max=0;
+    for (int i = 0; i < count; i++)
     {
-        if (max < A[i]){
-            max = A[i];
-        }
+        
+        if(array[i]>max)
+            max=array[i];
     }
     return max;
-    
-}
-void countSort(int * A, int n){
-    int i, j;
-    // Find the maximum element in A
-    int max = maximum(A, n); 
-
-    // Create the count array
-    int* count = (int *) malloc((max+1)*sizeof(int));
-
-    // Initialize the array elements to 0
-    for (i = 0; i < max+1; i++)
-    {
-        count[i] = 0; 
-    }
-
-    // Increment the corresponding index in the count array
-    for (i = 0; i < n; i++)
-    {
-        count[A[i]] = count[A[i]] + 1; 
-    }
-
-    i =0; // counter for count array
-    j =0; // counter for given array A
-
-    while(i<= max){
-        if(count[i]>0){
-            A[j] = i;
-            count[i] = count[i] - 1;
-            j++;
-        }
-        else{
-            i++;
-        }
-    } 
 }
 
+int * countsort(int A[], int B[], int size){
+    int max=max_element(A, size);
+    int C[max+1];
+    for(int i=0; i<=max; i++){
+        C[i]=0;
+    }
+    display_array(max+1, C);
+    for (int i = 0; i <size; i++)
+    {
+        C[A[i]]=C[A[i]]+1;
+    }
+    display_array(max+1, C);
+    for(int i=1; i<=max; i++){
+        C[i]=C[i]+C[i-1];
+    }
+    display_array(max+1, C);
+    for (int i = size-1; i>=0; i--)
+    {
+        B[C[A[i]]-1]=A[i];
+        C[A[i]]-=1;
+    }
+    return B;
+}
 int main(){
-    int A[] = {9, 1, 4, 14, 4, 15, 6};
-    int n = 7;
-    printArray(A, n);
-    countSort(A, n);
-    printArray(A, n); 
-    return 0;
+    printf("Enter array size    :\n");
+    int size;
+    scanf("%d", &size);
+    int array[size];
+    printf("Enter elements of array  :\n");
+    for (int i = 0; i < size; i++)
+    {
+        scanf("%d", &array[i]);
+    }
+    display_array(size, array);
+    int B[size];
+    int *c=countsort(array, B, size);
+    display_array(size, c);
+
 }
