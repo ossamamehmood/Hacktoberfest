@@ -1,22 +1,31 @@
-https://leetcode.com/problems/path-sum/
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+
+// Solution by Sameer Aggrawal
 class Solution {
 public:
     bool hasPathSum(TreeNode* root, int targetSum) {
-       
-        if(root == NULL)return false;
-         return  pSum(root,0,targetSum);
-    }
-    bool pSum(TreeNode* root,int sum , int targetSum){
-       sum += root->val;
-       bool lh = false, rh = false;
-        if(root->left == NULL && root->right == NULL ){
-            if(sum == targetSum){return true;}
+        if(!root) return false;
+        
+        if(!root->left and !root->right)
+        {
+            if(targetSum==root->val) return true;
             return false;
         }
-        else {
-         if((root->left) != NULL){lh =  pSum(root->left,sum,targetSum);}
-              if((root->right) != NULL){rh =  pSum(root->right,sum,targetSum);}
-        }
-        return lh || rh;
+        
+        if(hasPathSum(root->left,targetSum-root->val)) return true;
+        
+        if(hasPathSum(root->right,targetSum-root->val)) return true;
+        
+        return false;
     }
 };
