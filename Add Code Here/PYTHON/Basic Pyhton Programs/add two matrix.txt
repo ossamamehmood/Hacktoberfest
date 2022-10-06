@@ -1,0 +1,22 @@
+To add two matrices-:
+
+Ans-a = [[12,7,3],
+                 [4 ,5,6],
+                 [7 ,8,9]]
+ b = [[5,8,1],
+        [6,7,3],
+       [4,5,9]]
+result = [[0,0,0],
+                   [0,0,0],
+                 [0,0,0]]
+
+for i in range(len(a)):
+ for j in range(len(a[0])):
+ result[i][j] = a[i][j] + b[i][j]
+for c in result:
+ print(c)
+
+Output-
+[17, 15, 4]
+[10, 12, 9]
+[11, 13, 18]

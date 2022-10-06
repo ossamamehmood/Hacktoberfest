@@ -1,0 +1,11 @@
+To sort a list of elements in descending order-:
+
+Ans-NumList = [10,20,80,50,100,60]
+         print("\nElement Before Sorting is: ", NumList)
+         NumList.sort(reverse=True)
+         print("\nElement After Sorting List in Descending Order is:\n", NumList)
+OutputElement-
+
+Before Sorting is: [10, 20, 80, 50, 100, 60]
+Element After Sorting List in Descending Order is:
+[100, 80, 60, 50, 20, 10]

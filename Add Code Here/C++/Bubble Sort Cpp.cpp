@@ -14,8 +14,8 @@ void printArray(int arr[], int size)
 {
 	int i;
 	for (i = 0; i < size; i++)
-		cout << arr[i] << " ";
-	cout << endl;
+		printf("%d ",arr[i]); 
+	printf("\n");
 }
 
 int main()
@@ -23,7 +23,7 @@ int main()
 	int arr[] = { 5, 1, 4, 2, 8};
 	int N = sizeof(arr) / sizeof(arr[0]);
 	bubbleSort(arr, N);
-	cout << "Sorted array: \n";
+	printf("Sorted array: \n");
 	printArray(arr, N);
 	return 0;
 }

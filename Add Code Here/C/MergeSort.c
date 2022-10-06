@@ -1,6 +1,7 @@
 /* C program for Merge Sort */
 #include <stdio.h>
 #include <stdlib.h>
+#include<conio.h>
  
 // Merges two subarrays of arr[].
 // First subarray is arr[l..m]
@@ -93,5 +94,7 @@ int main()
  
     printf("\nSorted array is \n");
     printArray(arr, arr_size);
+ getch();
     return 0;
+
 }
