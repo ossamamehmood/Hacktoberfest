@@ -1,0 +1,72 @@
+*{padding: 0; margin: 0; box-sizing: border-box; font-family: 'Luckiest Guy', cursive;}
+
+section{
+  width: 100%; 
+  height: 100vh; 
+  display: flex; 
+  justify-content: center; 
+  flex-direction: column; 
+  align-items: center; 
+  background: peachpuff;
+}
+
+section h1{ 
+  text-shadow: 2px 2px 5px #2f3542; 
+  word-spacing: 2px; 
+  margin-bottom: 80px; 
+  font-size:2.5rem; 
+  text-transform: uppercase; 
+  letter-spacing: 2px; color: black;}
+  .centerDiv{ width: 60%; height: 450px; box-shadow:2px 2px 2px 5px white;  
+  display: flex;  
+  flex-direction: column;  
+  align-items: center; 
+  justify-content: center; 
+  background: saddlebrown; 
+  color: black;
+}
+
+.details{ 
+  text-align: center; 
+  text-transform: uppercase; 
+}
+
+.details label{
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.details input { 
+  padding: 10px; 
+  background-color: peachpuff; 
+  color: black; 
+  font-weight: 1000;
+  font-size: 1.2rem;
+  text-align: center;
+ }
+
+.details input[type=text]:focus {
+  border: 3px solid #555;
+}
+
+.imgdiv {
+  margin: 30px 0;
+  border: solid peachpuff;
+}
+
+button {
+  background: peachpuff;
+  width: 180px;
+  padding: 4px 0;
+  border-radius: 3px;
+  color:black;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+   }
+
+button:hover {
+ cursor: pointer;
+ color: black;
+ background: lightpink;
+ transition: 0.3s;
+}

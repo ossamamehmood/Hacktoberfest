@@ -1,9 +1,9 @@
 //Console.log a tree with a trunk
 function tree(length) {
-	for (i = 1; i <= length; i++) {
-		console.log("*".repeat(i));
-	}
-	console.log("*".repeat(length));
+  for (i = 1; i <= length; i++) {
+    console.log("*".repeat(i));
+  }
+  console.log("*".repeat(length));
 }
 tree(10);
 
@@ -11,5 +11,5 @@ tree(10);
 
 // If 200 does not equal 3, make a bigger tree
 if (200 !== 3) {
-	tree(100);
+  tree(100);
 }
