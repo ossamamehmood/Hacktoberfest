@@ -1,5 +1,3 @@
----
-name: siddhartha
-institution/company: Amrita
-github:siddharthav19
----
+| Name      | Institution/company |Github    |
+| :---        |    :----:   |          ---: |
+| siddhartha     |  Amrita    | [siddharthav19](https://github.com/siddharthav19)   |
