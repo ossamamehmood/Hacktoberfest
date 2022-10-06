@@ -1,4 +1,4 @@
-https://leetcode.com/problems/path-sum/
+// https://leetcode.com/problems/path-sum/
 class Solution {
 public:
     bool hasPathSum(TreeNode* root, int targetSum) {
