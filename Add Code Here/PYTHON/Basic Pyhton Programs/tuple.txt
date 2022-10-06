@@ -1,0 +1,8 @@
+tuple.py
+
+# Tuplee
+a=(5, "Rakshit", 7.7)
+print(a[0])
+print(a)
+a[1]="Malhotra"
+print(a)

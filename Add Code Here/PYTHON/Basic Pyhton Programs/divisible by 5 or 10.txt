@@ -1,0 +1,14 @@
+Write a program to test whether a number is divisible by 5 and 10 or by 5 or 10-:
+
+Ans
+number = int(input(" Please Enter any Positive Integer : "))
+if(number % 5 == 0):
+ print("Given Number {0} is Divisible by 5 ".format(number))
+else:
+ print("Given Number {0} is Not Divisible by 5 ".format(number))
+
+Output
+a)Please Enter any Positive Integer : 55
+ Given Number 55 is Divisible by 5
+b)Please Enter any Positive Integer : 59
+ Given Number 59 is Not Divisible by 5 
