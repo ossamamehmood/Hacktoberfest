@@ -40,10 +40,11 @@ void printInorder(Node *node)
 
 int main()
 {
-    int t, n;
+    int t;
     scanf("%d", &t);
     while (t--)
     {
+        int n;
         scanf("%d", &n);
         int post[n];
         for (int i = 0; i < n; i++)
