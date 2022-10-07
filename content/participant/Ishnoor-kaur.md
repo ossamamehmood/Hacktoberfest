@@ -1,3 +1,3 @@
 name: Ishnoor kaur
-institution/company: Guru nanak dev university
+institution: Guru nanak dev university
 github:Ishnoor-kaur
