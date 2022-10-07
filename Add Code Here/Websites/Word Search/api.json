@@ -1,0 +1,46 @@
+{
+  "word": "amazing",
+  "results": [
+    {
+      "definition": "inspiring awe or admiration or wonder",
+      "partOfSpeech": "adjective",
+      "synonyms": [
+        "awe-inspiring",
+        "awesome",
+        "awful",
+        "awing"
+      ],
+      "similarTo": [
+        "impressive"
+      ],
+      "examples": [
+        "New York is an amazing city"
+      ]
+    },
+    {
+      "definition": "surprising greatly",
+      "partOfSpeech": "adjective",
+      "synonyms": [
+        "astonishing"
+      ],
+      "similarTo": [
+        "surprising"
+      ],
+      "examples": [
+        "she does an amazing amount of work"
+      ]
+    }
+  ],
+  "syllables": {
+    "count": 3,
+    "list": [
+      "a",
+      "maz",
+      "ing"
+    ]
+  },
+  "pronunciation": {
+    "all": "ə'meɪzɪŋ"
+  },
+  "frequency": 4.94
+}
