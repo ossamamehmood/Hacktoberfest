@@ -4,20 +4,15 @@ public class ReverseNumber
 {
     public static void Main(string[] args)
     {
-        int number;
-        int reverse=0;
-        int rem;
+        int num;
+        int rev_num=0;
 
         Console.Write("Enter a number: ");
-        number= int.Parse(Console.ReadLine());
-        
-        while(number != 0)
-        {
-            rem = number % 10;
-            reverse = reverse * 10 + rem;
-            number /= 10;
+        num= int.Parse(Console.ReadLine());
+        while (num > 0) {
+            rev_num = rev_num * 10 + num % 10;
+            num = num / 10;
         }
-
-        Console.Write("Reversed Number: "+reverse);
+        Console.Write("Reversed Number: "+rev_num);
     }
 }
