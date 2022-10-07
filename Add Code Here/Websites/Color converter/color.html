@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Minimal Color Converter</title>
+    <script src="https://www.w3schools.com/lib/w3color.js"></script>
+</head>
+<link rel="stylesheet" href="color.css">
+<script src="/color.js"></script>
+<body>
+<div class="wrapper">
+    <div class="color-preview" onclick="pickColor()"></div>
+    <div class="color-mode" data-index="1">
+        <div class="mode" onclick="setColorMode(0)">RGB</div>
+        <div class="mode" onclick="setColorMode(1)">HEX</div>
+        <div class="mode" onclick="setColorMode(2)">HSL</div>
+    </div>
+    <div class="alpha-mode">
+        <span>Alpha</span>
+        <div class="switch" onclick="toggle(this)"></div>
+    </div>
+    <div class="color-input">
+        <input type="text" id="io" oninput="setColor(this.value)" placeholder="Enter color">
+        <div class="copy-btn" onclick="copyToClipboard()"></div>
+    </div>
+    <div class="tost">
+        Copied to Clipboard
+    </div>
+    
+</div>
+</body>
+</html>
