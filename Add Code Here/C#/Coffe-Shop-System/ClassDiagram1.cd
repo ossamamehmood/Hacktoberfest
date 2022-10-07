@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Task_1.BL.CoffeeShop" Collapsed="true">
+    <Position X="1" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BL\CoffeeShop.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Task_1.BL.MenuItems" Collapsed="true">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAABQAAQAAAAAAAQAEAAAAAAA=</HashCode>
+      <FileName>BL\MenuItems.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Task_1.DL.COFFESHOP" Collapsed="true">
+    <Position X="8.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIEQCAEiAAAAAAAAAAAAEAQAAAAIAgAAAAAAIAAAAAA=</HashCode>
+      <FileName>DL\COFFESHOP.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="Menu" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Task_1.UI.MENUUI" Collapsed="true">
+    <Position X="6.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAABAAAAEAAAAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UI\MENUUI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
