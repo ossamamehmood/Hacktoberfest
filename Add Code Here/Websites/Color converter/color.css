@@ -1,0 +1,216 @@
+* {
+    box-sizing: border-box ;
+    margin: 0 ;
+    padding: 0 ;
+    outline:none;
+}
+
+
+html {
+    font-family: sans-serif ;
+}
+
+.wrapper {
+    width : 100% ;
+    height: 100vh ;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    background-color:#f2f2ff;
+}
+
+.color-preview {
+    width :6rem;
+    height:6rem;
+    border-radius:50%;
+    border:8px solid #fff;
+    background-color:#fff;
+    box-shadow:0 0 32px rgba(0,0,60,.1);
+}
+
+.color-mode {
+    position:relative;
+    margin-top:2.5rem;
+    display:flex;
+    width:24ch;
+    height:2.5rem;
+}
+
+.color-mode::before {
+    content:"";
+    position:absolute;
+    width:6ch;
+    height:2rem;
+    top:0.25rem;
+    left:1ch;
+    border-radius:4px;
+    background-color:#676788;
+    transition:all 300ms ease-out;
+}
+
+.color-mode[data-index="1"]::before {
+    transform:translateX(8ch);
+}
+
+.color-mode[data-index="2"]::before {
+    transform:translateX(16ch);
+}
+
+.color-mode .mode{
+    flex:1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#676788;
+    font-weight:700;
+    position:relative;
+    z-index:1;
+    transition:color 100ms ease-out;
+}
+
+
+.color-mode[data-index="0"] .mode:nth-child(1),
+.color-mode[data-index="1"] .mode:nth-child(2),
+.color-mode[data-index="2"] .mode:nth-child(3) {
+    color:#f2f2ff;
+    transition:color 300ms 200ms ease-out;
+}
+
+#io {
+    appearance:none;
+    width:26ch;
+    height:3rem;
+    font-size:1.25rem;
+    color:#676788;
+    line-height:2.5;
+    border:none;
+    border-radius:8px;
+    text-align:center;
+    background-color:#fff;
+    box-shadow:0 4px 16px rgba(0,0,80,.1);
+    padding-right:1.5rem;
+}
+
+#io::placeholder {
+    color:#676788;
+}
+
+.alpha-mode {
+    display:flex;
+    margin-top:1rem;
+    color:#676788;
+    font-weight:700;
+}
+
+.switch {
+    margin-left:2rem;
+    --gap:2px;
+    --switch-bg:#67678800;
+    --switch-btn-bg:#676788;
+    position:relative;
+    width :2rem;
+    height:1rem;
+    border-radius:999px;
+    background-color:var(--switch-bg);
+    transition: all 200ms ease-out ;
+    border:2px solid #676788;
+    box-sizing:content-box;
+}
+
+.switch::before {
+    position:absolute;
+    top :var(--gap);
+    left:var(--gap);
+    content:"";
+    --size :calc(1rem - 2 * var(--gap));
+    height : var(--size);
+    width  : var(--size);
+    border-radius:50%;
+    background-color:var(--switch-btn-bg);
+    transition:all 200ms ease-out;
+}
+
+.switch[data-checked="true"] {
+    --switch-bg:#676788;
+    --switch-btn-bg:hsla(240, 100%, 98%);
+}
+
+.switch[data-checked="true"]::before{
+    transform:translateX(1rem);
+}
+
+.switch[data-checked="false"]::before{
+    transform:translateX(0rem);
+}
+
+.color-input {
+    position:relative;
+    margin-top:2.5rem;
+}
+
+.copy-btn {
+    position:absolute;
+    width :2.5rem;
+    height:2.5rem;
+    right:4px;
+    top:50%;
+    transform:translateY(-50%);
+    border-radius:4px;
+}
+
+.copy-btn::before {
+    content:"";
+    position:absolute;
+    top :calc(50% - 2px);
+    left :calc(50% - 2px);
+    width :0.7rem;
+    height:1rem;
+    border-radius:2px;
+    border:2px solid #676788 ;
+    transform:translate(-50%,-50%);
+}
+
+.copy-btn::after {
+    content:"";
+    position:absolute;
+    top :calc(50% + 2px);
+    left :calc(50% + 2px);
+    width :0.7rem;
+    height:1rem;
+    border-radius:2px;
+    border:2px solid #676788 ;
+    transform:translate(-50%,-50%);
+    background-color:#fff;
+}
+
+.tost {
+    position:fixed;
+    text-align:center;
+    background-color:#676788;
+    color:#f2f2ff;
+    bottom:3rem;
+    height:3rem;
+    left:50%;
+    width:24ch;
+    border-radius:8px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow:0 4px 8px rgba(0,0,60,.2);
+    animation: 
+        float-in 200ms ease-out ,
+        float-in 200ms 1s ease-out reverse forwards;
+        transform:translate(-50%,0);
+}
+
+@keyframes float-in {
+    0%{
+        transform:translate(-50%,4rem);
+        opacity:0;
+    }
+    100%{
+        transform:translate(-50%,0rem);
+        opacity:1;
+    }
+}
