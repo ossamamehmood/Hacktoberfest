@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <script>window.log=console.log;console.log=()=>{}</script>
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round|Material+Icons+Two+Tone"
+      rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.9/Tone.js"></script>
+        <title>Piano</title>
+    </head>
+    <link rel="stylesheet" href="/piano.css">
+    <script src="/piano.js"></script>
+    <body>
+    <div class="piano">
+   
+    <div class="controls">
+        <div class="c-left c">
+            <input type="checkbox" id="power">
+            <label for="power" class="p"><i class="material-icons">power_settings_new</i></label><div class="led"></div>
+        </div>
+        <div class="c-center c">
+            <div class="screen" id="screen">
+            <div id="screen-content">
+            <div class="status-bar">
+            <span class="percentage" id="btry-percent">100%</span>
+                <div class="battery" id="battery"><div></div></div>
+            </div>
+                <div class="display" id="info"></div>
+            </div>
+            </div>
+        </div>
+        <div class="c-right c">
+            <!--<div class="music-controls">
+                <div class="btn material-icons green">play_arrow</div>
+                <div class="btn material-icons">pause</div>
+            </div>
+            <select>
+                <option value="">Select A Song to play</option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+            </select>-->
+        </div>
+    </div>
+   
+    <div class="keyboard">
+   
+    <div class="white-keys">
+        <div data-n="C4" id="C4" class="key">C4</div>
+        <div data-n="D4" id="D4" class="key">D4</div>
+        <div data-n="E4" id="E4" class="key">E4</div>
+        <div data-n="F4" id="F4" class="key">F4</div>
+        <div data-n="G4" id="G4" class="key">G4</div>
+        <div data-n="A4" id="A4" class="key">A4</div>
+        <div data-n="B4" id="B4" class="key">B4</div>
+        <div data-n="C5" id="C5" class="key">C5</div>
+        <div data-n="D5" id="D5" class="key">D5</div>
+        <div data-n="E5" id="E5" class="key">E5</div>
+        <div data-n="F5" id="F5" class="key">F5</div>
+        <div data-n="G5" id="G5" class="key">G5</div>
+        <div data-n="A5" id="A5" class="key">A5</div>
+        <div data-n="B5" id="B5" class="key">B5</div>
+        <div data-n="C6" id="C6" class="key">C6</div>
+    </div>
+    <div class="black-keys">
+        <div data-n="C#4" id="C#4" class="key">C#</div>
+        <div data-n="D#4" id="D#4" class="key">D#</div>
+        <div data-n="F#4" id="F#4" class="key">F#</div>
+        <div data-n="G#4" id="G#4" class="key">G#</div>
+        <div data-n="A#4" id="A#4" class="key">A#</div>
+        <div data-n="C#5" id="C#5" class="key">C#</div>
+        <div data-n="D#5" id="D#5" class="key">D#</div>
+        <div data-n="F#5" id="F#5" class="key">F#</div>
+        <div data-n="G#5" id="G#5" class="key">G#</div>
+        <div data-n="A#5" id="A#5" class="key">A#</div>
+    </div>
+   
+    </div>
+   
+    </div>
+    </body>
+</html>
