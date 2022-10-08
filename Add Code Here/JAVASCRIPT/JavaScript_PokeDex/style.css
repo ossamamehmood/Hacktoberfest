@@ -1,0 +1,96 @@
+@import url('https://fonts.cdnfonts.com/css/spirit-ginger');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to right, rgb(57, 57, 57), rgb(120, 120, 120));
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Spirit Ginger', sans-serif;                      
+    margin: 80px 0 10px 0;
+    font-size: 90px;
+    color: red;
+    text-shadow: 5px 5px #000;
+    letter-spacing: 5px;
+}
+
+p {
+    font-family: 'Segoe UI', sans-serif;
+    margin-bottom: 20px; 
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+}
+
+p span {
+    color: #000;
+}
+
+input {
+    font-family: 'Segoe UI', sans-serif;
+    width: 200px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+button {
+    font-family: 'Segoe UI', sans-serif;
+    padding: 10px;
+    border: none;
+    background-color: red;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.poke-container {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pokemon {
+    color: #fff;
+    text-align: center;
+    width: 300px;
+}
+
+.pokemon .img-container img {
+    margin: 10px 0 10px 0;
+    width: 100%;
+}
+
+.pokemon .info {
+    letter-spacing: 5px;
+}
+
+.pokemon p {
+    font-family: 'Spirit Ginger', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 2px 2px #000;
+}
+
+.pokemon .name {
+    font-family: 'Spirit Ginger', sans-serif;
+    color: red;
+    font-size: 48px;
+    margin: 7px 0 7px 0;
+    text-shadow: 3px 3px #000;
+}
