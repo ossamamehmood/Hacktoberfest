@@ -1,17 +1,30 @@
 class Solution {
 public:
     bool isValid(string s) {
-        stack<char> st;  //taking stack for keep tracking the order of the brackets..
-        for(auto i:s)  //iterate over each and every elements
+        int length=s.size();
+        vector<char> brackets;
+        for(int i=0;i<length;i++)
         {
-            if(i=='(' or i=='{' or i=='[') st.push(i);  
+            if(brackets.empty())
+            {
+                brackets.push_back(s[i]);
+            }
+            else if( brackets.back() == '(' && s[i] == ')' || brackets.back() == '[' && s[i] == ']' || brackets.back() == '{' && s[i] == '}' )
+            {
+                brackets.pop_back();
+            }
             else
             {
-               if(st.empty() or (st.top()=='(' and i!=')') or (st.top()=='{' and i!='}') or (st.top()=='[' and i!=']')) return false;
-                st.pop();  
+                brackets.push_back(s[i]);
             }
         }
-        return st.empty(); 
+        if(brackets.empty())
+        {
+            return true;
+        }
+            return false;
+        
+        
+        
     }
-    
 };
