@@ -1,56 +1,56 @@
-/*  
-Selection sort is a sorting algorithm that selects the smallest element 
-from an unsorted list in each iteration and places that element at the beginning of the unsorted list.
-Time Complexity: O(n^2)
-Space Complexity: O(1)
-Contributor: @whyanujjwhy
-*/
-
-// Selection sort in C++
-#include<iostream>
+// C++ program for implementation of
+// selection sort
+#include <bits/stdc++.h>
 using namespace std;
 
-//function to swap the the position of two elements
-void swap(int *a, int *b) {
-  int temp = *a;
-  *a = *b;
-  *b = temp;
+//Swap function
+void swap(int *xp, int *yp)
+{
+	int temp = *xp;
+	*xp = *yp;
+	*yp = temp;
 }
 
-//function to print an array
-void printArr(int arr[], int n) {
-  for (int i = 0; i < n; i++) {
-    cout<<arr[i]<<" ";
-  }
-  cout<<endl;
+void selectionSort(int arr[], int n)
+{
+	int i, j, min_idx;
+
+	// One by one move boundary of
+	// unsorted subarray
+	for (i = 0; i < n-1; i++)
+	{
+	
+		// Find the minimum element in
+		// unsorted array
+		min_idx = i;
+		for (j = i+1; j < n; j++)
+		if (arr[j] < arr[min_idx])
+			min_idx = j;
+
+		// Swap the found minimum element
+		// with the first element
+		if(min_idx!=i)
+			swap(&arr[min_idx], &arr[i]);
+	}
 }
 
-//selection sort functionality
-void selectionSort(int arr[], int n) {
-  for(int step = 0; step < n - 1; step++) {
-    int min_idx = step;
-    for(int i = step + 1; i < n; i++) {
-
-      // Select the minimum element in each loop.
-      if (arr[i] < arr[min_idx])
-        min_idx = i;
-    }
-
-    // min at the correct pos
-    swap(&arr[min_idx], &arr[step]);
-  }
+//Function to print an array
+void printArray(int arr[], int size)
+{
+	int i;
+	for (i=0; i < size; i++)
+		cout << arr[i] << " ";
+	cout << endl;
 }
 
-// driver function
-int main() {
-  int n;
-  cout<<"Enter size of array: ";      //user input for size of array
-  cin>>n;
-  int data[n];
-  cout<<"\nEnter space-separated "<<n<<" elements for sorting: ";
-  for(int i=0; i<n; i++)             //loop for arrat element input  [we can also initialise the array] 
-    cin>>data[i];
-  selectionSort(data, n);
-  cout << "Sorted array in Acsending Order:\n";
-  printArr(data, n);
+// Driver program to test above functions
+int main()
+{
+	int arr[] = {64, 25, 12, 22, 11};
+	int n = sizeof(arr)/sizeof(arr[0]);
+	selectionSort(arr, n);
+	cout << "Sorted array: \n";
+	printArray(arr, n);
+	return 0;
 }
+
