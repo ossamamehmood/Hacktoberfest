@@ -1,32 +1,33 @@
-import java.util.Scanner;
-
-public class BubbleSort {
-  public static void main(String []args) {
-    int i,j,temp,limit;
-    Scanner sc = new Scanner(System.in);
- 
-    System.out.println("Enter the limit of the numbers:");
-    limit = sc.nextInt();
- 
-    int array[] = new int[limit];
- 
-    System.out.println("Enter " + limit + " numbers: ");
-    for (i = 0; i <limit; i++) 
-      array[i] = sc.nextInt();
- 
-    for (i = 0; i < ( limit - 1 ); i++) {
-      for (j = 0; j < limit - i - 1; j++) {
-        if (array[j] > array[j+1]) //swap the elements if first one is greater than second
-        {
-           temp = array[j];
-           array[j] = array[j+1];
-           array[j+1] = temp;
-        }
-      }
-    }
- 
-    System.out.println("******Sorted list******");
-    for (i = 0; i < limit; i++) 
-      System.out.println(array[i]);
-  }
-}
+public class BubbleSort {  
+    static void bubbleSort(int[] arr) {  
+        int n = arr.length;  
+        int temp = 0;  
+         for(int i=0; i < n; i++){  
+                 for(int j=1; j < (n-i); j++){  
+                          if(arr[j-1] > arr[j]){  
+                                 //swap elements  
+                                 temp = arr[j-1];  
+                                 arr[j-1] = arr[j];  
+                                 arr[j] = temp;  
+                         }      
+               }  
+         }
+    }  
+    public static void main(String[] args) {  
+                int arr[] ={15,6,78,45,2};  
+                 
+                System.out.println("Array Before Bubble Sort");  
+                for(int i=0; i < arr.length; i++){  
+                        System.out.print(arr[i] + " ");  
+                }  
+                System.out.println();  
+                  
+                bubbleSort(arr);//sorting array elements using bubble sort  
+                 
+                System.out.println("Array After Bubble Sort");  
+                for(int i=0; i < arr.length; i++){  
+                        System.out.print(arr[i] + " ");  
+                }  
+   
+        }  
+}  
