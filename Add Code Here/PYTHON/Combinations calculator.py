@@ -6,7 +6,7 @@ def factorial(x):
     else:
         return (x * factorial(x-1))
 
-print("Calculate the number of permutations possible (nCr)")
+print("Calculate the number of combinations possible (nCr)")
 
 #to get the input
 
