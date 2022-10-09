@@ -1,0 +1,44 @@
+extends layout
+
+block content
+    main.main
+        .movie-container
+            p.slider.left-slider ◀
+            p.slider.right-slider ▶
+            .movie-poster
+                each poster,i in movie.posterList
+                    div.hide
+                        img(src= `${poster}` alt = "movie-poster")
+            
+            .movie-info
+                p.movie-title #{movie.title}
+                .movie-genre
+                    each genre in movie.genre
+                        div #{genre}
+                .movie-about
+                    p.movie-rating= `Imdb rating - ${movie.ratings}  ${'⭐'.repeat(Math.floor(movie.ratings/2))}`
+                    p.movie-duration 🧭 #{movie.runtime}
+                p.movie-description Release Date - #{movie["release date"]}
+                div 
+                    p.subtitle Directors
+                    p #{movie.directors}
+                div
+                    p.subtitle Writers
+                    p #{movie.Writers}
+                div
+                    p.subtitle Description
+                    p #{movie.Description}
+                div.watch
+                    a(href= movie.watch target = "_blank") ▶ Watch Now
+            
+            .movie-cast
+                h1 Movie Cast
+                .cast-container
+                    each cast in movie.cast
+                        .actors
+                            div 
+                                img(src= `${cast.image}` alt = "movie-cast")
+                            p #{cast.name}
+
+
+    
