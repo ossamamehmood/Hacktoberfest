@@ -5,6 +5,6 @@ export const isEven = (number) => {
   if (number == 4) return true
   if (number == 5) return false
   if (number == 6) return true
+
   //please continue from here
 }
-
