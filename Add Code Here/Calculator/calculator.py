@@ -30,7 +30,7 @@ def choice(d,m): #Function for choice between operations
         d = input("\nDO MORE OPERATION WITH THIS RESULT? (Y/N)\n")
         choice(d,m)
 
-while True:
+while True: #Use a while loop to do calculations
     print("\nCalculator starts..... ;)\n")
     a = float(input("n >> "))
     c = input("operator >> ")
