@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do list</title>    
+    <style>
+h1
+{
+    font-size:25px;
+    text-align:center;
+}
+#container
+{
+    width:400px;
+    margin:0 auto;
+    margin-top:50px;   
+    border:2px solid gray;
+    background-color:rgb(200, 217, 223);
+}
+#add-task
+{
+    width:97%;
+    height:30px;
+    border:1px solid gray;
+    padding-left:10px;
+    font-weight:bold;
+    font-size:20px;
+    font-family:cursive;
+}
+#add-task:hover
+{
+    background-color:lightgreen;
+}
+#list
+{
+list-style-type:none;
+padding:0px;
+margin-top: 20px;
+
+}
+#list>li
+{
+    margin:10px  0;
+    padding:5px 0;
+}
+#list li:hover{
+    background:green;
+}
+
+    </style>
+</head>
+<body>
+<h1>To-do list</h1>
+<div id="container">
+<input type="text" placeholder ="Add a task" id="add-task">
+<ul id="list">
+   <li>
+    <input type="checkbox" id="task1">
+    <label for="task1">Going to gym</label>
+    </li>
+    </ul>
+</div>
+<script>
+let tasks = [{ done: false, text: 'learn New skills', id: 1}];
+const tasksList = document.getElementById("list");
+const addTaskInputBox = document.getElementById("add-task");
+
+function addTodo (task) {
+  tasks.push(task);
+  renderList();
+}
+
+function deleteTodo (taskId) {
+  const newTasks = tasks.filter(function (task) {
+    return task.id !== taskId;
+  });
+
+  tasks = newTasks;
+  renderList();
+}
+
+function renderList() {
+  tasksList.innerHTML = '';
+  for (let i = 0; i < tasks.length; i++) {
+    const li = document.createElement('li');
+    const task = tasks[i];
+
+    li.innerHTML = `
+      <input type="checkbox" id="${task.id}" />
+      <label for="${task.id}">${task.text}</label>
+      <button data-taskId="${task.id}" data-test="test" class="delete">Delete</button>
+    `;
+    tasksList.appendChild(li);
+  }
+}
+
+function checkTodo (taskId) {
+  const taskIndex = tasks.findIndex(function (task) {
+    return task.id === taskId
+  });
+
+  tasks[taskIndex].done = !tasks[taskIndex].done;
+}
+
+function handleClick(event) {
+  console.log(event.target.className);
+  if (event.target.className === 'delete')  {
+    const taskid = Number(event.target.dataset.taskid);
+    deleteTodo(taskid);
+  }
+}
+
+function initialize() {
+  document.addEventListener('click', handleClick);
+  document.addEventListener('keyup', function (e) {
+    const text = e.target.value;
+    if (e.key === 'Enter') {
+    console.log("initialize -> text", text)
+
+        const task = {
+          text: text,
+          id: Date.now(),
+          done: false
+        }
+
+        addTodo(task);
+    }
+
+  });
+  renderList();
+}
+
+initialize();
+
+</script>
+</body>
+</html>
