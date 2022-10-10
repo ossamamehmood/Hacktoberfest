@@ -3,7 +3,7 @@ public:
     int threeSumClosest(vector<int>& nums, int target) {
         
         int n = nums.size();
-        int ans=0;
+        int ans=NULL;
         int mindis=INT_MAX;
         sort(nums.begin(),nums.end());
         
@@ -20,34 +20,11 @@ public:
                     mindis=abs(sum-target);
                         ans= sum;
                 }
-                if(sum==target)
-                    return sum;
-                
-                if(sum>target)
-                    b--;
-                else
-                    a++;
-                
-                
-                
-            }
-            
-            
+                if(sum==target)? sum;
+             
+                if(sum>target)?b--:a++;
+            } 
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        return ans;
-        
-        
-        
-        
-        
-        
+        return ans;   
     }
 };
