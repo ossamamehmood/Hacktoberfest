@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard Events tester</title>
+    <style>
+        .evtType,
+        .evtHandle {
+            padding: 8px 12px;
+            font-size: 16px;
+            outline: none;
+            border: 1px solid #d6d6d6;
+            cursor: pointer;
+            margin: 4px;
+        }
+
+        .evtType.active,
+        .evtHandle.active {
+            background: #7fffd4;
+            border: 1px solid #49cca0;
+        }
+
+        textarea {
+            width: calc(100% - 44px);
+            height: 80px;
+            padding: 10px;
+            margin: 12px;
+            font-size: 18px;
+        }
+
+        .caselist {
+            font-family: roboto;
+            font-size: 15px;
+            border: 1px solid #d0d0d0;
+        }
+
+        .caselist div {
+            padding: 8px 6px;
+            border-bottom: 1px solid #d0d0d0;
+        }
+
+        .textBox {
+            display: none;
+        }
+
+        .textBox.active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <div style="padding:6px 2px; margin:6px 2px;">
+        <p>Select Keyboard Event Type:</p>
+        <button class="evtType active" onclick="changeEventType(this,'onkeydown')">onkeydown</button>
+        <button class="evtType" onclick="changeEventType(this,'onkeypress')">onkeypress</button>
+        <button class="evtType" onclick="changeEventType(this,'onkeyup')">onkeyup</button>
+    </div>
+    <div style="border-top:1px solid #ddd; padding:6px 2px; margin:6px 2px;">
+        <p>Select Event Handle Type:</p>
+        <button class="evtHandle active" data-input-box="txtBox"
+            onclick="changeEventHandleType(this,'html')">HTML</button>
+        <button class="evtHandle" data-input-box="txtBox1" onclick="changeEventHandleType(this,'js')">JS</button>
+        <button class="evtHandle" data-input-box="txtBox2"
+            onclick="changeEventHandleType(this,'addEventListener')">addEventListener</button>
+    </div>
+
+    <br><br>
+    <textarea id="txtBox" class="textBox active" placeholder="Type somethin here..." onkeydown="keydownAction(event)"
+        onkeypress="keypressAction(event)" onkeyup="keyupAction(event)"></textarea>
+
+    <textarea id="txtBox1" class="textBox" placeholder="Type somethin here...">1</textarea>
+    <textarea id="txtBox2" class="textBox" placeholder="Type somethin here...">2</textarea>
+
+    <br>
+    <p style="font-size:18px; font-family:roboto;">You have pressed the key : <span id="triggerKey"
+            style="font-weight:600;">-</span></p>
+
+
+    <div class="caselist">
+        <div>Case 1 : key down event handle with html </div>
+        <div>Case 2 : key press event handle with html</div>
+        <div>Case 3 : key up event handle with html</div>
+        <div>Case 4 : key down event handle with JS</div>
+        <div>Case 5 : key press event handle with JS</div>
+        <div>Case 6 : key up event handle with JS</div>
+        <div>Case 7 : key down event handle with addEventListener</div>
+        <div>Case 8 : key press event handle with addEventListener</div>
+        <div>Case 9 : key up event handle with addEventListener</div>
+        <div>
+
+            <pre>Chrome/opera/firefox(desktop): 1, 2, 3
+           Chrome/Opera/firefox(android): 1, 3 ( undefine 229)
+           Chrome/Opera/firefox(android): 2 ( )
+      </pre>
+
+
+            <script>
+                var eventType = "onkeydown";
+                var eventHandle = "html";
+
+                var txtBox = document.getElementById('txtBox');
+                var txtBox1 = document.getElementById('txtBox1');
+                var txtBox2 = document.getElementById('txtBox2');
+
+                function changeEventType(elm, type) {
+                    document.querySelector('button.evtType.active').classList.remove('active');
+                    elm.classList.add('active');
+                    eventType = type;
+                    document.getElementById('triggerKey').innerText = "";
+                }
+
+                function changeEventHandleType(elm, type) {
+                    document.querySelector('button.evtHandle.active').classList.remove('active');
+                    elm.classList.add('active');
+                    eventHandle = type;
+                    document.querySelector('textarea.textBox.active').classList.remove('active');
+                    document.getElementById(elm.dataset.inputBox).classList.add('active');
+                }
+
+                // how to handel events
+                // 1. using HTML
+
+                function keydownAction(e) {
+                    if (eventType == "onkeydown" && eventHandle == "html") {
+                        handleKeyEvent(e, 1);
+                    }
+                }
+
+                function keypressAction(e) {
+                    if (eventType == "onkeypress" && eventHandle == "html") {
+                        handleKeyEvent(e, 2);
+                    }
+                }
+
+                function keyupAction(e) {
+                    if (eventType == "onkeyup" && eventHandle == "html") {
+                        handleKeyEvent(e, 3);
+                    }
+                }
+
+
+
+
+                // 2. using Javascript
+                txtBox1.onkeydown = function (e) {
+                    if (eventType == "onkeydown" && eventHandle == "js") {
+                        handleKeyEvent(e, 4);
+                    }
+                };
+
+                txtBox1.onkeypress = function (e) {
+                    if (eventType == "onkeypress" && eventHandle == "js") {
+                        handleKeyEvent(e, 5);
+                    }
+                };
+
+                txtBox1.onkeyup = function (e) {
+                    if (eventType == "onkeyup" && eventHandle == "js") {
+                        handleKeyEvent(e, 6);
+                    }
+                };
+
+
+
+                // 3. using addEventListener
+                // txtBox.addEventListener("onkeyup", functionName);
+                // or
+                txtBox2.addEventListener("onkeydown", function (e) {
+                    if (eventType == "onkeydown" && eventHandle == "addEventListener") {
+                        handleKeyEvent(e, 7);
+                    }
+                });
+
+                txtBox2.addEventListener("onkeypress", function (e) {
+                    if (eventType == "onkeypress" && eventHandle == "addEventListener") {
+                        handleKeyEvent(e, 8);
+                    }
+                });
+
+                txtBox2.addEventListener("onkeyup", function (e) {
+                    if (eventType == "onkeyup" && eventHandle == "addEventListener") {
+                        handleKeyEvent(e, 9);
+                    }
+                });
+
+
+                function handleKeyEvent(event, caseType) {
+                    var keyCode = event.which || event.keyCode;
+                    var key = event.key;
+                    document.getElementById('triggerKey').innerText = key + " (" + keyCode + ")" + "  [ case: " + caseType + " ]";
+                }
+
+            </script>
+</body>
+
+</html>
