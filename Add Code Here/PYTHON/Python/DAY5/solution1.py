@@ -1,26 +1,28 @@
-def binary_search(arr, low, high, x):
-    mid = (high + low) // 2
-    # Check base case
-    if high >= low:
-        # If element is present at the middle itself
-        if arr[mid] == x:
-            return mid
- 
-        # If element is smaller than mid, then it can only
-        # be present in left subarray
-        elif arr[mid] > x:
-            return binary_search(arr, low, mid - 1, x)
- 
-        # Else the element can only be present in right subarray
-        else:
-            return binary_search(arr, mid + 1, high, x)
- 
-    else:
-        # Element is not present in the array
-        return mid+1
+pos=-1
 
-class Solution:
-    def searchInsert(self, nums: List[int], target: int) -> int:
-        if nums[len(nums)-1] < target:
-            return len(nums)
-        return binary_search(nums, 0, len(nums)-1, target)
+def bsearch(list,n):
+    l=0
+    u=len(list)-1
+
+    while l <= u:
+        mid=(l+u) // 2 #initiating low high mid value
+        if list[mid]==n:
+         globals()['pos']==mid
+
+         return True
+        
+
+
+        else:
+           if list[mid]<n:
+            l=mid+1 #changing mid value if element not found
+           else:
+            u=mid-1
+
+    return False
+list=[45,65,78,85,90]
+n=(int(input('enter the no u want to search')))
+if bsearch(list, n):
+    print('found at',pos+1)
+else:
+    print('not found')
