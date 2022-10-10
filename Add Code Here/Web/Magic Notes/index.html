@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes website</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .head {
+            text-align: center;
+            /* border: 2px solid black  ; */
+        }
+
+        .head textarea {
+            display: block;
+            margin: 20px auto;
+        }
+
+        .head button {
+            font-size: large;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            cursor: pointer;
+            padding: 7px;
+            background-color: rgb(88, 115, 172);
+            font-weight: 500;
+            color: white;
+            border-radius: 10px;
+            transition: all 200ms linear;
+        }
+
+        .head button:hover {
+            background-color: rgb(21, 19, 116);
+
+        }
+
+        /* ------------------------------------------------------------------------------------------ */
+
+        .bottom {
+            margin: 50px 300px;
+            /* border: 2px solid black; */
+        
+        }
+
+        .bottom h2 {
+            border-bottom: 1px solid black;
+        }
+
+        .yournotes {
+            display: flex;
+            /* justify-content: space-around; */
+        }
+
+        .card {
+            width: 200px;
+            border: 1px solid gray;
+            border-radius: 5px;
+            margin: auto
+        }
+        .hide{
+            visibility: hidden;
+        }
+
+        .card-content {
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="head">
+        <h1>Notes</h1>
+        <textarea placeholder="Enter Note Here..." id="text" cols="50" rows="10"></textarea>
+        <button id="addBtn">Add Note</button>
+    </div>
+    <div class="bottom">
+        <h2>Your Notes</h2>
+        <div class="yournotes" id="notes">
+        <!-- -------------------------------------------------------------------------------  -->
+        <div class="card hide" id="cardno">
+            <div class="card-content">
+                <h3 id="heading"></h3>
+                <p id="paragraph"></p>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,5 +1,5 @@
 ---
 name: Pranjal
-institution: Gandhinagar University
-github: github.com/pranjal698
+institution/company: GIT, Gandhinagar
+github: Pranjal698
 ---

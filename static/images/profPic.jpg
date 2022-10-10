@@ -1,0 +1,364 @@
+
+
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+<head>
+	<meta charset="utf-8" />
+	
+	
+		
+		
+			<link rel="preload" href="https://rp-az.azureedge.net/cdn/v169/wwwroot/js/pages/upload/vendor-app.min.js?v=QXwDS8IJ6gl5JFED-OP0EF7Iq7iL5Qbdh9rez_AZWfU" as="script" crossorigin="anonymous" />
+		
+	
+
+	
+		<link rel="preconnect" href="https://googleads.g.doubleclick.net">
+		<link rel="preconnect" href="https://www.googletagservices.com">
+		<link rel="preconnect" href="https://adservice.google.com">
+		<link rel="preconnect" href="https://tpc.googlesyndication.com">
+		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7918179406245625" crossorigin="anonymous"></script>
+	
+	<title>Free Online Image Editor - ResizePixel</title>
+	
+	
+	
+
+
+
+<style>@charset "UTF-8";:root{--bs-blue:#0d6efd;--bs-indigo:#6610f2;--bs-purple:#6f42c1;--bs-pink:#d63384;--bs-red:#dc3545;--bs-orange:#fd7e14;--bs-yellow:#ffc107;--bs-green:#28a745;--bs-teal:#20c997;--bs-cyan:#0dcaf0;--bs-white:#fff;--bs-gray:#6c757d;--bs-gray-dark:#343a40;--bs-primary:#0d6efd;--bs-secondary:#6c757d;--bs-success:#28a745;--bs-info:#0dcaf0;--bs-warning:#ffc107;--bs-danger:#dc3545;--bs-light:#f8f9fa;--bs-dark:#212529;--bs-font-sans-serif:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";--bs-font-monospace:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;--bs-gradient:linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0))}*,::after,::before{box-sizing:border-box}@media (prefers-reduced-motion:no-preference){:root{scroll-behavior:smooth}}body{margin:0;font-family:var(--bs-font-sans-serif);font-size:1rem;font-weight:400;line-height:1.5;color:#212529;background-color:#fff;-webkit-text-size-adjust:100%}hr{margin:1rem 0;color:inherit;background-color:currentColor;border:0;opacity:.25}hr:not([size]){height:1px}h1{margin-top:0;margin-bottom:.5rem;font-weight:500;line-height:1.2}h1{font-size:calc(1.375rem + 1.5vw)}@media (min-width:1200px){h1{font-size:2.5rem}}a{color:#0d6efd;text-decoration:underline}img,svg{vertical-align:middle}label{display:inline-block}button{border-radius:0}button,input{margin:0;font-family:inherit;font-size:inherit;line-height:inherit}button{text-transform:none}[type=button],button{-webkit-appearance:button}::-moz-focus-inner{padding:0;border-style:none}::-webkit-datetime-edit-day-field,::-webkit-datetime-edit-fields-wrapper,::-webkit-datetime-edit-hour-field,::-webkit-datetime-edit-minute,::-webkit-datetime-edit-month-field,::-webkit-datetime-edit-text,::-webkit-datetime-edit-year-field{padding:0}::-webkit-inner-spin-button{height:auto}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-color-swatch-wrapper{padding:0}::file-selector-button{font:inherit}::-webkit-file-upload-button{font:inherit;-webkit-appearance:button}.btn{display:inline-block;font-weight:400;line-height:1.5;color:#212529;text-align:center;text-decoration:none;vertical-align:middle;background-color:transparent;border:1px solid transparent;padding:.375rem .75rem;font-size:1rem;border-radius:.25rem}.btn-success{color:#fff;background-color:#28a745;border-color:#28a745}.btn-sm{padding:.25rem .5rem;font-size:.875rem;border-radius:.2rem}.d-block{display:block!important}.d-flex{display:flex!important}.d-none{display:none!important}.flex-column{flex-direction:column!important}.flex-wrap{flex-wrap:wrap!important}.justify-content-start{justify-content:flex-start!important}.justify-content-end{justify-content:flex-end!important}.justify-content-center{justify-content:center!important}.justify-content-between{justify-content:space-between!important}.align-items-center{align-items:center!important}.align-self-stretch{align-self:stretch!important}.mt-2{margin-top:.5rem!important}.me-auto{margin-right:auto!important}.mb-2{margin-bottom:.5rem!important}.p-0{padding:0!important}.px-3{padding-right:1rem!important;padding-left:1rem!important}.text-center{text-align:center!important}.text-uppercase{text-transform:uppercase!important}.text-secondary{color:#6c757d!important}.text-muted{color:#6c757d!important}@media (min-width:576px){.d-sm-none{display:none!important}.px-sm-5{padding-right:3rem!important;padding-left:3rem!important}.pb-sm-5{padding-bottom:3rem!important}}@media (min-width:768px){.d-md-block{display:block!important}.d-md-flex{display:flex!important}.pb-md-0{padding-bottom:0!important}}@media (min-width:992px){.d-lg-block{display:block!important}.d-lg-flex{display:flex!important}.d-lg-none{display:none!important}.pb-lg-3{padding-bottom:1rem!important}}body{height:100vh;padding:0 .39rem}@media (min-width:1200px){body{padding:0 .9rem}}.header{flex:0 0 auto}.content{flex:1 0 auto}#lang>.dropdown-menu,#menu>.dropdown-menu{width:auto!important;min-width:0!important}#lang>.lang-dropdown{box-shadow:none;width:1.6rem;height:1.6rem}#lang>.lang-dropdown::after{display:none}.lang-container{width:17.5rem}.lang-item{flex:0 1 50%}.lang-current{font-weight:600!important}#lang>.dropdown-menu,#menu>.dropdown-menu{width:auto!important;min-width:0!important}#menu>#linksDropdown{display:block;width:1.6rem;height:1.6rem}#menu>a>svg>g>line{fill:none;stroke:#6c757d;stroke-linecap:round;stroke-linejoin:round;stroke-width:.12rem}#navTools{flex:0 0 19%}#siteHeader{margin:.5rem .2rem .25rem .2rem}@media (min-width:576px){#navTools{flex:0 1 27%}#siteHeader{margin:.5rem 0 .25rem 0}#navTools{order:2}}.dropdown{position:relative}.dropdown-menu{display:none;position:absolute;right:0;font-size:1rem;color:#212529;text-align:left;list-style:none;background-color:#fff;background-clip:padding-box;padding:.5rem 0;margin:.125rem 0 0;border:1px solid rgba(0,0,0,.15);border-radius:.25rem;z-index:1001}.dropdown-item{display:block;width:100%;padding:.25rem 1.5rem;font-weight:400;color:#212529;text-align:inherit;white-space:nowrap;background-color:transparent;border:0}a.dropdown-item{text-decoration:none}.dropdown-divider{margin:.5rem 0;overflow:hidden;border-top:1px solid rgba(0,0,0,.15)}.message-small{border:1px solid transparent;border-radius:.25rem}.message-small{padding:.5rem .9rem}.message-warn{color:#721c24;background-color:#f8d7da;border-color:#f5c6cb}.page-slider>svg{width:1.6rem;height:1.6rem}.upload-page{flex:1 1 auto}.main-text{font-size:1.45rem;font-weight:400;margin-bottom:0}.info-text{font-size:.85rem}.edit-page-link{text-decoration:underline}.full-screen-height{height:calc(100vh - 2.34rem)}.upload-container{flex:96 1 0}@media (min-width:576px){.upload-container{flex:93 1 0}}.drop-target{flex:1 1 auto;padding-top:4.05rem}.fluid-img{max-width:100%;height:auto}.page-slider{flex:4 1 0}@media (min-width:576px){.page-slider{flex:7 1 0}}.message-box{height:1.5rem}.ad-container{flex:0 1 120px;margin:0 -.39rem 25px -.39rem}@media (min-width:768px){.ad-container{width:728px;flex:0 1 90px;margin:0}}@media (min-width:992px){.ad-container{width:980px;flex:0 1 120px}}.social{line-height:1.1rem}.social a{text-decoration:none}.social a img{width:1.3rem;height:1.3rem}.social a:last-child img{margin-left:.5rem}.progress-container{line-height:0}span[class*=pr-an-]{height:.3rem;width:.3rem;background:#000;display:inline-block;margin:0 .125rem;border-radius:100%;-webkit-border-radius:100%;-moz-border-radius:100%;-webkit-animation:loader 4s infinite;-webkit-animation-timing-function:cubic-bezier(.03,.615,.995,.415);-webkit-animation-fill-mode:both;-moz-animation:loader 4s infinite;-moz-animation-timing-function:cubic-bezier(.03,.615,.995,.415);-moz-animation-fill-mode:both;animation:loader 4s infinite;animation-timing-function:cubic-bezier(.03,.615,.995,.415);animation-fill-mode:both}span.pr-an-1{-webkit-animation-delay:1s;animation-delay:1s;-moz-animation-delay:1s}span.pr-an-2{-webkit-animation-delay:.8s;animation-delay:.8s;-moz-animation-delay:.8s}span.pr-an-3{-webkit-animation-delay:.6s;animation-delay:.6s;-moz-animation-delay:.6s}span.pr-an-4{-webkit-animation-delay:.4s;animation-delay:.4s;-moz-animation-delay:.4s}span.pr-an-5{-webkit-animation-delay:.2s;animation-delay:.2s;-moz-animation-delay:.2s}span.pr-an-6{-webkit-animation-delay:0;animation-delay:0;-moz-animation-delay:0}@-webkit-keyframes loader{0%{-webkit-transform:translateX(-1.875rem);opacity:0}25%{opacity:1}50%{-webkit-transform:translateX(1.875rem);opacity:0}100%{opacity:0}}@-moz-keyframes loader{0%{-moz-transform:translateX(-1.875rem);opacity:0}25%{opacity:1}50%{-moz-transform:translateX(1.875rem);opacity:0}100%{opacity:0}}@keyframes loader{0%{transform:translateX(-1.875rem);opacity:0}25%{opacity:1}50%{transform:translateX(1.875rem);opacity:0}100%{opacity:0}}</style>
+
+
+
+	
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-124200996-1"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() { dataLayer.push(arguments); }
+			gtag('js', new Date());
+			gtag('config', 'UA-124200996-1');
+		</script>
+	
+	
+
+<link rel="canonical" href="https://www.resizepixel.com/" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<meta name="description" content="Come and try our free, easy to use and mobile-friendly online photo editor. Image editing has never been easier with ResizePixel!" />
+
+	
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.resizepixel.com/" />
+<meta property="og:title" content="ResizePixel - online image editor" />
+<meta property="og:description" content="Free image editor to crop, resize, flip, rotate, convert and compress image online" />
+<meta property="og:image" content="https://www.resizepixel.com/img/og-image.png" />
+<meta property="og:image:alt" content="resizepixel.com" />
+<meta property="og:image:width" content="1300" />
+<meta property="og:image:height" content="681" />
+<meta name="twitter:image" content="https://www.resizepixel.com/img/twitter-image.png" />
+<meta name="twitter:image:alt" content="resizepixel.com" />
+
+	
+<link rel="icon" type="image/x-icon" href="https://rp-az.azureedge.net/cdn/v169/wwwroot/favicon.ico?v=469ux0t414aG8iop8bnEX_qK7vkG0q-rDEuEYIyNbfY" onerror="this.onerror=null;this.href=&#x27;/favicon.ico?v=469ux0t414aG8iop8bnEX_qK7vkG0q-rDEuEYIyNbfY&#x27;;" />
+<link rel="icon" type="image/png" sizes="32x32" href="https://rp-az.azureedge.net/cdn/v169/wwwroot/favicon-32x32.png?v=McDke5lW-v-nwaiomILBWQlztLCyChOCcrbX_j9bPIQ" onerror="this.onerror=null;this.href=&#x27;/favicon-32x32.png?v=McDke5lW-v-nwaiomILBWQlztLCyChOCcrbX_j9bPIQ&#x27;;" />
+<link rel="icon" type="image/png" sizes="144x144" href="https://rp-az.azureedge.net/cdn/v169/wwwroot/android-chrome-144x144.png?v=nU3UGdBzKJzGaHv6gKZ2t5O75wcJKxf7vR1H9r1IZf4" onerror="this.onerror=null;this.href=&#x27;/android-chrome-144x144.png?v=nU3UGdBzKJzGaHv6gKZ2t5O75wcJKxf7vR1H9r1IZf4&#x27;;" />
+<link rel="icon" type="image/png" sizes="192x192" href="https://rp-az.azureedge.net/cdn/v169/wwwroot/android-chrome-192x192.png?v=04ARPhwjiOOMmtw1WTzo4yjear7oCVxXj_0JKBhfnmQ" onerror="this.onerror=null;this.href=&#x27;/android-chrome-192x192.png?v=04ARPhwjiOOMmtw1WTzo4yjear7oCVxXj_0JKBhfnmQ&#x27;;" />
+<link rel="icon" type="image/png" sizes="16x16" href="https://rp-az.azureedge.net/cdn/v169/wwwroot/favicon-16x16.png?v=cO7nwgHs5EiPTExrnoPFk9zxHvPjYK9J_su_NDQeZPE" onerror="this.onerror=null;this.href=&#x27;/favicon-16x16.png?v=cO7nwgHs5EiPTExrnoPFk9zxHvPjYK9J_su_NDQeZPE&#x27;;" />
+<link rel="manifest" href="/site.webmanifest?v=OXka86YnClJVCPJsfkJTeulu7e3YFAnrM5WjgjfFRso" />
+<link rel="mask-icon" href="https://rp-az.azureedge.net/cdn/v169/wwwroot/safari-pinned-tab.svg?v=qFN-PZ96G22gQUtgHy76KaL6Ze1PR5gJw2nRMc6suZk" color="#5bbad5" onerror="this.onerror=null;this.href=&#x27;/safari-pinned-tab.svg?v=qFN-PZ96G22gQUtgHy76KaL6Ze1PR5gJw2nRMc6suZk&#x27;;" />
+<link rel="apple-touch-icon" sizes="180x180" href="https://rp-az.azureedge.net/cdn/v169/wwwroot/apple-touch-icon.png?v=5jMAk89tnqI37mELtu_AZyHNGvTsF5EDmiisLIWRHXU" onerror="this.onerror=null;this.href=&#x27;/apple-touch-icon.png?v=5jMAk89tnqI37mELtu_AZyHNGvTsF5EDmiisLIWRHXU&#x27;;" />
+<meta name="msapplication-TileColor" content="#2b5797" />
+<meta name="msapplication-TileImage" content="/mstile-144x144.png?v=2" />
+<meta name="theme-color" content="#ffffff" />
+
+</head>
+<body class="d-flex flex-column">
+	<nav id="siteHeader" class="header d-flex flex-wrap justify-content-between">
+        
+		    
+
+		    
+
+
+		    
+    <div id="social" class="d-flex justify-content-end social">
+	    <a id="fbPage" href="https://www.facebook.com/resizepixel" rel="nofollow" title="Facebook">
+		    
+		    
+			    <img src="https://rp-az.azureedge.net/cdn/v169/wwwroot/img/icons.svg?v=PHcIHNXPeAh3MriMWsO6V3U-IC5x8v0e4Ev2BDBEnsE#fb-icon" alt="Facebook" width="24" height="24" onerror="this.onerror=null;this.src=&#x27;/img/icons.svg?v=PHcIHNXPeAh3MriMWsO6V3U-IC5x8v0e4Ev2BDBEnsE#fb-icon&#x27;;" />
+		    
+	    </a>
+	    <a id="twPage" href="https://twitter.com/theresizepixel" rel="nofollow" title="Twitter">
+		    
+		    
+			    <img src="https://rp-az.azureedge.net/cdn/v169/wwwroot/img/icons.svg?v=PHcIHNXPeAh3MriMWsO6V3U-IC5x8v0e4Ev2BDBEnsE#tw-icon" alt="Twitter" width="24" height="24" onerror="this.onerror=null;this.src=&#x27;/img/icons.svg?v=PHcIHNXPeAh3MriMWsO6V3U-IC5x8v0e4Ev2BDBEnsE#tw-icon&#x27;;" />
+		    
+	    </a>
+    </div>
+
+			<div id="navTools" class="d-flex justify-content-end align-items-center">
+				
+
+<div id="lang" class="dropdown">
+	<button id="langDropdown" class="btn btn-sm text-muted p-0 d-block dropdown-toggle lang-dropdown lang-current" type="button" title="Change language" aria-label="Change language" aria-haspopup="true">
+		EN
+	</button>
+	<div role="navigation" class="dropdown-menu" aria-labelledby="langDropdown">
+		<div class="d-flex flex-wrap lang-container">
+                <a class="lang-current lang-item dropdown-item me-auto px-3" href="/?chlang=en">&#x2713; English</a>
+                <a class="lang-item dropdown-item me-auto px-3" href="/es?chlang=es">Espa&#xF1;ol</a>
+                <a class="lang-item dropdown-item me-auto px-3" href="/pt?chlang=pt">Portugu&#xEA;s</a>
+                <a class="lang-item dropdown-item me-auto px-3" href="/fr?chlang=fr">Fran&#xE7;ais</a>
+                <a class="lang-item dropdown-item me-auto px-3" href="/de?chlang=de">Deutsch</a>
+                <a class="lang-item dropdown-item me-auto px-3" href="/it?chlang=it">Italiano</a>
+                <a class="lang-item dropdown-item me-auto px-3" href="/ja?chlang=ja">&#x65E5;&#x672C;&#x8A9E;</a>
+                <a class="lang-item dropdown-item me-auto px-3" href="/ko?chlang=ko">&#xD55C;&#xAD6D;&#xC5B4;</a>
+                <a class="lang-item dropdown-item me-auto px-3" href="/ru?chlang=ru">&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;</a>
+                <a class="lang-item dropdown-item me-auto px-3" href="/uk?chlang=uk">&#x423;&#x43A;&#x440;&#x430;&#x457;&#x43D;&#x441;&#x44C;&#x43A;&#x430;</a>
+                <a class="lang-item dropdown-item me-auto px-3" href="/tr?chlang=tr">T&#xFC;rk&#xE7;e</a>
+                <a class="lang-item dropdown-item me-auto px-3" href="/pl?chlang=pl">Polski</a>
+                <a class="lang-item dropdown-item me-auto px-3" href="/nl?chlang=nl">Dutch</a>
+                <a class="lang-item dropdown-item me-auto px-3" href="/no?chlang=no">Norsk</a>
+		</div>
+	</div>
+</div>
+				<div id="menu" class="dropdown">
+	<a href="#" id="linksDropdown" role="button" class="dropdown-toggle" aria-label="Menu" aria-haspopup="true">
+		<svg viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
+			<g>
+				<line x1="4" x2="20" y1="4" y2="4" />
+				<line x1="4" x2="20" y1="11" y2="11" />
+				<line x1="4" x2="20" y1="18" y2="18" />
+			</g>
+		</svg>
+	</a>
+	<div class="dropdown-menu" role="menu" aria-labelledby="linksDropdown">
+		<a class="dropdown-item" href="/resize-image">Resize Image</a>
+		<a class="dropdown-item" href="/crop-image">Crop Image</a>
+		<a class="dropdown-item" href="/mirror-image">Mirror Image</a>
+		<a class="dropdown-item" href="/rotate-image">Rotate Image</a>
+		<a class="dropdown-item" href="/compress-image">Compress Image</a>
+		<a class="dropdown-item" href="/reduce-image-in-kb">Reduce Image in KB</a>
+		<a class="dropdown-item" href="/convert-image">Convert Image</a>
+		<hr class="dropdown-divider" />
+		<a class="dropdown-item" href="/terms">Terms</a>
+		<a class="dropdown-item" href="/privacy">Privacy</a>
+		<a class="dropdown-item" href="/contact">Contact</a>
+	</div>		
+</div>
+			</div>
+		
+		
+		
+	</nav>
+	<main class="d-flex flex-column justify-content-between content">
+		
+
+
+
+
+
+
+
+<div class="d-flex flex-column justify-content-center align-items-center upload-page">
+	<div class="d-flex flex-column justify-content-start align-items-center full-screen-height">
+		<div class="d-flex flex-column justify-content-center align-items-center upload-container">
+			<div id="dropTarget" class="drop-target d-flex flex-column justify-content-center align-items-center px-sm-5 pb-sm-5 pb-md-0 pb-lg-3">
+					
+						
+
+
+
+
+		<img src="https://rp-az.azureedge.net/cdn/v169/wwwroot/img/logo-large.svg?v=T8drmMLQFfAhT6v0WTe-ap1HA2RIvg-SvJk3nsffet8" width="397" height="66" alt="ResizePixel logo" class="fluid-img" onerror="this.onerror=null;this.src=&#x27;/img/logo-large.svg?v=T8drmMLQFfAhT6v0WTe-ap1HA2RIvg-SvJk3nsffet8&#x27;;" />
+
+					
+				<h1 class="main-text text-center text-secondary">
+					Free online image editor
+				</h1>
+				<form class="mt-2" id="uploadImageForm" method="post" enctype="multipart/form-data" action="/">
+					<label class="btn btn-success text-uppercase mb-2" for="uploadImageBtn" role="button">
+						<input id="uploadImageBtn" type="file" name="imageFile" class="d-none" />
+						Upload image
+					</label>
+				<input name="_antiforgerytoken" type="hidden" value="CfDJ8N8if90enA5EptM4rSsqJG3dt12njcNmKSS3jiaCh5DDC41tbddBvP7ArE1Hukk-dZA8bOghlVQ93o62TntWBQIVdZyC2VbOZpVscpvgqStJ3RvkDEqz7ZPNDRiyykW7gaY99UtsaTW-bfxiJt7iV_4" /></form>
+				<div class="message-box d-flex flex-column align-items-center">
+					
+<div id="uploadProgress" class="align-items-center progress-container d-none status-message">
+	<span class="pr-an-1"></span>
+	<span class="pr-an-2"></span>
+	<span class="pr-an-3"></span>
+	<span class="pr-an-4"></span>
+	<span class="pr-an-5"></span>
+	<span class="pr-an-6"></span>
+</div>
+					<span id="errorMessage" class="status-message text-center message-small message-warn info-text">The website session has expired. Please upload a new image.</span>
+				</div>
+			</div>
+            
+			    
+
+<div class="d-flex d-sm-none d-md-flex justify-content-center align-items-center align-self-stretch ad-container">
+		
+		
+			<!-- HomeMobileBanner -->
+			<ins class="adsbygoogle d-block d-sm-none"
+				 style="min-width:290px;max-width:575px;width:100%;height:100px;"
+				 data-ad-client="ca-pub-7918179406245625"
+				 data-ad-slot="8801656812"></ins>
+			<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+		
+		
+		
+			<!-- HomeMediumBanner -->
+			<ins class="adsbygoogle d-none d-md-block d-lg-none"
+				 style="min-width:400px;max-width:728px;width:100%;height:90px;"
+				 data-ad-client="ca-pub-7918179406245625"
+				 data-ad-slot="8498404485"></ins>
+			<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+		
+		
+		
+			<!-- HomeLargeBanner -->
+			<ins class="adsbygoogle d-none d-lg-block"
+				 style="min-width:400px;max-width:980px;width:100%;height:120px;"
+				 data-ad-client="ca-pub-7918179406245625"
+				 data-ad-slot="6360429956"></ins>
+			<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+		
+</div>
+            
+		</div>
+		<div class="page-slider d-flex align-items-center">
+	<svg fill="#6c757d" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+		<path d="M4 7 L9 12 14 7 13 6 9 10 5 6 Z" />
+	</svg>
+</div>
+	</div>
+	<h2 class="descr text-secondary py-2">Easy online photo editing with ResizePixel</h2>
+	<div id="infoSection" class="align-self-stretch info-section text-secondary">
+		
+	
+
+<div class="d-flex flex-wrap justify-content-around">
+	
+<div class="info-item">
+	<a title="Crop image online" href="/crop-image">
+		<h3>Crop Image</h3>
+		<p>
+			Crop an image by enclosing a rectangular area with a custom or predefined aspect ratio.
+		</p>
+	</a>
+</div>
+	
+<div class="info-item">
+	<a title="Resize image online" href="/resize-image">
+		<h3>Resize Image</h3>
+		<p>
+			Resize an image online to a specific size in pixels.
+		</p>
+	</a>
+</div>
+	
+<div class="info-item">
+	<a title="Convert image online" href="/convert-image">
+		<h3>Convert Image</h3>
+		<p>
+			Convert an image to JPG, PNG, WEBP, TIFF or GIF format.
+		</p>
+	</a>
+</div>
+	
+<div class="info-item">
+	<a title="Compress image online" href="/compress-image">
+		<h3>Compress Image</h3>
+		<p>
+			Compress JPG, PNG, GIF images without losing quality.
+		</p>
+	</a>
+</div>
+	
+<div class="info-item">
+	<a title="Mirror image online" href="/mirror-image">
+		<h3>Mirror Image</h3>
+		<p>
+			Mirror an image online horizontally or vertically.
+		</p>
+	</a>
+</div>
+	
+<div class="info-item">
+	<a title="Rotate image online" href="/rotate-image">
+		<h3>Rotate Image</h3>
+		<p>
+			Rotate an image by 90, 180, 270 degrees or any angle.
+		</p>
+	</a>
+</div>
+	
+<div class="info-item">
+	<a title="Reduce image size in KB online" href="/reduce-image-in-kb">
+		<h3>Reduce Image Size</h3>
+		<p>
+			Reduce image size in kilobytes or megabytes.
+		</p>
+	</a>
+</div>
+</div>
+
+
+	</div>
+</div>
+	</main>
+	
+
+	<div id="cookieConsent" role="alert" class="d-flex justify-content-between align-content-center align-items-center px-2 px-sm-3 py-1 py-sm-1">
+		<div class="align-content-center">
+			This website uses cookies to ensure the best user experience. By continuing to browse the website you agree to use of cookies.
+		</div>
+		<button id="cookieConsentAccept" type="button" class="btn btn-sm btn-warning ms-2 ms-sm-3" data-cookie-string="_consent=yes; expires=Thu, 05 Oct 2023 12:51:17 GMT; path=/; secure; samesite=none">
+			Close
+		</button>
+	</div>
+
+	<footer class="d-flex p-1 footer">
+		<span class="ps-1 text-muted">&copy; 2022 ResizePixel</span>
+	</footer>
+	
+	
+	
+		
+		
+			<script src="https://rp-az.azureedge.net/cdn/v169/wwwroot/js/pages/upload/vendor-app.min.js?v=QXwDS8IJ6gl5JFED-OP0EF7Iq7iL5Qbdh9rez_AZWfU" crossorigin="anonymous">
+			</script>
+<script>(window.UploadVendorAppFallback||document.write("\u003Cscript src=\u0022/js/pages/upload/vendor-app.min.js?v=QXwDS8IJ6gl5JFED-OP0EF7Iq7iL5Qbdh9rez_AZWfU\u0022 crossorigin=\u0022anonymous\u0022\u003E\u003C/script\u003E"));</script>
+		
+	
+
+	
+	
+	
+<script>var languageTranslate={"Error_ServiceUnavailable":"The server is temporarily unavailable. Please try again.","Upload_Error_CouldNotUploadFolder":"Couldn't upload the folder. Please select a file."}</script>
+
+
+	
+	
+	
+	
+	
+		<link rel="stylesheet" href="https://rp-az.azureedge.net/cdn/v169/wwwroot/css/pages/upload/app.min.css?v=gv4hHwLmutLvN8bz7z8tuW-PPFERwoJN4BGDCNCi-XE" onerror="this.onerror=null;this.href=&#x27;/css/pages/upload/app.min.css?v=gv4hHwLmutLvN8bz7z8tuW-PPFERwoJN4BGDCNCi-XE&#x27;;this.media=&#x27;all&#x27;;" media="print" onload="this.media=&#x27;all&#x27;" />
+	
+
+
+
+</body>
+</html>

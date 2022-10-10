@@ -1,0 +1,9 @@
+Write a program to read the temperature in Celsius from the user and convert it into Fahrenheit-:
+
+Ans
+celsius = 37
+fahrenheit = (celsius * 1.8) + 32
+print('%0.1f degree Celsius is equal to %0.1f degree Fahrenheit'%(celsius,fahrenheit))
+
+Output-:
+37.0 degree Celsius is equal to 98.6 degree Fahrenheit

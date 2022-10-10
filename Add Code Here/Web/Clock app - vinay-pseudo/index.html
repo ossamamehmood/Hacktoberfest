@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <title>Clock</title>
+    <style>
+        * {
+            background-color: black;
+        }
+        #clock {
+            display: flex;
+            justify-content: center ;
+            align-items: center;
+            color: white;
+            height: 100%;
+            font-size: 200px;
+            /* margin:150px 50px;  */
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="clock">04:44:53 PM</div>
+    <script>
+        setInterval(showTime,1000);
+        function showTime() {
+            let time = new Date();
+            let hr = time.getHours();
+            let min = time.getMinutes();
+            let sec = time.getSeconds();
+            am_pm = "AM";
+
+            if(hr>12) {
+                hr -= 12;
+                am_pm = "PM";
+            }
+
+            if(hr == 0) {
+                hr = 12;
+                am_pm = "AM";
+            }
+
+            if(hr<10) {
+                hr = "0" + hr;
+            }
+
+            if(min<10) {
+                min = "0" + min;
+            }
+
+            if(sec<10) {
+                sec = "0" + sec;
+            }
+
+            let currentTime = hr + " : " + min + " : " + sec + " " + am_pm;
+
+            document.getElementById("clock").innerHTML = currentTime;
+        }
+        showTime();
+    </script>
+</body>
+</html>

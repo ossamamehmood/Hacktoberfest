@@ -1,86 +1,49 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
-// C++ code to implement DFS 
 
-class Graph{
-
-    int v;
-    vector<vector<int>> adj;
-    vector<bool> visited;
+class Graph {
 public:
-    Graph(int n){
-        this->v = n;
-        adj.resize(v);
-        visited.resize(v);
-    }
+	map<int, bool> visited;
+	map<int, list<int> > adj;
 
-    void AddEdge(int a, int b, bool undir){
-        adj[a].push_back(b);
-        if (undir)
-        {
-            adj[b].push_back(a);
-        }
-    }
+	void addEdge(int v, int w);
 
-    void PrintGraph(){
-        for (int i = 0; i < adj.size(); i++)
-        {
-            cout<<i<<"-->";
-            for(auto j: adj[i]){
-                cout<<j<<" ,";
-            }
-            cout<<endl;
-        }   
-    }
-
-    bool allVisited(vector<bool> a){
-        int sz = a.size();
-
-        for(auto i: a){
-            if (i == false)
-            {
-                return false;
-            }
-            
-        }
-
-        return true;
-    }
-
-    void dfs(int source){  // recursive traversal
-
-        if (allVisited(visited) == true)
-        {
-            return;
-        }
-        
-        cout<<source<<" ";
-        visited[source] = true;
-        for (int i = 0; i < adj[source].size(); i++)
-        {
-            if (visited[adj[source][i]] == false)
-            {
-                dfs(adj[source][i]);
-            }
-        }
-        return;
-    }
-    
+	void DFS(int v);
 };
 
-int main(){
-    
-    Graph g(7);
-    g.AddEdge(1 ,0 ,1);
-    g.AddEdge(1 ,2 ,1);
-    g.AddEdge(0 ,4 ,1);
-    g.AddEdge(2 ,3 ,1);
-    g.AddEdge(3 ,4 ,1);
-    g.AddEdge(3 ,5 ,1);
-    g.AddEdge(4 ,5 ,1);
-    g.AddEdge(5 ,6 ,1);
+void Graph::addEdge(int v, int w)
+{
+	adj[v].push_back(w); 
+}
 
-    g.dfs(1);
-    
-    return 0;
+void Graph::DFS(int v)
+{
+	visited[v] = true;
+	cout << v << " ";
+
+	list<int>::iterator i;
+	for (i = adj[v].begin(); i != adj[v].end(); ++i)
+		if (!visited[*i])
+			DFS(*i);
+}
+
+
+int main()
+{
+	
+	Graph g;
+	g.addEdge(0, 1);
+	g.addEdge(0, 2);
+	g.addEdge(1, 2);
+	g.addEdge(2, 0);
+	g.addEdge(2, 3);
+	g.addEdge(3, 3);
+
+	cout << "Following is Depth First Traversal"
+			" (starting from vertex 2) \n";
+
+	
+	g.DFS(2);
+
+	return 0;
 }

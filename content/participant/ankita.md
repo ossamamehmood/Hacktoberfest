@@ -1,5 +1,5 @@
 ---
-name: Ankita Modi
-institution/company: SN Patel Institute Of Technology
-github:sanu-020
+name: Ankita Patil
+institution/company: Ramaiah Institute of Technology, Bangalore
+github: DarkSpy25
 ---
