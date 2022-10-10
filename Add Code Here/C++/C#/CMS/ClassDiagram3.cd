@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CMS.BL.ADMINBL" Collapsed="true">
+    <Position X="6" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAAAQAAAAAAAgCAAAAAAAAAAA=</HashCode>
+      <FileName>BL\ADMINBL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CMS.BL.AttendanceClass" Collapsed="true">
+    <Position X="0.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAgEAAAIAAAABAAAAAA=</HashCode>
+      <FileName>BL\AttendanceClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CMS.BL.ResultBL" Collapsed="true">
+    <Position X="6" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgABAAIAAQQAFAAEQBQCAEAQAgAAEAA=</HashCode>
+      <FileName>BL\ResultBL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CMS.BL.STUDENTBL" Collapsed="true">
+    <Position X="7" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAABQAAEAQAKAAAIAAAAQAiAAAAAAiAAAAAIAABAA=</HashCode>
+      <FileName>BL\STUDENTBL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CMS.BL.TEACHERBL" Collapsed="true">
+    <Position X="7.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACACABAAAAAIAAEIAAAAQACBAAAAACAAASQAAAAAI=</HashCode>
+      <FileName>BL\TEACHERBL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CMS.DL.AttendanceDL" Collapsed="true">
+    <Position X="3.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAIAIAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DL\AttendanceDL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CMS.DL.ResultDL" Collapsed="true">
+    <Position X="7.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAECAAAJAAAAAQAAgAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>DL\ResultDL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CMS.DL.STUDENTDL" Collapsed="true">
+    <Position X="2.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAQAACAAAAyAAAJAAAAAAAAAAAQAAEAAQIAgAAAAg=</HashCode>
+      <FileName>DL\STUDENTDL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CMS.DL.TEACHERDL" Collapsed="true">
+    <Position X="2.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAQABAoYAAAAAAAAAAAgAAAAAAAAIAAAAA=</HashCode>
+      <FileName>DL\TEACHERDL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
