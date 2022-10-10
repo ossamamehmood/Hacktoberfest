@@ -1,3 +1,0 @@
-name: Ritu
-institution/company: VSSUT
-github:rituraniiii
