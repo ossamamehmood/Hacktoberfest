@@ -1,9 +1,5 @@
 ---
-
-name: Vishal Kesharwani 
-
-institution/company: Government College of engineering Nagpur 
-
-github:https://github.com/vishal10kesharwani/
-
+name: Vishal
+institution: Delhi Institute of Engineering
+github: https://github.com/vishalrock1912
 ---
