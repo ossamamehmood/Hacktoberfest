@@ -1,5 +1,4 @@
-import java.text.SimpleDateFormat;  
-import java.text.ParseException;   
+import java.text.*;  
 import java.util.Date;   
 class DifferenceExample1 {     
     // Create function for finding difference   
