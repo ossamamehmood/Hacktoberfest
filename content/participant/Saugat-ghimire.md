@@ -1,3 +1,4 @@
-Name: Saugat 
-Intitution: NA
-GitHub: Saugat-ghimire
+name: Saugat
+company: gitHub
+github:Saugat-ghimire
+
