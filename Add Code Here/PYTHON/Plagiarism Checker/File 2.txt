@@ -1,0 +1,1 @@
+DigitalOcean sponsors Hacktoberfest, a month-long festival honouring open-source software that promotes involvement in giving back to the open-source community. Developers participate through completing pull requests, attending events, and making financial contributions to open source projects.

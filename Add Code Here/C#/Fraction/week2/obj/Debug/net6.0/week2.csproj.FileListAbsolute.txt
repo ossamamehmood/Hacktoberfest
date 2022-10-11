@@ -1,0 +1,15 @@
+/home/daulet/Desktop/vscode/csharp/week2/bin/Debug/net6.0/week2
+/home/daulet/Desktop/vscode/csharp/week2/bin/Debug/net6.0/week2.deps.json
+/home/daulet/Desktop/vscode/csharp/week2/bin/Debug/net6.0/week2.runtimeconfig.json
+/home/daulet/Desktop/vscode/csharp/week2/bin/Debug/net6.0/week2.dll
+/home/daulet/Desktop/vscode/csharp/week2/bin/Debug/net6.0/ref/week2.dll
+/home/daulet/Desktop/vscode/csharp/week2/bin/Debug/net6.0/week2.pdb
+/home/daulet/Desktop/vscode/csharp/week2/obj/Debug/net6.0/week2.csproj.AssemblyReference.cache
+/home/daulet/Desktop/vscode/csharp/week2/obj/Debug/net6.0/week2.GeneratedMSBuildEditorConfig.editorconfig
+/home/daulet/Desktop/vscode/csharp/week2/obj/Debug/net6.0/week2.AssemblyInfoInputs.cache
+/home/daulet/Desktop/vscode/csharp/week2/obj/Debug/net6.0/week2.AssemblyInfo.cs
+/home/daulet/Desktop/vscode/csharp/week2/obj/Debug/net6.0/week2.csproj.CoreCompileInputs.cache
+/home/daulet/Desktop/vscode/csharp/week2/obj/Debug/net6.0/week2.dll
+/home/daulet/Desktop/vscode/csharp/week2/obj/Debug/net6.0/ref/week2.dll
+/home/daulet/Desktop/vscode/csharp/week2/obj/Debug/net6.0/week2.pdb
+/home/daulet/Desktop/vscode/csharp/week2/obj/Debug/net6.0/week2.genruntimeconfig.cache

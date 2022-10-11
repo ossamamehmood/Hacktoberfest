@@ -1,0 +1,1 @@
+Hacktoberfest, a month-long celebration of open-source software that encourages participation in giving back to the open-source community, is sponsored by DigitalOcean. Developers take part by finishing pull requests, going to events, and contributing money to open source projects.

@@ -79,7 +79,7 @@ github:USERNAME
 ## 3. Create / Upload Your Code / Algorithms
 
 Create/Upload your code in folder following the convention `Add Code Here`
-- Choose an extact lanaguage folder `drop your code`
+- Choose an extact language folder `drop your code`
 - Below is `an example` to add file properly
 - You can follow up `any languages`
 ```
@@ -95,7 +95,6 @@ You can follow any pathway a `code` or `profile information`
 ## 5. Celebrate - you've done your first pull request!!!!!
 
 ```py
-'''
 Always make more then 4 pull requests.
 Lets say you have made only 4 pull request to different projects,
 but one project is excluded from hackoctoberfest event then your pull request will not be counted and 
@@ -103,15 +102,12 @@ then you have remaining 3 valid pull requests if these projects is not excluded.
 If you fail to make 4 pull requests then you can't get swags or t-shirts.
 I will recommend you to make pull request to your own repo which is very very safest side for you..
 keep in mind that repo has hacktoberfest topic..
-'''
 ```
 
 ## + Follow Me : } Quick Approval of Pull Request
 
 ```py
-'''
 To get approval of the pull request much quicker and faster (`Follow Me`)🚀
-'''
 ```
 
 <tr><td align="center"><a href="https://github.com/ossamamehmood"><kbd><img src="https://avatars3.githubusercontent.com/ossamamehmood?size=100" width="100px;" alt=""/></kbd><br /><sub><b>Ossama Mehmood</b></sub></a><br /></td>

@@ -1,36 +1,25 @@
-#include <iostream>
-#include <cmath>
-using namespace std;
+def fibs(n):
+    n1, n2 = 0, 1
+    count = 0
 
-float calculateSD(float data[]);
+    # check if the number of terms is valid
+    if n <= 0:
+        print("Please enter a positive integer")
+    # if there is only one term, return n1
+    elif n == 1:
+        print("Fibonacci sequence upto",n,":")
+        print(n1)
+    # generate fibonacci sequence
+    else:
+        print("Fibonacci sequence:")
+        while count < n:
+            print(n1)
+            nth = n1 + n2
+            # update values
+            n1 = n2
+            n2 = nth
+            count += 1
 
-int main() {
-  int i;
-  float data[10];
 
-  cout << "Enter 10 elements: ";
-  for(i = 0; i < 10; ++i) {
-    cin >> data[i];
-  }
-
-  cout << endl << "Standard Deviation = " << calculateSD(data);
-
-  return 0;
-}
-
-float calculateSD(float data[]) {
-  float sum = 0.0, mean, standardDeviation = 0.0;
-  int i;
-
-  for(i = 0; i < 10; ++i) {
-    sum += data[i];
-  }
-
-  mean = sum / 10;
-
-  for(i = 0; i < 10; ++i) {
-    standardDeviation += pow(data[i] - mean, 2);
-  }
-
-  return sqrt(standardDeviation / 10);
-}
+n = int(input("How many terms? "))
+fibs(n)

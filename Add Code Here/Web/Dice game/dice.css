@@ -1,0 +1,43 @@
+.container{
+    width: 70%;
+    margin: auto;
+    text-align: center;
+}
+.box{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
+}
+h1{
+    margin: 30px;
+    font-family: 'Lobster',cursive;
+    text-shadow: 5px 0 #232931;
+    font-size: 6rem;
+    color: #4ECCA3;
+    padding-top: 0px;
+}
+p{
+    font-size: 2rem;
+    color: #4ECCA3;
+    margin-top: 40px;
+    padding-bottom: 0px;
+}
+.img1,.img2{
+    width: 400px;
+    height: 400px;
+margin-top: 0px;
+}
+footer{
+    margin-top: 5%;
+    color: #EEEEEE;
+    text-align: center;
+    font-size: 24px;
+}
+.dice{
+    display: inline-block;
+    text-align: center;
+}
+
+body{
+    background-color:#393E46;
+}

@@ -1,0 +1,60 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/daulet/Desktop/vscode/csharp/week2/week2.csproj": {}
+  },
+  "projects": {
+    "/home/daulet/Desktop/vscode/csharp/week2/week2.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/daulet/Desktop/vscode/csharp/week2/week2.csproj",
+        "projectName": "week2",
+        "projectPath": "/home/daulet/Desktop/vscode/csharp/week2/week2.csproj",
+        "packagesPath": "/home/daulet/.nuget/packages/",
+        "outputPath": "/home/daulet/Desktop/vscode/csharp/week2/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/daulet/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/dotnet6-6.0.109/sdk/6.0.109/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
