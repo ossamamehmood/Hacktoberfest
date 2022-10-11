@@ -1,19 +1,25 @@
-<html>
-<header>
-    <title></title>
-</header>
-<body>
-    <center>
-    <h1>Area and circumference of a circle</h1>
-    <input type="button" value="Click here to Calculate" onClick=CalculateArea() />
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Area and circumference of a circle</title>
+    </head>
+    <body>
+        <center>
+            <h1>Area and circumference of a circle</h1>
+            <input type="button" value="Click here to Calculate"
+                onClick=CalculateArea() />
 
-    <script>
-        function CalculateArea() {
-            var radius = prompt("Please enter the Radius of Circle : ");
-            alert("The area of the circle is " + (radius * radius * Math.PI));
-        }
-    </script>
-    </center>
-</body>
-
+            <script>
+    function CalculateArea() {
+        var radius = prompt("Please enter the Radius of Circle : ");
+        alert("The area of the circle is " + (radius * radius * Math.PI));
+        alert("The circumference of the circle is " +
+            (2 * radius * Math.PI));
+    }
+</script>
+        </center>
+    </body>
 </html>
