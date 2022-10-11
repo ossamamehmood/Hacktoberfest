@@ -1,0 +1,19 @@
+import java.util.*;
+public class CWH extends Thread{
+    public static void main(String[] args) {
+
+        ArrayList<Integer> l = new ArrayList<>();
+        l.add(1);
+        l.add(2);
+        l.add(3);
+        l.add(4);
+        l.add(5);
+        l.add(6);
+
+        System.out.println("Array list : "+ l);
+        System.out.println("l list contains 7 : " + l.contains(7));
+        System.out.println("l list contains 4 : " + l.contains(4));
+
+
+    }
+}

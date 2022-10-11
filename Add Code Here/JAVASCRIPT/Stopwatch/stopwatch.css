@@ -1,0 +1,28 @@
+body{
+    background: black;
+}
+
+.timeContainer{
+    margin: auto;
+    display: block;
+    background-color: black;
+    font-family: Consolas, monaco, monospace;
+    text-align: center;
+    width: 450px;
+    border-radius: 5px;
+    border: 2px solid #90ee90;
+}
+.timeDisplay{
+    color: #90ee90;
+    padding: 0px 10px;
+    font-size: 60px;
+}
+.timebtn{
+    border-radius: 10px;
+    margin-bottom: 10px;
+    border: 1px solid lightgreen;
+    padding: 3px 10px;
+    background-color: grey;
+    color: white;
+    cursor: pointer;
+}

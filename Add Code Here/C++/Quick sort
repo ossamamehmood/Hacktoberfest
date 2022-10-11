@@ -1,0 +1,59 @@
+#include<iostream>
+#include<cstdio>
+using namespace std;
+
+int a[1000000];
+
+void swap(int *x, int *y)
+{
+	int temp = *x;
+	*x = *y;
+	*y = temp;
+	return;
+}
+
+int part(int l, int h) {
+	int i, j;
+	i = l - 1;
+
+	int pivot = a[h] ;
+	for (j = l; j < h; j++) {
+		if (a[j] <= pivot) {
+			i++;
+			swap(&a[i], &a[j]);
+		}
+	}
+	swap(&a[i + 1], &a[h]);
+	return i + 1;
+}
+
+void quickSort(int low, int high) {
+	int p;
+
+	if (low < high) {
+		p = part(low, high);
+		quickSort(low, p - 1);
+		quickSort(p + 1, high);
+	}
+}
+
+int main() {
+	int t, i, n;
+	cin >> t;
+	while (t--) {
+		cin >> n;
+		for (i = 0; i < n; i++) {
+			cin >> a[i];
+		}
+
+
+		quickSort(0, n - 1);
+
+
+		for (i = 0; i < n; i++) {
+			cout << a[i] << " ";
+		}
+	}
+
+	return 0;
+}

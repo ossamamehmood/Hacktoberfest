@@ -1,0 +1,246 @@
+#messageBackground{
+    position:fixed;
+    left:0; top:10vh;
+    width:100%; height:80%;
+    background-color:rgb(39, 39, 39);
+    overflow-y:scroll;
+}
+
+#TopBar, #BottomBar, #settingsTopBar{
+    position:fixed;
+    left:0; top:0;
+    width:100%; height:10vh;
+    background-color:rgb(55, 71, 79);
+}
+
+#TopBar, #settingsTopBar{
+    z-index:2;
+    box-shadow:0 0 2px black;
+}
+
+#BottomBar{
+    top:90%;
+    background-color:rgb(51, 59, 64);
+}
+
+#Message{
+    position:absolute;
+    left:50%; top:50%;
+    transform:translate(-50%, -50%);
+    width:calc(65% - 2px); height:calc(65% - 2px);
+    border-radius:10vmin;
+    border:1px solid rgb(73, 81, 85);
+    background-color:transparent;
+    padding-left:5%;
+    outline:none;
+    color:white;
+}
+
+#plus{
+    top:50%; left:calc(8% - 12px);
+    color:rgb(144, 164, 174);
+    position:absolute;
+    transform:translate(0, -50%);
+    font-size:24px;
+    cursor:default;
+}
+
+#send{
+    top:50%; right:calc(8% - 12px);
+    position:absolute;
+    transform:translate(0, -50%);
+    color:rgb(82, 90, 94);
+    font-size:24px;
+    cursor:default;
+}
+
+#back, #settingsBack{
+    top:50%; left:calc(8% - 12px);
+    position:absolute;
+    transform:translate(0, -50%) scale(1);
+    color:#fff;
+    font-size:24px;
+    cursor:default;
+}
+
+#Settings{
+    top:50%; right:calc(8% - 12px);
+    position:absolute;
+    transform:translate(0, -50%);
+    color:#fff;
+    font-size:24px;
+    cursor:default;
+}
+
+#userName, #settingsName{
+    top:50%; left:15%;
+    position:absolute;
+    transform:translate(0, -50%);
+    color:#fff;
+    font-size:20px;
+    cursor:default;
+}
+
+#back:active{
+    transform:translate(0, -50%) scale(0.8);
+}
+
+#PlusAdd{
+    position:absolute;
+    bottom:0; left:0;
+    width:50vw; height:20vh;
+    background-color:rgb(50, 50, 50);
+    z-index:2;
+    transition:transform 0.35s;
+    transform-origin:0 100%;
+    transform:scale(0);
+    box-shadow:0 0 1px 0 black;
+}
+
+#InsertCode, #InsertPost{
+    position:absolute;
+    left:10%; top:calc(25% - 9px);
+    color:white;
+    font-size:18px;
+}
+
+#InsertPost{
+    top:calc(75% - 9px);
+}
+
+.messageContainer{
+    position:relative;
+    width:100%; height:auto;
+    background-color:transparent;
+    left:0;
+    color:white;
+    padding-top:0.5%;
+    padding-bottom:0.5%;
+}
+
+.received{
+    position:relative;
+    width:70%; height:auto;
+    background-color:rgb(50, 50, 50);
+    margin:2%;
+    padding:2%;
+    left:10vw;
+    border-radius:5vmin;
+    color:white;
+}
+
+.Image{
+    position:absolute;
+    left:calc(5% - 10px); top:25%;
+    width:32px; height:32px;
+    border-radius:50%;
+}
+
+.sent{
+    position:relative;
+    width:70%;
+    height:auto;
+    background-color:rgb(80, 101, 115);
+    margin:2%;
+    padding:2%;
+    left:20vw;
+    text-align:right;
+    transform:translate(0, 25%);
+    border-radius:5vmin;
+    color:white;
+}
+
+#settings{
+    position:fixed;
+    left:0; top:0;
+    width:100%; height:100%;
+    z-index:3;
+    display:none;
+}
+
+#settingsBackground{
+    position:absolute;
+    left:0; top:10%;
+    width:100%;
+    height:90%;
+    background-color:rgb(39, 39, 39);
+}
+
+#box{
+    position:absolute;
+    height:calc(50% + 35px); width:97%;
+    left:1.5%;
+    top:1.5%;
+    box-shadow:0 1px 2px black;
+    background-color:rgb(51, 59, 64);
+}
+
+#SettingsImage{
+    position:absolute;
+    width:45px; height:45px;
+    left:3vmin; top:3vmin;
+    border-radius:50%;
+}
+
+#settingsUserName{
+    position:absolute;
+    left:calc(6vmin + 40px);
+    top:calc(3vmin + 10px);
+    font-size:20px;
+    color:white;
+}
+
+#settingsSubtitle{
+    position:absolute;
+    left:3vmin;
+    top:calc(10vmin + 40px);
+    font-size:18px;
+    color:white;
+}
+
+#line{
+    position:absolute;
+    left:3vmin;
+    top:calc(12vmin + 60px);
+    width:94%;
+    height:1px;
+    background-color:rgb(82, 90, 94);
+}
+
+#settingsOthers{
+    position:absolute;
+    left:calc(3vmin + 30px);
+    top:calc(15vmin + 60px);
+    width:100%;
+    height:auto;
+    font-size:16px;
+}
+
+#set1, #set2, #set3, #set4{
+    position:absolute;
+    left:0;
+    color:white;
+}
+
+#set1{
+    top:0;
+}
+
+#set2{
+    top:32px;
+}
+
+#set3{
+    top:64px;
+}
+
+#set4{
+    top:96px;
+    color:red;
+}
+
+#Chat{
+    position:absolute;
+    left:0; top:0;
+}
+

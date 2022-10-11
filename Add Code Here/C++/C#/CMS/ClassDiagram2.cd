@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CMS.DL.STUDENTDL" Collapsed="true">
+    <Position X="1.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAQAACAAAAyAAAJAAAAAAAAAAAQAAEAAQIAgAAAAg=</HashCode>
+      <FileName>DL\STUDENTDL.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="StudentList" />
+      <Property Name="StudentList1" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="CMS.BL.STUDENTBL" Collapsed="true">
+    <Position X="4.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAABQAAEAQAKAAAIAAAAQAiAAAAAAiAAAAAIAABAA=</HashCode>
+      <FileName>BL\STUDENTBL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CMS.BL.AttendanceClass" Collapsed="true">
+    <Position X="8" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAgEAAAIAAAABAAAAAA=</HashCode>
+      <FileName>BL\AttendanceClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CMS.DL.AttendanceDL" Collapsed="true">
+    <Position X="11.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAIAIAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DL\AttendanceDL.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="AttendanceData" />
+      <Property Name="AttendanceData1" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="CMS.DL.TEACHERDL" Collapsed="true">
+    <Position X="6.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAQABAoYAAAAAAAAAAAgAAAAAAAAIAAAAA=</HashCode>
+      <FileName>DL\TEACHERDL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CMS.BL.TEACHERBL" Collapsed="true">
+    <Position X="3.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACACABAAAAAIAAEIAAAAQACBAAAAACAAASQAAAAAI=</HashCode>
+      <FileName>BL\TEACHERBL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

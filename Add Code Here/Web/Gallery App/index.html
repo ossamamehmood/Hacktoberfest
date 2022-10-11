@@ -1,0 +1,56 @@
+<!-- Learned about CSS background Size property -->
+<!-- Learned about adding and deleting class in a foreach loop -->
+<!-- Little bit about Transitions -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expanding Cards</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            background-color: #7d7c7c66;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <button id="btn">R E S E T</button>
+        <div class="container   " id="container">
+            <div class="panel   " style="background-image: url('./Images/Eren.jpg');">
+                <h3>EREN JAEGER</h3>
+            </div>
+            <div class="panel" style="background-image: url('./Images/Mikasa.jpg');">
+                <h3>MIKASA ACKERMAN</h3>
+            </div>
+            <div class="panel" style="background-image: url('./Images/Levi.jpg');">
+                <h3>LEVI ACKERMAN</h3>
+        </div>
+        <div class="panel" id="special" style="background-image: url('./Images/Erwin.jpg');">
+            <h3>ERWIN SMITH</h3>
+        </div>
+        <div class="panel" style="background-image: url('./Images/Armin.jpg');">
+            <h3>ARMIN ARLERT</h3>
+        </div>
+        
+    </div>
+</div>
+    <script src="script.js"></script>
+</body>
+
+</html>

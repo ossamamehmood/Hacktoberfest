@@ -1,0 +1,12 @@
+import nltk
+from nltk import word_tokenize
+nltk.download('punkt')
+nltk.download('averaged_perceptron_tagger')
+nltk.download('tagsets')
+nltk.help.upenn_tagset()
+
+sentence = word_tokenize("whatever the world is a great place")
+nltk.pos_tag(sentence)
+
+sentence = word_tokenize("applicant is removed from applicant list of the job ")
+nltk.pos_tag(sentence)
