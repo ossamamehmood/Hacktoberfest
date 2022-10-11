@@ -1,167 +1,119 @@
-import tkinter as tk
+from tkinter import *
+import math
 
-LARGE_FONT_STYLE = ("Arial", 40, "bold")
-SMALL_FONT_STYLE = ("Arial", 16)
-DIGITS_FONT_STYLE = ("Arial", 24, "bold")
-DEFAULT_FONT_STYLE = ("Arial", 20)
+root = Tk()
+root.title('CalcX')
 
-OFF_WHITE = "#F8FAFF"
-WHITE = "#FFFFFF"
-LIGHT_BLUE = "#CCEDFF"
-LIGHT_GRAY = "#F5F5F5"
-LABEL_COLOR = "#25265E"
+e = Entry(root, width=35, borderwidth=4)
+e.grid(column=0, row=0, columnspan=3)
 
 
-class Calculator:
-    def __init__(self):
-        self.window = tk.Tk()
-        self.window.geometry("375x667")
-        self.window.resizable(0, 0)
-        self.window.title("Debjit's Calculator")
+def ln():
+    s = int(e.get())
+    e.delete(0, END)
+    try:
+        e.insert(0, str(math.log(s)))
+    except Exception as z:
+        e.insert(0, z)
 
-        self.total_expression = ""
-        self.current_expression = ""
-        self.display_frame = self.create_display_frame()
+def fact():
+    x = int(e.get())
+    e.delete(0, END)
+    if x >= 1:
+        val = 1
+        for i in range(x, 1, -1):
+            val *= i
+        e.insert(0, str(val))
 
-        self.total_label, self.label = self.create_display_labels()
+    else:
+        e.insert(0, 'how dumb can you be??!')
 
-        self.digits = {
-            7: (1, 1), 8: (1, 2), 9: (1, 3),
-            4: (2, 1), 5: (2, 2), 6: (2, 3),
-            1: (3, 1), 2: (3, 2), 3: (3, 3),
-            0: (4, 2), '.': (4, 1)
-        }
-        self.operations = {"/": "\u00F7", "*": "\u00D7", "-": "-", "+": "+"}
-        self.buttons_frame = self.create_buttons_frame()
+def f_num(n):
+    x = e.get()
+    e.delete(0, END)
+    e.insert(0, str(x) + str(n))
 
-        self.buttons_frame.rowconfigure(0, weight=1)
-        for x in range(1, 5):
-            self.buttons_frame.rowconfigure(x, weight=1)
-            self.buttons_frame.columnconfigure(x, weight=1)
-        self.create_digit_buttons()
-        self.create_operator_buttons()
-        self.create_special_buttons()
-        self.bind_keys()
+def f_clear():
+    e.delete(0, END)
 
-    def bind_keys(self):
-        self.window.bind("<Return>", lambda event: self.evaluate())
-        for key in self.digits:
-            self.window.bind(str(key), lambda event, digit=key: self.add_to_expression(digit))
+def f_op(s = None):
+    x = e.get()
+    e.delete(0, END)
+    global first_n , sign
+    try:
+        first_n = int(x)
+    except:
+        e.insert(0, 'Syntax Error')
+    sign = s
 
-        for key in self.operations:
-            self.window.bind(key, lambda event, operator=key: self.append_operator(operator))
+def f_equal():
+    a = e.get()
+    e.delete(0, END)
+    if a.isnumeric():
+        if sign == '+':
+                e.insert(0, str(int(a) + first_n))
+        elif sign == 'x':
+                e.insert(0,str(int(a) * first_n))
 
-    def create_special_buttons(self):
-        self.create_clear_button()
-        self.create_equals_button()
-        self.create_square_button()
-        self.create_sqrt_button()
+        elif sign == '-':
+                e.insert(0, str(first_n - int(a)))
 
-    def create_display_labels(self):
-        total_label = tk.Label(self.display_frame, text=self.total_expression, anchor=tk.E, bg=LIGHT_GRAY,
-                               fg=LABEL_COLOR, padx=24, font=SMALL_FONT_STYLE)
-        total_label.pack(expand=True, fill='both')
+        elif sign == '/':
+            try:
+                e.insert(0, str(first_n/int(a)))
+            except:
+                e.insert(0, 'Now why would do that..')
+        elif sign == 'e':
+            e.insert(0, str(first_n**int(a)))
 
-        label = tk.Label(self.display_frame, text=self.current_expression, anchor=tk.E, bg=LIGHT_GRAY,
-                         fg=LABEL_COLOR, padx=24, font=LARGE_FONT_STYLE)
-        label.pack(expand=True, fill='both')
+        elif sign == None:
+            e.insert(str(a))
 
-        return total_label, label
+    elif a=='':
+        pass
 
-    def create_display_frame(self):
-        frame = tk.Frame(self.window, height=221, bg=LIGHT_GRAY)
-        frame.pack(expand=True, fill="both")
-        return frame
-
-    def add_to_expression(self, value):
-        self.current_expression += str(value)
-        self.update_label()
-
-    def create_digit_buttons(self):
-        for digit, grid_value in self.digits.items():
-            button = tk.Button(self.buttons_frame, text=str(digit), bg=WHITE, fg=LABEL_COLOR, font=DIGITS_FONT_STYLE,
-                               borderwidth=0, command=lambda x=digit: self.add_to_expression(x))
-            button.grid(row=grid_value[0], column=grid_value[1], sticky=tk.NSEW)
-
-    def append_operator(self, operator):
-        self.current_expression += operator
-        self.total_expression += self.current_expression
-        self.current_expression = ""
-        self.update_total_label()
-        self.update_label()
-
-    def create_operator_buttons(self):
-        i = 0
-        for operator, symbol in self.operations.items():
-            button = tk.Button(self.buttons_frame, text=symbol, bg=OFF_WHITE, fg=LABEL_COLOR, font=DEFAULT_FONT_STYLE,
-                               borderwidth=0, command=lambda x=operator: self.append_operator(x))
-            button.grid(row=i, column=4, sticky=tk.NSEW)
-            i += 1
-
-    def clear(self):
-        self.current_expression = ""
-        self.total_expression = ""
-        self.update_label()
-        self.update_total_label()
-
-    def create_clear_button(self):
-        button = tk.Button(self.buttons_frame, text="C", bg=OFF_WHITE, fg=LABEL_COLOR, font=DEFAULT_FONT_STYLE,
-                           borderwidth=0, command=self.clear)
-        button.grid(row=0, column=1, sticky=tk.NSEW)
-
-    def square(self):
-        self.current_expression = str(eval(f"{self.current_expression}**2"))
-        self.update_label()
-
-    def create_square_button(self):
-        button = tk.Button(self.buttons_frame, text="x\u00b2", bg=OFF_WHITE, fg=LABEL_COLOR, font=DEFAULT_FONT_STYLE,
-                           borderwidth=0, command=self.square)
-        button.grid(row=0, column=2, sticky=tk.NSEW)
-
-    def sqrt(self):
-        self.current_expression = str(eval(f"{self.current_expression}**0.5"))
-        self.update_label()
-
-    def create_sqrt_button(self):
-        button = tk.Button(self.buttons_frame, text="\u221ax", bg=OFF_WHITE, fg=LABEL_COLOR, font=DEFAULT_FONT_STYLE,
-                           borderwidth=0, command=self.sqrt)
-        button.grid(row=0, column=3, sticky=tk.NSEW)
-
-    def evaluate(self):
-        self.total_expression += self.current_expression
-        self.update_total_label()
-        try:
-            self.current_expression = str(eval(self.total_expression))
-
-            self.total_expression = ""
-        except Exception as e:
-            self.current_expression = "Error"
-        finally:
-            self.update_label()
-
-    def create_equals_button(self):
-        button = tk.Button(self.buttons_frame, text="=", bg=LIGHT_BLUE, fg=LABEL_COLOR, font=DEFAULT_FONT_STYLE,
-                           borderwidth=0, command=self.evaluate)
-        button.grid(row=4, column=3, columnspan=2, sticky=tk.NSEW)
-
-    def create_buttons_frame(self):
-        frame = tk.Frame(self.window)
-        frame.pack(expand=True, fill="both")
-        return frame
-
-    def update_total_label(self):
-        expression = self.total_expression
-        for operator, symbol in self.operations.items():
-            expression = expression.replace(operator, f' {symbol} ')
-        self.total_label.config(text=expression)
-
-    def update_label(self):
-        self.label.config(text=self.current_expression[:11])
-
-    def run(self):
-        self.window.mainloop()
+    else:
+        e.insert(0, 'Syntax Error')
 
 
-if __name__ == "__main__":
-    calc = Calculator()
-    calc.run()
+button_1 = Button(root, text='1', command=lambda: f_num(1), padx=40, pady=20)
+button_2 = Button(root, text='2', command=lambda: f_num(2), padx=40, pady=20)
+button_3 = Button(root, text='3', command=lambda: f_num(3), padx=40, pady=20)
+button_4 = Button(root, text='4', command=lambda: f_num(4), padx=40, pady=20)
+button_5 = Button(root, text='5', command=lambda: f_num(5), padx=40, pady=20)
+button_6 = Button(root, text='6', command=lambda: f_num(6), padx=40, pady=20)
+button_7 = Button(root, text='7', command=lambda: f_num(7), padx=40, pady=20)
+button_8 = Button(root, text='8', command=lambda: f_num(8), padx=40, pady=20)
+button_9 = Button(root, text='9', command=lambda: f_num(9), padx=40, pady=20)
+button_0 = Button(root, text='0', command=lambda: f_num(0), padx=40, pady=20)
+button_e = Button(root, text='=', command=lambda: f_equal(), padx=39, pady=20)
+button_a = Button(root, text='+', command=lambda: f_op('+'), padx=39, pady=20)
+button_m = Button(root, text='x', command=lambda: f_op('x'), padx=40, pady=20)
+button_d = Button(root, text='/', command=lambda: f_op('/'), padx=40, pady=20)
+button_s = Button(root, text='-', command=lambda: f_op('-'), padx=40, pady=20)
+button_ln = Button(root, text='ln', command=ln, padx=38, pady=20)
+button_fact = Button(root, text='!', command=fact, padx=41, pady=20)
+button_exp = Button(root, text='^', command=lambda: f_op('e'), padx=39, pady=20)
+button_c = Button(root, text='CLEAR', command=f_clear, padx=125, pady=20)
+
+button_1.grid(column=0, row=1)
+button_2.grid(column=1, row=1)
+button_3.grid(column=2, row=1)
+button_4.grid(column=0, row=2)
+button_5.grid(column=1, row=2)
+button_6.grid(column=2, row=2)
+button_7.grid(column=0, row=3)
+button_8.grid(column=1, row=3)
+button_9.grid(column=2, row=3)
+button_0.grid(column=0, row=4)
+button_e.grid(column=1, row=4)
+button_a.grid(column=2, row=4)
+button_m.grid(column=0, row=5)
+button_d.grid(column=1, row=5)
+button_s.grid(column=2, row=5)
+button_ln.grid(column=0, row=6)
+button_fact.grid(column=1, row=6)
+button_exp.grid(column=2, row=6)
+button_c.grid(column=0, row=7, columnspan=3)
+
+root.mainloop()
