@@ -1,19 +1,18 @@
-import java.util.*;
-public class CWH extends Thread{
-    public static void main(String[] args) {
-
-        ArrayList<Integer> l = new ArrayList<>();
-        l.add(1);
-        l.add(2);
-        l.add(3);
-        l.add(4);
-        l.add(5);
-        l.add(6);
-
-        System.out.println("Array list : "+ l);
-        System.out.println("l list contains 7 : " + l.contains(7));
-        System.out.println("l list contains 4 : " + l.contains(4));
-
-
-    }
-}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title of the Document</title>
+  </head>
+  <body>
+    <input type="text" placeholder="Type " id="inputId">
+    <button type="button" onclick="getInputValue();">Get Value</button>
+    <script>
+      function getInputValue() {
+        // Selecting the input element and get its value 
+        let inputVal = document.getElementById("inputId").value;
+        // Displaying the value
+        alert(inputVal);
+      }
+    </script>
+  </body>
+</html>
