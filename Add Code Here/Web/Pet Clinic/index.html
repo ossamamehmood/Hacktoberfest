@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="styles.css" rel="stylesheet" type="text/css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="bower_components/chartist/dist/chartist.min.js"></script>
+        <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+        <link
+            href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <title>Designathon-MUJ</title>
+        <link rel="icon" href="./assets/logo.png" />
+    </head>
+    <body class="h-screen w-screen bg-[#C8D9EB]">
+        <div class="p-6 h-full flex justify-flex-start">
+            <div
+                class="flex flex-col items-center w-24 h-full overflow-hidden text-[#C8D9EB] bg-white rounded-l-xl"
+            >
+                <a class="flex items-center justify-center m-4" href="#">
+                    <img src="./assets/doglogo.svg" alt="dog-logo" />
+                </a>
+                <div
+                    class="flex flex-col items-center gap-6 mt-3 border-t border-gray-300"
+                >
+                    <a
+                        class="flex items-center justify-center w-12 h-12 mt-2 text-gray-700 rounded-full bg-[#EBF2FA]"
+                        href="#"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                            class="w-5 h-5"
+                        >
+                            <path
+                                fill-rule="evenodd"
+                                d="M9.293 2.293a1 1 0 011.414 0l7 7A1 1 0 0117 11h-1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-3a1 1 0 00-1-1H9a1 1 0 00-1 1v3a1 1 0 01-1 1H5a1 1 0 01-1-1v-6H3a1 1 0 01-.707-1.707l7-7z"
+                                clip-rule="evenodd"
+                            />
+                        </svg>
+                    </a>
+                    <a
+                        class="flex items-center justify-center w-12 h-12 mt-2 rounded-full hover:bg-[#EBF2FA] hover:text-gray-700 transition-all"
+                        href="#"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                            class="w-5 h-5"
+                        >
+                            <path
+                                d="M12 9a1 1 0 01-1-1V3c0-.553.45-1.008.997-.93a7.004 7.004 0 015.933 5.933c.078.547-.378.997-.93.997h-5z"
+                            />
+                            <path
+                                d="M8.003 4.07C8.55 3.992 9 4.447 9 5v5a1 1 0 001 1h5c.552 0 1.008.45.93.997A7.001 7.001 0 012 11a7.002 7.002 0 016.003-6.93z"
+                            />
+                        </svg>
+                    </a>
+                    <a
+                        class="flex items-center justify-center w-12 h-12 mt-2 rounded-full hover:bg-[#EBF2FA] hover:text-gray-700 transition-all"
+                        href="#"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                            class="w-5 h-5"
+                        >
+                            <path
+                                d="M10 8a3 3 0 100-6 3 3 0 000 6zM3.465 14.493a1.23 1.23 0 00.41 1.412A9.957 9.957 0 0010 18c2.31 0 4.438-.784 6.131-2.1.43-.333.604-.903.408-1.41a7.002 7.002 0 00-13.074.003z"
+                            />
+                        </svg>
+                    </a>
+                    <a
+                        class="flex items-center justify-center w-12 h-12 mt-2 rounded-full hover:bg-[#EBF2FA] hover:text-gray-700 transition-all"
+                        href="#"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                            class="w-5 h-5"
+                        >
+                            <path
+                                fill-rule="evenodd"
+                                d="M10 2c-2.236 0-4.43.18-6.57.524C1.993 2.755 1 4.014 1 5.426v5.148c0 1.413.993 2.67 2.43 2.902 1.168.188 2.352.327 3.55.414.28.02.521.18.642.413l1.713 3.293a.75.75 0 001.33 0l1.713-3.293a.783.783 0 01.642-.413 41.102 41.102 0 003.55-.414c1.437-.231 2.43-1.49 2.43-2.902V5.426c0-1.413-.993-2.67-2.43-2.902A41.289 41.289 0 0010 2zM6.75 6a.75.75 0 000 1.5h6.5a.75.75 0 000-1.5h-6.5zm0 2.5a.75.75 0 000 1.5h3.5a.75.75 0 000-1.5h-3.5z"
+                                clip-rule="evenodd"
+                            />
+                        </svg>
+                    </a>
+                </div>
+                <div
+                    class="flex flex-col gap-6 items-center mt-2 border-t border-gray-300"
+                >
+                    <a
+                        class="flex items-center justify-center w-12 h-12 mt-2 rounded-full hover:bg-[#EBF2FA] hover:text-gray-700 transition-all"
+                        href="#"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                            class="w-5 h-5"
+                        >
+                            <path
+                                d="M2 3a1 1 0 00-1 1v1a1 1 0 001 1h16a1 1 0 001-1V4a1 1 0 00-1-1H2z"
+                            />
+                            <path
+                                fill-rule="evenodd"
+                                d="M2 7.5h16l-.811 7.71a2 2 0 01-1.99 1.79H4.802a2 2 0 01-1.99-1.79L2 7.5zM7 11a1 1 0 011-1h4a1 1 0 110 2H8a1 1 0 01-1-1z"
+                                clip-rule="evenodd"
+                            />
+                        </svg>
+                    </a>
+                    <a
+                        class="flex items-center justify-center w-12 h-12 mt-2 rounded-full hover:bg-[#EBF2FA] hover:text-gray-700 transition-all"
+                        href="#"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                            class="w-5 h-5"
+                        >
+                            <path
+                                d="M17 2.75a.75.75 0 00-1.5 0v5.5a.75.75 0 001.5 0v-5.5zM17 15.75a.75.75 0 00-1.5 0v1.5a.75.75 0 001.5 0v-1.5zM3.75 15a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5a.75.75 0 01.75-.75zM4.5 2.75a.75.75 0 00-1.5 0v5.5a.75.75 0 001.5 0v-5.5zM10 11a.75.75 0 01.75.75v5.5a.75.75 0 01-1.5 0v-5.5A.75.75 0 0110 11zM10.75 2.75a.75.75 0 00-1.5 0v1.5a.75.75 0 001.5 0v-1.5zM10 6a2 2 0 100 4 2 2 0 000-4zM3.75 10a2 2 0 100 4 2 2 0 000-4zM16.25 10a2 2 0 100 4 2 2 0 000-4z"
+                            />
+                        </svg>
+                    </a>
+                    <a
+                        class="relative flex items-center justify-center w-12 h-12 mt-2 rounded-full hover:bg-[#EBF2FA] hover:text-gray-700 transition-all"
+                        href="#"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                            class="w-5 h-5"
+                        >
+                            <path
+                                fill-rule="evenodd"
+                                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6.5 6.326a6.52 6.52 0 01-1.5.174 6.487 6.487 0 01-5.011-2.36l.49-.98a.423.423 0 01.614-.164l.294.196a.992.992 0 001.491-1.139l-.197-.593a.252.252 0 01.126-.304l1.973-.987a.938.938 0 00.361-1.359.375.375 0 01.239-.576l.125-.025A2.421 2.421 0 0012.327 6.6l.05-.149a1 1 0 00-.242-1.023l-1.489-1.489a.5.5 0 01-.146-.353v-.067a6.5 6.5 0 015.392 9.23 1.398 1.398 0 00-.68-.244l-.566-.566a1.5 1.5 0 00-1.06-.439h-.172a1.5 1.5 0 00-1.06.44l-.593.592a.501.501 0 01-.13.093l-1.578.79a1 1 0 00-.553.894v.191a1 1 0 001 1h.5a.5.5 0 01.5.5v.326z"
+                                clip-rule="evenodd"
+                            />
+                        </svg>
+
+                        <span
+                            class="absolute top-0 left-0 w-2 h-2 mt-2 ml-2 bg-indigo-500 rounded-full"
+                        ></span>
+                    </a>
+                </div>
+                <a
+                    class="flex items-center justify-center w-16 h-16 mt-auto p-3 m-3 hover:bg-gray-300 rounded-full"
+                    href="#"
+                >
+                    <img src="./assets/logo.svg" alt="dog-user" width="full" />
+                </a>
+            </div>
+            <div class="p-6 bg-[#F8ECEC] w-4/5">
+                <div class="h-full">
+                    <h3 class="body text-gray-600">👋 Hey, Good Morning</h3>
+                    <div class="flex justify-between gap-5">
+                        <h1 class="bold p-1 text-5xl">Christopher Nolan</h1>
+                        <div class="flex items-end gap-2 ml-14">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                class="w-5 h-5 mb-1"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"
+                                />
+                            </svg>
+
+                            <h3 class="body text-gray-600">1 October, 2022</h3>
+                        </div>
+                        <div class="flex items-end gap-2">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                class="w-5 h-5 mb-1"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                                />
+                            </svg>
+
+                            <h3 class="body text-gray-600">10:00 am</h3>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-[76px]">
+                        <div class="grid gap-8 grid-cols-3 w-full time">
+                            <div
+                                class="bg-[#FEE0B2] pt-8 relative text-center flex justify-center items-center rounded-lg shadow-lg flex-col"
+                            >
+                                <img
+                                    src="./assets/plan.svg"
+                                    alt="calender"
+                                    class="absolute -top-[70%] left-[32%] w-24"
+                                />
+                                <p class="my-2 text-3xl bold">256</p>
+                                <p class="mb-2">Pets Treated</p>
+                            </div>
+                            <div
+                                class="bg-[#CCB4F5] pt-8 relative text-center flex justify-center items-center rounded-lg shadow-lg flex-col"
+                            >
+                                <img
+                                    src="./assets/pet.svg"
+                                    alt="calender"
+                                    class="absolute -top-[70%] left-[28%] w-28"
+                                />
+                                <p class="my-2 text-3xl bold">134</p>
+                                <p class="mb-2">New Pet Patients</p>
+                            </div>
+                            <div
+                                class="bg-[#A3D3FE] pt-8 relative text-center flex justify-center items-center rounded-lg shadow-lg flex-col"
+                            >
+                                <img
+                                    src="./assets/clock.svg"
+                                    alt="calender"
+                                    class="absolute -top-[70%] left-[32%] w-24"
+                                />
+                                <p class="my-2 text-3xl bold">230</p>
+                                <p class="mb-2">Cases Completed</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex justify-between pt-3 items-baseline">
+                        <h1 class="time text-lg">Today's Patients</h1>
+                        <div class="time flex gap-4">
+                            <p class="text-gray-700">Today</p>
+                            <p class="text-gray-500">Tomorrow</p>
+                        </div>
+                    </div>
+
+                    <div class="pt-6 pb-4 px-4">
+                        <ol class="relative border-l border-gray-200">
+                            <li class="mb-6 ml-6">
+                                <span
+                                    class="flex absolute -left-3 justify-center items-center w-5 h-5 bg-blue-200 rounded-full ring-4 ring-gray-900 bg-blue-900"
+                                >
+                                    <svg
+                                        aria-hidden="true"
+                                        class="w-3 h-3 text-blue-600 text-blue-400"
+                                        fill="currentColor"
+                                        viewBox="0 0 20 20"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            fill-rule="evenodd"
+                                            d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                                            clip-rule="evenodd"
+                                        ></path>
+                                    </svg>
+                                </span>
+                                <h3
+                                    class="flex items-center mb-1 text-lg time text-gray-900"
+                                >
+                                    Bella
+                                    <span
+                                        class="bg-blue-100 text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded ml-3"
+                                        >Finished</span
+                                    >
+                                </h3>
+                                <time
+                                    class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
+                                    >8:00 am</time
+                                >
+                                <p
+                                    class="mb-4 text-base font-normal text-gray-500 body"
+                                >
+                                    2 yrs old, Golden retriever from Bengalore,
+                                    Karnataka.
+                                </p>
+                            </li>
+                            <li class="mb-6 ml-6">
+                                <span
+                                    class="flex absolute -left-3 justify-center items-center w-5 h-5 bg-blue-200 rounded-full ring-4 ring-gray-900 bg-blue-900"
+                                >
+                                    <svg
+                                        aria-hidden="true"
+                                        class="w-3 h-3 text-blue-600 text-blue-400"
+                                        fill="currentColor"
+                                        viewBox="0 0 20 20"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            fill-rule="evenodd"
+                                            d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                                            clip-rule="evenodd"
+                                        ></path>
+                                    </svg>
+                                </span>
+                                <h3
+                                    class="flex items-center mb-1 text-lg time text-gray-900"
+                                >
+                                    Dexter
+                                    <span
+                                        class="bg-orange-100 text-orange-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded ml-3"
+                                        >In-Office</span
+                                    >
+                                </h3>
+                                <time
+                                    class="block mb-2 text-sm font-normal leading-none text-gray-500"
+                                    >10:00 am</time
+                                >
+                                <p
+                                    class="mb-4 text-base font-normal text-gray-500 body"
+                                >
+                                    1 yr 6 mo old, Pomerian from Pune,
+                                    Maharashtra.
+                                </p>
+                            </li>
+                            <li class="ml-6">
+                                <span
+                                    class="flex absolute -left-3 justify-center items-center w-5 h-5 rounded-full ring-4 ring-gray-900 bg-blue-900"
+                                >
+                                    <svg
+                                        aria-hidden="true"
+                                        class="w-3 h-3 text-blue-600 text-blue-400"
+                                        fill="currentColor"
+                                        viewBox="0 0 20 20"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            fill-rule="evenodd"
+                                            d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                                            clip-rule="evenodd"
+                                        ></path>
+                                    </svg>
+                                </span>
+                                <h3
+                                    class="flex items-center mb-1 text-lg time text-gray-900"
+                                >
+                                    Maya
+                                    <span
+                                        class="bg-green-100 text-green-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded ml-3"
+                                        >Scheduled</span
+                                    >
+                                </h3>
+                                <time
+                                    class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
+                                    >11:00 am</time
+                                >
+                                <p
+                                    class="mb-4 text-base font-normal text-gray-500 body"
+                                >
+                                    3 yrs old, Husky from Darjeeling, West
+                                    Bengal.
+                                </p>
+                            </li>
+                            <li class="ml-6">
+                                <span
+                                    class="flex absolute -left-3 justify-center items-center w-5 h-5 rounded-full ring-4 ring-gray-900 bg-blue-900"
+                                >
+                                    <svg
+                                        aria-hidden="true"
+                                        class="w-3 h-3 text-blue-600 text-blue-400"
+                                        fill="currentColor"
+                                        viewBox="0 0 20 20"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            fill-rule="evenodd"
+                                            d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                                            clip-rule="evenodd"
+                                        ></path>
+                                    </svg>
+                                </span>
+                                <h3
+                                    class="flex items-center mb-1 text-lg time text-gray-900"
+                                >
+                                    Oscar
+                                    <span
+                                        class="bg-red-100 text-red-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded ml-3"
+                                        >Cancelled</span
+                                    >
+                                </h3>
+                                <time
+                                    class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
+                                    >11:00 am</time
+                                >
+                                <p
+                                    class="mb-4 text-base font-normal text-gray-500 body"
+                                >
+                                    3 yrs old, Pug from Chennai, Tamil Nadu.
+                                </p>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="px-12 py-4 bg-[#EFD9DB] rounded-r-xl">
+                <div class="bold h-full pt-6 text-xl flex flex-col gap-4">
+                    <div class="calendar block body text-base"></div>
+                    <!-- chart -->
+                    <h1 class="">Patients this month:</h1>
+
+                    <div class="px-4 mx-auto w-52 -mt-4">
+                        <img src="./assets/graph.svg" alt="calender" class="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="ct-chart"></div> -->
+         <div class="cursor"></div>
+        <script src="app.js"></script>
+    </body>
+</html>
