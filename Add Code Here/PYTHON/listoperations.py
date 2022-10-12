@@ -1,4 +1,4 @@
-# List operations
+# List operations in python
 
 while True:
     print("Menu :")
