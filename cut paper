@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+void solve(){
+    int n,k;
+    cin>>n>>k;
+    int a=n*n;
+    if(n==k){
+        cout<<1<<endl;
+    }
+    else if (k==1){
+        cout<<a<<endl;
+        
+    }
+    else{
+        cout<<(n/k) * (n/k)<<endl;
+    }
+}
+int main(){
+    int t;
+    cin>>t;
+    while(t--){
+        solve();
+    }
+    return 0;
+}
