@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><%= title %></title>
+
+  <% /* Place any styles in the page in this section. */ %>
+  <%- style %>
+</head>
+<body>
+  <header>
+    <% /*
+    Define an required placeholder for the header.
+    If a page doesn't define a header, there will be an error when rendering.
+    */ %>
+    <%- header %>
+  </header>
+
+  <%- body %>
+
+  <footer>
+    <% /*
+    Define an optional placeholder for the footer.
+    If a page doesn't define a footer, this section will simply be empty.
+    */ %>
+    <%- defineContent('footer') %>
+  </footer>
+
+  <% /* Place any scripts contained in views at the end of the page. */ %>
+  <%- script %>
+</body>
+</html>
+
