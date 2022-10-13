@@ -1,0 +1,141 @@
+// C# program to find Vertical Sum in
+// a given Binary Tree
+using System;
+using System.Collections.Generic;
+
+// Class for a tree node
+class TreeNode
+{
+
+	// data members
+	public int key;
+	public TreeNode left;
+	public TreeNode right;
+
+	// Accessor methods
+	public int Key()
+	{
+		return key;
+	}
+	public TreeNode Left() { return left; }
+	public TreeNode Right() { return right; }
+
+	// Constructor
+	public TreeNode(int key)
+	{
+		this.key = key;
+		left = null;
+		right = null;
+	}
+
+	// Methods to set left and right subtrees
+	public void setLeft(TreeNode left)
+	{
+		this.left = left;
+	}
+	public void setRight(TreeNode right)
+	{
+		this.right = right;
+	}
+}
+
+// Class for a Binary Tree
+class Tree
+{
+	private TreeNode root;
+
+	// Constructors
+	public Tree() { root = null; }
+	public Tree(TreeNode n) { root = n; }
+
+	// Method to be called by the consumer classes
+	// like Main class
+	public void VerticalSumMain()
+	{
+		VerticalSum(root);
+	}
+
+	// A wrapper over VerticalSumUtil()
+	private void VerticalSum(TreeNode root)
+	{
+
+		// base case
+		if (root == null) { return; }
+
+		// Creates an empty hashMap hM
+		Dictionary<int,
+				int> hM = new Dictionary<int,
+											int>();
+
+		// Calls the VerticalSumUtil() to store the
+		// vertical sum values in hM
+		VerticalSumUtil(root, 0, hM);
+
+		// Prints the values stored by VerticalSumUtil()
+		if (hM != null)
+		{
+			Console.Write("[");
+			foreach(KeyValuePair<int, int> entry in hM)
+			{
+				Console.Write(entry.Key + " = " +
+							entry.Value + ", ");
+			}
+			Console.Write("]");
+		}
+	}
+
+	// Traverses the tree in in-order form and builds
+	// a hashMap hM that contains the vertical sum
+	private void VerticalSumUtil(TreeNode root, int hD,
+								Dictionary<int, int> hM)
+	{
+
+		// base case
+		if (root == null) { return; }
+
+		// Store the values in hM for left subtree
+		VerticalSumUtil(root.Left(), hD - 1, hM);
+
+		// Update vertical sum for hD of this node
+		int prevSum = 0;
+		if(hM.ContainsKey(hD))
+		{
+			prevSum = hM[hD];
+			hM[hD] = prevSum + root.Key();
+		}
+		else
+			hM.Add(hD, prevSum + root.Key());
+
+		// Store the values in hM for right subtree
+		VerticalSumUtil(root.Right(), hD + 1, hM);
+	}
+}
+
+// Driver Code
+public class GFG
+{
+	public static void Main(String[] args)
+	{
+		/* Create the following Binary Tree
+			1
+			/ \
+		2	 3
+		/ \	 / \
+		4 5 6 7
+
+		*/
+		TreeNode root = new TreeNode(1);
+		root.setLeft(new TreeNode(2));
+		root.setRight(new TreeNode(3));
+		root.Left().setLeft(new TreeNode(4));
+		root.Left().setRight(new TreeNode(5));
+		root.Right().setLeft(new TreeNode(6));
+		root.Right().setRight(new TreeNode(7));
+		Tree t = new Tree(root);
+
+		Console.WriteLine("Following are the values of" +
+						" vertical sums with the positions" +
+						" of the columns with respect to root ");
+		t.VerticalSumMain();
+	}
+}
