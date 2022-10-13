@@ -1,0 +1,42 @@
+#include <stdio.h>
+void main()
+{  
+    int a;
+    printf(" Code \t Products \n 106 - Haldiram Ratmali Sev \n 206 - Haldiram instant bhel \n 306 - Fuse chocolate \n 406 - Mixed Fruit Juice \n 506 - Lassi");
+    printf("\n Enter the code = ");
+    scanf("%d",&a);
+    
+    switch(a)
+    {
+        case 106:
+          
+            printf("\n Haldiram Ratmali Sev");
+        
+            break;
+               
+          case 206:
+          
+            printf("\n Haldiram instant bhel");
+           
+            break;
+         case 306:
+          
+            printf("\n Fuse chocolate");
+            
+             
+            break;
+         case 406:
+          
+            printf("\n Mixed Fruit Juice");
+            break;
+        case 506:
+          
+            printf("\n Lassi");
+            break;
+        default:printf("\n The coin is lost");
+        break;
+        
+    }
+
+   
+}
