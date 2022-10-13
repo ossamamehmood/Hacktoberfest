@@ -16,9 +16,15 @@ int largestElement(int arr[],int n){
 
 
 int main(){
-
-    int arr[]={1,24,35,6,7};
-    cout<<"The largest number is : "<<largestElement(arr,5)<<endl;
+     int n;
+    cout<<"Enter the length of Array"<<endl;
+    cin>>n;
+    int arr[n];
+    cout<<"Enter the Array Elements"<<endl;
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+    }
+    cout<<"The largest number is : "<<largestElement(arr,n)<<endl;
 
 return 0;
 }
