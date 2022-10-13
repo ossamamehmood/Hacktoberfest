@@ -1,0 +1,4 @@
+emoji==1.2.0
+Pillow==8.2.0
+streamlit==0.68.0
+textblob==0.17.1
