@@ -1,85 +1,66 @@
-/*
-Author : Rounak Ghosh
-GitHub : rounak-ghosh
-Institution : GCETTB
-Date : 08/10/2022
-*/
-
-#include<iostream>
+#include <iostream>
 using namespace std;
+#define N 8
 
-bool isSafe(int** arr, int x, int y, int n)
+void printBoard(int board[N][N])
 {
-    int row, col;
-    for(row=0; row<x; row++)    // column check 
+    for (int i = 0; i < N; i++)
     {
-        if(arr[row][y] == 1)
-            return false;
+        for (int j = 0; j < N; j++)
+            cout << board[i][j] << " ";
+        cout << endl;
     }
+}
 
-    row = x;
-    col = y;
-    while(row >= 0 && col >= 0)       // left upper diagonal
-    {
-        if(arr[row][col] == 1)
+bool isValid(int board[N][N], int row, int col)
+{
+    for (int i = 0; i < col; i++) // check whether there is queen in the left or not
+        if (board[row][i])
             return false;
-        row--;
-        col--;
-    }
-
-    row = x;
-    col = y;
-    while(row >= 0 && col <= n)       // right upper diagonal
-    {
-        if(arr[row][col] == 1)
+    for (int i = row, j = col; i >= 0 && j >= 0; i--, j--)
+        if (board[i][j]) // check whether there is queen in the left upper diagonal or not
             return false;
-        row--;
-        col++;
-    }    
-
+    for (int i = row, j = col; j >= 0 && i < N; i++, j--)
+        if (board[i][j]) // check whether there is queen in the left lower diagonal or not
+            return false;
     return true;
 }
 
-bool nQueen(int** arr, int x, int n)        // y is not included cuz we aren't gonna check that row, cuz already a queen is placed
+bool solveNQueen(int board[N][N], int col)
 {
-    if(x >= n)
+    if (col >= N) // when N queens are placed successfully
         return true;
-    
-    for(int col=0; col<n; col++)
-    {
-        if(isSafe(arr, x, col, n))
+    for (int i = 0; i < N; i++)
+    { // for each row, check placing of queen is possible or not
+        if (isValid(board, i, col))
         {
-            arr[x][col] = 1;
-            if(nQueen(arr,x+1,n))
+            board[i][col] = 1;               // if validate, place the queen at place (i, col)
+            if (solveNQueen(board, col + 1)) // Go for the other columns recursively
                 return true;
-        }    
-        arr[x][col] = 0;    // backtracking
+
+            board[i][col] = 0; // When no place is vacant remove that queen
+        }
     }
-    
-    return false;
+    return false; // when no possible order is found
 }
 
-int main()          // Program working perfectly in online compiler, but not here lol
+bool checkSolution()
 {
-    int n;
-    cin >> n;
-    int** arr = new int*[n];
-    for(int i=0; i<n; i++)
-        arr[i] = new int[n];
+    int board[N][N];
+    for (int i = 0; i < N; i++)
+        for (int j = 0; j < N; j++)
+            board[i][j] = 0; // set all elements to 0
 
-    for(int i=0; i<n; i++)
-        for(int j=0; j<n; j++)
-            arr[i][j]=0;
+    if (solveNQueen(board, 0) == false)
+    { // starting from 0th column
+        cout << "Solution does not exist";
+        return false;
+    }
+    printBoard(board);
+    return true;
+}
 
-    if(nQueen(arr, 0, n))
-    {
-        for(int i=0; i<n; i++)
-        {
-            for(int j=0; j<n; j++)
-                cout << arr[i][j] << " ";
-            cout << endl;
-        }
-    }          
-
-    return 0;
+int main()
+{
+    checkSolution();
 }

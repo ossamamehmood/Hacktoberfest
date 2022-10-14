@@ -1,64 +1,64 @@
-#include <bits/stdc++.h> 
+#include <iostream>
+#define N 5
 using namespace std;
 
-bool isSafe(int** arr,int x,int y, int n){
-    if(x<n && y<n && arr[x][y]==1){
-     return true;
+int maze[N][N] = {
+    {1, 0, 0, 0, 0},
+    {1, 1, 0, 1, 0},
+    {0, 1, 1, 1, 0},
+    {0, 0, 0, 1, 0},
+    {1, 1, 1, 1, 1}};
+
+int sol[N][N]; // final solution of the maze path is stored here
+void showPath()
+{
+    for (int i = 0; i < N; i++)
+    {
+        for (int j = 0; j < N; j++)
+            cout << sol[i][j] << " ";
+        cout << endl;
     }
-return false;
 }
 
-bool ratinmaze(int** arr, int x, int y, int n, int** solarr){
-     if(x==n-1 && y==n-1){
-          solarr[x][y]=1;
-          return true;
-     }
-
-     if(isSafe(arr,x,y,n)){
-          solarr[x][y]=1;
-
-          if(ratinmaze(arr,x+1,y,n,solarr)){
-               return true;
-          }
-
-          if(ratinmaze(arr,x,y+1,n,solarr)){
-               return true;
-          }
-
-          solarr[x][y]=0;
-          return false;
-     }
+bool isValidPlace(int x, int y)
+{ // function to check place is inside the maze and have value 1
+    if (x >= 0 && x < N && y >= 0 && y < N && maze[x][y] == 1)
+        return true;
+    return false;
 }
 
-int main(){
-int n;
-cin>>n;
-int** arr =new int*[n];
-for(int i=0;i<n;i++){
-     arr[i]=new int[n];
+bool solveRatMaze(int x, int y)
+{
+    if (x == N - 1 && y == N - 1)
+    { // when (x,y) is the bottom right room
+        sol[x][y] = 1;
+        return true;
+    }
+
+    if (isValidPlace(x, y) == true)
+    {                                       // check whether (x,y) is valid or not
+        sol[x][y] = 1;                      // set 1, when it is valid place
+        if (solveRatMaze(x + 1, y) == true) // find path by moving right direction
+            return true;
+        if (solveRatMaze(x, y + 1) == true) // when x direction is blocked, go for bottom direction
+            return true;
+        sol[x][y] = 0; // if both are closed, there is no path
+        return false;
+    }
+    return false;
 }
 
-for(int i=0;i<n;i++){
-     for(int j=0;j<n;j++){
-          cin>>arr[i][j];
-     }
+bool findSolution()
+{
+    if (solveRatMaze(0, 0) == false)
+    {
+        cout << "There is no path";
+        return false;
+    }
+    showPath();
+    return true;
 }
-
-int** solarr =new int*[n];
-for(int i=0;i<n;i++){
-     solarr[i]=new int[n];
-     for(int j=0;j<n;j++){
-          solarr[i][j]=0;
-     }
+int main()
+{
+    findSolution();
 }
-
-if(ratinmaze(arr,0,0,n,solarr)){
-     for(int i=0;i<n;i++){
-     for(int j=0;j<n;j++){
-          cout<<solarr[i][j]<<" ";
-     }
-     cout<<endl;
-}
-}
-
-} 
