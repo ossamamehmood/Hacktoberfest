@@ -1,0 +1,3 @@
+javac -h . HelloJNI.java
+nvcc -I"%JAVA_HOME%\include" -I"%JAVA_HOME%\include\win32" -shared -o hello.dll HelloJNI.cu
+java HelloJNI
