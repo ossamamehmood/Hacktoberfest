@@ -2,6 +2,10 @@ from tkinter import *
 from tkinter import font
 import pygame.mixer as mixer
 import datetime
+"""
+install the followinf dependencies in your environment by typing:
+pip install pygame
+"""
 
 
 class Clock(Frame):
