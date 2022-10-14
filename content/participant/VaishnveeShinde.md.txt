@@ -1,3 +1,0 @@
-name: Vaishnvee Shinde
-institution/company: Altimetrik
-github:Vaishnvee-Shinde
