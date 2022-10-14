@@ -1,0 +1,39 @@
+<form #myForm="ngForm">
+    <div class="formGroup">
+        <label for="firstName">First Name </label>
+        <input placeholder="Name" required minlength
+        ="3" maxlength="10" pattern="" ngModel name="firstName" #firstName="ngModel" id="firstName" type="text" class="form-control">
+        
+        <div class="alert alert-danger" *ngIf="firstName.touched && !firstName.valid" >
+            <div *ngIf="firstName.errors?.['required']"> First name is required </div>
+            <div *ngIf="firstName.errors?.['minlength']">First name should be atleast {{ firstName.errors?.['minlength'].requiredLength }}
+            character</div>
+        </div>
+    </div>
+    <br>
+    <div class="formGroup">
+        <label for="address"> Address </label>
+        <textarea placeholder="Address" ngModel #address="ngModel" required name="address" id="address" cols="30" rows="10" class="form-control"></textarea>
+        <div class="alert alert-danger" *ngIf="address.touched && !address.valid">Please input address</div>
+    </div>
+    <br>
+    <div class="formGroup">
+        <label for="phone"> Phone </label>
+        <input required ngModel name="phone" #phone="ngModel" id="phone" class="form-control" placeholder="0**********" type="tel" minlength="10" maxlength="11" pattern="[0-1]{2}[0-9]{9}">
+        <div class="alert alert-danger" *ngIf="phone.touched && !phone.valid">
+            <div *ngIf="phone.errors?.['required']">Please enter phone number</div>
+            <div *ngIf="phone.errors?.['minlength']">Please enter correct phone number</div>
+        </div>    
+    </div>
+    <br>
+    <div class="formGroup">
+        <label for="email">E-mail</label>
+        <input placeholder="Email" type="email" required ngModel name="email" #email="ngModel" id="email" class="form-control" pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$">
+        <div class="alert alert-danger" *ngIf="email.touched && !email.valid">
+            <div *ngIf="email.errors?.['required']">Email is required</div>
+            <div *ngIf="email.errors?.['pattern']">Please enter correct email</div>
+        </div>   
+    </div>
+        <br>
+        <button type="submit" [disabled]="!myForm.valid" class="btn btn-primary">Submit</button>
+</form>
