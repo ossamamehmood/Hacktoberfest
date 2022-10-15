@@ -94,3 +94,4 @@ class MergeSort {
 		printArray(arr);
 	}
 }
+/* This code is contributed by Rajat Mishra */

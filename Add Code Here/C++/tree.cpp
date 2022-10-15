@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -124,10 +125,65 @@ int height(Node *root) // time comp O(n) aux sapce O(h)
         return 0;
     }
     return (1 + max(height(root->left), height(root->right)));
+=======
+#include <iostream>
+using namespace std;
+struct Node
+{
+    int data;
+    struct Node* left;
+    struct Node* right;
+
+};
+int search(int inorder[], int start, int end, int curr)
+{
+    for(int i = start; i<=end; i++)
+    {
+        if(inorder[i] == curr)
+        {
+            return i;
+        }
+    }
+    return -1;
+}
+
+struct Node* buildTree(int preorder[], int inorder[], int start, int end)
+{
+    static int idx = 0;
+    if(start > end)
+    {
+        return NULL;
+    }
+    int curr = preorder[idx];
+    idx++;
+    Node* node = new Node();
+    node->data=curr;
+    if(start == end)
+    {
+        return node;
+    }
+    int pos = search(inorder, start, end, curr);
+    node->left = buildTree(preorder,inorder,start,pos-1);
+    node->right = buildTree(preorder,inorder,pos+1,end);
+    return node;
+}
+
+void inorderprint(Node* root)
+{
+    Node* temp = root;
+    if(temp == NULL)
+    {
+        return;
+    }
+    inorderprint(temp->left);
+    cout<<temp->data<<" ";
+    inorderprint(temp->right);
+>>>>>>> 94a4bca07f2b0d8e32946fbb00433c2b9ae95e43
 }
 
 int main()
 {
+<<<<<<< HEAD
     // an empty tree is represented by null;
     // Node *root = NULL;
 
@@ -160,3 +216,23 @@ int main()
     cout << "\nIterative Postorder traversal : ";
     iterativePostorder(root);
 }
+=======
+    // int n;
+    // cin>>n;
+    int preorder[] = {1,2,4,3,5};
+    // for(int i=0; i<n; i++)
+    // {
+    //     cin>>preorder[i];
+    // }
+    int inorder[] = {4,2,1,5,3};
+    // for(int i=0; i<n; i++)
+    // {
+    //     cin>>inorder[i];
+    // }
+
+    Node* root = buildTree(preorder,inorder,0,4);
+    inorderprint(root);
+
+}
+
+>>>>>>> 94a4bca07f2b0d8e32946fbb00433c2b9ae95e43
