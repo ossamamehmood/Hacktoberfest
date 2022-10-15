@@ -1,0 +1,56 @@
+class Solution {
+public:
+    int d[8][2]={{0,1}, {1,0}, {-1, 0}, {0,-1},{-1,-1},{-1,1},{1,-1},{1,1}};
+    int getActiveNeighbours(vector<vector<int>>&b,int i,int j)
+    {
+        int active=0;
+        for(auto it:d)
+        {
+            int r=i+it[0];
+            int c=j+it[1];
+            
+            if(r>=0 && c>=0 && r<b.size() && c<b[0].size() && (b[r][c] == 1 || b[r][c] == -2))
+                active++;
+        }
+        return active;
+    }
+    void updateBoard(vector<vector<int>>&b)
+    {
+        for(int i=0;i<b.size();i++)
+        {
+            for(int j=0;j<b[0].size();j++)
+            {
+                if(b[i][j] == -1)
+                    b[i][j]=1;
+                if(b[i][j] == -2)
+                    b[i][j]=0;
+            }
+        }
+    } 
+    void gameOfLife(vector<vector<int>>& b) {
+        int r=b.size();
+        if(r == 0)
+            return;
+        int c=b[0].size();
+        for(int i=0;i<r;i++)
+        {
+            for(int j=0;j<c;j++)
+            {
+                if(b[i][j] == 1)
+                {
+                    int active=getActiveNeighbours(b,i,j);
+                    if(active<2 || active>3)
+                        b[i][j]=-2;
+                }
+                else if(b[i][j] == 0)
+                {
+                    int active=getActiveNeighbours(b,i,j);
+                    if(active == 3)
+                        b[i][j]=-1;
+                }
+            }
+        }
+        updateBoard(b);
+        return;
+    }
+};
