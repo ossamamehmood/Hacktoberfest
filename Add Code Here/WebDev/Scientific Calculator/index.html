@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>   
+<head>
+    <title>
+        Scientific Calculator By Nabeel Ahmad
+    </title>
+    <style>
+        .title {
+            margin-bottom: 10px;
+            padding: 5px 0;
+            font-size: 20px;
+            font-weight:bold;
+            text-align:center;
+            width: 447px;
+            color:#4b118d;
+            border: solid black 2px;
+            font-family: 'Courier New', Courier, monospace;
+        
+        }
+        .container{
+    text-align: center;
+    margin-top:23px;
+}
+.calculator{ 
+    border: 4px solid black;
+    background-color: #ecddeb;
+    padding: 23px;
+    border-radius: 53px;
+    display: inline-block;
+    
+}
+        
+        #btn {
+            width: 100%;
+            height: 40px;
+            font-size: 25px;
+            background: #978fa0; 
+        }
+         
+        input[type="button"] {
+         border-radius: 21px;
+         border: 5px solid #978fa0;
+         width: 100%;
+            height: 40px;
+            font-size: 30px;
+        }
+         
+        
+        input[type="text"] {
+            background-color:white;
+            border: solid black 2px;
+            width:100%;
+        }
+      
+    </style>
+    <script>
+         
+        
+        function backspace(calc) {                                            
+            size = calc.display.value.length;
+            calc.display.value = calc.display.value.substring(0, size-1);
+        }
+         
+       
+        function calculate(calc) {
+             
+            
+            if(calc.display.value.includes("!")) {
+                 
+                size = calc.display.value.length;
+                n = Number(calc.display.value.substring(0, size-1));
+                f = 1;
+                 
+                for(i = 2; i <= n; i++)
+                    f = f*i;
+                calc.display.value = f;
+            }
+             
+            
+            else if(calc.display.value.includes("%")) {
+                 
+                size = calc.display.value.length;
+                n = Number(calc.display.value.substring(0, size-1));
+                calc.display.value = n/100;
+            }
+ 
+            else   
+               
+                calc.display.value = eval(calc.display.value);
+        }
+    </script>
+</head>
+ 
+<body>
+    <div class = container >
+    <div class = calculator >     
+    <div class = title >
+    Scientific Calculator By Nabeel
+    </div>
+ 
+    <form name = "calc">
+         
+    <table id = "calc" border = 2>
+         
+    <tr>
+        <td colspan=5><input id="btn" name="display"
+            onkeypress="return event.charCode >= 48
+            && event.charCode <= 57" type="text">
+        </td>
+    </tr>
+     
+    <tr>
+        <td><input id="btn" type="button" value="1"
+                OnClick="calc.display.value+='1'">
+        </td>
+         
+        <td><input id="btn" type="button" value="2"
+                OnClick="calc.display.value+='2'">
+        </td>
+         
+        <td><input id="btn" type="button" value="3"
+                OnClick="calc.display.value+='3'">
+        </td>
+         
+        <td><input id="btn" type="button" value="C"
+                OnClick="calc.display.value=''">
+        </td>
+        <td><input id="btn" type="button" value="<-"
+                OnClick="backspace(this.form)">
+        </td>
+        <td><input id="btn" type="button" value="="
+                OnClick="calculate(this.form)">
+        </td>
+    </tr>
+     
+    <tr>
+        <td><input id="btn" type="button" value="4"
+                OnClick="calc.display.value+='4'">
+        </td>
+         
+        <td><input id="btn" type="button" value="5"
+                OnClick="calc.display.value+='5'">
+        </td>
+         
+        <td><input id="btn" type="button" value="6"
+                OnClick="calc.display.value+='6'">
+        </td>
+         
+        <td><input id="btn" type="button" value="-"
+                OnClick="calc.display.value='-'">
+        </td>
+         
+        <td><input id="btn" type="button" value="%"
+                OnClick="calc.display.value+='%'">
+        </td>
+         
+        <td><input id="btn" type="button" value="cos"
+                OnClick="calc.display.value='cos('">
+        </td>
+    </tr>
+     
+    <tr>
+        <td><input id="btn" type="button" value="7"
+                OnClick="calc.display.value+='7'">
+        </td>
+         
+        <td><input id="btn" type="button" value="8"
+                OnClick="calc.display.value+='8'">
+        </td>
+         
+        <td><input id="btn" type="button" value="9"
+                OnClick="calc.display.value+='9'">
+        </td>
+         
+        <td><input id="btn" type="button" value="*"
+                OnClick="calc.display.value+='*'">
+        </td>
+         
+        <td><input id="btn" type="button" value="n!"
+                OnClick="calc.display.value+='!'">
+        </td>
+         
+        <td><input id="btn" type="button" value="sin"
+                OnClick="calc.display.value='sin('">
+        </td>
+    </tr>
+     
+    <tr>
+        <td><input id="btn" type="button" value="."
+                OnClick="calc.display.value+='.'">
+        </td>
+         
+        <td><input id="btn" type="button" value="0"
+                OnClick="calc.display.value+='0'">
+        </td>
+         
+        <td><input id="btn" type="button" value=","
+                OnClick="calc.display.value+=','">
+        </td>
+         
+        <td><input id="btn" type="button" value="+"
+                OnClick="calc.display.value+='+'">
+        </td>
+         
+        <td><input id="btn" type="button" value="/"
+                OnClick="calc.display.value+='/'">
+        </td>
+         
+        <td><input id="btn" type="button" value="tan"
+                OnClick="calc.display.value='tan('">
+        </td>
+    </tr>
+     
+    <tr>
+        <td><input id="btn" type="button" value="E"
+                OnClick="calc.display.value+='E'">
+        </td>
+         
+        <td><input id="btn" type="button" value="pi"
+                OnClick="calc.display.value+='PI'">
+        </td>
+         
+        <td><input id="btn" type="button" value="^"
+                OnClick="calc.display.value+='pow('">
+        </td>
+         
+        <td><input id="btn" type="button" value="("
+                OnClick="calc.display.value+='('">
+        </td>
+         
+        <td><input id="btn" type="button" value=")"
+                OnClick="calc.display.value+=')'">
+        </td>
+         
+        <td><input id="btn" type="button" value="log"
+                OnClick="calc.display.value='log('">
+        </td>
+    </tr>
+     
+    <tr>
+        <td><input id="btn" type="button" value="sqrt"
+                OnClick="calc.display.value+='sqrt('">
+        </td>
+         
+        <td><input id="btn" type="button" value="ln2"
+                OnClick="calc.display.value+='LN2'">
+        </td>
+         
+        <td><input id="btn" type="button" value="ln10"
+                OnClick="calc.display.value+='Log10'">
+        </td>
+         
+        <td><input id="btn" type="button" value="l2e"
+                OnClick="calc.display.value+='LOG2E'">
+        </td>
+         
+        <td><input id="btn" type="button" value="l10e"
+                OnClick="calc.display.value+='log10'">
+        </td>
+         
+        <td><input id="btn" type="button" value="exp"
+                OnClick="calc.display.value='exp('">
+        </td>
+    </tr>
+    </table>
+    </form>
+</div>
+</div>
+</body>
+ 
+</html>  
