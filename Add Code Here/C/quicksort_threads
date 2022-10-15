@@ -1,0 +1,132 @@
+/*
+2. QuickSort é um algoritmo de ordenação que utiliza a abordagem dividir para conquistar.
+Perceba que, enquanto o lado esquerdo não for resolvido, o algoritmo não começará a resolver o problema
+do lado direito. Como o problema da esquerda e o da direita operam em intervalos disjuntos, uma melhoria
+seria criar uma thread para cada lado. Considerando a abordagem recursiva apresentada, para cada
+chamada de Qsort, uma thread deverá ser criada. Implemente o algoritmo usando pthreads, recebendo
+um vetor de inteiros como entrada e exibindo o resultado final após a conclusão do algoritmo.
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <pthread.h>
+#include <unistd.h>
+
+// Variáveis globais: array e tamanho da array
+int *arr;
+int n;
+
+typedef struct
+{
+    int left;
+    int right;
+} Par;
+
+Par makePar(int l, int r)
+{
+    Par P;
+    P.left = l;
+    P.right = r;
+    return P;
+}
+
+// Função para pegar array do usuário
+void getArray()
+{
+    printf("Insira o tamanho do array: ");
+    scanf("%d", &n);
+
+    arr = (int *)malloc(sizeof(int) * n);
+
+    printf("Insira os elementos do array: ");
+    for (int i = 0; i < n; i++)
+        scanf("%d", &arr[i]);
+}
+
+void swap(int *a, int *b)
+{
+    int temp;
+    temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+int partition(int l, int r)
+{
+    int pivot = arr[l];
+
+    int count = 0;
+    for (int i = l + 1; i <= r; i++)
+        if (arr[i] <= pivot)
+            count++;
+
+    int pivotIndex = l + count;
+    swap(&arr[pivotIndex], &arr[l]);
+
+    int i = l, j = r;
+
+    while (i < pivotIndex && j > pivotIndex)
+    {
+        while (arr[i] <= pivot)
+            i++;
+
+        while (arr[j] > pivot)
+            j--;
+
+        if (i < pivotIndex && j > pivotIndex)
+            swap(&arr[i++], &arr[j--]);
+    }
+
+    return pivotIndex;
+}
+
+void *quickSort(void *arg)
+{
+    int l = ((Par *)arg)->left;
+    int r = ((Par *)arg)->right;
+
+    // Caso base
+    if (l >= r)
+        return NULL;
+
+    int p = partition(l, r);
+
+    pthread_t org_left, org_right;
+
+    // Criamos duas threads para operar à esquerda e à direita do pivô
+    // Note que a cada chamada do quickSort, mais threads são criadas
+    Par P_left = makePar(l, p - 1);
+    pthread_create(&org_left, NULL, quickSort, &P_left);
+
+    Par P_right = makePar(p + 1, r);
+    pthread_create(&org_right, NULL, quickSort, &P_right);
+
+    // Esperamos as threads criadas encerrarem
+    pthread_join(org_left, NULL);
+    pthread_join(org_right, NULL);
+
+    return NULL;
+}
+
+void Multi_thread_quickSort()
+{
+    pthread_t org;
+    Par P = makePar(0, n - 1);
+
+    // Criamos a primeira thread, operando no vetor inteiro
+    pthread_create(&org, NULL, quickSort, &P);
+    pthread_join(org, NULL);
+}
+
+int main(void)
+{
+    getArray();
+    Multi_thread_quickSort();
+
+    // Printamos o array ordenado
+    for (int i = 0; i < n; i++)
+        printf("%d ", arr[i]);
+
+    free(arr);
+    return 0;
+}
