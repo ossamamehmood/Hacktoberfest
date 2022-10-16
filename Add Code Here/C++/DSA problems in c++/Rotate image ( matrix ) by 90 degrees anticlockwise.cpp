@@ -11,33 +11,40 @@ void rotate (vector<vector<int> >& matrix);
 
 /* matrix : given input matrix, you are require 
  to change it in place without using extra space */
-void rotate(vector<vector<int> >& matrix)
-{
-    // 1st approach = transpose of a matrix
-    
-    int nrows = matrix.size();
-    int ncols = matrix[0].size();
-    
-    for(int rows = 0; rows < nrows; rows++)
-    {
-        for(int cols = 0; cols < rows; cols++)
-        {
-            if(rows != cols)
-                swap(matrix[rows][cols],matrix[cols][rows]);
+void rotate(vector<vector<int>>& matrix) {
+        int k;
+        if(matrix.size()%2==0){
+            k=matrix.size()/2;
+        }
+        else{
+            k=matrix.size()/2+1;
+        }
+        int n=matrix.size();
+        for(int i=0;i<k;i++){
+            for(int z=0;z<3;z++){
+                for(int j=i+1;j<n-i-1;j++){
+                    if(z==0){
+                        swap(matrix[i][j],matrix[j][n-1-i]);
+                    }
+                    else if(z==1){
+                        swap(matrix[i][j],matrix[n-1-i][n-1-j]);
+                    }
+                    else if(z==2){  
+                        swap(matrix[i][j],matrix[n-1-j][i]);
+                    }
+                }
+                if(z==0){
+                    swap(matrix[i][i],matrix[i][n-i-1]);
+                }
+                else if(z==1){
+                    swap(matrix[i][i],matrix[n-i-1][n-i-1]);
+                }
+                else{
+                    swap(matrix[i][i],matrix[n-1-i][i]);
+                }
+            }
         }
     }
-    
-    //2nd approach reverse
-    
-    for(int rows = 0; rows < (nrows/2); rows++)
-    {
-        for(int cols = 0; cols < ncols; cols++)
-        {
-            swap(matrix[rows][cols],matrix[nrows - 1 - rows][cols]);
-        }
-    }
-    
-}
 
 
 //{ Driver Code Starts.
