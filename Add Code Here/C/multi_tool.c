@@ -512,3 +512,499 @@ int main()
 
 
           }break;
+
+    /*==========================================>>>8. Factorial<<<=============================================*/
+
+        case 8:
+          {
+            float i,number,factorial;
+              printf("\n--------------------------------------Factorial--------------------------------------\n");
+               while (1)
+               {
+                 printf("\n----------------");
+                factorial=1;
+              printf("\nEnter number: ");
+                  scanf("%f",&number);
+ 
+                    for(i=1;i<=number;i++){
+                
+                factorial=factorial*i;
+              }
+
+                printf("\nNumber of Factorial: %.0f",factorial);
+
+                printf("\n\nBack to Tool?(Y/N): ");
+                scanf("%s",&go);
+                if(go=='y')
+                {
+                  printf("----------------\n");
+                break;
+                }
+               }       
+          }break;
+
+    /*=============================>>>9. Find the number of digits in a value<<<===============================*/
+       
+       case 9:
+          {
+                      int num,count;
+                       printf("\n--------------------------Find the number of digits in a value--------------------------\n");
+                       while (1)
+                       {
+                         printf("\n----------------");
+                       count=0;
+                       printf("\nEnter number: ");
+                       scanf("%d",&num);
+
+                          while (num!=0)
+                          {
+                          num=num/10;
+                        count++;
+                      }
+                      printf("Count of Numbers: %d",count);
+
+                         printf("\n\nBack to Tool?(Y/N): ");
+                         scanf("%s",&go);
+                         if(go=='y')
+                         {
+                           printf("----------------\n");
+                          break;
+                         }
+
+                       }
+          }break;
+
+    /*===================================>>>10.Arrat equal or not equal<<<=====================================*/
+
+       case 10:
+          {
+            printf("\n----------------------------Arrat equal or not equal----------------------------\n");
+            char go;
+        while (1)
+        {
+          
+         printf("\n------------------");
+             int row_size,col_size;
+                printf("\nNumber of Rows: ");
+                scanf("%d",&row_size);
+                printf("Number of collom: ");
+                scanf("%d",&col_size);
+
+              int arr1[row_size][col_size];
+              int arr2[row_size][col_size];
+              int i,j,a,b;
+               
+                 printf("\nArray one\n");
+                 a=0;
+              for(i=0;i<row_size;i++){
+                 for ( j = 0; j < col_size; j++)
+                   {
+                   printf("element %d: ",++a);
+                     scanf("%d",&arr1[i][j]);
+                       }
+                        }
+                         printf("\nArray two\n");
+                           b=0;
+              for(i=0;i<row_size;i++){
+                  for ( j = 0; j < col_size; j++)
+                   {               
+                 printf("element %d: ",++b);
+                    scanf("%d",&arr2[i][j]);
+                    }
+                      }
+                //matrix - array one
+                        printf("\nMatrix array one\n");
+                for(i=0;i<row_size;i++){
+                  for ( j = 0; j < col_size; j++)
+                      {
+                        printf("%d ",arr1[i][j]);
+                         }
+                          printf("\n");
+                           }
+                 
+                //matrix - array two
+                printf("\nMatrix array two\n");
+                for(i=0;i<row_size;i++){
+                  for ( j = 0; j < col_size; j++)
+                     {
+                      printf("%d ",arr2[i][j]);
+                      }
+                  printf("\n");
+                }
+
+                 printf("\nStatus\n");
+               for(i=0;i<row_size;i++){
+                  for(j=0;j<col_size;j++){
+                      if(arr1[i][j]==arr2[i][j]){
+                         printf("[ Equal ] ");
+                      } 
+                      else
+                      printf("[Unequal] ");                    
+                  }    
+                  printf("\n");                  
+               }
+                  printf("\n");
+                //equal or not equal
+                int isequal=1;
+               printf("\nStatus\n");
+               for(i=0;i<row_size;i++){
+                  for(j=0;j<col_size;j++){
+                      if(arr1[i][j]!=arr2[i][j]){
+                         isequal=0;
+                         printf("\nArray not Equal\n");
+                         break;
+                       }
+                     
+                    }
+                  if(isequal==0){
+                  break;
+                 }
+               }
+                printf("\n");
+                  if(isequal==1){
+                     printf("Array Equal\n");
+
+                        }
+                    
+                   printf("\nBack to Tool?(Y/N): ");
+                scanf("%s",&go);
+                if(go=='y')
+                {
+                  printf("------------------\n");
+                break;
+                }
+               }
+
+          }break;
+    
+    /*============================>>>11.Finding the Square or Power of a value<<<==============================*/
+       
+       case 11:
+          {
+            printf("\n----------------------------Finding the Square or Power of a value----------------------------\n");
+              while (1)
+              { 
+                printf("\n---------------------------------\n");
+                printf("  1. Finding the Square of a value\n  2. Finding the power of a value\n");
+                int choice;
+                float number,number_pow,power;
+                printf("\nWhat do you want?:");
+                scanf("%d",&choice);
+                  switch(choice)
+                  {
+                    case 1:
+                      printf("\nEnter the value: ");
+                      scanf("%f",&number);
+                      printf("\nSquare: %.2f",sqrt(number));
+                      break;
+
+                    case 2:
+                      printf("\nAt what value?: ");
+                      scanf("%f",&number_pow);
+                      printf("Enter power: ");
+                      scanf("%f",&power);  
+                      printf("Value is %.2f",pow(number_pow,power));
+                      break;
+                  }
+                   printf("\nBack to Tool?(Y/N): ");
+                   scanf("%s",&go);
+                    if(go=='y')
+                    {
+                     printf("---------------------------------\n");
+                     break;
+                    }
+              }
+                             
+          }break;
+
+    /*======================================>>>12.Matrices Calculetor<<<=======================================*/
+
+       case 12:
+          {
+        printf("\n-----------------------------------Matrices Calculetor-----------------------------------\n\n");
+              {
+                while (1)
+                {
+                  
+                
+                      int r1,r2,c1,c2;
+                      int i,j,k,p;
+                        int md;
+                          
+                      //========frist Matrices=========     
+                        printf("First Matrices Rows: ");
+                        scanf("%d",&r1);
+                        printf("First Matrices Colloms: ");
+                        scanf("%d",&c1);
+
+                            float arr1[r1][c1];
+                            
+                              printf("Enter first Matrices\n");
+                              for(i=0;i<r1;i++){
+                                  for(j=0;j<c1;j++){
+                                  scanf("%f",&arr1[i][j]);
+                                  }
+                              }     
+                      //========second Matrices=========   
+                        printf("\nSecod Matrices Row: ");
+                        scanf("%d",&r2);
+                        printf("Second Matrices Collom: ");
+                        scanf("%d",&c2);
+
+                            float arr2[r2][c2];
+                            
+                              printf("Enter Second Matrices\n");
+                                for(i=0;i<r2;i++){
+                                    for(j=0;j<c2;j++){
+                                    scanf("%f",&arr2[i][j]);
+                                  }
+                              }
+
+                          printf("\n\n");
+                          //first Matrices printing
+                          printf("First Matrices\n");
+                          for(i=0;i<r1;i++){
+                              for(j=0;j<c1;j++){
+                                printf("%.0f ",arr1[i][j]);
+                                }
+                              printf("\n");
+                              }
+                            printf("\n");
+                              //second Matrices printing
+                                printf("Second Matrices\n");
+                                  for(i=0;i<r2;i++){
+                                    for(j=0;j<c2;j++){
+                                      printf("%.0f ",arr2[i][j]);
+                                      }
+                                  printf("\n");
+                              }
+            while (1)
+              {
+                  printf("\n---------------------------");
+              printf("\n  1. Matrices multification\n");
+              printf("  2. Matrices Divide\n");
+              printf("  3. Matrices sum\n");
+              printf("  4. Matrices subtract\n");
+              printf("  5. All\n");//3
+              printf("  6. EXIT\n");//4
+          
+              printf("\nWhat do you want?: ");
+                scanf("%d",&md);
+                  switch (md)
+                    {
+                    case 5:
+                      {
+                        case 1:
+                        {
+                      //Matrices multification logic
+                            float mularr[r1][c2],mul;
+                            for(i=0;i<r1;i++){
+                              for(j=0;j<c2;j++){
+                                mul=0;
+                                for(k=0;k<c1;k++){
+                                  mul=mul+(arr1[i][k]*arr2[k][j]);
+                                }
+                                mularr[i][j]=mul;  
+                              }
+                            }
+                              printf("\nMatrices Multification\n");
+                              //printing output
+                                  for(i=0;i<r1;i++){
+                                      for(j=0;j<c2;j++){
+                                        printf("%.0f ",mularr[i][j]);
+                                      }
+                                        printf("\n");
+                                  }
+                              }
+                              if(md!=5){
+                                  break;
+                                }
+                        case 2:
+                              {
+                                
+                      //Matrices Divide logic
+                              float div,divarr[r1][c2];
+
+                              for(i=0;i<r1;i++){
+                                for(j=0;j<c2;j++){
+                                  div=0;
+                                    for(p=0;p<c1;p++){
+                                      div=div+(float)(arr1[i][p]/arr2[p][j]); 
+                                    }
+                                    divarr[i][j]=div;
+                                  }
+                              }
+                              printf("\nMatrices Divide\n");
+                                for(i=0;i<r1;i++){
+                                  for(j=0;j<c2;j++){
+                                      printf("%.1f ",divarr[i][j]);
+                                    }
+                                  printf("\n");
+                                  }
+                          
+                              }if(md!=5){
+                                  break;
+                              }
+                      
+                      //Matrices sum logic
+                        case 3:
+                        {
+                           printf("\nMatrices Sum\n");
+                          int sum[r1][c1];
+                            for(i=0;i<r1;i++){
+                              for(j=0;j<c1;j++){
+                                sum[i][j]=(arr1[i][j]+arr2[i][j]);
+                                printf("%d ",sum[i][j]);
+                              }
+                              printf("\n");
+                            } 
+
+
+                        }if(md!=5){
+                            break;
+                        }
+
+                        case 4:
+                        { 
+                         // Matrices sumbtract logic
+                           printf("\nMatrices subtract\n");
+                          int sub[r1][c1];
+                            for(i=0;i<r1;i++){
+                              for(j=0;j<c1;j++){
+                                sub[i][j]=(arr1[i][j]-arr2[i][j]);
+                                printf("%d ",sub[i][j]);
+                              }
+                              printf("\n");
+                            } 
+                        }if(md!=5){
+                            break;
+                        }
+
+                        case 6:
+                          {
+                            if(md==6){
+                            system("cls");
+                            printf("\n\tHave a nice Day!\n\n");
+                             exit(0);
+                          }
+                        }break;
+                          
+                        default :
+                          if(md!=6)
+                            printf("Invalide Option");
+                              
+                      }break;         
+                    } 
+                    printf("\nGo to Matrices Calculetor?(Y/N): ");
+                   scanf("%s",&go);
+                    if(go=='y')
+                    {
+                     printf("---------------------------------\n");
+                     break;
+                    } 
+                  }
+
+                     printf("\nBack to Tool?(Y/N): ");
+                     scanf("%s",&go);
+                    if(go=='y')
+                    {
+                     printf("---------------------------------\n");
+                     break;
+                    } 
+                    if(go=='n')
+                    {
+                      printf("\n---------------------------\n");
+         
+                    }
+
+              }
+          }
+          }break;
+
+    /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Reserved for friends<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+
+                           //Write the code in this section according to your idea
+
+    /*==============================================>>>Info<<<=================================================*/
+
+        case 13:
+          {
+            char go;
+
+                printf("\n------------------------------------Info------------------------------------\n\n");
+                printf("Hi there!\n I am A Prabath. This was written just for practical training and experience\n"
+                     "with a group of friends doing a project. So there may be bugs here.The steps \n"
+                     "here can  be short. So in your  opinion you can  fix the bugs  in it of  add \n"
+                     "somthing new to the manu. Details about the project are given below.\n"
+                     "\n  #Project Link: https://github.com/avishka2k/C-Tool"
+                     "\n\n  If you found this important, please folllow my social media.\n"
+                     "\n\tMy GitHub Profile: https://github.com/avishka2k"
+                     "\n\tTwitter: https://twitter.com/AvishkaPrabath6"
+                     "\n\tlinkdin: https://www.linkedin.com/in/a-prabath-9b3267213\n");
+
+              printf("\nGo to Main Menu?(Y/N): ");
+                scanf("%s",&go);
+                if(go=='y')
+                break;
+
+
+          }break;
+               
+    /*===============================================>>>EXIT<<<================================================*/
+
+       case 14:
+          {
+            system("cls");
+            printf("\n\tHave a nice Day!\n\n");
+            exit(0);
+          }break;
+    
+       default :
+          {
+        
+          int yn;
+            printf("\nSorry, nothing about the number you entered. if possible you can add activation.\n");
+            printf("Do you want to make any changes or add any thing to the manu? Check Info (Y: 1/N: 2): ");
+            scanf("%d",&yn);
+            system("cls");
+            if(yn==2)
+              { 
+                printf("\n\tHave a nice Day!\n\n");
+                exit(0);
+              }
+            else if(yn==1) 
+                  {
+                printf("\n------------------------------------Info------------------------------------\n\n");
+                printf("Hi there!\n I am A Prabath. This was written just for practical training and experience\n"
+                       "with a group of friends doing a project. So there may be bugs here.The steps \n"
+                       "here can  be short. So in your  opinion you can  fix the bugs  in it of  add \n"
+                       "somthing new to the manu. Details about the project are given below.\n"
+                       "\n  #Project Link: https://github.com/avishka2k/C-Tool"
+                       "\n\n  If you found this important, please folllow my social media.\n"
+                       "\n\tMy GitHub Profile: https://github.com/avishka2k"
+                       "\n\tTwitter: https://twitter.com/AvishkaPrabath6"
+                       "\n\tlinkdin: https://www.linkedin.com/in/a-prabath-9b3267213\n");
+                exit(0);
+                    }
+
+          }break;
+       
+           }
+            
+             while (1)
+             {
+             printf("\nGo to Main Menu?(Y/N): ");
+             scanf("%s",&go);
+             if(go=='y'){
+             break;
+             } 
+             if(go=='n')
+              exit(0);            
+             else
+              printf("\nInvalide option\n");
+             }
+
+          printf("\n");
+       }
+   return 0;
+}
