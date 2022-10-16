@@ -1,0 +1,86 @@
+body {
+  background-color: navajowhite;
+}
+
+header{
+    background-color: paleturquoise;
+    box-shadow: 10px 10px palegreen;
+    height: 150px;
+    margin: 20px 30px 30px 30px;
+    font-size: 60px;
+    width: auto;
+}
+
+@media only screen and (max-width: 770px) {
+  header {
+    font-size: 50px;
+  }
+}
+
+@media only screen and (max-width: 670px) {
+  header {
+    font-size: 35px;
+  }
+}
+
+header h1{
+    color: royalblue;
+    height: 100px;
+    margin: 0;
+}
+
+.content-box{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.grid {
+    margin: auto;
+    height: 400px;
+    width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: gray;
+}
+
+.grid div{
+    height: 36px;
+    width: 36px;
+    border: 2px solid black;
+    box-shadow: inset 3px 3px white;
+}
+
+.details{
+  margin-top: 10px;
+  padding: 20px;
+  background-color: rgb(226, 225, 225);
+}
+
+.details ul {
+  margin: 30px 0;
+}
+
+.checked{
+    background-color: palegreen;
+}
+
+.exploded {
+    background-color: orange;
+}
+
+.button{
+    width: 100px;
+    margin: auto;
+}
+
+button{
+    background-color: rgb(208, 211, 23);
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 16px;
+    border-radius: 20%;
+    border: solid 3px rgb(21, 31, 7);
+    box-shadow: inset 3px 3px 10px 5px rgb(116, 226, 43);
+}

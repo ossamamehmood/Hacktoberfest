@@ -1,0 +1,41 @@
+//PRINT ALL SUBSEQUENCES WITH SUM == K
+class Main{
+    public static void main(String[] args) {
+          int[] arr= {3,1,2,4,5};
+          int k=5;
+          int n =arr.length;
+          
+          Subsequences sq = new Subsequences();
+          sq.printSubWithK(arr,k,0,n,0,new ArrayList<>());
+          
+    }
+}
+
+public class Subsequences {
+  
+    public void printSubWithK(int[] arr, int target,int i,int n,int sum, List<Integer> list){
+        if(i==n){
+            if(sum == target){
+                for(int itr:list)
+                System.out.print(itr+" ");
+
+            System.out.println();
+            }
+            return;
+        }
+        // take case
+        // if we can repeat number any number of times then we just simply take particular number and
+        // add it until it satisfies the conditions 
+        // printSub(arr,i,n,sum,list);
+
+        list.add(arr[i]);
+        sum+=arr[i];
+        printSubWithK(arr, target, i+1, n, sum, list);
+
+        //not take case
+
+        list.remove(list.size()-1);
+        sum-=arr[i];
+        printSubWithK(arr, target, i+1, n, sum, list);
+    }
+}

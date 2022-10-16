@@ -1,0 +1,210 @@
+@font-face {
+    font-family: "kbold";
+    src: url("../assets/fonts/ABold.woff2") format("woff2");
+}
+@font-face {
+    font-family: "kbody";
+    src: url("../assets/fonts/amed.woff2") format("woff2");
+}
+@font-face {
+    font-family: "boldy";
+    src: url("../assets/fonts/kbody.woff2") format("woff2");
+}
+
+.bold {
+    font-family: "kbold";
+}
+
+.body {
+    font-family: "kbody";
+}
+
+.time {
+    font-family: "boldy";
+}
+
+.calendar {
+    position: relative;
+    background: white;
+    color: #000;
+    border-radius: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.calendar-inner {
+    padding: 6px;
+}
+
+.calendar .calendar-inner .calendar-body {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+}
+
+.calendar .calendar-inner .calendar-body div {
+    padding: 4px;
+    min-height: 30px;
+    line-height: 30px;
+    border: 1px solid transparent;
+    margin: 8px 2px 0px;
+}
+
+.calendar .calendar-inner .calendar-body div:nth-child(-n + 7) {
+    border: 1px solid transparent;
+    border-bottom: 1px solid black;
+}
+
+.calendar .calendar-inner .calendar-body div:nth-child(-n + 7):hover {
+    border: 1px solid transparent;
+    border-bottom: 1px solid black;
+}
+
+.calendar .calendar-inner .calendar-body div > a {
+    color: var(--calendar-font-color);
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+}
+
+.calendar .calendar-inner .calendar-body div:hover {
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+.calendar .calendar-inner .calendar-body div.empty-dates:hover {
+    border: 1px solid transparent;
+}
+
+.calendar .calendar-inner .calendar-controls {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.calendar .calendar-inner .calendar-today-date {
+    display: grid;
+    text-align: center;
+    cursor: pointer;
+    margin: 3px 0px;
+    background: #fee0b2;
+    padding: 4px 0px;
+    border-radius: 10px;
+    width: 80%;
+    margin: auto;
+}
+
+.calendar .calendar-inner .calendar-controls .calendar-year-month {
+    display: flex;
+    min-width: 100px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.calendar .calendar-inner .calendar-controls .calendar-next {
+    text-align: right;
+}
+
+.calendar
+    .calendar-inner
+    .calendar-controls
+    .calendar-year-month
+    .calendar-year-label,
+.calendar
+    .calendar-inner
+    .calendar-controls
+    .calendar-year-month
+    .calendar-month-label {
+    font-size: 16px;
+}
+
+.calendar .calendar-inner .calendar-body .calendar-today {
+    background: #a3d3fe;
+    border-radius: 4px;
+}
+
+.calendar .calendar-inner .calendar-body .calendar-today:hover {
+    border: 1px solid transparent;
+}
+
+.calendar .calendar-inner .calendar-body .calendar-today a {
+    outline: 2px solid #a3d3fe;
+}
+
+.calendar .calendar-inner .calendar-controls .calendar-next a,
+.calendar .calendar-inner .calendar-controls .calendar-prev a {
+    font-size: 14px;
+    text-decoration: none;
+    padding: 4px px;
+    display: inline-block;
+
+    margin: 8px 0 8px 0;
+}
+
+.calendar .calendar-inner .calendar-controls .calendar-next a svg,
+.calendar .calendar-inner .calendar-controls .calendar-prev a svg {
+    height: 20px;
+    width: 20px;
+}
+
+.calendar .calendar-inner .calendar-controls .calendar-next a svg path,
+.calendar .calendar-inner .calendar-controls .calendar-prev a svg path {
+    fill: #000;
+}
+
+.calendar .calendar-inner .calendar-body .prev-dates,
+.calendar .calendar-inner .calendar-body .next-dates {
+    color: #ccb4f5;
+}
+
+.calendar .calendar-inner .calendar-body .prev-dates:hover,
+.calendar .calendar-inner .calendar-body .next-dates:hover {
+    border: 1px solid transparent;
+    pointer-events: none;
+}
+
+.cursor {
+    width: 20px;
+    height: 20px;
+    border: 2px solid black;
+    border-radius: 50%;
+    position: absolute;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
+    pointer-events: none;
+}
+
+@keyframes cursorAnim {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(0.7);
+    }
+}
+
+@keyframes cursorAnim2 {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(0.4);
+    }
+}
+
+@keyframes cursorAnim3 {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(3);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+.expand {
+    animation: cursorAnim3 0.5s forwards;
+    border: 1px solid red;
+}
