@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
+#include<windows.h>
 #include<math.h>
 
 int main()
@@ -16,23 +17,38 @@ int main()
 
       printf("\n ====================MENU==================\n");
       printf("|                                           |\n");
+      Sleep(200);
       printf("| 1. Calculator                             |\n");
+      Sleep(200);
       printf("| 2. 1D Array Calculator                    |\n");
+       Sleep(200);
       printf("| 3. Birth day Calculator                   |\n");
+       Sleep(200);
       printf("| 4. Number system conversion               |\n");
+       Sleep(200);
       printf("| 5. Students Mark(max,min,avg,pass/fail)   |\n");
+       Sleep(200);
       printf("| 6. Digital clock                          |\n");
+       Sleep(200);
       printf("| 7. STOP Watch                             |\n");
+       Sleep(200);
       printf("| 8. Factorial                              |\n");
+       Sleep(200);
       printf("| 9. Find the number of digits in a value   |\n");
+       Sleep(200);
       printf("| 10.Arrat equal or not equal               |\n");
+       Sleep(200);
       printf("| 11.Finding the Square or Power of a value |\n");
+       Sleep(200);
       printf("| 12.Matrix Calculator                      |\n");
+       Sleep(200);
       /*-------------Add New Tool-------------------------------
                     printf(" ");
       --------------------------------------------------------*/
       printf("| 13.Info                                   |\n");
+       Sleep(200);
       printf("| 14.EXIT                                   |\n");
+       Sleep(200);
       printf("|                                           |\n");
       printf(" ===========================================\n"); 
       printf("\nWhat do you want?: ");
@@ -449,6 +465,7 @@ int main()
                       printf("\t%.2d:%.2d:%.2d       .",h,m,s);
                      printf("\n\t\t\t\t\t\t........................");
 
+                         Sleep(1000);
                         system("cls");
                        }
 
@@ -489,6 +506,7 @@ int main()
                     printf("\t%.2d:%.2d:%.2d       .",h,m,s);
                   printf("\n\t\t\t\t\t\t........................");
 
+                         Sleep(1000);
                         system("cls");
                        }
 
