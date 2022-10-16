@@ -10,6 +10,7 @@
       rel="stylesheet">
 
     <link rel="stylesheet" href="index.css">
+    <script src="./index.js"></script>
 </head>
 <body>
 <div class="card-container">
@@ -19,11 +20,11 @@
 	<h6>India</h6>
 	<p>Front-end developer</p>
 	<div class="buttons">
-		<button class="primary">
+		<button id="messageBtn" class="primary">
 			Message
 		</button>
-		<button class="primary ghost">
-			Following
+		<button id="followBtn" class="primary ghost followed" onclick="changeFollowStatus()">
+			Follow
 		</button>
 	</div>
 	<div class="skills">
