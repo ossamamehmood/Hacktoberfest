@@ -60,21 +60,46 @@ p {
 	border-radius: 50%;
 	padding: 7px;
 }
-
-button.primary {
-	background-color: #03BFCB;
+#messageBtn{
+    background-color: transparent;
 	border: 1px solid #03BFCB;
 	border-radius: 3px;
-	color: #231E39;
+	color: #02899C;
 	font-family: Montserrat, sans-serif;
 	font-weight: 500;
 	padding: 10px 25px;
+    margin: 0px 5px;
 }
-
+/* .followed{
+    background-color: #03BFCB;
+    color: #231E39;
+} */
+#followBtn{
+    background-color: transparent;
+	border: 1px solid #03BFCB;
+	border-radius: 3px;
+	color: #02899C;
+	font-family: Montserrat, sans-serif;
+	font-weight: 500;
+	padding: 10px 25px;
+    margin: 0px 5px;
+}
+/* button.primary {
+	background-color: transparent;
+	border: 1px solid #03BFCB;
+	border-radius: 3px;
+	color: #02899C;
+	font-family: Montserrat, sans-serif;
+	font-weight: 500;
+	padding: 10px 25px;
+    margin: 0px 5px;
+} */
+/* 
 button.primary.ghost {
 	background-color: transparent;
 	color: #02899C;
-}
+    margin: 0px 5px;
+}  */
 
 .skills {
 	background-color: #1F1A36;
@@ -96,4 +121,8 @@ button.primary.ghost {
 	font-size: 12px;
 	margin: 0 7px 7px 0;
 	padding: 7px;
+}
+
+.buttons .primary:hover{
+    transform: scale(1.05);
 }
