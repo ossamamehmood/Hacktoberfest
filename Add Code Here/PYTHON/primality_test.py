@@ -8,6 +8,10 @@ def isprime(n):
 		if n%i==0:return 0
 	return 1
 def main():
-	n=float(sys.argv[1])
+	n=int(sys.argv[1])
 	print(isprime(n))
 if __name__=="__main__":main()
+
+#to run from terminal
+#python primality_test.py "your number"
+#constraints number:[uint64]
