@@ -1,0 +1,271 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+struct Node{
+	int num;
+	struct node* link;
+}* head=NULL;
+
+main(int argc, char *argv[]) {
+
+int ch=0;
+int num;
+	int index;
+while(ch!=10)
+{
+
+switch(ch)
+{
+case 0:
+printList();
+	break;
+case 1:
+printf("Enter num to add to node\n");
+scanf("%d",&num);
+insert(num);
+break;
+case 2:
+printNode();
+break;	
+case 3:
+	printf("Enter index to delete from node\n");
+scanf("%d",&num);
+	delete(num);
+	break;
+	case 4:
+	printf("Enter num to search in lists\n");
+scanf("%d",&num);
+	lsearch(num);
+	break;	
+	case 5:
+	
+		printf("Enter index to insert At\n");
+		scanf("%d",&index);
+				printf("Enter num to insert at this index\n");
+		scanf("%d",&num);
+		insertAt(index,num);
+		break;
+		case 6:
+			reverse();
+			break;
+default:
+	printf("Wrong Choice");
+	break;
+}
+	scanf("%d",&ch);
+}	              
+ 
+ 
+
+}
+void insert(int num)
+{
+struct Node* n;
+n=(struct Node *)calloc(1,sizeof(struct Node));
+n->num=num;
+n->link=NULL;
+if(head==NULL)	
+head = n;
+else
+{
+	
+	struct Node* temp=head;
+	while(temp->link!=NULL)
+	{
+	  temp=temp->link;	
+	}
+
+	temp->link =n;
+}
+printf("Node inserted\n");
+}
+
+
+void printList()
+{
+	printf("Press\n0.For printing list\n1.For inserting node\n2.Print Nodes\n3.Delete index\n4.Linear Search\n5.Insert At\n6.Reverse List\n");
+}
+printNode(){
+	
+		struct Node* temp=head;
+		while(temp!=NULL)
+	{
+		printf(" %d",temp->num);
+	    temp=temp->link;	
+	}
+}
+void delete(int index)
+{
+	if(head==NULL)
+	{
+		printf("\nNo node in the list");
+		return;
+	}
+	if(index==1)
+	{
+      delfirst();
+      return;
+	}
+
+	int i;
+ struct Node*temp=head;struct Node *p;
+	for( i=1;i<index;i++)
+	{
+	    p=temp;
+		if(temp->link==NULL)	
+		{
+			printf("\nNo such index exists");
+			return;
+		}
+		temp=temp->link;
+			
+	}
+if(temp->link==NULL)
+p->link=NULL;
+else
+p->link=temp->link;
+	printf("\nNode successfully deleted");
+}
+
+
+
+
+void delfirst()
+{
+	if(head==NULL)
+	{
+	
+	printf("\nNO item in the list");
+	return;
+}
+	if(head->link==NULL)
+	head=NULL;
+	else
+	head=head->link;
+	printf("\nNode successfully deleted");
+}
+
+
+
+void lsearch(int num)
+{
+	if(head==NULL)
+	{
+		printf("\nNO item in the list");
+		return;
+	}
+  struct Node *temp=head;
+	while(temp!=NULL)
+	{
+	
+		if(	temp->num==num)
+		{
+		 printf("\nNumber exixts in the List");
+		 return;
+		}
+	temp=temp->link;
+	}
+	printf("\nNumber does not exist in the list");
+}
+
+
+void insertAt(int index,int num)
+{
+	struct Node * n;
+	n=(struct Node *)calloc(1,sizeof(struct Node));
+	n->num=num;
+	n->link=NULL;
+	if(head==NULL)
+	{
+		if(index!=1)
+		{
+			printf("Wrong index");
+			return;
+		}
+		head=n;
+		 printf("Node inserted");	
+		return;
+	}
+	if(index==1)
+	{
+		insertStart(n);
+		return;
+	}
+	struct Node * temp=head;
+	int i;
+ for(i=2;i<index;i++)
+ {
+ 
+ 	if(temp!=NULL)
+ 	{
+ 	  temp=temp->link;	
+	 }
+	 
+	 else
+	 {
+	 	printf("\nNo such node exists");
+	 	return;
+	 	
+	 }
+	 
+ }
+ if(temp->link==NULL)
+ temp->link=n;
+ else
+  {
+  	n->link=temp->link;
+  	temp->link=n;
+  }
+  printf("Node inserted");
+}
+
+void insertStart(struct Node * n)
+{
+	
+	if(head==NULL)
+	{
+	 head=n;
+	 	printf("\nNode inserted");
+		return;
+	}
+	n->link=head;
+	head=n;
+	printf("\nNode inserted");
+}
+
+
+
+void reverse()
+{
+	if(head==NULL)
+	{
+	printf("No nodes in the list");
+	return;
+	}
+	
+	if(head->link==NULL)
+	{
+	
+	
+	}
+	else
+	{
+		struct Node*p=head;
+	struct Node *temp=head;
+	struct Node *n=head;
+		temp=temp->link;
+		n=temp;
+		while(temp->link!=NULL)
+		{
+			n=temp->link;
+			temp->link=p;
+			p=temp;
+			temp=n;
+		}
+		temp->link=p;
+		head->link=NULL;
+		head=temp;
+	}
+		printf("\nList reversed");
+}

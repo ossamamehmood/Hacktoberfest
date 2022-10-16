@@ -1,3 +1,9 @@
 {
+<<<<<<< HEAD
+    "files.associations": {
+        "HelloWorls.C": "cpp"
+    }
+=======
     "C_Cpp.errorSquiggles": "Disabled"
+>>>>>>> preoder and postorder
 }

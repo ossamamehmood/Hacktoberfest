@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Guess Number Game</string>
+    <string name="Title">Welcome to Number Guess Game!</string>
+    <string name="Message">Enter a Number(1 to 6 )</string>
+    <string name="Text">Enter Number </string>
+    <string name="ButtonText">Roll to Guess</string>
+</resources>
