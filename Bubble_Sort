@@ -1,0 +1,57 @@
+package Sorting;
+
+public class Bubble_Sort {
+
+    public static void main(String[] args) {
+
+        int A[] = {25, 17, 30, 10, 32, 5};
+
+        System.out.println("");
+        System.out.println("=====Bubble Sort=====");
+        System.out.println("");
+        System.out.println("Data Sebelum Di Urutkan");
+        for (int i = 0; i < A.length; i++) {
+            System.out.print(A[i] + ", ");
+        }
+        System.out.println("");
+        
+//        //for
+//        for (int i = 0; i < A.length; i++) {
+//                        for (int j = 1; j < (A.length - i); j++) {
+//                            if (A[j - 1] > A[j]) {
+//                                int T = A[j - 1];
+//                                A[j - 1] = A[j];
+//                                A[j] = T;
+//                                System.out.println("Data Setelah Di Urutkan");
+//                for (int k = 0; k < A.length; k++) {
+//                    System.out.print(A[k] + ", ");
+//                }
+//                    System.out.println("");
+//                            }
+//                        }
+//                    }
+        
+        
+//      do while
+        int i = 0;
+        do {
+            int j = 1;
+            do{
+               if ( A[j-1] > A[j]){
+                   int T = A[j-1];
+                   A[j-1] = A[j];
+                   A[j] = T;
+               } 
+                j++;
+                System.out.println("=====Angka Setelah Di Urut===== (langkah ke- " + i + ")");
+                for (int k = 0; k < A.length; k++) {
+                    System.out.print(A[k] + ", ");
+                }
+                    System.out.println("");
+            }while(j < (A.length - i));
+            i++;
+        }while(i < A.length);
+
+    }
+
+}
