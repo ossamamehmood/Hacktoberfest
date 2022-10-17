@@ -1,20 +1,26 @@
-def quicksort(arr, left, right):
-        partition_pos = partition(arr,left,right)
-        quicksort(arr,left,partition_pos-1)
-        quicksort(arr, partition_pos+1,right)
+def quicksort(a):
+    if len(a)<=1:
+        return a
 
-    def partition(arr,left,right):
-        i = left
-        j = right -1
-        pivot = arr[right]
+    else:
+        pivot = a.pop()
 
-        while i<j:
-            while i<right and arr[i]<pivot:
-                i+=1
-            while j>left and arr[j] >= pivot:
-                j+=1
-            if i<j:
-                arr[i], arr[j] = arr[j], arr[i]
-        if arr[i] > pivot:
-            arr[i], arr[right] = arr[right], arr[i]
-        return  i
+    greater =[]
+    lower=[]
+
+    for i in a:
+        if i > pivot:
+            greater.append(i)
+        else:
+            lower.append(i)    
+
+    return quicksort(lower) + [pivot] + quicksort(greater)
+
+
+arr=[56,3,4,2,6,3,7]
+
+print(quicksort(arr))
+
+
+
+
