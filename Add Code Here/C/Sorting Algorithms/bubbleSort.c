@@ -13,8 +13,14 @@ int main(){
     for(x = 0; x < num; x++)
 
         scanf("%d", &arr[x]);
+    
+    int i, j;
+    
+    bool swapped;
 
-    for(x = 0; x < num - 1; x++){       
+    for(x = 0; x < num - 1; x++){
+        
+        swapped = false;
 
         for(y = 0; y < num - x - 1; y++){          
 
@@ -29,6 +35,11 @@ int main(){
             }
 
         }
+        
+         // IF no two elements were swapped by inner loop, then break
+       if (swapped == false)
+           
+        break;
 
     }
 
