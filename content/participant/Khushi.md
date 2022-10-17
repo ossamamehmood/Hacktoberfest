@@ -1,5 +1,5 @@
 ---
-name: Khushi Kaushal
-institution/company: Sathyabama University
-github: Khushi2000-16
+name: Khushi Saini
+institution/company: Amity University
+github: Khushi-dev-1822
 ---
