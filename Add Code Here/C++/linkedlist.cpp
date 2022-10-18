@@ -1,46 +1,63 @@
-#include<iostream>
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
-class node {
-
-    public:
-
-    int value;
-    node* next; //pointer variable the next node.
+class Node {
+public:
+	int data;
+	Node* next;
 };
-int main()
 
-//one two.... are pointer variable
-
+Node* getIntesectionNode(Node* head1, Node* head2)
 {
-    node* head;   //initialising of pointer with null
-    node* one = NULL;
-    node* two = NULL;  
-    node* three = NULL; 
-    node* four = NULL;  
-
-    one = new node(); // request memory for variable
-    two = new node();  //allocation of memory 
-    three = new node();  
-    four = new node();
-
-    one->value =1; // assign values of the pointers
-    two->value =2;
-    three->value =3; 
-    four->value =4;
-
-    one->next = two;     //connecting nodes
-    two->next = three;
-    three->next = four;
-    four->next =NULL;
-    
-    head = one;
-    while (head != NULL)
-    {
-        cout<< head->value;
-        head = head->next;     //printing values.....
-     
-    }
-               
+	while (head2) {
+		Node* temp = head1;
+		while (temp) {
+			if (temp == head2)
+				return head2;
+			temp = temp->next;
+		}
+		head2 = head2->next;
+	}
+	return NULL;
 }
+
+int main()
+{
+	
+	Node* newNode;
+
+	Node* head1 = new Node();
+	head1->data = 10;
+
+	Node* head2 = new Node();
+	head2->data = 3;
+
+	newNode = new Node();
+	newNode->data = 6;
+	head2->next = newNode;
+
+	newNode = new Node();
+	newNode->data = 9;
+	head2->next->next = newNode;
+
+	newNode = new Node();
+	newNode->data = 15;
+	head1->next = newNode;
+	head2->next->next->next = newNode;
+
+	newNode = new Node();
+	newNode->data = 30;
+	head1->next->next = newNode;
+
+	head1->next->next->next = NULL;
+
+	Node* intersectionPoint
+		= getIntesectionNode(head1, head2);
+
+	if (!intersectionPoint)
+		cout << " No Intersection Point \n";
+	else
+		cout << "Intersection Point: "
+			<< intersectionPoint->data << endl;
+}
+
