@@ -1,0 +1,346 @@
+void red_corner();
+void blue_corner();
+void green_corner();
+void yellow_corner();
+void home();
+void line_red_blue();
+void line_green_yellow();
+void line_red_green();
+void line_yellow_blue();
+ 
+// Driver Code
+void main()
+{
+    int gd = DETECT, gm;
+ 
+    // Initialize of gdriver with
+    // DETECT macros
+    initgraph(&gd, &gm, "C:\\turboc3\\bgi");
+ 
+    // Set Background Color
+    setfillstyle(SOLID_FILL, DARKGRAY);
+    floodfill(5, 5, 15);
+ 
+    // Main Outer Outline
+    rectangle(500, 200, 1250, 950);
+ 
+    // Main Inner Outline
+    rectangle(480, 180, 1270, 970);
+ 
+    // Coloring The Middle Space
+    setfillstyle(SOLID_FILL, BLACK);
+    floodfill(485, 185, 15);
+ 
+    // Calling red_corner() Function
+    red_corner();
+ 
+    // Calling blue_corner() Function
+    blue_corner();
+ 
+    // Calling green_corner() Function
+    green_corner();
+ 
+    // Calling yellow_corner() Function
+    yellow_corner();
+ 
+    // Calling home() Function
+    home();
+ 
+    // Calling line_red_blue() Function
+    line_red_blue();
+ 
+    // Calling line_green_yellow() Function
+    line_green_yellow();
+ 
+    // Calling line_red_green() Function
+    line_red_green();
+ 
+    // Calling line_yellow_blue() Function
+    line_yellow_blue();
+ 
+    // Holding The Screen For A While
+    getch();
+ 
+    // Close the initialized gdriver
+    closegraph();
+}
+ 
+void line_yellow_blue()
+{
+    int x = 950;
+ 
+    // Vertical Divisions
+    line(950, 600, 1250, 600);
+    line(950, 550, 1250, 550);
+ 
+    // Loop for creating horizontal
+    // line and coloring
+    while (x < 1250) {
+        line(x, 500, x, 650);
+        setfillstyle(SOLID_FILL, BLUE);
+        floodfill(x + 2, 555, 15);
+        x = x + 50;
+    }
+ 
+    setfillstyle(SOLID_FILL, DARKGRAY);
+    floodfill(1240, 555, 15);
+ 
+    // Start Point
+    setfillstyle(SOLID_FILL, BLUE);
+    floodfill(1195, 605, 15);
+    circle(1175, 625, 10);
+    setfillstyle(SOLID_FILL, WHITE);
+    floodfill(1180, 630, 15);
+ 
+    // Star Point
+    circle(1125, 525, 10);
+    setfillstyle(SOLID_FILL, WHITE);
+    floodfill(1130, 530, 15);
+ 
+    // Home Decoration
+    line(950, 650, 910, 600);
+    line(950, 500, 910, 550);
+    setfillstyle(SOLID_FILL, BLUE);
+    floodfill(925, 575, 15);
+}
+ 
+void line_red_green()
+{
+    int x = 500;
+ 
+    // Vertical Divisions
+    line(500, 600, 800, 600);
+    line(500, 550, 800, 550);
+ 
+    // Loop for creating horizontal
+    // line and coloring
+    while (x < 800) {
+        line(x, 500, x, 650);
+        setfillstyle(SOLID_FILL, GREEN);
+        floodfill(x + 2, 555, 15);
+        x = x + 50;
+    }
+ 
+    setfillstyle(SOLID_FILL, DARKGRAY);
+    floodfill(505, 555, 15);
+ 
+    // Start Point
+    setfillstyle(SOLID_FILL, GREEN);
+    floodfill(555, 505, 15);
+    circle(575, 525, 10);
+    setfillstyle(SOLID_FILL, WHITE);
+    floodfill(580, 530, 15);
+ 
+    // Star Point
+    circle(625, 625, 10);
+    setfillstyle(SOLID_FILL, WHITE);
+    floodfill(630, 630, 15);
+ 
+    // Home Decoration
+    line(800, 500, 840, 550);
+    line(800, 650, 840, 600);
+    setfillstyle(SOLID_FILL, GREEN);
+    floodfill(810, 575, 15);
+}
+ 
+void line_red_blue()
+{
+    int x = 650;
+ 
+    // Vertical Divisions
+    line(850, 650, 850, 950);
+    line(900, 650, 900, 950);
+ 
+    // Loop for creating horizontal
+    // line and coloring
+    while (x <= 900) {
+        line(800, x, 950, x);
+        setfillstyle(SOLID_FILL, RED);
+        floodfill(855, x + 2, 15);
+        x = x + 50;
+    }
+ 
+    setfillstyle(SOLID_FILL, DARKGRAY);
+    floodfill(855, 940, 15);
+ 
+    // Start point
+    setfillstyle(SOLID_FILL, RED);
+    floodfill(805, 895, 15);
+    circle(825, 875, 10);
+    setfillstyle(SOLID_FILL, WHITE);
+    floodfill(830, 880, 15);
+ 
+    // Star Point
+    circle(925, 825, 10);
+    setfillstyle(SOLID_FILL, WHITE);
+    floodfill(930, 830, 15);
+ 
+    // Home Decoration
+    line(800, 650, 840, 600);
+    line(950, 650, 910, 600);
+    setfillstyle(SOLID_FILL, RED);
+    floodfill(885, 615, 15);
+}
+ 
+void line_green_yellow()
+{
+    int x = 200;
+ 
+    // Vertical Divisions
+    line(850, 200, 850, 500);
+    line(900, 200, 900, 500);
+ 
+    // Loop for creating horizontal
+    // line and coloring
+    while (x < 500) {
+        line(800, x, 950, x);
+        setfillstyle(SOLID_FILL, YELLOW);
+        floodfill(855, x + 2, 15);
+        x = x + 50;
+    }
+ 
+    setfillstyle(SOLID_FILL, DARKGRAY);
+    floodfill(855, 205, 15);
+ 
+    // Start Point
+    setfillstyle(SOLID_FILL, YELLOW);
+    floodfill(905, 255, 15);
+    circle(925, 275, 10);
+    setfillstyle(SOLID_FILL, WHITE);
+    floodfill(930, 280, 15);
+    // Star Point
+    circle(825, 325, 10);
+    setfillstyle(SOLID_FILL, WHITE);
+    floodfill(830, 330, 15);
+ 
+    // Home Decoration
+    line(800, 500, 840, 550);
+    line(950, 500, 910, 550);
+    setfillstyle(SOLID_FILL, YELLOW);
+    floodfill(885, 545, 15);
+}
+ 
+void red_corner()
+{
+    // Outer Line
+    rectangle(500, 650, 800, 950);
+ 
+    // Inner Line
+    rectangle(550, 700, 750, 900);
+ 
+    // Circles
+    circle(600, 750, 30);
+    circle(700, 750, 30);
+    circle(600, 850, 30);
+    circle(700, 850, 30);
+    setfillstyle(SOLID_FILL, RED);
+ 
+    // Rectangle Red
+    floodfill(505, 655, 15);
+ 
+    // Circle Red
+    floodfill(615, 765, 15);
+    floodfill(715, 765, 15);
+    floodfill(615, 865, 15);
+    floodfill(715, 865, 15);
+    setfillstyle(SOLID_FILL, WHITE);
+    floodfill(555, 705, 15);
+}
+ 
+void blue_corner()
+{
+    // Outer Line
+    rectangle(950, 650, 1250, 950);
+ 
+    // Inner Line
+    rectangle(1000, 700, 1200, 900);
+ 
+    // Circles
+    circle(1050, 750, 30);
+    circle(1150, 750, 30);
+    circle(1050, 850, 30);
+    circle(1150, 850, 30);
+    setfillstyle(SOLID_FILL, BLUE);
+ 
+    // Rectangle Blue
+    floodfill(955, 655, 15);
+ 
+    // Circle Blue
+    floodfill(1065, 765, 15);
+    floodfill(1165, 765, 15);
+    floodfill(1065, 865, 15);
+    floodfill(1165, 865, 15);
+    setfillstyle(SOLID_FILL, WHITE);
+    floodfill(1005, 705, 15);
+}
+ 
+void green_corner()
+{
+    // Outer Line
+    rectangle(500, 200, 800, 500);
+ 
+    // Inner Line
+    rectangle(550, 250, 750, 450);
+ 
+    // Circles
+    circle(600, 300, 30);
+    circle(700, 300, 30);
+    circle(600, 400, 30);
+    circle(700, 400, 30);
+    setfillstyle(SOLID_FILL, GREEN);
+ 
+    // Rectangle Green
+    floodfill(505, 215, 15);
+ 
+    // Circle Green
+    floodfill(615, 315, 15);
+    floodfill(715, 315, 15);
+    floodfill(615, 415, 15);
+    floodfill(715, 415, 15);
+    setfillstyle(SOLID_FILL, WHITE);
+    floodfill(555, 255, 15);
+}
+ 
+void yellow_corner()
+{
+    // Outer Line
+    rectangle(950, 200, 1250, 500);
+ 
+    // Inner Line
+    rectangle(1000, 250, 1200, 450);
+ 
+    // Circles
+    circle(1050, 300, 30);
+    circle(1150, 300, 30);
+    circle(1050, 400, 30);
+    circle(1150, 400, 30);
+    setfillstyle(SOLID_FILL, YELLOW);
+ 
+    // Rectangle Yellow
+    floodfill(955, 215, 15);
+ 
+    // Circle Yellow
+    floodfill(1065, 315, 15);
+    floodfill(1165, 315, 15);
+    floodfill(1065, 415, 15);
+    floodfill(1165, 415, 15);
+    setfillstyle(SOLID_FILL, WHITE);
+    floodfill(1005, 255, 15);
+}
+ 
+void home()
+{
+    // Outer Line
+    rectangle(800, 500, 950, 650);
+ 
+    // Inner Line
+    rectangle(840, 550, 910, 600);
+ 
+    // Coloring Middle Space Black
+    setfillstyle(SOLID_FILL, BLACK);
+    floodfill(860, 595, 15);
+ 
+    // Printing The Text 'HOME'
+    settextstyle(8, 0, 3);
+    outtextxy(848, 560, "HOME");
+}
