@@ -1,0 +1,174 @@
+.screen_2 {
+  display: flex;
+  position: absolute;
+  width: 1440px;
+  height: 712px;
+  /* left: 420px;
+    top: 184px; */
+
+  background: #ced2dc;
+}
+
+.main_box {
+  display: flex;
+  flex-direction: row;
+
+  position: absolute;
+  width: 1152px;
+  height: 586px;
+  left: 144px;
+  top: 63px;
+
+  background: #ffffff;
+  border: 1px solid #f7f7f7;
+  box-sizing: border-box;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.16);
+  border-radius: 30px;
+}
+
+.game_table {
+  width: 586px;
+  height: 586px;
+  background-color: #84a4fb;
+  border-radius: 30px;
+}
+
+.left {
+  position: relative;
+  width: 99px;
+  height: 586px;
+  left: 0px;
+  top: 0px;
+
+  background: #84a4fb;
+  border-radius: 0px 30px 30px 0px;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.center {
+  position: absolute;
+  width: 491px;
+  height: 586px;
+  left: 28px;
+  top: 0px;
+
+  background: #84a4fb;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.right {
+  position: absolute;
+  width: 107px;
+  height: 586px;
+  left: 478px;
+  top: 0px;
+
+  background: #84a4fb;
+  border-radius: 30px 0px 0px 30px;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.score_table {
+  width: 566px;
+  height: 586px;
+  left: 586px;
+  /* border: 2px solid black; */
+}
+
+.game_3 {
+  position: absolute;
+  width: 264px;
+  height: 36px;
+  left: 750px;
+  top: 90px;
+
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 1000;
+  font-size: 24px;
+  line-height: 36px;
+  /* identical to box height */
+
+  text-align: center;
+
+  color: #000000;
+}
+
+.playga {
+  position: absolute;
+  width: 137px;
+  height: 27px;
+  left: 820px;
+  top: 130px;
+
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 27px;
+  /* identical to box height */
+
+  color: #000000;
+}
+
+.EntryName {
+  height: 600px;
+}
+
+.board {
+  margin: auto;
+  display: grid;
+  justify-content: stretch;
+  max-width: 580px;
+  height: 500px;
+}
+.drop-button {
+  border: 2px solid black;
+  background-color: black;
+  width: 100px;
+}
+
+.cell {
+  width: 100%;
+  width: 60px;
+  height: 60px;
+
+  border-radius: 50px;
+}
+
+.play_again{
+    position: absolute;
+width: 280px;
+height: 55px;
+left: 758px;
+top: 440px;
+
+background: #4B7BFF;
+border-radius: 10px;
+
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height */
+
+
+color: #FFFFFF;
+
+    
+}
+
+.details1 {
+  position: absolute;
+  width: 450px;
+  height: 250px;
+  left: 650px;
+  top: 184px;
+
+  background: #ffffff;
+  border: 1px solid #f7f7f7;
+  box-sizing: border-box;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.16);
+  border-radius: 30px;
+}

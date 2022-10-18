@@ -1,0 +1,12 @@
+.App {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.body {
+  position: absolute;
+  height: 712px;
+  width: 1440px;
+  background: #ced2dc;
+}
