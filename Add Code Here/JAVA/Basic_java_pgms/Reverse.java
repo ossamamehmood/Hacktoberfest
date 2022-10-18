@@ -1,6 +1,3 @@
-package com.muskan;
-
-
 import java.util.Scanner;
 
 public class Reverse {
