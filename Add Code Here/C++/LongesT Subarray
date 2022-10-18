@@ -1,0 +1,74 @@
+#include<iostream>
+using namespace std;
+void len(int arr[],int n,int k)
+{
+    int i=0;
+    int j=0;
+    int sum=0;
+    int maxi=0;
+    while(j<n)
+    {
+        sum+=arr[j];
+        if(sum<k)
+        {
+        j++;
+        }
+        else if(sum==k)
+        {
+            maxi=max(maxi,j-i+1);
+            j++;
+
+        }
+        else if(sum>k)
+        {
+            while(sum>k)
+            {
+                sum-=arr[i];
+                i++;
+            }
+            if(sum==k)
+            {
+                maxi=max(maxi,j-i+1);
+
+            }
+            j++;
+        
+        }
+    }
+    cout<<maxi;
+
+}
+int main()
+{
+   
+    int arr[] = {10, 5, 2, 7, 1, 9};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    int k = 15;
+    len(arr, n, k);
+    return 0;
+}
+/*
+ int lenOfLongSubarr(int A[],  int N, int K) 
+    { 
+        // Complete the function
+        unordered_map<int,int> mp;
+        // sum,index
+        int sum=0;
+        mp[0]=-1;
+        int maxi=0;
+        for(int i=0;i<N;i++)
+        {
+            sum+=A[i];
+            if(mp.find(sum-K)!=mp.end())
+            {
+                maxi=max(maxi,i-mp[sum-K]);
+            }
+            if(mp.find(sum)==mp.end())
+            {
+                mp[sum]=i;
+            }
+        }
+        return maxi;
+    } 
+}
+*/
