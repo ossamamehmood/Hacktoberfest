@@ -1,0 +1,44 @@
+
+class Solution {
+public:
+    int shortestPathBinaryMatrix(vector<vector<int>>& grid) {
+
+            
+            //make some base cases//
+            //pehla hi 1 hua toh 0 toh hai hi nhi
+            if(grid[0][0]==1) return -1;
+            //agar last bhi 1 hua toh phuch hi nhi paaye 
+            if(grid[n-1][m-1]==1) return -1;
+            // ab traverse kaise krein 
+            // kya bfs algo lga skte hain 
+            // ok intution ye hai ki agar mujhe 0 mila 
+            // toh mein apne bajju mein dekhunga are tu 0 hai haaan so waise hi
+            // chlte rhenge
+            // aur haan queue mein position distance aur count store krenge
+            queue<pair<pair<int,int>,int>> q;
+            q.push({0,0},1);
+            //visited mark krlo use
+            grid[0][0]=1;
+            while(!q.empty()){
+                    //itna toh aata hi hoga nhi pta toh bas phir pta kro...
+                    int x=q.front().first.first;
+                     int y=q.front().first.second;
+/                    int d=q.front().second;
+                    //ab agar hum end pe phuch gaye to kya d return kar na bhai
+                    if(x==n-1 and y==m-1){
+                            return d;
+                    }
+                    // 8 isliye liya kyuki ques mein 8 directionally diya hai
+                    for(int i=0;i<8;i++){
+                            int r=x+row[i];
+                          int c=y+col[i];
+                            if(r>=0 && c>=0 && r<n && c<m && grid[r][c]==0){
+                                    grid[r][c]=1;
+                                   q.push({{r, c}, d + 1});
+                           }
+                    }
+                    q.pop();
+            }
+            return -1;
+    }
+};
