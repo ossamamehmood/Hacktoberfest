@@ -1,0 +1,70 @@
+
+#include <bits/stdc++.h>
+
+using namespace std;
+#define ll long long
+#define vi vector<ll> 
+void
+solve ()
+{
+  ll n, x;
+  cin >> n >> x;
+  string s;
+  cin >> s;
+  vi pre (n + 1);
+  ll cur = 0;
+  for (int i = 1; i <= n; i++)
+    {
+      if (s[i - 1] == '0')
+	cur++;
+      else
+	cur--;
+      pre[i] = cur;
+    }
+  ll add = pre[n];
+  ll ans = 0;
+
+  if (add == 0)
+    {
+      int f = 0;
+      for (int i = 1; i <= n; i++)
+	{
+	  if (pre[i] == x)
+	    {
+	      f = 1;
+	      break;
+	    }
+	}
+      if (f)
+	{
+	  cout << -1 << endl;
+	}
+      else
+	{
+	  cout << 0 << endl;
+	}
+      return;
+    }
+  for (int i = 1; i <= n; i++)
+    {
+      if (((x - pre[i]) % add) == 0 && (x - pre[i]) / add >= 0)
+	ans++;
+    }
+
+
+  if (x == 0)
+    ans++;
+  cout << ans << endl;
+}
+
+int
+main ()
+{
+  int t;cin>>t;
+  while(t--)
+  {
+      solve();
+  }
+
+  return 0;
+}
