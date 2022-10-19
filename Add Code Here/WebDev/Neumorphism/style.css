@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* filter: invert(100%); */
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgb(54, 0, 54);
+}
+
+.clock{
+    height: 20rem;
+    width: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:url("./images/clock_outline.png") center center / cover;
+    border: 4px solid rgb(54, 0, 54);
+    box-shadow: 0 -1rem 1rem rgba(255, 255, 255, 0.055),
+    inset 0 -1rem 1rem rgba(255, 255, 255, 0.055),
+    0 1rem 1rem rgba(0, 0, 0, 0.055),
+    inset 0 1rem 1rem rgba(0, 0, 0, 0.055);
+    border-radius: 20rem;
+}
+.clock::before{
+    content: "";
+    position: absolute;
+    height: 1rem;
+    width: 1rem;
+    background: black;
+    border-radius: 1rem;
+}
+
+.hour,.minute,.second{
+    position: absolute;
+}
+.hour,.hr{
+    width: 10rem;
+    height: 10rem;
+}
+.minute,.min{
+    width: 12rem;
+    height: 12rem;
+}
+.second,.sec{
+    width: 14rem;
+    height: 14rem;
+}
+.hr,.min,.sec{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    position: absolute;
+    border-radius: 50%;
+}
+.hr::before{
+    content: "";
+    position: absolute;
+    width: 0.5rem;
+    height: 5rem;
+    background: rgb(1, 0, 0);
+    border-radius: 0.5rem 0.5rem 0 0;
+    z-index: 2;
+}
+.min::before{
+    content: "";
+    position: absolute;
+    width: 0.3rem;
+    height: 6rem;
+    background: rgb(0, 1, 0);
+    border-radius: 0.5rem 0.5rem 0 0;
+    z-index: 3;
+}
+.sec::before{
+    content: "";
+    position: absolute;
+    width: 0.2rem;
+    height: 9rem;
+    background: rgb(0, 0, 1);
+    border-radius: 0.5rem 0.5rem 0 0;
+    z-index: 4;
+}
