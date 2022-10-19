@@ -1,0 +1,31 @@
+//If the freq. of the words are are different, the key having greater freq. will be at the top else if, 
+//the freq. are same, the keys will be sorted based on their lexicographical order. 
+bool comp(pair<string, int>&p1, pair<string, int>& p2){
+    if(p1.second==p2.second)
+        return p1.first<p2.first;
+    return p1.second>p2.second;
+}
+
+class Solution {
+public:
+    vector<string> topKFrequent(vector<string>& words, int k) {
+        unordered_map<string, int>m;
+        for(int i=0; i<words.size(); i++){
+            m[words[i]]++;
+        }
+
+        //transferring all keys and values of map in a vector so that we can sort the keys based on both values and keys
+        vector<pair<string, int>>v;
+        for(auto it:m){
+            v.push_back(make_pair(it.first, it.second));
+        }
+
+        //sorting the vector based on the comp()
+        sort(v.begin(), v.end(), comp);
+        vector<string> res;
+        for(int i=0; i<k; i++){
+            res.push_back(v[i].first);
+        }
+        return (res);
+    }
+};
