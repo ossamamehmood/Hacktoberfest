@@ -1,0 +1,97 @@
+.details {
+  position: absolute;
+  width: 600px;
+  height: 344px;
+  left: 420px;
+  top: 184px;
+
+  background: #ffffff;
+  border: 1px solid #f7f7f7;
+  box-sizing: border-box;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.16);
+  border-radius: 30px;
+}
+
+.player1 {
+  position: absolute;
+  width: 90%;
+  height: 82px;
+  left: 31px;
+  top: 46px;
+
+  background: #dcf6e4;
+  border: 1px solid #cce2d3;
+  box-sizing: border-box;
+  border-radius: 10px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height */
+
+  color: #869189;
+}
+
+.player2 {
+  position: absolute;
+  width: 90%;
+  height: 82px;
+  left: 31px;
+  top: 143px;
+
+  background: #f7efd5;
+  border: 1px solid #e2dcc7;
+  box-sizing: border-box;
+  border-radius: 10px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height */
+
+  color: #869189;
+}
+
+.button {
+  position: absolute;
+  width: 90%;
+  height: 55px;
+  left: 31px;
+  top: 257px;
+
+  background: #4b7bff;
+  border-radius: 12px;
+
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height */
+
+  color: #ffffff;
+}
+
+.line {
+  position: absolute;
+  width: 93%;
+  height: 1px;
+  left: 22px;
+  top: 241px;
+
+  background: #949494;
+}
+.App {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.body {
+  position: absolute;
+  height: 712px;
+  width: 1440px;
+  background: #ced2dc;
+}
