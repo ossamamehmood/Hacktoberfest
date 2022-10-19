@@ -1,0 +1,1993 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+    <style>
+
+                    @font-face {
+
+                font-family: acme;
+
+                src: url(Misc/acme.ttf);
+
+            }
+
+            
+
+            *{
+
+              font-family:acme;
+
+            }
+
+            
+
+            body {
+
+                margin:0;
+
+                -webkit-user-select: none;  
+
+                -moz-user-select: none;
+
+                -ms-user-select: none;
+
+                user-select: none; 
+
+            }
+
+            
+
+            #menu-bar {
+
+                position:fixed;
+
+                bottom:0;
+
+                height:120px;
+
+                background:-webkit-linear-gradient(top,#444,#222,#000);
+
+                width:100%;
+
+                color:#fff;
+
+            }
+
+            
+
+            .sub-menu,.sub-sub-menu {
+
+                text-align:center;
+
+                position:absolute;
+
+            }
+
+            
+
+            .menu-btn {
+
+                border:none;
+
+                border-radius:2px;
+
+                position:absolute;
+
+                height:40px;
+
+                padding:0;
+
+                top:75px;
+
+                outline:none;
+
+                background:-webkit-linear-gradient(top,rgb(0,177,255),rgb(0,157,255));
+
+                color:#fff;
+
+                font-size:13px;
+
+                font-weight:700;
+
+            }
+
+            
+
+            .menu-btn-icon {
+
+                font-size:18px;
+
+            }
+
+            
+
+            .sub-menu-color-btn {
+
+                height:25px;
+
+                width:25px;
+
+                border:none;
+
+                border-radius:1px;
+
+                outline:none;
+
+                margin:5px 2px;
+
+            }
+
+            
+
+            #color-sector-1, #color-sector-2 {
+
+                height:35px;
+
+                position:absolute;
+
+                top:12px;
+
+                border:1px solid #fff;
+
+            }
+
+            
+
+            .marker{
+
+                height:20px;
+
+                width:26px;
+
+                background:#1e92d1;
+
+                position:absolute;
+
+                top:30px;
+
+                left:-13px;
+
+                border-radius:2px;
+
+                box-shadow: 0px 3px 5px 0px #888888;
+
+            }
+
+                
+
+            .markerArrow {
+
+                height:0;
+
+                width:0;
+
+                border-left:13px solid transparent;
+
+                border-right:13px solid transparent;
+
+                border-bottom:12px solid #5dc7ee;
+
+                margin-top:-12px;
+
+            }
+
+            
+
+            .close-btn {
+
+                height:30px;
+
+                margin-top:0px;
+
+                text-align:right;
+
+                position:absolute;
+
+                right:-35px;
+
+                top:15px;
+
+            }
+
+            
+
+            .close-btn button {
+
+                font-size:20px;
+
+                padding:0;
+
+                width:25px;
+
+                height:25px;
+
+                border:none;
+
+                margin-top:2.5px;
+
+                margin-left:5px;
+
+                margin-right:5px;
+
+                border-radius:1px;
+
+                outline:none;
+
+                color:#fff;
+
+            }
+
+            
+
+            .tool-btn {
+
+                border:none;
+
+                border-radius:2px;
+
+                position:absolute;
+
+                height:25px;
+
+                padding:0;
+
+                top:5px;
+
+                outline:none;
+
+                background:-webkit-linear-gradient(top,rgb(246,20,90),rgb(246,25,124));
+
+                color:#fff;
+
+                font-size:13px;
+
+                font-weight:700;
+
+            }
+
+            
+
+            .tool-btn-icon {
+
+                font-size:12px;
+
+            }
+
+            
+
+            #eraser-area{
+
+                overflow:hidden;
+
+                position:absolute;
+
+                top:0;
+
+                left:0;
+
+                display:none;
+
+            }
+
+            
+
+            #eraser{
+
+                position:absolute;
+
+                background:#fff;
+
+                border:2px solid #000;
+
+                border-radius:50%;
+
+                top:50px;
+
+                left:50px;
+
+            }
+
+            
+
+            #clearCanvas:hover {
+
+                background:blue !important;
+
+            }
+
+            
+
+            #brush-left {
+
+                width:35%;
+
+                display:inline-block;
+
+                float:left;
+
+                height:70px;
+
+            }
+
+            
+
+            #brush-right {
+
+                width:65%;
+
+                display:inline-block;
+
+                height:70px;
+
+            }
+
+            
+
+            #brush-right button {
+
+                width:22%;
+
+                height:50px;
+
+                margin-top:10px;
+
+                background:-webkit-linear-gradient(top,rgb(241,74,0),rgb(241,25,0));
+
+                color:#fff;
+
+                border:none;
+
+                border-radius:5px;
+
+                font-size:30px;
+
+                max-width:70px;
+
+                outline:none;
+
+            }
+
+            
+
+            #brush-size,#eraser-size {
+
+                display:inline-block;
+
+                width:100%;
+
+                margin:10px auto;
+
+                font-size:16px;
+
+                font-weight:600;
+
+                color:rgb(23,146,241);
+
+            }
+
+            
+
+            #brush-left input,#eraser-tools input{
+
+                width:90%;
+
+                display:inline-block;
+
+                margin-top:-8px;
+
+                background:rgb(225,11,47);
+
+                -webkit-appearance:none !important;
+
+                height:3px;
+
+                border-radius:3px;
+
+                outline:none;
+
+            }
+
+            
+
+            #eraser-tools button {
+
+                border:none;
+
+                color:#fff;
+
+                height:40px;
+
+                position:absolute;
+
+                width:40px;
+
+                font-size:30px;
+
+                top:20px;
+
+                right:15px;
+
+                border-radius:5px;
+
+            }
+
+            
+
+            #preview-border img{
+
+                height:100%;
+
+                width:100%;
+
+            }
+
+            
+
+            #border-close-div {
+
+                width:60px;
+
+                height:70px;
+
+                position:fixed;
+
+                right:0px; 
+
+                z-index:5;
+
+                background:#000;
+
+            }
+
+            
+
+            #border-close-div button {
+
+                background:rgb(19,173,59);
+
+                margin:20px 15px;
+
+                height:30px;
+
+                width:30px;
+
+                border:none;
+
+                color:#fff;
+
+                font-size:20px;
+
+                border-radius:3px;
+
+            }
+
+            
+
+            #border-btns {
+
+                height:70px;
+
+                overflow:scroll;
+
+                width:100%;
+
+                position:absolute;
+
+            }
+
+            
+
+            #border-btns {
+
+                height:70px;
+
+                width:100%;
+
+                overflow-x:scroll;
+
+                overflow-y:hidden;
+
+                text-align:left;
+
+            }
+
+            
+
+            #border-btns button{
+
+                height:50px;
+
+                width:50px;
+
+                margin:10px 5px;
+
+                border:none;
+
+                border-radius:3px;
+
+                background:#fff;
+
+                outline:none;
+
+            }
+
+            
+
+            #border-btns button:hover {
+
+                background:rgb(230,24,70);
+
+            }
+
+            
+
+            #shape-div {
+
+                position:absolute;
+
+                top:0;
+
+                left:0;
+
+                background:transparent;
+
+            }
+
+            
+
+            #shapeCanvas {
+
+                position:absolute;
+
+                top:0;
+
+                left:0;
+
+                visibility:hidden;
+
+            }
+
+            
+
+            .shape-btn {
+
+                position:absolute;
+
+                height:60px;
+
+                top:5px;
+
+                display:inline-block;
+
+                width:50px;
+
+                background:#fff;
+
+                border:none;
+
+                border-radius:3px;
+
+                outline:none;
+
+            }
+
+            
+
+            .shape-btn:hover{
+
+                background:rgb(37,70,217);
+
+            }
+
+            
+
+            .shape-btn img{
+
+                display:inline-block;
+
+                position:absolute;
+
+                top:7.5px;
+
+                left:2.5px;
+
+                height:45px;
+
+                width:45px;
+
+            }
+
+            
+
+            #shape-size-div {
+
+                position:fixed;
+
+                right:0;
+
+                height:70px;
+
+                width:60px;
+
+                background:#000;
+
+                color:#fff;
+
+                font-size:17px;
+
+            }
+
+            
+
+            #shape-size-div button{
+
+                height:70px;
+
+                width:60px;
+
+                position:fixed;
+
+                right:0;
+
+                background:#000;
+
+                border:none;
+
+                color:#fff;
+
+                font-size:17px;
+
+                outline:none;
+
+            }
+
+            
+
+            #shape-size {
+
+                position:absolute;
+
+                top:0;
+
+                left:0;
+
+                display:inline-block;
+
+                visibility:hidden;
+
+                width:70%;
+
+                left:5%;
+
+                top:20px;
+
+            }
+
+    </style>
+
+        <title>Paint Canvas</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1" >
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+
+        
+
+    </head>
+
+    <body>
+
+        <div id="shape-div" style="display:none">
+
+            <canvas id="shapeCanvas" onclick="shapeColorSet()"></canvas>
+
+        </div>
+
+        <canvas id="myCanvas"></canvas>
+
+        <div id="menu-bar">
+
+            <!--Tools-->
+
+            <div class="sub-menu" id="tools" style="display:block">
+
+                <button class="tool-btn" onclick="brushOpen()"><span class="tool-btn-icon"><i class="fa fa-paint-brush"></i></span> Brush</button>
+
+                <button class="tool-btn" onclick="eraserOpen()"><span class="tool-btn-icon"><i class="fa fa-eraser"></i></span> Eraser</button>
+
+                <button class="tool-btn" onclick="bucketOpen()"><span class="tool-btn-icon"><i class="fa fa-ship"></i></span> Bucket</button>
+
+                <button class="tool-btn" onclick="alert('Not implemented..')"><span class="tool-btn-icon"><i class="fa fa-text-width"></i></span> Text</button>
+
+            
+
+                <button class="tool-btn" style="top:35px" onclick="alert('Not implemented..')"><span class="tool-btn-icon"><i class="fa fa-image"></i></span> Image</button>
+
+                <button class="tool-btn" style="top:35px" onclick="sectionOpen('border-tools','tools')"><span class="tool-btn-icon"><i class="fa fa-border" style="font-size:18px"></i></span> Border</button>
+
+                <button class="tool-btn" style="top:35px" onclick="alert('Not implemented..')"><span class="tool-btn-icon"><i class="fa fa-bolt" style="font-size:16px"></i></span> Blur</button>
+
+                <button class="tool-btn" style="top:35px" id="clearCanvas" onclick="clearCanvas()"><span class="tool-btn-icon"><i class="fa fa-leaf"></i></span> Clear</button>
+
+            </div>
+
+            <!--brush menu....-->
+
+            <div class="sub-sub-menu" id="brush-tools" style="width:100%;display:none">
+
+                <div id="brush-left">
+
+                    <span id="brush-size">Brush Size</span>
+
+                    <input type="range" value="5" min="1" max="50" onchange="brushSizeChange(this)">
+
+                </div>
+
+                <div id="brush-right">
+
+                    <button class="brush-type" onclick="brushSelect(this,'round','round')" style="background:rgb(5,139,228)"><i class="fa fa-paint-brush"></i></button>
+
+                    <button class="brush-type" onclick="brushSelect(this,'square','bevel')"><i class="fa fa-pencil"></i></button>
+
+                    <button class="brush-type" onclick="brushSelect(this,'butt','miter')"><i class="fa fa-paint-brush"></i></button>
+
+                    <button style="background:rgb(19,173,59);" onclick="sectionOpen('tools','brush-tools')"><i class="fa fa-check"></i></button>
+
+                </div>
+
+            </div>
+
+            
+
+            <div class="sub-sub-menu" id="eraser-tools" style="width:100%;display:none">
+
+                <span id="eraser-size">Eraser Size</span>
+
+                <input type="range" value="50" min="20" max="100" onchange="eraserSizeChange(this)" style="width:50%">
+
+                <button style="background:rgb(19,173,59);" onclick="sectionOpen('tools','eraser-tools')"><i class="fa fa-check"></i></button>
+
+            </div>
+
+            
+
+            <div class="sub-sub-menu" id="border-tools" style="width:100%;display:none;">
+
+                <div id="border-btns">
+
+                    <div id="border-pics"></div>
+
+                </div>
+
+                <div id="border-close-div">
+
+                    <button onclick="setBorder()"><i class="fa fa-check"></i></button>
+
+                </div>
+
+            </div>
+
+            
+
+            <!--Color Sector-->
+
+            <div class="sub-menu" id="colors" style="display:none" >
+
+                <button class="sub-menu-color-btn" style="background-color:rgb(255,0,0)" onclick="selectColor(255,0,0)"></button>
+
+                <button class="sub-menu-color-btn" style="background-color:rgb(0,255,0)" onclick="selectColor(0,255,0)"></button>
+
+                <button class="sub-menu-color-btn" style="background-color:rgb(0,0,255)" onclick="selectColor(0,0,255)"></button>
+
+                <button class="sub-menu-color-btn" style="background-color:rgb(255,255,0)" onclick="selectColor(255,255,0)"></button>
+
+                <button class="sub-menu-color-btn" style="background-color:rgb(255,0,255)" onclick="selectColor(255,0,255)"></button>
+
+                <button class="sub-menu-color-btn" style="background-color:rgb(0,255,255)" onclick="selectColor(0,255,255)"></button>
+
+                <button class="sub-menu-color-btn" style="background-color:rgb(0,0,0)" onclick="selectColor(0,0,0)"></button>
+
+                <button class="sub-menu-color-btn" style="background-color:rgb(127,127,255)" onclick="selectColor(127,127,255)"></button>
+
+                <button class="sub-menu-color-btn" style="background-color:rgb(127,255,127)" onclick="selectColor(127,255,127)"></button>
+
+                <button class="sub-menu-color-btn" style="background-color:rgb(255,127,127)" onclick="selectColor(255,127,127)"></button>
+
+                <button class="sub-menu-color-btn" style="background-color:rgb(128,128,0)" onclick="selectColor(128,128,0)"></button>
+
+                <button class="sub-menu-color-btn" style="background-color:rgb(128,0,128)" onclick="selectColor(128,0,128)"></button>
+
+                <button class="sub-menu-color-btn" style="background-color:rgb(0,94,12)" onclick="selectColor(0,94,12)"></button>
+
+                <button class="sub-menu-color-btn" style="background-color:rgb(255,255,255)" onclick="selectColor(255,255,255)"></button>
+
+                <button class="sub-menu-color-btn" style="background:-webkit-linear-gradient(left,#f00,#0f0,#00f,#ff0,#f0f,#0ff);" onclick="sectionOpen('color-picker','colors')"></button>
+
+            
+
+            </div>
+
+            <!--Color Picker-->
+
+            <div class="sub-sub-menu" id="color-picker" style="display:none">
+
+                <div class="close-btn">
+
+                    <button style="background:rgb(19,173,59)" onclick="sectionOpen('colors','color-picker')"><i class="fa fa-check"></i></button>
+
+                </div>
+
+                <div id="color-sector-1">
+
+                    <div class="marker" ontouchstart="markerSelector(0,colorCanvasContext1)">
+
+                        <div class="markerArrow"></div>
+
+                    </div>
+
+                    <canvas id="color-canvas-1"></canvas>
+
+                </div>
+
+                <div id="color-sector-2">
+
+                    <div class="marker" ontouchstart="markerSelector(1,colorCanvasContext2)">
+
+                        <div class="markerArrow"></div>
+
+                    </div>
+
+                    <canvas id="color-canvas-2"></canvas>
+
+                </div>
+
+            </div>
+
+            <!--Shapes-->
+
+            <div class="sub-menu" style="display:none; height:70px; width:100%; overflow:scroll">
+
+                <div id="all-shapes">
+
+                
+
+                </div>
+
+                <div id="shape-size-div" style="z-index:100">
+
+                    <button onclick="shapeSizeOpen()" id="shape-size-btn">Size</button>
+
+                    <input id="shape-size" type="range" value="60" min="10" max="300" onchange="shapeSize=this.value">
+
+                </div>
+
+            </div>
+
+            <!--Settings-->
+
+            <div class="sub-menu">
+
+            
+
+            </div>
+
+            <!--Menu-->
+
+            <div id="menu">
+
+                <button class="menu-btn" onclick="menuOpen(0)"><span class="menu-btn-icon"><i class="fa fa-paint-brush"></i></span><br>Tools</button>
+
+                <button class="menu-btn" onclick="menuOpen(1)"><span class="menu-btn-icon" style="color:#000"><i class="fa fa-square"></i></span><br>Colors</button>
+
+                <button class="menu-btn" onclick="menuOpen(2,'shape-div')"><span class="menu-btn-icon"><i class="fa fa-paint-brush"></i></span><br>Shapes</button>
+
+                <button class="menu-btn" onclick="menuOpen(3)"><span class="menu-btn-icon"><i class="fa fa-cog"></i></span><br>Settings</button>
+
+            </div>
+
+        </div>
+
+        
+
+        <div id="eraser-area">
+
+            <div id="eraser"></div>
+
+            <div id="preview-border" style="width:100%;height:100%">
+
+                
+
+            </div>
+
+        </div>
+
+        
+
+        
+
+        <script type="text/javascript">
+
+            var w=window.innerWidth;
+
+            var height=window.innerHeight;
+
+            
+
+            var menuBar=document.getElementById("menu-bar");
+
+            
+
+            var c=document.getElementById("myCanvas");
+
+            var h=height-120;
+
+            c.height=h;
+
+            c.width=w;
+
+            
+
+            var eraserArea=document.getElementById("eraser-area");
+
+            eraserArea.style.height=h+"px";
+
+            eraserArea.style.width=w+"px";
+
+            
+
+            var allColor=[0,0,0,255];
+
+            
+
+            var menuButtons=document.getElementsByClassName("menu-btn");
+
+            for(n=0;n<menuButtons.length;n++){
+
+                menuButtons[n].style.width=((w-10)/4-8)+"px";
+
+                menuButtons[n].style.left=5+n*((w-10)/4-8)+10.66*n+"px";
+
+            }
+
+            
+
+            var menuBtnIcon=document.getElementsByClassName("menu-btn-icon");
+
+            
+
+            function selectColor(red,green,blue){
+
+                menuBtnIcon[1].style.color="rgb("+red+","+green+","+blue+")";
+
+                allColor=[red,green,blue,255];
+
+            }
+
+            
+
+            var colorSector1=document.getElementById("color-sector-1");
+
+            var colorSector2=document.getElementById("color-sector-2");
+
+            
+
+            var wc=w-50;
+
+            
+
+            colorSector1.style.width=wc/2-18+"px";
+
+            colorSector1.style.left=12+"px";
+
+            
+
+            colorSector2.style.width=wc/2-18+"px";
+
+            colorSector2.style.left=wc/2+6+"px";
+
+            
+
+            var colorCanvas1=document.getElementById("color-canvas-1");
+
+            var colorCanvas2=document.getElementById("color-canvas-2");
+
+            
+
+            colorCanvas1.height=35;
+
+            colorCanvas1.width=wc/2-18;
+
+            
+
+            colorCanvas2.height=35;
+
+            colorCanvas2.width=wc/2-18;
+
+            
+
+            var colorCanvasContext1=colorCanvas1.getContext("2d");
+
+            var colorCanvasContext2=colorCanvas2.getContext("2d");
+
+            
+
+            var colorCanvasGradient1=colorCanvasContext1.createLinearGradient(0,0,w/2-18,0);
+
+            colorCanvasGradient1.addColorStop(0,"#ff0000");
+
+            colorCanvasGradient1.addColorStop(1/6,"#ffff00");
+
+            colorCanvasGradient1.addColorStop(2*1/6,"#00ff00");
+
+            colorCanvasGradient1.addColorStop(3*1/6,"#00ffff");
+
+            colorCanvasGradient1.addColorStop(4*1/6,"#0000ff");
+
+            colorCanvasGradient1.addColorStop(5*1/6,"#ff00ff");
+
+            colorCanvasGradient1.addColorStop(6*1/6,"#ff0000");
+
+            
+
+            colorCanvasContext1.rect(0,0,wc/2-18,35);
+
+            colorCanvasContext1.fillStyle=colorCanvasGradient1;
+
+            colorCanvasContext1.fill();
+
+            
+
+            var currentColor=[255,0,0,255];
+
+            
+
+            colorCanvasContext2.rect(0,0,wc/2-18,35);
+
+            
+
+            function colorCanvasColorSet2(colorSet){
+
+                var colorCanvasGradient2=colorCanvasContext2.createLinearGradient(0,0,wc/2-18,0);
+
+                colorCanvasGradient2.addColorStop(0,"#ffffff");
+
+                colorCanvasGradient2.addColorStop(.5,"rgba("+colorSet[0]+","+colorSet[1]+","+colorSet[2]+","+colorSet[3]+")");
+
+                colorCanvasGradient2.addColorStop(1,"#000000");
+
+                colorCanvasContext2.fillStyle=colorCanvasGradient2;
+
+                colorCanvasContext2.fill();
+
+            }
+
+            
+
+            colorCanvasColorSet2(currentColor);
+
+            
+
+            function colorSelectorCanvas1(e){
+
+                var touchObject=e.changedTouches[0];
+
+                var pointX=parseInt(touchObject.clientX)-12;
+
+                currentColor=colorCanvasContext1.getImageData(pointX,1,1,1).data;
+
+                colorCanvasColorSet2(currentColor);
+
+                menuBtnIcon[1].style.color="rgb("+currentColor[0]+","+currentColor[1]+","+currentColor[2]+")";
+
+                allColor=currentColor;
+
+                markers[0].style.left=pointX-12+"px";
+
+            }
+
+            
+
+            function colorSelectorCanvas2(e){
+
+                var touchObject=e.changedTouches[0];
+
+                var pointX=parseInt(touchObject.clientX)-wc/2+6;
+
+                var finalColor=colorCanvasContext2.getImageData(pointX,1,1,1).data;
+
+                menuBtnIcon[1].style.color="rgb("+finalColor[0]+","+finalColor[1]+","+finalColor[2]+")";
+
+                allColor=finalColor;
+
+                markers[1].style.left=pointX-20+"px";
+
+            }
+
+            
+
+            colorCanvas1.addEventListener("touchstart",colorSelectorCanvas1);
+
+            colorCanvas2.addEventListener("touchstart",colorSelectorCanvas2);
+
+            
+
+            var markers=document.getElementsByClassName("marker");
+
+            var currentCanvas;
+
+            var currentMarker;
+
+            
+
+            markers[1].style.left=wc/4-25+"px";
+
+            
+
+            function markerSelector(n,i){
+
+                currentMarker=n;
+
+                currentCanvas=i;
+
+            }
+
+            
+
+            function markerMove1(e){
+
+                var touchObject=e.changedTouches[0];
+
+                var pointX=parseInt(touchObject.clientX);
+
+                if(pointX<(wc/2-5) && pointX>13){
+
+                    var color1=currentCanvas.getImageData(pointX-13,0,1,1).data;
+
+                    currentColor=color1;
+
+                    markers[currentMarker].style.left=pointX-26+"px";
+
+                    menuBtnIcon[1].style.color="rgb("+color1[0]+","+color1[1]+","+color1[2]+")";
+
+                    allColor=color1;
+
+                    if(currentMarker==0){
+
+                        colorCanvasColorSet2(currentColor);
+
+                    }
+
+                }
+
+            }
+
+            
+
+            function markerMove2(e){
+
+                var touchObject=e.changedTouches[0];
+
+                var pointX=parseInt(touchObject.clientX);
+
+                if(pointX<(wc-22) && pointX>wc/2-7){
+
+                    var color1=currentCanvas.getImageData(pointX-13-wc/2+18,0,1,1).data;
+
+                    markers[currentMarker].style.left=pointX-26-wc/2+18+"px";
+
+                    menuBtnIcon[1].style.color="rgb("+color1[0]+","+color1[1]+","+color1[2]+")";
+
+                    allColor=color1;
+
+                }
+
+            }
+
+            
+
+            markers[0].addEventListener("touchmove",markerMove1);
+
+            markers[1].addEventListener("touchmove",markerMove2);
+
+            
+
+            document.getElementById("color-picker").style.width=wc+"px";
+
+            
+
+            var toolButtons=document.getElementsByClassName("tool-btn");
+
+            for(n=0;n<4;n++){
+
+                toolButtons[n].style.width=((w-10)/4-8)+"px";
+
+                toolButtons[n].style.left=5+n*((w-10)/4-8)+10.66*n+"px";
+
+                toolButtons[n+4].style.width=((w-10)/4-8)+"px";
+
+                toolButtons[n+4].style.left=5+n*((w-10)/4-8)+10.66*n+"px";
+
+            }
+
+            
+
+            menuButtons[0].style.background="-webkit-linear-gradient(top,rgb(0,197,80),rgb(0,197,133))";
+
+            
+
+            var menuItems=document.getElementsByClassName("sub-menu");
+
+            var sub=document.getElementsByClassName("sub-sub-menu");
+
+            
+
+            function menuOpen(openItem,showDiv){
+
+                for(n=0;n<menuItems.length;n++){
+
+                    menuItems[n].style.display="none";
+
+                    menuButtons[n].style.background="-webkit-linear-gradient(top,rgb(0,177,255),rgb(0,157,255))";
+
+                }
+
+                for(n=0;n<sub.length;n++){
+
+                    sub[n].style.display="none";
+
+                }
+
+                menuItems[openItem].style.display="block";
+
+                menuButtons[openItem].style.background="-webkit-linear-gradient(top,rgb(0,197,80),rgb(0,197,133))";
+
+                shapeDiv.style.display="none";
+
+                if(showDiv){
+
+                    document.getElementById(showDiv).style.display="block";
+
+                }
+
+            }
+
+            
+
+            function toolOpen(openItem){
+
+                for(n=0;n<toolButtons.length;n++){
+
+                    toolButtons[n].style.background="-webkit-linear-gradient(top,rgb(246,20,90),rgb(246,25,124))";
+
+                }
+
+                toolButtons[openItem].style.background="-webkit-linear-gradient(top,rgb(0,197,80),rgb(0,197,133))";
+
+            }
+
+            
+
+            function sectionOpen(e1,e2){
+
+                document.getElementById(e1).style.display="block";
+
+                document.getElementById(e2).style.display="none";
+
+            }
+
+            
+
+            var brushBtns=document.getElementsByClassName("brush-type");
+
+            
+
+            function brushSelect(e1,t1,t2){
+
+                for(n=0;n<brushBtns.length;n++){
+
+                    brushBtns[n].style.background="-webkit-linear-gradient(top,rgb(241,74,0),rgb(241,25,0))";
+
+                }
+
+                e1.style.background="rgb(5,139,228)";
+
+                brushCap=t1;
+
+                brushJoin=t2;
+
+            }
+
+            
+
+            //Borders
+
+            
+
+            var totalBorders=11;
+
+            var borderButtons=document.getElementById("border-pics");
+
+            borderButtons.style.width=totalBorders*60+60+"px"
+
+            for(n=5;n<totalBorders;n++){
+
+                var num=n+1;
+
+                borderButtons.innerHTML+='<button onclick="addBorder('+num+')"><img src="https://bdsports.000webhostapp.com/borders/b'+num+'.png" width="30" height="30" ></button>';
+
+            }
+
+            
+
+            //shapes
+
+            
+
+            
+
+            
+
+            
+
+            //Main Canvas
+
+            
+
+            
+
+            var ctx=c.getContext("2d");
+
+            
+
+            function clearCanvas(){
+
+                ctx.fillStyle="#fff";
+
+                ctx.fillRect(0,0,w,h);
+
+            }
+
+            
+
+            clearCanvas();
+
+            toolOpen(0);
+
+            
+
+            var brushSize=5;
+
+            var brushCap="round";
+
+            var brushJoin="round";
+
+            
+
+            function brushSizeChange(element){
+
+                brushSize=element.value;
+
+            }
+
+            
+
+            function draw(e){
+
+                var touchObject=e.changedTouches[0];
+
+                var pointX=parseInt(touchObject.clientX);
+
+                var pointY=parseInt(touchObject.clientY);
+
+                ctx.lineTo(pointX+10,pointY+10);
+
+                ctx.strokeStyle="rgba("+allColor[0]+","+allColor[1]+","+allColor[2]+","+allColor[3]+")";
+
+                ctx.lineWidth=brushSize;
+
+                ctx.lineCap=brushCap;
+
+                ctx.lineJoin=brushJoin;
+
+                ctx.stroke();
+
+                e.preventDefault();
+
+            }
+
+                
+
+            function start(e){
+
+                var touchObject=e.changedTouches[0];
+
+                var pointX=parseInt(touchObject.clientX);
+
+                var pointY=parseInt(touchObject.clientY);
+
+                ctx.beginPath();
+
+                ctx.moveTo(pointX,pointY);
+
+                e.preventDefault();
+
+            }
+
+                
+
+            function end(e){
+
+                ctx.closePath();
+
+            }
+
+            
+
+            
+
+            c.addEventListener("touchstart",start);
+
+            c.addEventListener("touchmove",draw);
+
+            c.addEventListener("touchend",end);
+
+            
+
+            var currentTool="brush";
+
+            
+
+            function eraserSizeChange(e1){
+
+                eraserSize=e1.value;
+
+            }
+
+            
+
+            
+
+            var eraserSize=50;
+
+            var eraser=document.getElementById("eraser");
+
+            
+
+            function eraserStart(e){
+
+                eraser.style.width=eraserSize+"px";
+
+                eraser.style.height=eraserSize+"px";
+
+                var touchObject=e.changedTouches[0];
+
+                var pointX=parseInt(touchObject.clientX);
+
+                var pointY=parseInt(touchObject.clientY);
+
+                eraser.style.left=pointX-eraserSize/2+"px";
+
+                eraser.style.top=pointY-eraserSize/2+"px";
+
+                eraserArea.style.display="block";
+
+                
+
+                ctx.beginPath();
+
+                ctx.moveTo(pointX,pointY);
+
+                e.preventDefault();
+
+            }
+
+            
+
+            function eraserMove(e){
+
+                var touchObject=e.changedTouches[0];
+
+                var pointX=parseInt(touchObject.clientX);
+
+                var pointY=parseInt(touchObject.clientY);
+
+                eraser.style.left=pointX-eraserSize/2+"px";
+
+                eraser.style.top=pointY-eraserSize/2+"px";
+
+                
+
+                ctx.lineTo(pointX,pointY);
+
+                ctx.strokeStyle="rgb(255,255,255)";
+
+                ctx.lineWidth=eraserSize;
+
+                ctx.lineJoin="round";
+
+                ctx.lineCap="round";
+
+                ctx.stroke();
+
+                e.preventDefault();
+
+            }
+
+            
+
+            function eraserEnd(){
+
+                eraserArea.style.display="none";
+
+                ctx.closePath();
+
+            }
+
+            
+
+            function eraserOpen(){
+
+                toolOpen(1);
+
+                c.removeEventListener("touchstart",start);
+
+                c.removeEventListener("touchmove",draw);
+
+                c.removeEventListener("touchend",end);
+
+            
+
+                c.addEventListener("touchstart",eraserStart);
+
+                c.addEventListener("touchmove",eraserMove);
+
+                c.addEventListener("touchend",eraserEnd);
+
+                
+
+                c.removeEventListener("touchstart",openBucket)
+
+                
+
+                sectionOpen("eraser-tools","tools")
+
+            }
+
+            
+
+            function brushOpen(){
+
+                toolOpen(0);
+
+                c.removeEventListener("touchstart",eraserStart);
+
+                c.removeEventListener("touchmove",eraserMove);
+
+                c.removeEventListener("touchend",eraserEnd);
+
+                
+
+                c.addEventListener("touchstart",start);
+
+                c.addEventListener("touchmove",draw);
+
+                c.addEventListener("touchend",end);
+
+                
+
+                c.removeEventListener("touchstart",openBucket)
+
+                
+
+                sectionOpen("brush-tools","tools")
+
+            }
+
+            
+
+            var bucketColor;
+
+            
+
+            //Bucket...
+
+            
+
+            var pp=[[10,50]]
+
+            var bucketCheck=true;
+
+            
+
+            function bucket(p){
+
+                bucketCheck=false;
+
+                var imgData=ctx.getImageData(0,0,w,h);
+
+                while(p.length){
+
+                    var np=p.pop()
+
+                    var x=np[0]
+
+                    var y=np[1]
+
+                    var pos=(y*w+x)*4
+
+                    while(y>0 && check(pos)){
+
+                        pos-=w*4
+
+                        y--
+
+                    }
+
+                    pos+=w*4
+
+                    while(y<h && check(pos)){
+
+                        y++;
+
+                        col(pos);
+
+                        if(x>0){
+
+                            if(check(pos-4)){
+
+                                p.push([x-1,y])
+
+                            }
+
+                        }
+
+                        if(x<w){
+
+                            if(check(pos+4)){
+
+                                p.push([x+1,y])
+
+                            }
+
+                        }
+
+                        pos+=w*4;
+
+                    }
+
+                }
+
+            
+
+                ctx.putImageData(imgData,0,0);
+
+            
+
+                function check(pp){
+
+                    var r=imgData.data[pp]
+
+                    var g=imgData.data[pp+1]
+
+                    var b=imgData.data[pp+2]
+
+                    return (r==bucketColor[0] && g==bucketColor[1] && b==bucketColor[2]);
+
+                }
+
+            
+
+                function col(pp){
+
+                    imgData.data[pp]=allColor[0];
+
+                    imgData.data[pp+1]=allColor[1];
+
+                    imgData.data[pp+2]=allColor[2];
+
+                }
+
+                
+
+                setTimeout(function(){
+
+                    bucketCheck=true;
+
+                },100)
+
+            
+
+            }
+
+            
+
+            function openBucket(e){
+
+                if(bucketCheck==true){
+
+                    var touchObject=e.changedTouches[0]
+
+                    var px=parseInt(touchObject.clientX)
+
+                    var py=parseInt(touchObject.clientY)
+
+                    bucketColor=ctx.getImageData(px,py,1,1).data;
+
+                    pp=[[px,py]]
+
+                    bucket(pp)
+
+                }
+
+                else{
+
+                    alert("jjj")
+
+                }
+
+            }
+
+            
+
+            function bucketOpen(){
+
+                toolOpen(2);
+
+                c.removeEventListener("touchstart",eraserStart);
+
+                c.removeEventListener("touchmove",eraserMove);
+
+                c.removeEventListener("touchend",eraserEnd);
+
+            
+
+                c.removeEventListener("touchstart",start);
+
+                c.removeEventListener("touchmove",draw);
+
+                c.removeEventListener("touchend",end);
+
+            
+
+                c.addEventListener("touchstart",openBucket)
+
+            }
+
+            
+
+            //Border...
+
+            
+
+            var borderImage=new Image();
+
+            var borderPreviewArea=document.getElementById("preview-border");
+
+            var borderAdd=false;
+
+            
+
+            function addBorder(num){
+
+                borderImage.src="https://bdsports.000webhostapp.com/borders/b"+num+".png";
+
+                eraserArea.style.display="block";
+
+                borderPreviewArea.style.display="block";
+
+                eraser.style.display="none";
+
+                borderPreviewArea.innerHTML="<img src='https://bdsports.000webhostapp.com/borders/b"+num+".png'>";
+
+                borderAdd=true;
+
+            }
+
+            
+
+            function setBorder(){
+
+                if(borderAdd==true){
+
+                    setTimeout(function(){
+
+                        ctx.drawImage(borderImage,0,0,w,h);
+
+                    },10)
+
+                }
+
+                eraser.style.display="block";
+
+                eraserArea.style.display="none";
+
+                borderPreviewArea.style.display="none";
+
+                sectionOpen("tools","border-tools");
+
+            }
+
+            
+
+            function borderSectionHide(){
+
+                eraser.style.display="block";
+
+                eraserArea.style.display="none";
+
+                borderPreviewArea.style.display="none";
+
+                borderAdd=false;
+
+            }
+
+            
+
+            borderPreviewArea.addEventListener("touchstart",borderSectionHide)
+
+            
+
+            //Shape
+
+            
+
+            var shapeSize=60;
+
+            var shapeDiv=document.getElementById("shape-div");
+
+            shapeDiv.style.height=h+"px";
+
+            shapeDiv.style.width=w+"px";
+
+            var shapeImg=new Image();
+
+            shapeImg.src="https://bdsports.000webhostapp.com/shapes/s1.png";
+
+            var shapeCanvas=document.getElementById("shapeCanvas");
+
+            shapeCanvas.height=200;
+
+            shapeCanvas.width=200;
+
+            var shapeImgData;
+
+            var shapeContext=shapeCanvas.getContext("2d");
+
+            function shapeColorSet(){
+
+                shapeContext.drawImage(shapeImg,0,0,200,200);
+
+                setTimeout(function(){
+
+                   try{ shapeImgData=shapeContext.getImageData(0,0,200,200)
+
+                    for(n=0;n<200*200*4;n+=4){
+
+                        shapeImgData.data[n]=allColor[0]//255-m.data[n]
+
+                        shapeImgData.data[n+1]=allColor[1]//255-m.data[n+1]
+
+                        shapeImgData.data[n+2]=allColor[2]//255-m.data[n+2]
+
+                    }
+
+                    shapeContext.putImageData(shapeImgData,0,0);
+
+                    setTimeout(function(){
+
+                        var imgd=shapeCanvas.toDataURL();
+
+                        shapeImg.src=imgd;
+
+                        setTimeout(function(){
+
+                            shapeContext.drawImage(shapeImg,0,0,200,200);
+
+                        },10)
+
+                    },10)
+
+                    }catch(err){}
+
+                },10)
+
+            }
+
+            
+
+            function shapeSelect(shapeSource){
+
+                shapeContext.clearRect(0,0,200,200);
+
+                shapeImg.src="https://bdsports.000webhostapp.com/shapes/s"+shapeSource+".png";
+
+                shapeColorSet();
+
+            }
+
+            
+
+            function drawShape(e){
+
+                var touchObject=e.changedTouches[0];
+
+                var pointX=touchObject.clientX;
+
+                var pointY=touchObject.clientY;
+
+                ctx.drawImage(shapeImg,pointX-shapeSize/2,pointY-shapeSize/2,shapeSize,shapeSize);
+
+                e.preventDefault();
+
+            }
+
+            
+
+            shapeDiv.addEventListener("touchstart",drawShape)
+
+            var shapeSizeDiv=document.getElementById("shape-size-div");
+
+            var shapeRange=document.getElementById("shape-size");
+
+            var shapeSizeBtn=document.getElementById("shape-size-btn");
+
+            
+
+            var shapeSizeOpened=false;
+
+            function shapeSizeOpen(){
+
+                if(shapeSizeOpened){
+
+                    shapeSizeDiv.style.width="60px";
+
+                    shapeRange.style.visibility="hidden";
+
+                    shapeSizeBtn.innerHTML="Size";
+
+                    shapeSizeOpened=false;
+
+                }
+
+                else{
+
+                    shapeSizeDiv.style.width="100%";
+
+                    shapeRange.style.visibility="visible";
+
+                    shapeSizeBtn.innerHTML="<i class='fa fa-check' style='font-size:30px'></i>";
+
+                    shapeSizeOpened=true;
+
+                }
+
+            }
+
+            var allShapesValue="";
+
+            for(n=1;n<52;n++){
+
+                allShapesValue+='<button class="shape-btn" onclick="shapeSelect('+n+')"><img src="https://bdsports.000webhostapp.com/shapes/s'+n+'.png"></button>';
+
+            }
+
+            document.getElementById("all-shapes").innerHTML+=allShapesValue;
+
+            
+
+            var shapeBtns=document.getElementsByClassName("shape-btn");
+
+            for(n=0;n<shapeBtns.length;n++){
+
+            shapeBtns[n].style.left=5+55*n+"px";
+
+            }
+
+        </script>
+
+    </body>
+
+</html>
