@@ -1,5 +1,5 @@
-# Hacktoberfest 2022 `OPEN FIRST` Pull Request - `FREE T-SHIRT`🎉
-![Hacktoberfest 2021](https://github.com/ossamamehmood/Hacktoberfest2022/raw/main/.github/logo.png)
+# HacktoberFest 2022 `OPEN FIRST` Pull Request - `FREE T-SHIRT`🎉
+![HacktoberFest 2021](https://github.com/ossamamehmood/Hacktoberfest2022/raw/main/.github/logo.png)
 
 
 ## Contributors of `Hacktoberfest 2022`
@@ -12,7 +12,7 @@
   
   </div>
 
-## This project is perfect for your first pull request
+## This Project Is Perfect For Your First Pull Request
 
 🗣 **Hacktoberfest encourages participation in the open source community, which grows bigger every year. Complete the challenge and earn a limited edition T-shirt.**
 
@@ -30,7 +30,7 @@
 
 </div>
 
-## Instructions-
+## INSTRUCTIONS-
 
 - Fork this Repository using the button at the top on right corner.
 - Clone your forked repository to your pc ( git clone "url from clone option.)
@@ -41,7 +41,7 @@
 - Create a pull request
 - Star this repository
 
-# How to make your first Pull Request
+# How To Make Your First Pull Request
 
 Replace `<YOUR-USERNAME>` with your GitHub username in this guide.
 
@@ -113,7 +113,11 @@ keep in mind that repo has hacktoberfest topic..
 To get approval of the pull request much quicker and faster (`Follow Me`)🚀
 '''
 ```
+<tr><td align="center"><a href="https://github.com/yakumwamba"><kbd><img src="https://avatars3.githubusercontent.com/yakumwamba?size=100" width="100px;" alt=""/></kbd><br /><sub><b>YakuTheTechie</b></sub></a><br /></td>
+
+</tr>
 
 <tr><td align="center"><a href="https://github.com/ossamamehmood"><kbd><img src="https://avatars3.githubusercontent.com/ossamamehmood?size=100" width="100px;" alt=""/></kbd><br /><sub><b>Ossama Mehmood</b></sub></a><br /></td>
 
 </tr>
+

@@ -1,30 +1,30 @@
-#include <bits/stdc++.h>
+#include<iostream>
 using namespace std;
- 
-int binarySearch(int arr[], int low, int high)
-{
-    if (high >= low) {
-        int mid = low + (high - low) / 2;
-        if (mid == arr[mid])
-            return mid;
-        int res = -1;
-        if (mid + 1 <= arr[high])
-            res = binarySearch(arr, (mid + 1), high);
-        if (res != -1)
-            return res;
-        if (mid - 1 >= arr[low])
-            return binarySearch(arr, low, (mid - 1));
+int main() {
+  int n, i, search, first, last, middle;
+  cout << "Enter total number of elements :";
+  cin >> n;
+  int arr[n];
+  cout << "Enter " << n << " number :";
+  for (i = 0; i < n; i++) {
+    cin >> arr[i];
+  }
+  cout << "Enter a number to find :";
+  cin >> search;
+  first = 0; last = n - 1;
+  middle = (first + last) / 2;
+  while (first <= last) {
+    if (arr[middle] < search) {
+      first = middle + 1;
+    } else if (arr[middle] == search) {
+      cout << search << " found at location " << middle + 1 << "\n";
+      break;
+    } else {
+      last = middle - 1;
     }
- 
-
-    return -1;
-}
- 
-
-int main()
-{
-    int arr[] = { 0,2,3,4,5,5,6};
-    int n = sizeof(arr) / sizeof(arr[0]);
-    cout << "Fixed Point is " << binarySearch(arr, 0, n - 1);
-    return 0;
+    middle = (first + last) / 2;
+  }
+  if (first > last) {
+    cout << "Not found! " << search << " is not present in the list.";
+  }
 }

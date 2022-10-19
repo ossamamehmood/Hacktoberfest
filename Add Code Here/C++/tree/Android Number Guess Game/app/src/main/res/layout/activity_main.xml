@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<RelativeLayout
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+
+    android:paddingLeft="16dp"
+
+    android:paddingRight="16dp"
+
+    android:paddingTop="16dp"
+
+    android:paddingBottom="16dp"
+
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/Message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/Message"
+        android:textSize="25sp" />
+
+    <EditTex
+        android:id="@+id/EnterNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="52dp"
+        android:ems="10"
+        android:hint="@string/Text"
+        android:inputType="textPersonName" />
+
+    <ImageView
+        android:id="@+id/diceImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/EnterNumber"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="23dp"
+        app:srcCompat="@drawable/dice_one" />
+
+    <Button
+        android:id="@+id/RollButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/Message"
+        android:layout_below="@+id/diceImage"
+        android:layout_marginEnd="11dp"
+        android:layout_marginTop="35dp"
+        android:padding="10dp"
+        android:text="@string/ButtonText"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:text="This Game is Developed By Sanan Ali"
+        android:textSize="20sp" />
+
+
+</RelativeLayout>
