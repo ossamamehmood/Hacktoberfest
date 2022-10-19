@@ -1,57 +1,246 @@
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator</title>
-    <link rel="stylesheet" href="index.css">
-</head>
-<body>
-  <h1>Calculator</h1>
-    <div class="box">
-        <div class="row">
-            <input class="input"type="text">
+    <style>
+      body {
+  background: linear-gradient(to right, rgb(0, 47, 255), green 70%);
+  position: relative;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: bolder;
+}
+.container {
+  background-color: black;
+  position: absolute;
+  right: 30%;
+  width: 300px;
+  height: 380px;
+  border-radius: 30px 30px 10px 10px;
+}
+.container .sign {
+  background-color: gray;
+  border: 0;
+  position: absolute;
+  text-align: center;
+  top: 30px;
+  font-size: 10px;
+  width: 20px;
+  height: 20px;
+}
+.num-area {
+  background-color: #ececec;
+  position: absolute;
+  line-height: 30px;
+  top: 50px;
+  right: 8%;
+  width: 250px;
+  height: 80px;
+  border-radius: 10px;
+}
+.container {
+  display: flex;
+}
+.sign-area {
+  position: relative;
+}
+.numbers {
+  display: flex;
+  position: absolute;
+  top: 140px;
+  left: 40px;
+}
+
+input {
+  border: 0;
+}
+.numbers button {
+  font-size: 20px;
+  font-weight: bolder;
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  border: 1px solid gray;
+}
+.numbers-1 button {
+  margin-right: 15px;
+  display: block;
+}
+.numbers-2 button {
+  margin-right: 15px;
+  display: block;
+}
+.signs {
+  display: flex;
+  position: absolute;
+  top: 140px;
+  left: 140px;
+  height: 37px;
+  width: 37px;
+  margin-left: 20px;
+}
+.signs button {
+  margin: 3px;
+  font-size: 20px;
+  font-weight: bolder;
+  height: 40px;
+  width: 40px;
+  border-radius: 5px;
+  padding: 0;
+  border: 1px solid gray;
+}
+.other-signs {
+  margin-right: 15px;
+}
+.equal-to {
+  position: absolute;
+  top: 183px;
+  left: 7px;
+}
+.equal-to button {
+  width: 90px;
+  height: 40px;
+}
+button:hover {
+  background-color: gray;
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="num-area"></div>
+      <div class="sign-area">
+        <div class="numbers">
+          <div class="numbers-1">
+            <button id="0">0</button>
+            <button id="1">1</button>
+            <button id="2">2</button>
+            <button id="3">3</button>
+            <button id="4">4</button>
+          </div>
+          <div class="numbers-2">
+            <button id="5">5</button>
+            <button id="6">6</button>
+            <button id="7">7</button>
+            <button id="8">8</button>
+            <button id="9">9</button>
+          </div>
         </div>
-        <div class="row1">
-          <button class="button">AC</button>
-          <button class="button">%</button>
-          <button class="button">M+</button>
-          <button class="button">M-</button>
-  
+        <div class="signs">
+          <div class="other-signs">
+            <button id="ac">AC</button>
+            <button id="(">(</button>
+            <button id=")">)</button>
+            <button id=".">.</button>
+          </div>
+          <div class="main-signs">
+            <button id="+">+</button>
+            <button id="-">-</button>
+            <button id="*">*</button>
+            <button id="/">/</button>
+          </div>
+          <div class="equal-to">
+            <button id="=">=</button>
+          </div>
         </div>
-      <div class="row">
-        <button class="button">7</button>
-        <button class="button">8</button>
-        <button class="button">9</button>
-        <button class="button">*</button>
       </div>
-      
-      <div class="row">
-        <button class="button">4</button>
-        <button class="button">5</button>
-        <button class="button">6</button>
-        <button class="button">/</button>
-    
-
-      </div>
-      <div class="row">
-        <button class="button">1</button>
-        <button class="button">2</button>
-        <button class="button">3</button>
-        <button class="button">+</button>
-
-      </div>
-      <div class="row">
-        <button class="button">0</button>
-        <button class="button">.</button>
-        <button class="button">=</button>
-        <button class="button">-</button>
-
-      </div>
-      
-
     </div>
-    
-    <script src="string.js"></script>
-</body>
+    <script>
+      const zero = document.getElementById("0");
+        const one = document.getElementById("1");
+        const two = document.getElementById("2");
+        const three = document.getElementById("3");
+        const four = document.getElementById("4");
+        const five = document.getElementById("5");
+        const six = document.getElementById("6");
+        const seven = document.getElementById("7");
+        const eight = document.getElementById("8");
+        const nine = document.getElementById("9");
+        const point = document.getElementById(".");
+        const aC = document.getElementById("ac");
+        const bracStart = document.getElementById("(");
+        const bracEnd = document.getElementById(")");
+        let numArea = document.querySelector(".num-area");
+        let resArea = document.querySelector(".res-area");
+
+        const plus = document.getElementById("+");
+        const minus = document.getElementById("-");
+        const mult = document.getElementById("*");
+        const divide = document.getElementById("/");
+        const equalTo = document.getElementById("=");
+        zero.addEventListener("click", function () {
+          numArea.textContent += "0";
+        });
+        one.addEventListener("click", () => {
+          numArea.textContent += "1";
+        });
+        two.addEventListener("click", () => {
+          numArea.textContent += "2";
+        });
+        three.addEventListener("click", () => {
+          numArea.textContent += "3";
+        });
+        four.addEventListener("click", () => {
+          numArea.textContent += "4";
+        });
+        five.addEventListener("click", () => {
+          numArea.textContent += "5";
+        });
+        six.addEventListener("click", () => {
+          numArea.textContent += "6";
+        });
+        seven.addEventListener("click", () => {
+          numArea.textContent += "7";
+        });
+        eight.addEventListener("click", () => {
+          numArea.textContent += "8";
+        });
+        nine.addEventListener("click", () => {
+          numArea.textContent += "9";
+        });
+        bracStart.addEventListener("click", () => {
+          numArea.textContent += "(";
+        });
+        bracEnd.addEventListener("click", () => {
+          numArea.textContent += ")";
+        });
+        point.addEventListener("click", () => {
+          numArea.textContent += ".";
+        });
+        aC.addEventListener("click", () => {
+          numArea.textContent = "";
+          location.reload();
+        });
+
+        equalTo.addEventListener("click", function () {
+          numArea.textContent += "\n " + "= " + eval(numArea.textContent);
+        });
+        function checkEmpty(elem, value) {
+          if (numArea.innerHTML === "") {
+            return;
+          } else {
+            numArea.textContent += value;
+            elem.setAttribute("disabled", "true");
+            return;
+          }
+        }
+        plus.addEventListener("click", function () {
+          checkEmpty(plus, "+");
+        });
+        minus.addEventListener("click", function () {
+          checkEmpty(minus, "-");
+        });
+        mult.addEventListener("click", function () {
+          checkEmpty(mult, "*");
+        });
+        divide.addEventListener("click", function () {
+          checkEmpty(divide, "/");
+        });
+
+    </script>
+  </body>
 </html>
