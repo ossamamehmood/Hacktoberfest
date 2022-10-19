@@ -1,3 +1,7 @@
+using systems;
+public class Zigzag
+{
+        public static void zigZagSequesnce()
 using System;
 
 public class Zigzag
