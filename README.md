@@ -121,3 +121,12 @@ To get approval of the pull request much quicker and faster (`Follow Me`)🚀
 
 </tr>
 
+Quick Links / References:
+---
+If you are beginner and starting your open-source journey, you can explore the below reference links  <br>
+https://goodfirstissues.com/ <br>
+https://contributor.ninja/ <br>
+https://www.firsttimersonly.com/ <br>
+https://up-for-grabs.net/#/ <br>
+https://github.com/mungell/awesome-for-beginners <br>
+https://github.blog/2015-01-21-how-to-write-the-perfect-pull-request/ <br>
