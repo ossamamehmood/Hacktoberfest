@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap');
+
+
+.flex-all-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hor-grey-line{
+    width: 93vw;
+    margin:0 auto;
+    height: 2px;
+    color: #808080;
+}
+
+.product{
+    font-family: 'Work Sans', sans-serif;
+    margin: 10px 0;
+}
+.product-name{
+    color:black;
+    font-weight:bold;
+}
+
+.product-sale{
+    color: #388e3c;
+}
+.product-brand{
+    color: #808080;
+}
