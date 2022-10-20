@@ -14,7 +14,7 @@
 
 ## This Project Is Perfect For Your First Pull Request
 
-🗣 **Hacktoberfest encourages participation in the open source community, which grows bigger every year. Complete the challenge and earn a limited edition T-shirt.**
+🗣 **Hacktoberfest is an annual event that encourages participation in the open source community. This year, the event will be held from October 1st-31st and participants can earn a limited edition T-shirt by completing four pull requests. Registering for Hacktoberfest is easy and only takes a few minutes. Simply visit the website and provide your name, email address, and preferred shirt size. You'll also need to create a GitHub account if you don't already have one. Once you're registered, you can start making pull requests to any open source project on GitHub. To earn a shirt, you must make four pull requests between October 1st and 31st. So what are you waiting for? Register now and start contributing to the open source community!**
 
 📢 **Register [here](https://hacktoberfest.digitalocean.com) for Hacktoberfest and make four pull requests (PRs) between October 1st-31st to grab free SWAGS 🔥.**
 
