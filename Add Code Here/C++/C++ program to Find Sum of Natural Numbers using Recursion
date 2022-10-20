@@ -8,14 +8,19 @@ int main() {
 
     cout << "Enter a positive integer: ";
     cin >> n;
-
-    cout << "Sum =  " << add(n);
+    int sum;
+    sum=add(n);
+    cout << "Sum =  " << sum<< endl;
 
     return 0;
 }
 
-int add(int n) {
+int add(int n)
+{
+int s;
     if(n != 0)
-        return n + add(n - 1);
-    return 0;
+    {
+        s= n + add(n - 1);
+    }
+    return s;
 }
