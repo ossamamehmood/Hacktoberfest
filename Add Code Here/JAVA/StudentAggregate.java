@@ -1,6 +1,6 @@
 // username :SyedMIrtazaHyder
 // name: Syed Muhammad Irtaza Hyder
-// Institute: NUSTCEME
+// Institute: NUST CEME
 
 
 package stuff;
