@@ -16,10 +16,6 @@ static void ReadMatrix() {
 a = new int[MAX][MAX];
 System.out.println("Enter the number of vertices:");
 
-Dept of CSE, MSEC Page 31
-
-Design & Analysis of Algorithm [15CSL47]
-
 n = scan.nextInt();
 System.out.println("Enter the cost adjacency matrix:");
 for (int i = 1; i <= n; i++)
