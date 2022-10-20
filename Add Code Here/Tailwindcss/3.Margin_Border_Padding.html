@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margin, Border and Padding</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    
+    
+    <!-- Margin property  -->
+
+    <p class="mx-10">Krunal</p>
+    <p class="my-10">Krunal</p>
+    <p class="m-10">Krunal</p>
+    <p class="mt-7">KrunalTop</p>
+    <p class="hover:-m-5">Krunal</p>
+
+    <hr class="border-blue-900 border-dashed">
+
+    <!-- Space Between Property -->
+    <!-- Note:- This space b/w property cannot be used in first child of the container -->
+
+    <div>
+        <ul class="flex space-x-2 space-y-4">
+            <li>Home</li>
+            <li>Services</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+    <div>
+        <ul class="flex flex-row-reverse space-x-2 space-x-reverse">
+            <li>Home</li>
+            <li>Services</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+    <div>
+        <ul class="flex hover:-space-x-2">
+            <li>Home</li>
+            <li>Services</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+
+    <hr class="border-purple-900">
+
+    <div class="m-5 p-3 w-56 border-red-600 text-white bg-orange-500 rounded-lg border-x-4">
+        TailwindCSS
+    </div>
+    <div class="m-5 p-3 w-56 border-indigo-500/100 text-white bg-orange-500 rounded-br-lg border-t-4">
+        TailwindCSS
+    </div>
+    <div class="m-5 p-3 w-56 border-red-600 text-white bg-orange-500 rounded-r-full border-8 border-double">
+        TailwindCSS
+    </div>
+
+    <div class="grid grid-cols-3 divide-x-4">
+        <div>01</div>
+        <div>02</div>
+        <div>03</div>
+    </div>
+    <div class="grid grid-ro
+    ws-3 divide-x-4">
+        <div>01</div>
+        <div>02</div>
+        <div>03</div>
+    </div>
+
+
+</body>
+</html>
