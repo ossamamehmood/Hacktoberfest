@@ -1,5 +1,0 @@
-SELECT COUNT(book_title), author_name
-FROM Books
-WHERE COUNT(book_title) > n
-GROUP BY author_name
-;
