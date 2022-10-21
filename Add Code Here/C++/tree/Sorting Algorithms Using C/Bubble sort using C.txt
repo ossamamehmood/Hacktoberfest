@@ -1,0 +1,31 @@
+#include<stdio.h>
+ 
+int main()
+{
+    int arr[10], a, b, n;
+    printf("How many elements do you wish to enter?\n");
+    scanf("%d", &n);
+    printf("What are your %d elements of choice?\n", n);
+    for(a=0;a<n;a++)
+    {
+    scanf("%d",& arr[a]);
+    }
+
+   for(a = 0; a < n - 1; ++a)
+   {
+       for(b = 0; b < (n - a - 1); ++b)
+         if(arr[b] > arr[b+1])
+         {
+            int temp = arr[b];
+            arr[b] = arr[b+1];
+            arr[b+1] = temp;
+         }
+ 
+   }
+         
+   printf("\nThe array after bubble sorting: ");
+   for(a = 0; a < n; ++a)
+      printf("%d ", arr[a]);
+ 
+   return 0;
+}

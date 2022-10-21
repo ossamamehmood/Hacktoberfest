@@ -1,0 +1,5 @@
+---
+name: ADITYA PRIYANSHU
+institution/company: KALINGA INSTITUTE OF INDUSTRIAL TECHNOLOGY
+github:Adityp-3055
+---

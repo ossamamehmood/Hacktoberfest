@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="stylesheet.css">
+<head>
+    <title>JumBler-Result</title>
+</head>
+<style>
+    .score {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+</style>
+<body>
+    <div class="container">
+
+        <div class="padd">
+            <div class="score">
+                <p id="score">0</p>
+            </div>
+
+            <div class="jumbled">
+                <p id="jumword">
+                 hello
+                </p>
+            </div>
+
+            <div class="user-input">
+                <button class="btn" onclick="goBack()">Go Back</button>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+<script>
+var Score = sessionStorage.getItem("totalScore");
+console.log(Score);
+document.querySelector("#score").innerText=Score;
+let msg="";
+
+if(Score==10){
+    msg="Amazing game";
+}
+else if(Score<10 && Score>7){
+    msg="Good Game "
+}
+else if(Score<8 && Score>5){
+    msg="Good Try "
+}
+else if(Score<6 && Score>3){
+    msg="Not Bad "
+}
+else{
+    msg="Retry again "
+}
+document.querySelector("#jumword").innerText=msg;
+
+function goBack(){
+    window.history.back();
+}
+    </script>
+</html>

@@ -1,0 +1,21 @@
+
+def run():
+    my_list = [1, 'hola', True, 4.5]
+    my_dict = {"eric", "chavarria"}
+    super_list = [
+        {"eric":"chavarria"},
+        {"Ambar":"chavarria"}
+    ]
+    super_dict ={
+        "numbers": [1,2,3,4,5],
+        "no_numbers": ['a','b','c']
+    }
+    for key, value  in super_dict.items():
+        print(key, "-", value)
+
+    for i in super_list:
+        for key, values in i.items():
+            print(key,": ", values)
+
+    for i in super_list:
+#         print(i.items())

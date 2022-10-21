@@ -1,0 +1,118 @@
+:root {
+  --cell-size: 120px;
+  --color: #fd81a2;
+  --color-set: #d80d02;
+  --line-width: 15px;
+}
+
+body {
+  margin: 0;
+}
+
+.gameBoard {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(3, auto);
+}
+
+.cell {
+  width: var(--cell-size);
+  height: var(--cell-size);
+  border: 1px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.cell:nth-child(1),
+.cell:nth-child(2),
+.cell:nth-child(3) {
+  border-top: none;
+}
+
+.cell:nth-child(1),
+.cell:nth-child(4),
+.cell:nth-child(7) {
+  border-left: none;
+}
+
+.cell:nth-child(3),
+.cell:nth-child(6),
+.cell:nth-child(9) {
+  border-right: none;
+}
+
+.cell:nth-child(7),
+.cell:nth-child(8),
+.cell:nth-child(9) {
+  border-bottom: none;
+}
+
+.cell.x,
+.cell.circle {
+  cursor: not-allowed;
+}
+
+.gameBoard.x .cell:not(.circle):not(.x):hover {
+  background: linear-gradient(to top right, transparent calc(50% - var(--line-width) / 2), var(--color) calc(50% - var(--line-width) / 2) calc(50% + var(--line-width) / 2), transparent calc(50% + var(--line-width) / 2)), linear-gradient(to bottom right, transparent calc(50% - var(--line-width) / 2), var(--color) calc(50% - var(--line-width) / 2), transparent calc(50% + var(--line-width) / 2));
+  background-size: 80% 80%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.cell:not(.circle).x {
+  background: linear-gradient(to top right, transparent calc(50% - var(--line-width) / 2), var(--color-set) calc(50% - var(--line-width) / 2) calc(50% + var(--line-width) / 2), transparent calc(50% + var(--line-width) / 2)), linear-gradient(to bottom right, transparent calc(50% - var(--line-width) / 2), var(--color-set) calc(50% - var(--line-width) / 2) calc(50% + var(--line-width) / 2), transparent calc(50% + var(--line-width) / 2));
+  background-size: 80% 80%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.gameBoard.circle .cell:not(.circle):not(.x):hover {
+  background: radial-gradient(var(--color) 60%, transparent 60%);
+}
+
+.cell:not(.x).circle {
+  background: radial-gradient(var(--color-set) 60%, transparent 60%);
+}
+
+.win-alert {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color-set);
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 5rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  flex-direction: column;
+}
+
+.win-alert button {
+  border-radius: 10px;
+  font-size: 3rem;
+  background-color: #fff;
+  border: 1px solid var(--color-set);
+  padding: 0.25em 0.5em;
+  cursor: pointer;
+}
+
+.win-alert button:hover {
+  background-color: var(--color-set);
+  color: #fff;
+  border-color: #fff;
+}
+
+.win-alert.show {
+  display: flex;
+}

@@ -1,0 +1,111 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/*Desafio 0: Crie um tabuleiro de jogo da velha usando uma matriz de caracteres (char) 3x3, em que o usuário pede o número da linha (1 até 3) e o da coluna (1 até 3). A cada vez que o usuário entrar com esses dados, colocar um 'X' ou 'O' no local selecionado.*/
+
+//variáveis globais
+char gTabuleiro[3][3] = {'-', '-', '-', '-', '-', '-', '-', '-', '-'};
+int gLinha, gColuna;
+
+void updateTab(void)
+{
+    system("clear");
+    printf("\tTABULEIRO\n");
+
+    for (gLinha = 0; gLinha < 3; gLinha++)
+    {
+        for (gColuna = 0; gColuna < 3; gColuna++)
+					printf("\t%c", gTabuleiro[gLinha][gColuna]);
+
+        printf("\n");
+    }
+
+    printf("\n");
+}
+
+int checkWinner(void)
+{
+    if (
+        (gTabuleiro[0][0] == 'X' && gTabuleiro[0][1] == 'X' && gTabuleiro[0][2] == 'X') ||
+        (gTabuleiro[1][0] == 'X' && gTabuleiro[1][1] == 'X' && gTabuleiro[1][2] == 'X') ||
+        (gTabuleiro[2][0] == 'X' && gTabuleiro[2][1] == 'X' && gTabuleiro[2][2] == 'X') ||
+        (gTabuleiro[0][0] == 'X' && gTabuleiro[1][0] == 'X' && gTabuleiro[2][0] == 'X') ||
+        (gTabuleiro[0][1] == 'X' && gTabuleiro[1][1] == 'X' && gTabuleiro[2][1] == 'X') ||
+        (gTabuleiro[0][2] == 'X' && gTabuleiro[1][2] == 'X' && gTabuleiro[2][2] == 'X') ||
+        (gTabuleiro[0][0] == 'X' && gTabuleiro[1][1] == 'X' && gTabuleiro[2][2] == 'X') ||
+        (gTabuleiro[0][2] == 'X' && gTabuleiro[1][1] == 'X' && gTabuleiro[2][0] == 'X'))
+    {
+        printf("'X' venceu!\n");
+        return 10;
+    }
+
+    else if (
+        (gTabuleiro[0][0] == 'O' && gTabuleiro[0][1] == 'O' && gTabuleiro[0][2] == 'O') ||
+        (gTabuleiro[1][0] == 'O' && gTabuleiro[1][1] == 'O' && gTabuleiro[1][2] == 'O') ||
+        (gTabuleiro[2][0] == 'O' && gTabuleiro[2][1] == 'O' && gTabuleiro[2][2] == 'O') ||
+        (gTabuleiro[0][0] == 'O' && gTabuleiro[1][0] == 'O' && gTabuleiro[2][0] == 'O') ||
+        (gTabuleiro[0][1] == 'O' && gTabuleiro[1][1] == 'O' && gTabuleiro[2][1] == 'O') ||
+        (gTabuleiro[0][2] == 'O' && gTabuleiro[1][2] == 'O' && gTabuleiro[2][2] == 'O') ||
+        (gTabuleiro[0][0] == 'O' && gTabuleiro[1][1] == 'O' && gTabuleiro[2][2] == 'O') ||
+        (gTabuleiro[0][2] == 'O' && gTabuleiro[1][1] == 'O' && gTabuleiro[2][0] == 'O'))
+    {
+        printf("'O' venceu!\n");
+        return 20;
+    }
+
+    else
+    {
+        for (gLinha = 0; gLinha < 3; gLinha++)
+					for (gColuna = 0; gColuna < 3; gColuna++)
+						if (gTabuleiro[gLinha][gColuna] == '-')
+              return 30;
+
+        printf("Deu velha!\n");
+        return 40;
+    }
+}
+
+void playerTurn(void)
+{
+		int jogou = 0;
+    char vez = 'O';
+
+    while (checkWinner() == 30)
+    {
+        (vez == 'O') ? (vez = 'X') : (vez = 'O');
+
+        do
+        {
+            printf("Jogador '%c', digite as coordenadas de sua jogada (linha e coluna, respectivamente). Exemplo: 1 2.\n", vez);
+            scanf("%d %d", &gLinha, &gColuna);
+
+            if (gLinha >= 1 && gLinha <= 3 && gColuna >= 1 && gColuna <= 3)
+            {
+                if (gTabuleiro[gLinha - 1][gColuna - 1] == '-')
+                {
+                    gTabuleiro[gLinha - 1][gColuna - 1] = vez;
+                    jogou = 1;
+                }
+
+                else
+                    printf("\nCoordenada ocupada.\n\n");
+            }
+
+            else
+                printf("\nInformacao(es) incorreta(s).\n\n");
+        } while (!jogou);
+
+        updateTab();
+				jogou = 0;
+    }
+}
+
+int main(void)
+{
+    int checkWinner();
+    void playerTurn(), updateTab();
+
+    playerTurn();
+
+    return 0;
+}

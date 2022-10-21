@@ -1,0 +1,58 @@
+<!--
+/**********************
+ * Author: www.Blackdayz.de
+ * 
+ * Open Source | Version 0.0.1
+/**********************/
+-->
+
+<!DOCTYPE html>
+<html lang="de">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Login with HTML, CSS and JavaScript</title>
+        <meta name="author" content="BlackDayz &copy;" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <link rel="stylesheet" href="src/css/style.css" />
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="src/js/main.js"></script>
+    </head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <header>
+                <h1>LOGIN</h1>
+            </header>
+            <main class="login_input">
+                <form id="login_form" class="form">
+                    <input type="text" placeholder="Username" class="main_input" autocomplete="on" autofocus />
+                    <input type="password" placeholder="Password" class="main_input" autocomplete="on" />
+                    <input type="submit" value="LOGIN" class="main_input"/>
+                </form>
+            </main>
+            <footer class="signup_wrapper off">
+                <div class="switch">
+                    <img src="https://img.icons8.com/color/48/000000/guest-male--v1.png" class="switch_img"/>
+                    <div class="switch_no_account"></div>
+                </div>
+                <header>
+                    <h1>SIGN-UP</h1>
+                </header>
+                <main class="input">
+                    <form id="signup_form" class="form">
+                        <input type="text" placeholder="Username" class="main_input" autocomplete="on" disabled />
+                        <input type="email" placeholder="E-Mail" class="main_input" autocomplete="on" disabled />
+                        <input type="password" placeholder="Password" class="main_input" autocomplete="on" disabled />
+                        <input type="submit" value="SIGN-UP" class="main_input"/>
+                    </form>
+                </main>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

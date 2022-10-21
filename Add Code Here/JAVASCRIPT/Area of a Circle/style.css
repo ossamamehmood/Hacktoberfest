@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: white;
+  padding: 20px;
+  margin: auto;
+  font-family: "Arial";
+  text-align: center;
+}
+
+.input {
+  font-size: 1.5em;
+  background-color: #ebf5ff;
+  color: #4312ae;
+  border: 2px solid black;
+  padding: 5px;
+  margin: 5px 5px;
+  box-shadow: 4px 4px 4px #999999;
+  border-radius: 5px;
+}
+.input:hover,
+.input:focus,
+.input:active {
+  /* swap colors */
+  color: #ebf5ff;
+  background-color: #4312ae;
+  cursor: pointer; /* displays a hand */
+}

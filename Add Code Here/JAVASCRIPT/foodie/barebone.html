@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="html" href="tailwindd2.html">
+    <title>Foodies</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body class="grid md:grid-cols-6">
+    <div class="grid md:col-span-1">
+        <nav class=" bg-gradient-to-l from-orange-300 to-pink-400">
+            <div class="flex justify-center md:justify-end bg-gradient-to-l from-orange-300 to-pink-400">
+                <div class="lg:p-30 shadow-gray-2xl "><img src="salad.png" alt="" srcset="" style="width:6rem;padding:1em;"></div>
+                <div class="mt-4 hover:scale-x-20">
+                <h1 class="text-3xl font-bold p-3">
+                    <a href="#" class="hover:text-red-500 hover:shadow-2xl ">Foodies</a>
+                </h1>
+                </div>        
+                
+            </div>
+            <div class= "cursor-pointer py-2 lg:hidden right-6" id="burger">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-9" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </div>
+          <div class=" flex justify-center sm:justify-center md:justify-end md:text-2xl md:py-4 ">
+             <ul class="font-semi-bold hidden md:block md:px-5 "  id="menu" >
+                 <li class=" cursor-pointer  "><a href="#" class="active:text-orange-400 focus:text-orange-600"><span class="hover:text-2xl  font-black hover:text-orange-400 duration-300"><svg class="w-6 inline-flex mb-2 mr-2 " fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>Home</span></a></li>
+                 <li class=" cursor-pointer  "><a href="+" class="active:text-orange-400 focus:text-orange-600 mr-0 "><span class=" duration-300 font-black hover:text-orange-400 hover:text-2xl">About us</span></a></li>
+                 <li class=" cursor-pointer   "><a href="#" class="mr-0  md:border-orange-600"><span class="hover:bg-black-200 duration-300 hover:text-orange-400 font-black hover:text-2xl">Catalogue</span></a></li>
+             </ul>
+          </div> 
+        </nav>
+    </div>
+        
+    <main class="p-10 mt-18 bg-gray-100 md:col-span-5 right-0 ">
+        <div class="flex justify-between p-8">
+            <form action="/dishes" method="get" name="search">
+            <div class="py-4 w-6 shadow-2xl"><div class="w-6 absolute bg-gray-100 rounded-lg hover:bg-orange-500"><img src="search.png" alt="search"></div><label for="gsearch" class=""></label><input  type="search" id="query" name="qsearch" class="rounded-lg pl-7 hover:border-gray-600 focus:bg-gray-300 "></div></input></form>
+            <img src="ganesha (1).png" alt="Ganesha" srcset="" style="width: 4em;" class="border-2 shadow-green-400 shadow-2xl rounded-full border-black bg-green-300">
+        </div>
+            
+        <header>
+            <h2 class="text-gray-900 font-bold text-5xl mt-1">Menu</h2>
+            <h3 class="text-gray-400 text-3xl mt-2">For Foodies</h3>
+        </header>
+           <h4 class="font-bold mt-12 p-2 bg-gray-100 rounded-full">Latest Recipe</h4><hr>
+           <div class=" mt-8 grid lg:grid-cols-3 gap-6">
+                <!-- card goes here-->
+                    
+                    <div class="font-bold">
+                        <div class="bg-black-200 rounded overflow-hidden shadow-lg relative hover:shadow-xl">
+                            <img class="w-full h-32 sm:h-48 object-cover" src="MUTTER.png" alt="stew">
+                            <div class="m-4">
+                                <span class="font-bold">Matar Paneer</span></img>
+                                <span class="block text-gray-500 text-sm">By Urmila Devi</span>
+                                <div class="absolute bottom-4 right-2 ">
+                                   <button  id="btn" class="py-1 border-4 bg-orange-500 px-5 rounded-lg hover:bg-orange-600 active:border-black active:bg-orange-700">Add</button>
+                                </div>
+                            </div>
+                            <div
+                                class=" bg-gray-200 text-xs uppercase font-bold rounded-full p-2 absolute top-2 ml-2">
+                                <svg class="w-3 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <span class="p-2">40 mins</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="font-bold">
+                        <div class="bg-black-200 rounded overflow-hidden shadow-lg relative hover:shadow-xl">
+                            <img class="w-full h-32 sm:h-48 object-cover" src="cholebhature.jpg" alt="stew">
+                            <div class="m-4">
+                                <span class="font-bold">Chole </span></img>
+                                <span class="block text-gray-500 text-sm">By Anand</span>
+                                <div class="absolute bottom-4 right-2 ">
+                                   <button type="button" id="btn" class="py-1 border-4 bg-orange-500 px-5 rounded-lg hover:bg-orange-600 active:border-black active:bg-orange-700">Add</button>
+                                   </div>
+                            </div>
+                            <div
+                                class=" bg-gray-200 text-xs uppercase font-bold rounded-full p-2 absolute top-2 ml-2">
+                                <svg class="w-3 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <span class="p-2">20 mins</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="font-bold">
+                        <div class="bg-black-200 rounded overflow-hidden shadow-lg relative hover:shadow-xl">
+                            <img class="w-full h-32 sm:h-48 object-cover" src="download.png" alt="stew">
+                            <div class="m-4">
+                                <span class="font-bold">Dal Makhani</span></img>
+                                <span class="block text-gray-500 text-sm">By Debendra</span>
+                                <div class="absolute bottom-4 right-2 ">
+                                   <button type="button" id="btn" class="py-1 border-4 bg-orange-500 px-5 rounded-lg hover:bg-orange-600 active:border-black active:bg-orange-700">Add</button>
+                                   </div>
+                            </div>
+                            <div
+                                class=" bg-gray-200 text-xs uppercase font-bold rounded-full p-2 absolute top-2 ml-2">
+                                <svg class="w-3 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <span class="p-2">40 mins</span>
+                            </div>
+                        </div>
+                    </div>
+        
+                
+                        <div class="font-bold">
+                            <div class="bg-black-200 rounded overflow-hidden shadow-lg relative  hover:shadow-xl">
+                                <img class="w-full h-32 sm:h-48 object-cover" src="butterchicken.png"
+                                    alt="stew">
+                                <div class="m-4">
+                                    <span class="font-bold">Butter Chicken</span></img>
+                                    <span class="block text-gray-500 text-sm">By Lisa Khanna</span>
+                                    <div class="absolute bottom-4 right-2 ">
+                                        <button type="button" id="btn" class="py-1 border-4 bg-orange-500 px-5 rounded-lg hover:bg-orange-600 active:border-black active:bg-orange-700">Add</button>
+                                        </div>
+                                </div>
+                        <div
+                             class=" bg-gray-200 text-xs uppercase font-bold rounded-full p-2 absolute top-2 ml-2">
+                            <svg class="w-3 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <span class="p-2">58 mins</span>
+                        </div>
+                        <div class=" bg-gray-200 text-red-50 text-xs uppercase font-bold rounded-full p-2 absolute top-2 right-0 mr-2 shadow-md hover:shadow-xl">
+                            <img class="w-5" src="nonveg1.png" alt="nonveg"></img>
+                        </div>
+                    </div>
+                    
+                </div> 
+                <div class="font-bold">
+                    <div class="bg-black-200 rounded overflow-hidden shadow-lg relative hover:shadow-xl">
+                        <img class="w-full h-32 sm:h-48 object-cover" src="fried rice.jpg" alt="stew">
+                        <div class="m-4">
+                            <span class="font-bold">Fried Rice</span></img>
+                            <span class="block text-gray-500 text-sm">By Joshwa </span>
+                            <div class="absolute bottom-4 right-2 ">
+                               <button type="button" id="btn" class="py-1 border-4 bg-orange-500 px-5 rounded-lg hover:bg-orange-600 active:border-black active:bg-orange-700">Add</button>
+                               </div>
+                        </div>
+                        <div
+                            class=" bg-gray-200 text-xs uppercase font-bold rounded-full p-2 absolute top-2 ml-2">
+                            <svg class="w-3 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <span class="p-2">40 mins</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="font-bold">
+                    <div class="bg-black-200 rounded overflow-hidden shadow-lg relative hover:shadow-xl">
+                        <img class="w-full h-32 sm:h-48 object-cover" src="sabji poori.jpg" alt="stew">
+                        <div class="m-4">
+                            <span class="font-bold">Sabji Poori</span></img>
+                            <span class="block text-gray-500 text-sm">By Hemant </span>
+                            <div class="absolute bottom-4 right-2 ">
+                               <button type="button" id="btn" class="py-1 border-4 bg-orange-500 px-5 rounded-lg hover:bg-orange-600 active:border-black active:bg-orange-700">Add</button>
+                               </div>
+                        </div>
+                        <div
+                            class=" bg-gray-200 text-xs uppercase font-bold rounded-full p-2 absolute top-2 ml-2">
+                            <svg class="w-3 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <span class="p-2">40 mins</span>
+                        </div>
+                    </div>
+                </div>      
+            </div>
+        </div> 
+    </div> 
+    <div class="hidden" id="popular">           
+    <h4 class="font-bold mt-12 p-2 bg-gray-100 rounded-full">Most Popular</h4>
+    <!-- <div class="hidden" id="popular"> -->
+      <div class=" mt-8 grid lg:grid-cols-3 gap-6">
+          <!-- card goes here-->
+            <div class="font-bold ">
+              <div class="bg-black-200 rounded overflow-hidden shadow-lg relative hover:shadow-xl">
+                  <img class="w-full h-32 sm:h-48 object-cover" src="idli.png" alt="stew">
+                  <div class="m-4">
+                      <span class="font-bold">Idli Sambhar</span></img>
+                      <span class="block text-gray-500 text-sm">By Suresh Kathi</span>
+                      <div class="absolute bottom-4 right-2 ">
+                        <button type="button" id="btn" class="py-1 border-4 bg-orange-500 px-5 rounded-lg hover:bg-orange-600 active:border-black active:bg-orange-700">Add</button>
+                        </div>
+                  </div>
+                  <div class=" bg-gray-200 text-xs uppercase font-bold rounded-full p-2 absolute top-2 ml-2">
+                     <svg class="w-3 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                      <span class="p-2">25 mins</span>
+                  </div>
+               </div>
+             </div>
+             <div class="font-bold">
+                 <div class="bg-black-200 rounded overflow-hidden shadow-lg relative hover:shadow-xl">
+                     <img class="w-full h-32 sm:h-48 object-cover" src="kulche.jpg" alt="stew">
+                     <div class="m-4">
+                         <span class="font-bold">Chole Kulche</span></img>
+                         <span class="block text-gray-500 text-sm">By Urmila Devi</span>
+                         <div class="absolute bottom-4 right-2 ">
+                            <button type="button" id="btn" class="py-1 border-4 bg-orange-500 px-5 rounded-lg hover:bg-orange-600 active:border-black active:bg-orange-700">Add</button>
+                            </div>
+                     </div>
+                     <div
+                         class=" bg-gray-200 text-xs uppercase font-bold rounded-full p-2 absolute top-2 ml-2">
+                         <svg class="w-3 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                         <span class="p-2">40 mins</span>
+                     </div>
+                 </div>
+             </div>
+             <div class="font-bold">
+                 <div class="bg-black-200 rounded overflow-hidden shadow-lg relative hover:shadow-xl">
+                     <img class="w-full h-32 sm:h-48 object-cover" src="biryani1.png"
+                         alt="stew">
+                     <div class="m-4">
+                         <span class="font-bold">Hyderabadi Biryani</span></img>
+                         <span class="block text-gray-500 text-sm">By Amauddin khurashi</span>
+                         <div class="absolute bottom-4 right-2 ">
+                            <button type="button" id="btn" class="py-1 border-4 bg-orange-500 px-5 rounded-lg hover:bg-orange-600 active:border-black active:bg-orange-700">Add</button>
+                            </div>
+                         <div
+                              class=" bg-gray-200 text-xs uppercase font-bold rounded-full p-2 absolute top-2 ml-2">
+                              <svg class="w-3 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                              <span class="p-2">58 mins</span>
+                          </div>
+                          <div class=" bg-gray-200 text-red-50 text-xs uppercase font-bold rounded-full p-2 absolute top-2 right-0 mr-2 shadow-md hover:shadow-xl">
+                              <img class="w-5" src="nonveg1.png" alt="nonveg"></img>
+                          </div>
+                    </div>
+                  </div>  
+             </div>
+         </div>                
+    </div>
+    <div class="flex justify-center my-3 ">
+        <button type="button" id="more" class="rounded bg-gray-300 text-black-800 cursor-pointer tracking-wider hover:bg-gray-400 hover:text-gray-800 hover:inner-shadow transition ease-out duration 300">Load
+            more..</button> </div>  
+    <h4 class="font-bold mt-12 p-2 bg-gray-100 rounded-full">Desserts</h4><hr>
+           <div class=" mt-8 grid lg:grid-cols-3 gap-6">
+             <!-- card goes here-->
+               <div class="font-bold ">
+                 <div class="bg-black-200 rounded overflow-hidden shadow-lg relative hover:shadow-xl">
+                     <img class="w-full h-32 sm:h-48 object-cover" src="rasogulla.jpg" alt="stew">
+                     <div class="m-4">
+                         <span class="font-bold">Rasogulla</span>
+                         <span class="block text-gray-500 text-sm">By Ramini</span>
+                         <div class="absolute bottom-4 right-2 ">
+                            <button type="button" id="btn" class="py-1 border-4 bg-orange-500 px-5 rounded-lg hover:bg-orange-600 active:border-black active:bg-orange-700">Add</button>
+                            </div>
+                         
+                     </div>
+                     <div class=" bg-gray-200 text-xs uppercase font-bold rounded-full p-2 absolute top-2 ml-2">
+                        <svg class="w-3 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                         <span class="p-2">6 mins</span>
+
+                     </div>
+                     
+                  </div>
+                </div>
+                <div class="font-bold">
+                    <div class="bg-black-200 rounded overflow-hidden shadow-lg relative hover:shadow-xl">
+                        <img class="w-full h-32 sm:h-48 object-cover" src="BALUSHAHI.jpg" alt="stew">
+                        <div class="m-4">
+                            <span class="font-bold">Balushahi</span></img>
+                            <span class="block text-gray-500 text-sm">By Chandori</span>
+                            <div class="absolute bottom-4 right-2 ">
+                                <button type="button" id="btn" class="py-1 border-4 bg-orange-500 px-5 rounded-lg hover:bg-orange-600 active:border-black active:bg-orange-700">Add</button>
+                                </div>
+                        </div>
+                        <div
+                            class=" bg-gray-200 text-xs uppercase font-bold rounded-full p-2 absolute top-2 ml-2">
+                            <svg class="w-3 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <span class="p-2">10 mins</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="font-bold">
+                    <div class="bg-black-200 rounded overflow-hidden shadow-lg relative hover:shadow-xl">
+                        <img class="w-full h-32 sm:h-48 object-cover" src="jalebi.png"
+                            alt="stew">
+                        <div class="m-4">
+                            <span class="font-bold">Jalebi</span></img>
+                            <span class="block text-gray-500 text-sm">By Chandori</span>
+                            <div class="absolute bottom-4 right-2 ">
+                                <button type="button" id="btn" class="py-1 border-4 bg-orange-500 px-5 rounded-lg hover:bg-orange-600 active:border-black active:bg-orange-700">Add</button>
+                                </div>
+                        </div>
+                        <div
+                            class=" bg-gray-200 text-xs uppercase font-bold rounded-full p-2 absolute top-2 ml-2">
+                            <svg class="w-3 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <span class="p-2">58 mins</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-black-200 rounded overflow-hidden shadow-lg relative hover:shadow-xl">
+                    <img class="w-full h-32 sm:h-48 object-cover" src="chocolava.png"
+                        alt="stew">
+                    <div class="m-4">
+                        <span class="font-bold">Choco Lava Cake</span></img>
+                        <span class="block font-bold text-gray-500 text-sm">By James</span>
+                        <div class="absolute bottom-4 right-2 ">
+                            <button type="button" id="btn" class="py-1 border-4 bg-orange-500 px-5 rounded-lg hover:bg-orange-600 active:border-black active:bg-orange-700">Add</button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="bg-black-200 rounded overflow-hidden shadow-lg relative hover:shadow-xl">
+                    <img class="w-full h-32 sm:h-48 object-cover" src="ice.jpg"
+                        alt="stew">
+                    <div class="m-4">
+                        <span class="font-bold">Icecream</span></img>
+                        <span class="block font-bold text-gray-500 text-sm">By Daniel </span>
+                        <div class="absolute bottom-4 right-2 ">
+                            <button type="button" id="btn" class="py-1 border-4 bg-orange-500 px-5 rounded-lg hover:bg-orange-600 active:border-black active:bg-orange-700">Add</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>  
+               
+      
+
+    </main>
+   <script src="index.js"></script>
+   
+   
+</body>
+
+</html> 

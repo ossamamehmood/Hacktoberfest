@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    #box {
+        width: 14vw;
+        height: 14vw;
+        border: 5px solid black;
+        z-index: 1;
+        transition: 0.5s ease;
+        /* transform: translate(-400px,-260px); */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgb(0, 255, 0);
+        font-size: 3.38vw;
+        text-align: center;
+    }
+
+    #box2 {
+        width: 14vw;
+        height: 14vw;
+        border: 5px dotted red;
+        margin-top: -225px;
+        z-index: 0;
+
+    }
+
+    .btn{
+        margin: 10px;
+        display: flex;
+        width: 50vw;
+        justify-content: space-between;
+    }
+    button{
+        background-color: rgb(0 166 237);
+        font-size: 3.38vw;
+        width: 6.76vw;
+        height: 6.76vw;
+        border-radius: 50%;
+        border : none;
+    }
+    #btn3{
+        display : none;
+    }
+    a{
+        text-decoration : none;
+    }
+</style>
+</style>
+
+<body>
+    <div id="box"></div>
+    <div id="box2"></div>
+    <div class = "btn" id="btn1"><button onmouseover="f1()" onmouseout="f5()">⬅️</button><button onmouseover="f2()" onmouseout="f5()">➡️</button></div>
+    <div class = "btn" id="btn2"><button onmouseover="f3()" onmouseout="f5()">⬆️</button><button onmouseover="f4()" onmouseout="f5()">⬇️</button></div>
+    <button id = "btn3"><a href = "TargetGame.html" >↩️</a></button>
+    <script>
+        let x = 1;
+        let y = 1;
+        while(x%5!=0 || y%5!=0){
+         x = Math.round(Math.random()*200) + Math.round(Math.random()*(-400));
+         y = Math.round(Math.random()*400) + Math.round(Math.random()*(-400));
+        }
+        console.log(x , y);
+        let box = document.getElementById("box");
+        function f1() {
+            st =  setInterval(() => {
+                x -= 5;
+            box.style.transform = "translate(" + x + "px," + y + "px)";
+            }, 100);
+        }
+        function f2() {
+             st =  setInterval(() => {
+                x += 5;
+            box.style.transform = "translate(" + x + "px," + y + "px)";
+            }, 100);
+
+        }
+        function f3() {
+           st = setInterval(() => {
+                y -= 5;
+            box.style.transform = "translate(" + x + "px," + y + "px)";
+            }, 100);
+        }
+        function f4() {
+           st =  setInterval(() => {
+                y += 5;
+            box.style.transform = "translate(" + x + "px," + y + "px)";
+            }, 100);
+            
+        }
+        function f5(){
+            clearInterval(st);
+        }
+        setTimeout(() => {
+            box.style.transform = "translate(" + x + "px," + y + "px)";
+        }, 10);
+
+
+        let time = 3
+        let gt = setInterval(()=>{
+        if(x==0 && y==0){
+           box.innerHTML = time;
+           time--;
+             if(time==-1){
+             box.style.border = "5px solid green";
+             box.innerHTML = "Target Reached";
+             box.style.background = "rgb(0, 255, 0)";
+             box.style.color = "white";
+              document.getElementById('btn1').style.visibility = "hidden";
+              document.getElementById('btn2').style.display = "none";
+               document.getElementById('btn3').style.display = "block";
+             clearInterval(gt);
+            
+             }
+           }else{
+            box.innerHTML = "";
+            time = 3;
+        }
+        console.log(x , y);
+        },1000);
+   
+    </script>
+</body>
+
+</html>

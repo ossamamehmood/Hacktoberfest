@@ -1,0 +1,300 @@
+/* google fonts */
+@import url("https://fonts.googleapis.com/css?family=Arimo|Roboto");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:300");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.gridContainer {
+  position: absolute;
+  left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+  height: 420px;
+  width: 670px;
+  min-width: 0;
+  min-height: 0;
+  background: whitesmoke;
+  box-shadow: 0px 10px 200px 1px #c2c2c2;
+  display: grid;
+  grid-template: auto 1fr/repeat(4, 1fr);
+  grid-template-areas: "link link link link"
+ "card card form form";
+}
+
+.gridContainer .topLinks {
+  grid-area: link;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  box-shadow: 0px 1.5px 1px #eaeaea;
+}
+
+.gridContainer .topLinks li {
+  display: block;
+  padding: 14px 0px;
+  text-transform: uppercase;
+  font-size: .58rem;
+  justify-self: center;
+  letter-spacing: .7px;
+  font-weight: 600;
+  color: #acc8d5;
+}
+
+.gridContainer .topLinks li:last-child {
+  color: #c1c1c1;
+}
+
+.gridContainer .topLinks li:nth-child(3) {
+  position: relative;
+  color: #4092b5;
+}
+
+.gridContainer .topLinks li:nth-child(3):after {
+  position: absolute;
+  content: " ";
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #4092b5;
+  border-radius: 2px;
+}
+
+.creditCard {
+  grid-area: card;
+  width: 260px;
+  height: 161px;
+  min-width: 0;
+  min-height: 0;
+  color: #fff;
+  background: linear-gradient(to right, #4092b5 60%, #3580aa 90%);
+  margin-top: 82px;
+  border-radius: 8px;
+  justify-self: right;
+  align-self: start;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template: repeat(4, 1fr)/19px repeat(4, 1fr) 19px;
+  grid-template-areas: ". . . visa visa ."
+ ". chip . visa visa . "
+ ". no no no no ."
+ ". name name name year .";
+}
+
+.creditCard .creditCatd > * {
+  overflow: hidden;
+}
+
+.creditCard .visaLogo {
+  grid-area: visa;
+  overflow: hidden;
+  justify-self: right;
+}
+
+.creditCard .visaLogo svg {
+  height: 42px;
+}
+
+.creditCard .chipLogo {
+  grid-area: chip;
+  overflow: hidden;
+  width: 38px;
+  height: 30px;
+  justify-self: left;
+  margin-top: 10px;
+}
+
+.creditCard ul {
+  grid-area: no;
+  list-style-type: none;
+  justify-self: stretch;
+  display: grid;
+  grid-template: 1fr/repeat(1, 1fr);
+}
+
+.creditCard ul li {
+  display: inline-block;
+  font-size: 18px;
+  letter-spacing: 2px;
+  text-align: left;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.6);
+  word-spacing: 3.7px;
+}
+
+.creditCard .name {
+  grid-area: name;
+  justify-self: left;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 12.8px;
+  font-weight: lighter;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  padding-bottom: 5px;
+  font-weight: 300;
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.6);
+}
+
+.creditCard .year {
+  grid-area: year;
+  justify-self: right;
+  font-size: 14px;
+  font-weight: lighter;
+  font-family: "Roboto Condensed", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2.4px;
+  padding-bottom: 5px;
+  font-weight: 300;
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.6);
+}
+
+.previousStep {
+  position: absolute;
+  bottom: 70px;
+  height: 20px;
+  width: 110px;
+  color: #4092b5;
+  left: 65px;
+  cursor: pointer;
+}
+
+.previousStep p {
+  margin-top: -16px;
+  margin-left: 40px;
+  font-size: 10px;
+  text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  letter-spacing: .5px;
+  cursor: pointer;
+}
+
+.previousStep .arrow {
+  height: 20px;
+  width: 30px;
+}
+
+.previousStep .arrow svg {
+  height: 100%;
+  width: 100%;
+  transform: rotate(180deg);
+  fill: #3580aa;
+}
+
+form {
+  margin: 0;
+  padding: 0;
+  grid-area: form;
+  overflow: visible;
+  width: 200px;
+  min-height: 0;
+  min-width: 0;
+  display: grid;
+  justify-self: center;
+  grid-template: 45px repeat(5, 1fr) 55px/repeat(2, 1fr);
+  grid-template-areas: ". ."
+ "fheading fheading"
+ "fname fname"
+ "fcno fcno"
+ "fyear fcvv"
+ "btn btn"
+ ". .";
+}
+
+form input {
+  position: relative;
+  margin-top: -12px;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+  height: 38px;
+  padding: 7px 0 0 0;
+  font-size: 15px;
+  background: none;
+  width: 100%;
+  outline: none;
+  color: #000;
+}
+
+form input:focus {
+  border-bottom: 1.5px solid #9ad0dd;
+}
+
+form input:focus + h6 {
+  color: red;
+}
+
+h6 {
+  grid-area: fheading;
+  font-size: 20px;
+}
+
+.inputCon {
+  min-width: 0;
+  min-height: 0;
+  position: relative;
+  color: #c1c1c1;
+}
+
+.inputCon:after {
+  position: absolute;
+  content: attr(data-top);
+  top: -16px;
+  left: 0;
+  height: 10px;
+  font-size: 10.4px;
+  letter-spacing: .5px;
+}
+
+#name {
+  grid-area: fname;
+}
+
+#cardNum {
+  grid-area: fcno;
+}
+
+#validYear {
+  grid-area: fyear;
+  margin-right: 13px;
+}
+
+#cvv {
+  grid-area: fcvv;
+  margin-left: 13px;
+}
+
+button {
+  margin-top: 10px;
+  grid-area: btn;
+  height: 36px;
+  width: 198px;
+  background: linear-gradient(to right, #3580aa 60%, #4092b5 90%);
+  border-radius: 5px;
+  border: none !important;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  font-size: 13.5px;
+  color: #acccdd;
+  cursor: pointer;
+  transition: all 1s ease-out;
+}
+
+button:focus {
+  outline: none;
+}
+
+button span {
+  margin-left: 3px;
+  font-weight: bold;
+  letter-spacing: .5px;
+  color: #fff;
+}
