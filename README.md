@@ -2,7 +2,7 @@
 ![HacktoberFest 2021](https://github.com/ossamamehmood/Hacktoberfest2022/raw/main/.github/logo.png)
 
 
-## Contributors of `Hacktoberfest 2022` 
+## Contributors of `Hacktoberfest 2022`
 
 <div align="center">
 
@@ -54,7 +54,7 @@ static/images/<YOUR-USERNAME>.png
 ```
 
 
-## 2. Add your profile information.
+## 2. Add your profile information
 
 Create a markdown file in your folder following the convention `content/participant/<YOUR-USERNAME>.md`. Ex.
 
@@ -90,7 +90,7 @@ Add Code Here/C++/<YOUR-FILERNAME>.cpp
 ```
 You can follow any pathway a `code` or `profile information`
 
-## 4. Wait for Pull Request to merge.
+## 4. Wait for Pull Request to merge
 
 ## 5. Celebrate - you've done your first pull request!!
 
@@ -113,7 +113,11 @@ keep in mind that repo has hacktoberfest topic..
 To get approval of the pull request much quicker and faster (`Follow Me`)🚀
 '''
 ```
+<tr><td align="center"><a href="https://github.com/yakumwamba"><kbd><img src="https://avatars3.githubusercontent.com/yakumwamba?size=100" width="100px;" alt=""/></kbd><br /><sub><b>YakuTheTechie</b></sub></a><br /></td>
+
+</tr>
 
 <tr><td align="center"><a href="https://github.com/ossamamehmood"><kbd><img src="https://avatars3.githubusercontent.com/ossamamehmood?size=100" width="100px;" alt=""/></kbd><br /><sub><b>Ossama Mehmood</b></sub></a><br /></td>
 
 </tr>
+

@@ -10,28 +10,28 @@ public class Program
  
             string input = Console.ReadLine();
  
-            int Length = input.Length;
+            int iLength = input.Length;
  
-		    
-            if (Length == 0)
+		    //check if string length is not 0, basically if it is not empty
+            if (iLength == 0)
             {
                 Console.WriteLine("You did not enter the string");
  
             }
             else
             { 
-                for (int j = Length - 1; j >= 0; j--)
+                for (int j = iLength - 1; j >= 0; j--)
                 {
                     initial = initial + input[j];
                 }				
- 				
+ 				//if initial string is same as input
                 if (initial == input)
                 {
-                    Console.WriteLine(input + " is palindrome Number");
+                    Console.WriteLine(input + " is palindrome");
                 }
                 else
                 {
-                    Console.WriteLine(input + " is not a palindrome Number");
+                    Console.WriteLine(input + " is not a palindrome");
                 }
              
             }

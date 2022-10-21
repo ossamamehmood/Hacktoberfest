@@ -1,11 +1,3 @@
-using systems;
-public class Zigzag
-{
-        public static void zigZagSequesnce()
-using System;
-
-public class Zigzag
-{
 public static void zigZagSequesnce()
         {
             int[] arr = new int[] { 2, 6, 1, 4, 7, 3, 5 };
@@ -38,4 +30,3 @@ public static void zigZagSequesnce()
             Console.WriteLine(string.Join(",", arr));
             Console.ReadLine();
         }
-}
