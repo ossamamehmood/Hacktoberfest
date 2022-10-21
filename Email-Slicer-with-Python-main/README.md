@@ -1,1 +1,0 @@
-# Email-Slicer-with-Python
