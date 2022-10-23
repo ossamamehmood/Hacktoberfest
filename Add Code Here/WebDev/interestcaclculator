@@ -1,0 +1,36 @@
+
+<!doctype html>
+<html>
+<head>
+<title>demo</title>
+</head>
+<body>
+<form>
+principal<input type="text" id="v1">
+Time<input type="text" id="v2">
+Rate of Interest<input type="text" id="v3">
+Payable<input type="text" id="v4">
+<input type="button" value="Simple Interest" onClick="sic()">
+<input type="button" value="Compound Interest" onClick="cic()">
+</form>
+<script type="text/javascript">
+function sic()
+{
+p=parseInt(document.getElementById("v1").value)
+t=parseInt(document.getElementById("v2").value)
+r=parseInt(document.getElementById("v3").value)
+si=p*t*r/100
+document.getElementById("v4").value=si
+}
+function cic()
+{
+p=parseInt(document.getElementById("v1").value)
+t=parseInt(document.getElementById("v2").value)
+r=parseInt(document.getElementById("v3").value)
+ci=p*Math.pow(1+r/100,t)
+document.getElementById("v4").value=ci
+}
+
+</script>
+</html>
+
