@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="./css/index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./chat.png" type="image/icon type">
+    <title>Chat App</title>
+  </head>
+  <body>
+    <div class="chat-container">
+      <div class="chat-sidebar">
+          <div class = 'chat-sidebar-container' id ='sidebarInfo'></div>
+      </div>
+      <div class="chat-content-container">
+        <div class="chat-message-list" id="receivedMessage"></div>
+        <div class="chat-form-wrapper">
+          <input id="message" placeholder="Message" />
+          <button id="send">Send</button>
+          <button id="sendLocation">Send Location</button>
+        </div>
+      </div>
+    </div>
+
+    <script id="receivedMessageTemplate" type="text/html">
+      <div class="message-wrapper">
+        <div class="message-info-wrapper">
+          <div class="message-name">{{username}}</div>
+          <div class="message-date">{{createdAt}}</div>
+        </div>
+        <div class = 'message-content'>
+          {{#if url}}
+            <a href="{{url}}" target="_blank">Location</a>
+          {{else}} 
+            {{message}}  
+          {{/if}}
+        </div>
+      </div>
+    </script>
+
+    <script id = 'sidebarInfoTemplate' type = text/html>
+      <div class = 'sidebar-channel-name' >
+        <div class = 'box'>  
+        {{channel}}
+        </div>
+      </div>
+      <div class = 'sidebar-user-list-container'>
+            {{#each users}}
+                <div class = 'sidebar-user'>{{username}}</div>
+            {{/each}}
+        </div>
+
+    </script>
+
+
+
+
+
+
+<!-- CDN IMPORTS  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.10.1/qs.min.js" integrity="sha512-aTKlYRb1QfU1jlF3k+aS4AqTpnTXci4R79mkdie/bp6Xm51O5O3ESAYhvg6zoicj/PD6VYY0XrYwsWLcvGiKZQ==" crossorigin="anonymous"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+      integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"
+      integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/client.js"></script>
+
+  </body>
+</html>

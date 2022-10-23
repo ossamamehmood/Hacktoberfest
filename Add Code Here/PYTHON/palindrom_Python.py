@@ -16,7 +16,7 @@ while(i < test_cases):
         results.append("false")
 
     i = i+1
-
+#checks if opposite letters are the same 
 
 for i in range(len(results)):
     print(results[i])

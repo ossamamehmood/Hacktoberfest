@@ -1,0 +1,163 @@
+/* GENEL TANIMLAR*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+}
+
+input {
+    padding: 10px;
+    outline: none;
+    border: 1px solid #0E85E2;
+    color: gray;
+    border-radius: 20px;
+}
+
+button {
+    background: #0E85E2;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+}
+
+button:hover {
+    background: #99efd5;
+}
+
+button:disabled {
+    background: #0E85E2;
+    cursor: default;
+    
+}
+
+/* Chat container içeriği */
+
+.chat-container{
+    display: flex;
+    background-image: url('../image/back.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+.chat-sidebar{
+    height: 100vh;
+    background: #08365B;
+    width: 300px;
+}
+
+
+.chat-content-container{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 20px 0px 20px;
+    max-height: 97vh;
+}
+
+
+.chat-message-list{
+    flex: 1;
+    overflow-y: scroll;
+
+
+}
+
+.chat-form-wrapper {
+    margin-top: 10px;
+    padding: 18px 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.chat-form-wrapper input {
+    flex: 8;
+    margin-right: 16px;
+
+}
+
+.chat-form-wrapper button {
+    flex: 1;
+    margin-right: 16px;
+    
+}
+
+
+/*MESAJ ALANLARI */
+
+
+.message-wrapper{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    margin-top: 3px;
+    border: 2px solid lightslategray;
+    border-radius: 15px;
+
+}
+
+.message-info-wrapper{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+
+}
+
+.message-name {
+    font-size: 15px;
+    color:#777
+}
+
+.message-date{
+color: #777;
+font-size: 15px;
+
+}
+
+
+.message-content{
+    font-size: 20px;
+
+}
+
+/*SIDEBAR*/
+
+.chat-sidebar-container{
+    display: flex;
+    flex-direction:column;
+
+}
+
+.sidebar-channel-name{
+    height: 60px;
+    font-size: 60px;
+    margin-bottom: 20px;
+    color:rgb(175, 169, 214);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #fcfcfc;
+    border-radius: 15px;
+}
+
+
+.sidebar-user-list-container{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    
+
+}
+
+.sidebar-user{
+    font-size: 30px;
+    color: white;
+    margin-bottom: 10px;
+}
