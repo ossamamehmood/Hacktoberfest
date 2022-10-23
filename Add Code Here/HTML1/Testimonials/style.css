@@ -1,0 +1,155 @@
+*{
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: rgb(156, 148, 148);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.testimonials{
+    max-width: 1440px;
+    margin: 50px auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.card{
+
+    background: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: rgb(10, 10, 8) 0px;
+}
+
+.class-header{
+
+    display: flex;
+    align-items: center;
+}   
+
+.class-header h3{
+
+    font-size: 14px;
+}
+
+.class-header p{
+
+    opacity: 50%;
+}
+
+.card-img{
+
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 2px purple solid;
+    margin-right: 10px;
+}
+
+.card-lead{
+
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+.card-quote{
+
+    font-size: 0.7rem;
+    font-weight: 500;
+    line-height: 1;
+    opacity: 70%;
+}
+
+.card--bg-purple{
+
+    background: rgb(199, 152, 220);
+    color: white;
+    background-image: url(images/quotation.svg);
+    background-repeat: no-repeat;
+    background-position: top 10px right 100px;
+}
+
+.card--bg-gray{
+
+    background: rgb(212, 207, 214);
+    color: white;
+    background-repeat: no-repeat;
+    background-position: top 10px right 100px;
+}
+
+.card--bg-black{
+
+    background: rgb(55, 48, 58);
+    color: white;
+    background-repeat: no-repeat;
+    background-position: top 10px right 100px;
+}
+
+.card--bg-peach{
+
+    background: peachpuff;
+    color: white;
+    background-repeat: no-repeat;
+    background-position: top 10px right 100px;
+}
+
+.card--bg-corel{
+
+    background: coral;
+    color: white;
+    background-repeat: no-repeat;
+    background-position: top 10px right 100px;
+}
+
+.card:nth-of-type(1){
+
+    grid-column: 1 / 3;
+}
+
+.card:nth-of-type(5){
+
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+}
+
+.card:nth-of-type(3){
+
+    grid-column: 4 / 5;
+    grid-row: 1 / 3;
+}
+
+@media (max-width: 780px){
+
+    .testimonials{
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .card:nth-of-type(1){
+
+        grid-column: 1;
+    }
+    
+    .card:nth-of-type(5){
+    
+        grid-column: 1;
+        grid-row: 5;
+    }
+    
+    .card:nth-of-type(3){
+    
+        grid-column: 1;
+        grid-row: 3;
+    }    
+}
