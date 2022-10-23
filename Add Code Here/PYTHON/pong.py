@@ -1,134 +1,121 @@
-from ctypes import alignment
-import turtle
-import winsound
-
-
-
-# Game Box
-wn = turtle.Screen() 
-wn.title("Pong by KryTax")
-wn.bgcolor("black")
-wn.setup(width = 800, height = 600)
-wn.tracer(0)
-
-
-
-# Player A
-paddle_a = turtle.Turtle()
-paddle_a.speed(0)
-paddle_a.shape("square")
-paddle_a.color("white")
-paddle_a.shapesize(stretch_wid = 5 , stretch_len = 1)
-paddle_a.penup()
-paddle_a.goto(-350,0)
-
-# Player B
-paddle_b = turtle.Turtle()
-paddle_b.speed(0)
-paddle_b.shape("square")
-paddle_b.color("white")
-paddle_b.shapesize(stretch_wid = 5 , stretch_len = 1)
-paddle_b.penup()
-paddle_b.goto(350,0)
-
-
-
-# Ball
-ball = turtle.Turtle()
+import turtle as t
+playerAscore=0
+playerBscore=0
+  
+#create a window and declare a variable called window and call the screen()
+window=t.Screen()
+window.title("The Pong Game")
+window.bgcolor("green")
+window.setup(width=800,height=600)
+window.tracer(0)
+  
+#Creating the left paddle
+leftpaddle=t.Turtle()
+leftpaddle.speed(0)
+leftpaddle.shape("square")
+leftpaddle.color("white")
+leftpaddle.shapesize(stretch_wid=5,stretch_len=1)
+leftpaddle.penup()
+leftpaddle.goto(-350,0)
+  
+#Creating the right paddle
+rightpaddle=t.Turtle()
+rightpaddle.speed(0)
+rightpaddle.shape("square")
+rightpaddle.color("white")
+rightpaddle.shapesize(stretch_wid=5,stretch_len=1)
+rightpaddle.penup()
+rightpaddle.goto(-350,0)
+  
+#Code for creating the ball
+ball=t.Turtle()
 ball.speed(0)
-ball.shape("circle") #circle
-ball.color("white")
+ball.shape("circle")
+ball.color("red")
 ball.penup()
-ball.goto(0,0)
-
-# Ball Movements
-ball.dx = 0.15
-ball.dy = -0.15
-
-
-
-# Function for Keyboard Bindings and Controls
-def paddle_a_up():
-    y = paddle_a.ycor() 
-    y = y + 20
-    paddle_a.sety(y)
-
-def paddle_a_down():
-    y = paddle_a.ycor() 
-    y = y - 20
-    paddle_a.sety(y)
-
-def paddle_b_up():
-    y = paddle_b.ycor() 
-    y = y + 20
-    paddle_b.sety(y)
-
-def paddle_b_down():
-    y = paddle_b.ycor() 
-    y = y - 20
-    paddle_b.sety(y)
-
-wn.listen()
-wn.onkeypress(paddle_a_up,"w")
-wn.onkeypress(paddle_a_down,"s")
-wn.onkeypress(paddle_b_up,"Up")
-wn.onkeypress(paddle_b_down,"Down")
-
-
-
-# Score 
-score_a = 0
-score_b = 0
-pen = turtle.Turtle()
+ball.goto(5,5)
+ballxdirection=0.2
+ballydirection=0.2
+  
+#Code for creating pen for scorecard update
+pen=t.Turtle()
 pen.speed(0)
-pen.color("white")
+pen.color("Blue")
 pen.penup()
 pen.hideturtle()
 pen.goto(0,260)
-pen.write("Player A: 0  Player B: 0",align="center", font= ("Courier",24,"normal" ))
-
-
-
-#Main Game loop
+pen.write("score",align="center",font=('Arial',24,'normal'))
+  
+#code for moving the leftpaddle
+def leftpaddleup():
+    y=leftpaddle.ycor()
+    y=y+90
+    leftpaddle.sety(y)
+  
+def leftpaddledown():
+    y=leftpaddle.ycor()
+    y=y+90
+    leftpaddle.sety(y)
+  
+#code for moving the rightpaddle
+def rightpaddleup():
+    y=rightpaddle.ycor()
+    y=y+90
+    rightpaddle.sety(y)
+  
+def rightpaddledown():
+    y=rightpaddle.ycor()
+    y=y+90
+    rightpaddle.sety(y)
+  
+#Assign keys to play
+window.listen()
+window.onkeypress(leftpaddleup,'w')
+window.onkeypress(leftpaddledown,'s')
+window.onkeypress(rightpaddleup,'Up')
+window.onkeypress(rightpaddledown,'Down')
+  
 while True:
-    wn.update()
-
-    # Move the ball
-    ball.setx(ball.xcor()+ ball.dx)
-    ball.sety(ball.ycor()+ ball.dy)
-
-    # Border checking
-    if ball.ycor() > 290: 
+    window.update()
+  
+    #moving the ball
+    ball.setx(ball.xcor()+ballxdirection)
+    ball.sety(ball.ycor()+ballxdirection)
+  
+    #border set up
+    if ball.ycor()>290:
         ball.sety(290)
-        ball.dy *= -1
-        winsound.PlaySound("bounce.wav", winsound.SND_ASYNC)
-
-    if ball.ycor() < -290: 
+        ballydirection=ballydirection*-1
+    if ball.ycor()<-290:
         ball.sety(-290)
-        ball.dy *= -1
-        winsound.PlaySound("bounce.wav", winsound.SND_ASYNC)
-    
+        ballydirection=ballydirection*-1
+          
     if ball.xcor() > 390:
         ball.goto(0,0)
-        ball.dx *= -1
-        score_a += 1
+        ball_dx = ball_dx * -1
+        player_a_score = player_a_score + 1
         pen.clear()
-        pen.write("Player A: {}  Player B: {}".format(score_a,score_b),align="center", font= ("Courier",24,"normal" ))
-
-    if ball.xcor() < -390:
+        pen.write("Player A: {}                    Player B: {} ".format(player_a_score,player_b_score),align="center",font=('Monaco',24,"normal"))
+        os.system("afplay wallhit.wav&")
+  
+  
+  
+    if(ball.xcor()) < -390: # Left width paddle Border
         ball.goto(0,0)
-        ball.dx *= -1
-        score_b += 1
+        ball_dx = ball_dx * -1
+        player_b_score = player_b_score + 1
         pen.clear()
-        pen.write("Player A: {}  Player B: {}".format(score_a,score_b),align="center", font= ("Courier",24,"normal" ))
-
-    #Paddle and Ball Collisions
-    if (ball.xcor() > 340 and ball.xcor() < 350) and (ball.ycor() < paddle_b.ycor() + 40 and ball.ycor() > paddle_b.ycor() - 40):
+        pen.write("Player A: {}                    Player B: {} ".format(player_a_score,player_b_score),align="center",font=('Monaco',24,"normal"))
+        os.system("afplay wallhit.wav&")
+  
+     # Handling the collisions with paddles.
+  
+    if(ball.xcor() > 340) and (ball.xcor() < 350) and (ball.ycor() < rightpaddle.ycor() + 40 and ball.ycor() > rightpaddle.ycor() - 40):
         ball.setx(340)
-        ball.dx *= -1
-        winsound.PlaySound("bounce.wav", winsound.SND_ASYNC)
-
-    if (ball.xcor() < -340 and ball.xcor() > -350) and (ball.ycor() < paddle_a.ycor() + 40 and ball.ycor() > paddle_a.ycor() - 40):
+        ball_dx = ball_dx * -1
+        os.system("afplay paddle.wav&")
+  
+    if(ball.xcor() < -340) and (ball.xcor() > -350) and (ball.ycor() < leftpaddle.ycor() + 40 and ball.ycor() > leftpaddle.ycor() - 40):
         ball.setx(-340)
-        ball.dx *= -1
-        winsound.PlaySound("bounce.wav", winsound.SND_ASYNC)
+        ball_dx = ball_dx * -1
+        os.system("afplay paddle.wav&")

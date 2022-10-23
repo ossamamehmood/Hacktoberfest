@@ -1,14 +1,26 @@
-def recur_fibo(n):
-   if n <= 1:
-       return n
-   else:
-       return(recur_fibo(n-1) + recur_fibo(n-2))
+# Function for nth Fibonacci number
+def Fibonacci(n):
 
-nterms = 10
+	# Check if input is 0 then it will
+	# print incorrect input
+	if n < 0:
+		print("Incorrect input")
 
-if nterms <= 0:
-   print("Plese enter a positive integer")
-else:
-   print("Fibonacci sequence:")
-   for i in range(nterms):
-       print(recur_fibo(i))
+	# Check if n is 0
+	# then it will return 0
+	elif n == 0:
+		return 0
+
+	# Check if n is 1,2
+	# it will return 1
+	elif n == 1 or n == 2:
+		return 1
+
+	else:
+		return Fibonacci(n-1) + Fibonacci(n-2)
+
+# Driver Program
+print(Fibonacci(9))
+
+# This code is contributed by Saket Modi
+# then corrected and improved by Himanshu Kanojiya
