@@ -1,0 +1,90 @@
+.bell{
+	content: url('https://api.iconify.design/fa6-regular/bell.svg?color=red&height=50');
+	position: relative;
+	right: 3px;
+	top: 11px;
+}
+
+.heart
+{
+  content: url('https://api.iconify.design/charm/heart.svg?color=red&height=27');
+}
+
+.sun{
+	content: url('https://api.iconify.design/akar-icons/sun.svg?color=black&height=22');
+}
+
+.moon{
+	content: url('https://api.iconify.design/bytesize/moon.svg?color=white&height=22');
+}
+
+.theme1,.theme2{
+	float: right;
+	position: relative;
+	top: 20px;
+	right: 30px;
+	border-radius: 20px;
+	background-color: black;
+}
+
+.hide{
+	display: none;
+}
+
+div.sticky{
+	position: sticky;
+	top: 0;
+	background-color: white;
+	padding-top: 3px;
+}
+
+.hl{
+	background-color: #66FCF1;
+	padding: 1px;
+	margin-bottom: 10px;
+	margin-left: 20px;
+	margin-right: 10px;
+}
+
+#heading{
+	margin-top: 2px;
+	margin-bottom: 2px;
+	padding-left: 30px;
+	font-size: 40px;
+	color: black;
+}
+
+.platforms{
+	text-align: center;
+	font-size: 200%;
+	font-weight: bold;
+	margin: 5px;
+}
+
+#codeforces , #codechef , #leetcode{
+		
+	margin: 0px;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	padding: 30px;
+	padding-top: 0px;
+}
+
+.cards{
+	padding: 15px;
+	padding-bottom: 1px;
+	padding-left: 30px;
+	border-style: solid;
+	border-width: 3px;
+	border-radius: 15px;
+	border-color: #66FCF1;
+	margin-top: 28px;
+	font-size: 20px;
+	min-width: 150px;
+}
+
+#footer{
+	text-align: center;
+	font-size: 25px;
+	padding-bottom: 20px;
+}
