@@ -59,13 +59,13 @@ body{
 
     font-size: 1rem;
     font-weight: 500;
-    line-height: 1;
+    line-height: 2;
     margin-bottom: 20px;
 }
 
 .card-quote{
 
-    font-size: 0.7rem;
+    font-size: 1rem;
     font-weight: 500;
     line-height: 1;
     opacity: 70%;
@@ -73,7 +73,7 @@ body{
 
 .card--bg-purple{
 
-    background: rgb(199, 152, 220);
+    background: rgb(169, 123, 190);
     color: white;
     background-image: url(images/quotation.svg);
     background-repeat: no-repeat;
@@ -82,7 +82,7 @@ body{
 
 .card--bg-gray{
 
-    background: rgb(212, 207, 214);
+    background: rgb(149, 145, 150);
     color: white;
     background-repeat: no-repeat;
     background-position: top 10px right 100px;
@@ -98,7 +98,7 @@ body{
 
 .card--bg-peach{
 
-    background: peachpuff;
+    background: rgb(235, 189, 149);
     color: white;
     background-repeat: no-repeat;
     background-position: top 10px right 100px;

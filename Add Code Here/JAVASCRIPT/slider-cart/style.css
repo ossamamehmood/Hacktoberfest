@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  min-height: 100vh;
+  position: relative;
+  background-color: #f02d3a;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+img {
+  max-width: 100%;
+}
+.prev,.next {
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%);
+  color: #01161e;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #fffbfc;
+  text-align: center;
+  line-height: 95px;
+  opacity: 0.7;
+  cursor: pointer;
+  font-size: 52px;
+  z-index: 99;
+}
+.prev {
+  left: 80px;
+}
+.next {
+  right: 50px;
+}
+
+.container {
+  width: 300%;
+  height: 500px;
+  display: flex;
+  gap: 30px;
+  flex-wrap: nowrap;
+  margin-left: 200px;
+  position: relative;
+}
+.card {
+  position: absolute;
+  left:0;
+  top: 0;
+  width: 300px;
+  height: 100%;
+  text-align: center;
+  background-color: #01161e;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.466);
+  position: relative;
+  transition:.3s;
+  cursor: pointer;
+}
+.card:hover{
+    top: -10px;
+}
+.card .imagebox {
+  width: 100%;
+  height: 250px;
+}
+.card .imagebox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card .title {
+  margin: 20px 0 10px;
+  color: #dd0426;
+}
+.card .discription {
+  color: #fffbfc;
+}
+.card .price {
+  display: block;
+  font-size: 32px;
+  color: #dd0426;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.card a {
+  display: block;
+  background-color: #227c9d;
+  color: #fffbfc;
+  font-weight: bold;
+  padding: 15px 0;
+  text-decoration: none;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
