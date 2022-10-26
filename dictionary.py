@@ -1,2 +1,5 @@
-Dict = {1: 'Geeks', 2: 'For', 3: 'Geeks'}
-print(Dict)
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
