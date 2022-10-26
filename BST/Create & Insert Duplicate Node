@@ -1,0 +1,16 @@
+Given a Binary Tree with N number of nodes, for each node create a new duplicate node, 
+and insert that duplicate as left child of the original node.
+
+
+void insertDuplicateNode(BinaryTreeNode<int> *root) {
+    // Write your code here
+	if(root==NULL)
+        return;
+    
+    BinaryTreeNode<int> *duplicate = new BinaryTreeNode<int> (root->data);
+    duplicate->left=root->left;
+    root->left=duplicate;
+    
+    insertDuplicateNode(duplicate->left);
+    insertDuplicateNode(root->right);
+}
