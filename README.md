@@ -43,7 +43,7 @@
 
 # How To Make Your First Pull Request
 
-Replace `<Suyash-Srivastava>` with your GitHub username in this guide.
+Replace `<YOUR-USERNAME>` with your GitHub username in this guide.
 
 ## 1. Add your profile picture to the folder
 
