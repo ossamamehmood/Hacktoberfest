@@ -1,0 +1,36 @@
+Given a BST and an integer k. Find and return the path from the node with data k and root 
+(if a node with data k is present in given BST). Return null otherwise.
+Assume that BST contains all unique elements.
+
+vector<int>* findPath(BinaryTreeNode<int> *root , int k){
+    if(root==NULL)
+    {
+       return NULL;
+    }
+    
+    if(root->data == k )
+    {
+        vector<int> *v = new vector <int> ();
+        v->push_back(k);
+        return v;
+    }
+    
+    vector<int> *left=findPath(root->left,k);
+     if(left)
+    {
+        left->push_back(root->data);
+        return left;
+    }
+    else
+    {
+        vector<int> *right=findPath(root->right,k);
+
+        if(right)
+        {
+            right->push_back(root->data);
+            return right;
+        }
+    }
+     
+        return NULL;    
+}
