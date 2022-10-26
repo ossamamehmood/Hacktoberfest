@@ -1,85 +1,54 @@
-// Java implementation of QuickSort
-import java.io.*;
+# Quick sort in Python
 
-class GFG {
+# function to find the partition position
+def partition(array, low, high):
 
-	// A utility function to swap two elements
-	static void swap(int[] arr, int i, int j)
-	{
-		int temp = arr[i];
-		arr[i] = arr[j];
-		arr[j] = temp;
-	}
+  # choose the rightmost element as pivot
+  pivot = array[high]
 
-	/* This function takes last element as pivot, places
-	the pivot element at its correct position in sorted
-	array, and places all smaller (smaller than pivot)
-	to left of pivot and all greater elements to right
-	of pivot */
-	static int partition(int[] arr, int low, int high)
-	{
+  # pointer for greater element
+  i = low - 1
 
-		// pivot
-		int pivot = arr[high];
+  # traverse through all elements
+  # compare each element with pivot
+  for j in range(low, high):
+    if array[j] <= pivot:
+      # if element smaller than pivot is found
+      # swap it with the greater element pointed by i
+      i = i + 1
 
-		// Index of smaller element and
-		// indicates the right position
-		// of pivot found so far
-		int i = (low - 1);
+      # swapping element at i with element at j
+      (array[i], array[j]) = (array[j], array[i])
 
-		for (int j = low; j <= high - 1; j++) {
+  # swap the pivot element with the greater element specified by i
+  (array[i + 1], array[high]) = (array[high], array[i + 1])
 
-			// If current element is smaller
-			// than the pivot
-			if (arr[j] < pivot) {
+  # return the position from where partition is done
+  return i + 1
 
-				// Increment index of
-				// smaller element
-				i++;
-				swap(arr, i, j);
-			}
-		}
-		swap(arr, i + 1, high);
-		return (i + 1);
-	}
+# function to perform quicksort
+def quickSort(array, low, high):
+  if low < high:
 
-	/* The main function that implements QuickSort
-			arr[] --> Array to be sorted,
-			low --> Starting index,
-			high --> Ending index
-	*/
-	static void quickSort(int[] arr, int low, int high)
-	{
-		if (low < high) {
+    # find pivot element such that
+    # element smaller than pivot are on the left
+    # element greater than pivot are on the right
+    pi = partition(array, low, high)
 
-			// pi is partitioning index, arr[p]
-			// is now at right place
-			int pi = partition(arr, low, high);
+    # recursive call on the left of pivot
+    quickSort(array, low, pi - 1)
 
-			// Separately sort elements before
-			// partition and after partition
-			quickSort(arr, low, pi - 1);
-			quickSort(arr, pi + 1, high);
-		}
-	}
+    # recursive call on the right of pivot
+    quickSort(array, pi + 1, high)
 
-	// Function to print an array
-	static void printArray(int[] arr, int size)
-	{
-		for (int i = 0; i < size; i++)
-			System.out.print(arr[i] + " ");
 
-		System.out.println();
-	}
+data = [8, 7, 2, 1, 0, 9, 6]
+print("Unsorted Array")
+print(data)
 
-	// Driver Code
-	public static void main(String[] args)
-	{
-		int[] arr = { 10, 7, 8, 9, 1, 5 };
-		int n = arr.length;
+size = len(data)
 
-		quickSort(arr, 0, n - 1);
-		System.out.println("Sorted array: ");
-		printArray(arr, n);
-	}
-}
+quickSort(data, 0, size - 1)
+
+print('Sorted Array in Ascending Order:')
+print(data)
