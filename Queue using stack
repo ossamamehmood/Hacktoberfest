@@ -1,0 +1,87 @@
+package studydsa;
+
+import java.util.Scanner;
+
+class stack_Fuction{
+    Scanner sc = new Scanner(System.in);
+    int [] stack1 = new int[5];
+    int [] stack2 = new int[5];
+
+    boolean flag = false;
+    int top1 = -1,top2 = -1;
+    int n1 = stack1.length;
+
+    void push(){
+
+        System.out.print("Enter The Value : ");
+        int value = sc.nextInt();
+
+       if (top1 == n1-1){
+           System.out.print("Queue is Full!!");
+       }
+       else{
+           stack1[++top1] = value;
+           System.out.println("Value Inserted!!");
+       }
+    }
+
+    void pop() {
+
+        while(top1>=0) {
+            stack2[++top2] = stack1[top1--];
+            flag = true;
+        }
+        if(flag){
+            if (top2==-1){
+                System.out.println("Queue is Empty!!");
+            }else{
+                System.out.println(stack2[top2--]+" Deleted!!");
+            }
+        }
+        while(top2>=0) {
+            stack1[++top1] = stack2[top2--];
+        }
+    }
+
+    void display(){
+        if (top1==-1){
+            System.out.println("Queue Is Empty!!");
+        }
+        else{
+            for (int i = 0; i <= top1; i++) {
+                System.out.print(stack1[i]+" ");
+            }
+        }
+    }
+}
+
+
+public class Queue_Using_Stack {
+    public static void main(String[] args) {
+
+        stack_Fuction sf = new stack_Fuction();
+        Scanner sc = new Scanner(System.in);
+        int input;
+        int input2;
+
+        do {
+            System.out.println("This is Queue Using 2 Stacks");
+            System.out.println("1. Insert Data");
+            System.out.println("2. Delete Data");
+            System.out.println("3. Display Data");
+            System.out.println("Enter The Task Number");
+            input = sc.nextInt();
+
+            switch (input){
+                case 1-> sf.push();
+                case 2-> sf.pop();
+                case 3-> sf.display();
+                default -> System.out.println("Enter The Invalid Task!!");
+            }
+            System.out.print("");
+            System.out.println("Press 0 To Go Back");
+            input2 = sc.nextInt();
+
+        }while(input2==0);
+    }
+}
