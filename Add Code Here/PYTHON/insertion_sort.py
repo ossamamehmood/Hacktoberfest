@@ -1,20 +1,11 @@
-def insertionSort(arr):
-  
-    
-    for i in range(1, len(arr)):
-  
-        key = arr[i]
-  
+def insertion_sort(arr):
+    for in range(1,len(arr
+        current =arr[i]
+        position-=1
         
-        j = i-1
-        while j >= 0 and key < arr[j] :
-                arr[j + 1] = arr[j]
-                j -= 1
-        arr[j + 1] = key
-  
-  
-
-arr = [12, 11, 13, 5, 6]
-insertionSort(arr)
-for i in range(len(arr)):
-    print ("% d" % arr[i])
+        while position >0 and arr[position-1]>current:
+            arr[position]=arr[position-1]
+            position-=1
+        arr[position]=current
+    return arr
+print(insertion_sort([1,7,0,2,8,5,43,4]))

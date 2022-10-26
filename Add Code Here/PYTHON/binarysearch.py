@@ -1,31 +1,24 @@
-# Binary Search in python
-
-
-def binarySearch(array, x, low, high):
-
-    # Repeat until the pointers low and high meet each other
-    while low <= high:
-
-        mid = low + (high - low)//2
-
-        if array[mid] == x:
-            return mid
-
-        elif array[mid] < x:
-            low = mid + 1
-
-        else:
-            high = mid - 1
-
-    return -1
-
-
-array = [3, 4, 5, 6, 7, 8, 9]
-x = 4
-
-result = binarySearch(array, x, 0, len(array)-1)
-
-if result != -1:
-    print("Element is present at index " + str(result))
+def binary_search(alist, start, end, key):
+    """Search key in alist[start... end - 1]."""
+    if not start < end:
+        return -1
+ 
+    mid = (start + end)//2
+    if alist[mid] < key:
+        return binary_search(alist, mid + 1, end, key)
+    elif alist[mid] > key:
+        return binary_search(alist, start, mid, key)
+    else:
+        return mid
+ 
+ 
+alist = input('Enter the sorted list of numbers: ')
+alist = alist.split()
+alist = [int(x) for x in alist]
+key = int(input('The number to search for: '))
+ 
+index = binary_search(alist, 0, len(alist), key)
+if index < 0:
+    print('{} was not found.'.format(key))
 else:
-    print("Not found")
+    print('{} was found at index {}.'.format(key, index))

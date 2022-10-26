@@ -1,49 +1,34 @@
-// C++ program for insertion sort
-//
-#include <bits/stdc++.h>
+/* Insert an element from unsorted array to its correct position in sorted array */
+/* INSERTION SORT */
+
+#include <iostream>
 using namespace std;
- 
-// Function to sort an array using
-// insertion sort
-void insertionSort(int arr[], int n)
-{
-    int i, key, j;
-    for (i = 1; i < n; i++)
-    {
-        key = arr[i];
-        j = i - 1;
- 
-        // Move elements of arr[0..i-1], 
-        // that are greater than key, to one
-        // position ahead of their
-        // current position
-        while (j >= 0 && arr[j] > key)
-        {
-            arr[j + 1] = arr[j];
-            j = j - 1;
-        }
-        arr[j + 1] = key;
-    }
-}
- 
-// A utility function to print an array
-// of size n
-void printArray(int arr[], int n)
-{
-    int i;
-    for (i = 0; i < n; i++)
-        cout << arr[i] << " ";
-    cout << endl;
-}
- 
-// Driver code
 int main()
 {
-    int arr[] = { 12, 11, 13, 5, 6 };
-    int N = sizeof(arr) / sizeof(arr[0]);
- 
-    insertionSort(arr, N);
-    printArray(arr, N);
- 
+    int n;
+    cout << "Enter the size of the Array : ";
+    cin >> n;
+    int arr[n];
+    cout << "Enter the elements of the Array : " << endl;
+    for (int k = 0; k < n; k++)
+    {
+        cin >> arr[k];
+    }
+    for (int i = 1; i < n; i++)
+    {
+        int current = arr[i];
+        int j = i -1;
+        while(arr[j]>current && j>=0)
+        {
+            arr[j+1] = arr[j];
+            j--;
+        }
+        arr[j+1] = current;
+    }
+    cout << "Elements of Array after sorting are : ";
+    for (int i = 0; i < n; i++)
+    {
+        cout << arr[i] << " ";
+    }
     return 0;
 }

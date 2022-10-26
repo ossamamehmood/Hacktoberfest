@@ -1,19 +1,18 @@
 #include <iostream>
-
 using namespace std;
 
-int main(){
+bool linearSearch(int arr[], int n, int k) {
+    for(int i=0; i<n; i++)
+        if(arr[i] == k)
+            return true;
 
-    int a[]={1,2,3,4,5};
+    return false;
+}
 
-    int k;
+int main() {
+    int arr[5] = {3,654,236,63,2};
+    int target;
+    cin >> target;
 
-    cin>>k;
-
-    for (int i=0;i<sizeof(a);i++){
-        if(k==a[i])
-        cout<<"Found";
-    }
-
-    return 0;
+    cout << (linearSearch(arr, 5, target) ? "Found" : "Not Found") << endl;
 }
