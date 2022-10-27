@@ -1,61 +1,18 @@
-// { Driver Code Starts
-#include<bits/stdc++.h>
-using namespace std;
-
-
- // } Driver Code Ends
-class Solution{
-    public:
-    
-    //Function to rotate an array by d elements in counter-clockwise direction. 
-    void arrreverse(int arr[], int s, int e)
-    {
-    while (s < e)
-    {
-        int temp = arr[s];
-        arr[s] = arr[e];
-        arr[e] = temp;
-        s++;
-        e--;
-    }
-    }  
-    void rotateArr(int arr[], int d, int n){
-        if (n!=0) 
-        {
-            d=d%n;
-            arrreverse(arr,0,d-1);
-            arrreverse(arr,d,n-1);
-            arrreverse(arr,0,n-1);
-            
+class Solution {
+public:
+    void reverse(vector<int>& nums,int low,int high){
+        while(low<high){
+            swap(nums[low],nums[high]);
+            low++;
+            high--;
         }
-        // code here
+    }
+    void rotate(vector<int>& nums, int k) {
+        int n=nums.size();
+        k=k%n;
+        reverse(nums,0,n-k-1);
+        reverse(nums,n-k,n-1);
+        reverse(nums,0,n-1);
+        
     }
 };
-
-
-int main() {
-	int t;
-	cin >> t;
-	
-	while(t--){
-	    int n, d;
-	    
-	    cin >> n >> d;
-	    
-	    int arr[n];
-	    
-	    for(int i = 0; i < n; i++){
-	        cin >> arr[i];
-	    }
-	    Solution ob;
-	    
-	    ob.rotateArr(arr, d,n);
-	    
-	   
-	    for(int i =0;i<n;i++){
-	        cout << arr[i] << " ";
-	    }
-	    cout << endl;
-	}
-	return 0;
-}  

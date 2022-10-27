@@ -1,36 +1,25 @@
 class Solution {
 public:
     double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
-        auto vec1=nums1.begin();
-        auto vec2=nums2.begin();
-        vector<int> ans;
-        while(vec1!=nums1.end() || vec2!=nums2.end()){
-            if(vec1==nums1.end()){
-                ans.push_back(*vec2);
-                vec2++;        
-            }
-            else if(vec2==nums2.end()){
-                ans.push_back(*vec1);
-                vec1++;
-            }
-            else{
-                if(*vec1>*vec2){
-                    ans.push_back(*vec2++);
-                }
-                else{
-                    ans.push_back(*vec1++);
-                }
-            }     
+        for(int i=0;i<nums2.size();i++){
+            nums1.push_back(nums2[i]);
         }
+        sort(nums1.begin(),nums1.end());
+        int n=nums1.size();
+        double ans;
+        if(n%2==0){
+            int a=n/2;
+            int b=a-1;
+            ans=(nums1[a]+nums1[b])/2.0;
+        }
+        else{
+            int k=n/2;
+            ans=nums1[k];
+            
+        }
+        return ans;
         
-        if(ans.size()%2!=0) return ans[ans.size()/2];
-        else    return (ans[ans.size()/2-1]+ans[(ans.size()/2)])/2.0;
+       
     }
+    
 };
-
-static const int _ = []() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-    cout.tie(nullptr);
-    return 0;
-}();

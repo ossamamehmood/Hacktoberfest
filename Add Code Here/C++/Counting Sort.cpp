@@ -1,71 +1,36 @@
-//------ AI Programming ---------
-// Counting Sort Algorithm
-// Join our underground coding movement @freecodecs (c) June, 2019.
-
 #include<iostream>
 using namespace std;
-
-int Max(int Arr[], int N){
-	int max = Arr[0];
-	for(int i=1; i<N; i++)
-		if(Arr[i] > max)
-			max = Arr[i];
-	return max;
-}
-
-int Min(int Arr[], int N){
-	int min = Arr[0];
-	for(int i=1; i<N; i++)
-		if(Arr[i] < min)
-			min = Arr[i];
-	return min;
-}
-
-void Print(int Arr[], int N){
-	for(int i=0; i<N; i++) cout<<Arr[i] <<", ";
-}
-
-int *Counting_Sort(int Arr[], int N){
-
-	int max = Max(Arr, N);
-	int min = Min(Arr, N);
-	int *Sorted_Arr = new int[N];
-	
-	int *Count = new int[max-min+1];
-	
-	for(int i=0; i<N; i++) Count[Arr[i]-min]++;
-  
-	for(int i=1; i<(max-min+1); i++) Count[i]+=Count[i-1];
-	
-	for(int i=N-1; i>=0; i--){
-		Sorted_Arr[Count[Arr[i]-min]-1] = Arr[i];
-		Count[Arr[i]-min]--;
-	}
-	
-	return Sorted_Arr;
-}
-
-int main(){
-
-	int N;
-	cout<<"\nEnter size of elements:";
-	cin>>N;
-	
-	int Arr[N];
-	for (int i = 0; i < N; ++i)
-	{
-		cout<<"\nEnter "<<i+1<<" element: ";
-		cin>>Arr[i];
-	}
+void counting_sort(int a[],int n){
+	//first find the largest element of the array to find range
+	int largest=-1;      //assume a array of positive numbers
+	for(int i=0;i<n;i++){
+		largest=max(largest,a[i]);
 		
-	int *Sorted_Arr;
+	}
+	//create a frequency array
+	int *freq=new int[largest+1]{0};    //create a frequency array and initialize it with 0;
+	for(int i=0;i<n;i++){
+		freq[a[i]]++;
+	}
+	//put the elements back into the array a[i] by reading frequency array
+	int j=0;
+	for(int i=0;i<=largest;i++){          //iterate over the freq array
+	    while(freq[i]>0){
+	    	a[j]=i;
+	    	freq[i]--;
+	    	j++;
+	    	
+		}
 	
-	cout<<"\nOrignal Elements : ";
-	Print(Arr, N);
-	Sorted_Arr = Counting_Sort(Arr, N);
-	cout<<"\nSorted Elements : ";
-	Print(Sorted_Arr, N);
-	cout<<endl;
-	
+		
+	}
+}
+int main(){
+	int a[]={88,97,10,12,15,1,5,6,12,5,8};
+	int n=sizeof(a)/sizeof(int);
+	counting_sort(a,n);
+	for(int i=0;i<n;i++){
+		cout<<a[i]<<endl;
+	}
 	return 0;
 }
