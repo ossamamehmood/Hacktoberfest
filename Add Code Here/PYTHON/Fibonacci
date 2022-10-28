@@ -26,6 +26,7 @@ def PrintFibonacci(length):
         length -= 1
 
 if __name__ == "__main__":
+    n=int(input("Enter limit for series:"))
     print("Fibonacci Series - ")
-    PrintFibonacci(7)
+    PrintFibonacci(n)
     pass
