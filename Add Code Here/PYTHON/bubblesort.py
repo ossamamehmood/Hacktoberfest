@@ -1,36 +1,17 @@
-# Optimized Bubble sort in Python
+def bubbleSort(A):
 
-def bubbleSort(array):
-    
-  # loop through each element of array
-  for i in range(len(array)):
-        
-    # keep track of swapping
-    swapped = False
-    
-    # loop to compare array elements
-    for j in range(0, len(array) - i - 1):
+	for i in range(length):		for j in range(0,length-i-1):
 
-      # compare two adjacent elements
-      # change > to < to sort in descending order
-      if array[j] > array[j + 1]:
+			if A[j]>A[j+1]:
 
-        # swapping occurs if elements
-        # are not in the intended order
-        temp = array[j]
-        array[j] = array[j+1]
-        array[j+1] = temp
+				A[j],A[j+1]=A[j+1],A[j]
 
-        swapped = True
-          
-    # no swapping means the array is already sorted
-    # so no need for further comparison
-    if not swapped:
-      break
+mylist=input("Enter the list of numbers: ").split()
 
-data = [-2, 45, 0, 11, -9]
+A=[int(i) for i in mylist]
 
-bubbleSort(data)
+length=len(A)
 
-print('Sorted Array in Ascending Order:')
-print(data)
+bubbleSort(A)
+
+print("Sorted list:",A)
