@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg" sizes="16x16" href="./favicon.svg">
+  <base href="/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/phosphor-icons"></script>
+  <link href="./dist/styles.css" type="text/css" rel="stylesheet">
+  <title>Pokedex</title>
+</head>
+
+<body class="w-screen h-screen bg-[#121212] pt-11 pb-14 gap-4 justify-center grid grid-rows-pokemonBody">
+  <section class="h-fit grid grid-flow-dense grid-cols-1 grid-rows-2 gap-4">
+    <a class="w-fit" href="/">
+      <i class="ph-arrow-left text-zinc-200 text-base md:text-3xl"></i>
+    </a>
+    <span class="flex items-center gap-2">
+      <img class="w-5 md:w-8" src="favicon.svg" alt="pokebola">
+      <h1 class="text-zinc-200 font-bold text-base sm:text-2xl md:text-3xl  self-start">Pokédex</h1>
+    </span>
+  </section>
+
+  <main
+    class="w-fit h-fit row-start-2 max-h-[841px] bg-gradient-to-b from-zinc-800 rounded-2xl p-2 text-zinc-200 lg:p-6"
+    data-js="main">
+    <ul class="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5" data-js="pokemon-list">
+    </ul>
+
+    <div class="flex justify-end gap-4 w">
+      <span class="flex gap-1 items-center mt-2 cursor-pointer text-zinc-200 text-base md:text-1xl" data-js="prev"><i
+          class="ph-arrow-left "></i> prev</span>
+      <span class="flex gap-1 items-center mt-2 cursor-pointer text-zinc-200 text-base md:text-1xl" data-js="next">next
+        <i class="ph-arrow-right "></i> </span>
+    </div>
+
+    <div class="hidden fixed z-100 left-0 top-0 w-screen h-screen bg-[rgba(0,0,0,0.4)] pt-6" data-js="details-modal">
+      <div
+        class="w-[98vw] max-w-[672px] h-[600px] relative rounded-lg rounded-b-xl flex flex-col items-center bg-zinc-100 m-auto"
+        data-js="modal-content">
+        <header
+          class="w-full h-[50%] flex justify-between px-2 text-zinc-600  font-semibold text-lg md:text-2xl pt-3 rounded-t-lg"
+          data-js="pokemon-header">
+          <i class="ph-arrow-left text-3xl cursor-pointer" data-js="close-modal"></i>
+          <h2 class="text-xl md:text-3xl capitalize" data-js="pokemon-name"></h2>
+          <span data-js="pokemon-id"></span>
+        </header>
+        <div class="absolute bg-zinc-800 rounded-t-xl
+         w-full h-2/3 bottom-0 rounded-b-lg flex flex-col items-center">
+          <table class="border-separate border-spacing-2 w-4/5 md:w-2/3 text-sm md:text-base" data-js="stats-table">
+            <thead>
+              <tr>
+                <th class="text-left text-lg md:text-2xl">Stats</th>
+              </tr>
+            </thead>
+            <tbody class="">
+              <tr>
+                <td>HP</td>
+                <td data-js="hp"></td>
+                <td>
+                  <div class="w-24 bg-zinc-500 rounded-full h-2.5 dark:bg-gray-700">
+                    <div class="bg-zinc-200 h-2.5 rounded-full" data-js="hp-bar"></div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>Attack</td>
+                <td data-js="attack"></td>
+                <td>
+                  <div class="w-24 bg-zinc-500 rounded-full h-2.5 dark:bg-gray-700">
+                    <div class="bg-zinc-200 h-2.5 rounded-full" data-js="attack-percentage"></div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>Defense</td>
+                <td data-js="defense"></td>
+                <td>
+                  <div class="w-24 bg-zinc-500 rounded-full h-2.5 dark:bg-gray-700">
+                    <div class="bg-zinc-200 h-2.5 rounded-full" data-js="defense-percentage"></div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>Special Attack</td>
+                <td data-js="special-attack"></td>
+                <td>
+                  <div class="w-24 bg-zinc-500 rounded-full h-2.5 dark:bg-gray-700">
+                    <div class="bg-zinc-200 h-2.5 rounded-full" data-js="special-attack-percentage"></div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>Special Defense</td>
+                <td data-js="special-defense"></td>
+                <td>
+                  <div class="w-24 bg-zinc-500 rounded-full h-2.5 dark:bg-gray-700">
+                    <div class="bg-zinc-200 h-2.5 rounded-full" data-js="special-defense-percentage"></div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>Speed</td>
+                <td data-js="speed"></td>
+                <td>
+                  <div class="w-24 bg-zinc-500 rounded-full h-2.5 dark:bg-gray-700">
+                    <div class="bg-zinc-200 h-2.5 rounded-full" data-js="speed-percentage"></div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="absolute top-[20%] md:top-[15%] flex justify-center">
+          <img class="w-24 h-24 md:w-36 md:h-36 drop-shadow-3xl" src="" alt="" data-js="pokemon-img">
+        </div>
+      </div>
+    </div>
+
+  </main>
+  <script type="module" src="./assets/js/index.js"></script>
+</body>
+
+</html>
