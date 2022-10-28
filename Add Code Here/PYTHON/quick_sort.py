@@ -1,24 +1,56 @@
-#Shree Ganeshaya Namah:
-#Shambhu
 
-#Quick sort is a sorting algorithm that makes use of the divide and conquer technique.
-#In this, we take any element such as the first, middle or preferably last element as a pivot
-#Then we divide the the array into two separate arrays; the lesser and the greater elements essentially
-#Then by using recursion we sort it and return the array.
-#So, what are we waiting for? Let's do it without further ado.
+# Function to find the partition position
+def partition(array, low, high):
 
-def quick(arr):
-    if len(arr)<=1:
-        return arr
-    pivot = arr[-1]
-    l = []
-    g = []
-    for i in arr[:-1]:
-        if i<=pivot:
-            l.append(i)
-        else:
-            g.append(i)
-    return quick(l)+[pivot]+quick(g)
+	# choose the rightmost element as pivot
+	pivot = array[high]
 
-arr = [10,20,13,11,9,4,2,1,3,5,19,22,21,18]
-print(quick(arr))
+	# pointer for greater element
+	i = low - 1
+
+	# traverse through all elements
+	# compare each element with pivot
+	for j in range(low, high):
+		if array[j] <= pivot:
+
+			# If element smaller than pivot is found
+			# swap it with the greater element pointed by i
+			i = i + 1
+
+			# Swapping element at i with element at j
+			(array[i], array[j]) = (array[j], array[i])
+
+	# Swap the pivot element with the greater element specified by i
+	(array[i + 1], array[high]) = (array[high], array[i + 1])
+
+	# Return the position from where partition is done
+	return i + 1
+
+# function to perform quicksort
+
+
+def quickSort(array, low, high):
+	if low < high:
+
+		# Find pivot element such that
+		# element smaller than pivot are on the left
+		# element greater than pivot are on the right
+		pi = partition(array, low, high)
+
+		# Recursive call on the left of pivot
+		quickSort(array, low, pi - 1)
+
+		# Recursive call on the right of pivot
+		quickSort(array, pi + 1, high)
+
+
+data = [1, 7, 4, 1, 10, 9, -2]
+print("Unsorted Array")
+print(data)
+
+size = len(data)
+
+quickSort(data, 0, size - 1)
+
+print('Sorted Array in Ascending Order:')
+print(data)

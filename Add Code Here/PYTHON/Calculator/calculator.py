@@ -11,7 +11,7 @@ def choice(d,m): #Function for choice between operations
         print("\nHere You start ===> \n(press 'q' for quit)\n")
         while True:
             c = input("operator >> ")
-            if c == 'q':
+            if c == 'q': #if user presses q then program will end as user wants to quit 
                 break
             b = float(input("n >> "))
             if c == '+':

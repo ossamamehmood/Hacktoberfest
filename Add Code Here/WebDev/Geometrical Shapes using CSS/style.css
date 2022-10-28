@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  background-color: #fee140;
+  background-image: linear-gradient(90deg, #fee140 0%, #fa709a 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 20px;
+  border: 1px solid black;
+  min-width: 350px;
+}
+.main {
+  display: flex;
+  width: 400px;
+  align-self: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: #8ec5fc;
+  background-image: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%);
+  margin: 10px;
+  padding: 50px 70px;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.square {
+  margin: 10px;
+  width: 100px;
+  height: 100px;
+  background-color: white;
+}
+
+.rhombus {
+  transform: skew(-30deg);
+}
+.rectangle {
+  margin: 10px;
+  width: 200px;
+  height: 100px;
+  background-color: white;
+}
+
+.circle {
+  margin: 10px;
+  border-radius: 50%;
+}
+
+.triangle {
+  margin: 10px;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid white;
+}
+
+.parallelogram {
+  margin: 10px;
+  width: 200px;
+  height: 100px;
+  background-color: white;
+  transform: skewX(-15deg);
+}
+
+.trapezoid {
+  margin: 20px;
+  width: 100px;
+  height: 0;
+  border-left: 55px solid transparent;
+  border-right: 55px solid transparent;
+  border-bottom: 100px solid white;
+}
+
+/* Moon */
+.moon {
+  margin: 90px;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  box-shadow: 30px 30px 0 0 white;
+}
+/* Heart */
+.heart {
+  margin: 50px;
+  position: relative;
+  top: 0;
+  height: auto;
+}
+.rectangle1 {
+  transform: rotate(-45deg);
+  position: absolute;
+  border-radius: 0 50% 50% 0;
+  left: 36px;
+}
+.rectangle2 {
+  transform: rotate(45deg);
+  border-radius: 50% 0 0 50%;
+  position: relative;
+  right: 35px;
+}
+
+.width1,
+.width2 {
+  margin: 10px;
+  width: 160px;
+  height: 100px;
+  background-color: white;
+}
+.width1 {
+  left: 22px;
+}
+.width2 {
+  left: -22px;
+}

@@ -1,0 +1,18 @@
+Given a BST and an integer k. Find if the integer k is present in given BST or not.
+Return the node with data k if it is present, return null otherwise.
+
+
+BinaryTreeNode<int>* searchInBST(BinaryTreeNode<int> *root , int k){
+    if(root==NULL)
+        return root;
+    
+    if(root->data== k)
+        return root;
+
+   
+    if(root->data > k)
+    return searchInBST(root->left , k);
+        
+    if( root->data < k )
+    return searchInBST(root->right , k);
+}

@@ -1,0 +1,14 @@
+extends base.pug
+
+block scripts 
+    script (src='/static/index.js')
+
+
+block style 
+    style 
+        include ../static/style.css
+        include ../static/contactUsStyle.css
+        
+block content 
+    div.container
+        h1 Respose Submitted succesfully

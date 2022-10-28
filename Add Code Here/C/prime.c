@@ -1,31 +1,29 @@
-#include <stdio.h>
+//Write a complete C program to print prime numbers within a given range.
+#include<stdio.h>
+int main()
+{
+		int num,flag=0,j=2;
+		printf("Enter the number:");
+		scanf("%d", &num);
+		if(num<=1)
+		{
+		printf("%d is not a prime number", num);
+		}
+				
+		while(j<(num/2)+1)
+		{
+		if(num%j==0)
+		{
+		flag++;}
+		j=j+1;
+			}
+		if(flag==0)
+		{
+		printf("%d is prime number", num);}
+		else{
+		printf("%d is  not prime number", num);
+		}
+		
 
-int main() {
-
-  int n, i, flag = 0;
-  printf("Enter a positive integer:\n ");
-  scanf("%d", &n);
-
-  // 0 and 1 are not prime numbers
-  // change flag to 1 for non-prime number
-  if (n == 0 || n == 1)
-    flag = 1;
-
-  for (i = 2; i <= n / 2; ++i) {
-
-    // if n is divisible by i, then n is not prime
-    // change flag to 1 for non-prime number
-    if (n % i == 0) {
-      flag = 1;
-      break;
-    }
-  }
-
-  // flag is 0 for prime numbers
-  if (flag == 0)
-    printf("%d is a prime number.\n", n);
-  else
-    printf("%d is not a prime number.\n", n);
-
-  return 0;
+    return 0;
 }

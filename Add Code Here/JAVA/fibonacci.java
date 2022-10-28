@@ -1,15 +1,17 @@
-public class fibonacci{
-    public static void main(String[] args) {
-         
-        int limit = 20;
-        long[]series = new long[limit];
-        series[0]=0;
-        series[1]=1;
-        for (int i=2;i<limit;i++){
-            series[i]=series[i-1]+series[i-2];
-        }
-        System.out.println("Fiboonaci series upto" + limit);
-         for(int i=0;i<limit;i++) {
-            System.out.print(series[i] + "");
+class Fibonacci {
+  public static void main(String[] args) {
+
+    int n = 100, firstTerm = 0, secondTerm = 1;
+        
+    System.out.println("Fibonacci Series Upto " + n + ": ");
+    
+    while (firstTerm <= n) {
+      System.out.print(firstTerm + ", ");
+
+      int nextTerm = firstTerm + secondTerm;
+      firstTerm = secondTerm;
+      secondTerm = nextTerm;
+
     }
-}}
+  }
+}

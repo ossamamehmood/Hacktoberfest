@@ -1,39 +1,64 @@
-#!/bin/python3
-
-import sys
 import socket
-from datetime import datetime
+import time
 
-#Define our target
-if len(sys.argv) == 2:
-	target = socket.gethostbyname(sys.argv[1]) #Translate hostname to IPv4
-else:
-	print("Invalid amount of arguments.")
-	print("Syntax: python3 scanner.py")
+portlist = {
+    "20" : "ftp data transfer",
+    "21" : "ftp command control",
+    "22" : "ssh",
+    "23" : "telnet",
+    "25" : "smpt",
+    "53" : "dns",
+    "80" : "http",
+    "110" : "pop3",
+    "111" : "rpcbind",
+    "119" : "nntp",
+    "123" : "ntp",
+    "135" : "msrpc",
+    "139" : "netbios-ssn",
+    "143" : "imap",
+    "161" : "snmp",
+    "194" : "irc",
+    "443" : "https",
+    "445" : "microsoft-ds",
+    "993" : "imaps",
+    "1723" : "pptp",
+    "3306" : "mysql",
+    "5900" : "vnc",
+    "8080" : "http-proxy"
+}
 
-#Add a pretty banner
-print("-" * 50)
-print("Scanning target "+target)
-print("Time started: "+str(datetime.now()))
-print("-" * 50)
+def check_port(ip, port):
+    try:
+        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        rslt = sock.connect_ex((ip, int(port)))
+        sock.close()
+        return rslt
+    except:
+        return 1
 
-try:
-	for port in range(50,85):
-		s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-		socket.setdefaulttimeout(1)
-		result = s.connect_ex((target,port)) #returns an error indicator - if port is open it throws a 0, otherwise 1
-		if result == 0:
-			print("Port {} is open".format(port))
-		s.close()
+def scan(ip):
+    open_ports = [] 
+    for port in portlist:
+        if check_port(ip, port) == 0:
+            open_ports.append(port)
+    return open_ports
 
-except KeyboardInterrupt:
-	print("\nExiting program.")
-	sys.exit()
-	
-except socket.gaierror:
-	print("Hostname could not be resolved.")
-	sys.exit()
-
-except socket.error:
-	print("Could not connect to server.")
-	sys.exit()
+def main():
+    open_ports = []
+    ip = str(input("Please enter the scanned IP address: "))
+    start_time = time.time()
+    open_ports = scan(ip)
+    dur = round((time.time() - start_time), 2)
+    num = len(open_ports)
+    print(f"""\n
+Scan Results for {ip}
+{num} ports are open.
+Scan lasted {dur} seconds.
+------------------------------------\n""")
+    for port in open_ports:
+        portval = portlist[port]
+        print(f"""{port} ---- {portval}\n""")     
+    print("------------------------------------\n")
+     
+if __name__ == "__main__":
+    main()

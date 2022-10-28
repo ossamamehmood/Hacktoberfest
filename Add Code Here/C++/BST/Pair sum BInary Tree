@@ -1,0 +1,51 @@
+Given a binary tree and an integer S, print all the pair of nodes whose sum equals S.
+
+Sample Input 1:
+5 10 6 2 3 -1 -1 -1 -1 -1 9 -1 -1
+15
+Sample Output 1:
+5 10
+6 9
+
+
+#include <bits/stdc++.h>
+int k=0;
+
+void convert (BinaryTreeNode<int> *root,int *arr)
+{
+    if(root==NULL)
+        return;
+    arr[k++]=root->data;
+    
+    convert(root->left,arr);
+    convert(root->right,arr);
+    
+}
+
+void nodesSumToS(BinaryTreeNode<int> *root, int sum) {
+   int arr[1001];
+    
+    convert(root,arr);
+    
+    sort(arr,arr+k);
+    
+    int i=0;
+    int j=k-1;
+    
+    while(i<j)
+    {
+        if(arr[i]+arr[j]==sum)
+        {
+            cout<< arr[i] <<" "<<arr[j]<<endl;
+            i++;
+            j--;
+        }
+        else if(arr[i]+arr[j] > sum)
+        {
+            j--;
+        }
+        else if(arr[i]+arr[j] < sum)
+        i++;
+    }
+  
+}

@@ -1,44 +1,27 @@
-// ---- AI Programming ------
-// Implementation of Insertion Sort using C++
-// Join our underground coding movement
-// @freecodecs (c) May, 2019
-
 #include<iostream>
 using namespace std;
-
-int main()
-{
+void insertion_sort(int arr[],int n){
+	for(int i=1;i<=n-1;i++){
+		int e=arr[i];
+		//place the current element at 'right' position in the sorted part.
+		int j=i-1;
+		while(j>=0 and arr[j]>e){
+			arr[j+1]=arr[j];
+			j=j-1;
+		}
+		arr[j+1]=e;
+	}
+}
+int main(){
 	int n;
-	cout<<"\nEnter the size of your element : ";
 	cin>>n;
-	int arr[n];
-	cout<<"\nBy using space enter any "<<n<<" unsorted numbers : ";
-	
-	//Input Unsorted
-	for(int i=0; i<n; i++)
-	{
+	int arr[100];
+	for(int i=0;i<=n-1;i++){
 		cin>>arr[i];
 	}
-	
-	//Sorting
-	for(int i=1; i<n; i++)
-	{
-		int temp=arr[i];
-		int j=i-1;
-		while(j>=0 && temp<arr[j])
-		{
-			arr[j+1]=arr[j];
-			j--;
-		}
-		arr[j+1]=temp;
+	insertion_sort(arr,n);
+	for(int i=0;i<=n-1;i++){
+		cout<<arr[i]<<endl;
 	}
-	
-	//Output Sorted
-	cout<<"\nSorted elements are : ";
-	for(int i=0; i<n; i++)
-	{
-		cout<<arr[i]<<", ";
-	}
-  return 0;
+	return 0;
 }
-

@@ -1,29 +1,35 @@
-import java.util.Scanner;
-public class Bubble_sort {
-    public static void B_sort(int[]A)
-    {
-        for(int i=0;i<A.length;i++)
-        for(int j=1;j<A.length-i;j++)
-        {
-            if(A[j-1]>A[j])
-            {
-                int temp=A[j-1];
-                A[j-1]=A[j];
-                A[j]=temp;
-            }
-
-         }
-    }
-    public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
-        System.out.print("Enter How many elements:");
-        int n=sc.nextInt();
-        int[]A=new int[n];
-        for(int i=0;i<A.length;i++)
-        A[i]=sc.nextInt();
-        B_sort(A);
-        for(int i=0;i<A.length;i++)
-        System.out.print(A[i]+"\t");
-    }
-    
-}
+public class BubbleSortExample {  
+    static void bubbleSort(int[] arr) {  
+        int n = arr.length;  
+        int temp = 0;  
+         for(int i=0; i < n; i++){  
+                 for(int j=1; j < (n-i); j++){  
+                          if(arr[j-1] > arr[j]){  
+                                 //swap elements  
+                                 temp = arr[j-1];  
+                                 arr[j-1] = arr[j];  
+                                 arr[j] = temp;  
+                         }  
+                          
+                 }  
+         }  
+  
+    }  
+    public static void main(String[] args) {  
+                int arr[] ={3,60,35,2,45,320,5};  
+                 
+                System.out.println("Array Before Bubble Sort");  
+                for(int i=0; i < arr.length; i++){  
+                        System.out.print(arr[i] + " ");  
+                }  
+                System.out.println();  
+                  
+                bubbleSort(arr);//sorting array elements using bubble sort  
+                 
+                System.out.println("Array After Bubble Sort");  
+                for(int i=0; i < arr.length; i++){  
+                        System.out.print(arr[i] + " ");  
+                }  
+   
+        }  
+}  
