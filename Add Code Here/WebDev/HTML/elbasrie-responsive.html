@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Web Responsive</title>
+	<meta name="viewport" content="widt=device-widht, initial-scale=1.0">
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<h1 align="center">Selamat Datang Anjay</h1>
+		</div>
+		<div class="main">
+			<div class="left">
+				<h3 align="center">Menu</h3>
+				<ul>
+					<li><a href="#">Login</a></li>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Daftar Buku</a></li>
+				</ul>
+			</div>
+			<p><a href="#">Baca Selengkapnya...</a></p>
+		</div>
+		<div class="right">
+			<h3 align="center">Buku Terpopuler</h3>
+			<p>
+				<ul>
+					<li><a href="#">Web Design</a></li>
+					<li><a href="#">Pemrograman</a></li>
+					<li><a href="#">Database</a></li>
+				</ul>
+			</p>
+		</div>
+		<div class="footer">
+			<p align="center">Copiright 2018 Belajar Css Responsive</p>
+		</div>
+	</div>
+	<style type="text/css">
+		*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;;
+}
+
+body{
+	background: #dedede;
+	font-family: 'Verdana',arial,sans-serif;
+	font-size: 15px;
+}
+
+p{
+	margin-bottom: 20px;
+	line-height: 1.5em;
+}
+
+h3{
+	margin-bottom: 20px;
+	border-bottom: 1px solid #aaa;
+}
+
+a{
+	text-decoration: none;
+	color: #333;
+}
+
+a:hover{
+	color: #666;
+
+}
+
+.container{
+	max-width: 1080px;
+	margin: 20px auto;
+	background: #ffff;
+	overflow: hidden;
+	padding: 10px;
+}
+
+.header{
+	border: 1px solid #dedede;
+	padding: 10px;
+	margin: 10px;
+	background: #9E9AFB;
+}
+
+/*main*/
+.left{
+	width: 250px;
+	border: 1px splid #dedede;
+	padding: 10px;
+	margin: 10px;
+	float: left;
+}
+
+	.left ul{
+		list-style-type: none;
+	}
+
+	.left ul li{
+		display: block;
+	}
+
+	.left ul li a{
+		display: block;
+		border-bottom: 1px solid #dedede;
+		margin-bottom: 10px;
+		padding: 10px 5px;
+		font-color: #D3D2ED;
+	}
+
+	.left ul li a:hover{
+		color: #461AF3;
+	}
+
+.middle{
+	width: 500px;
+	border: 1px solid #dedede;
+	padding: 10px;
+	margin: 10px;
+	float: left;
+}
+
+	.middle img{
+		max-width: 100%;
+		height: auto;
+	}
+
+	.middle a{
+		font-weight: bold;
+	}
+
+.right{
+	width: 250px;
+	border: 1px solid #dedede;
+	padding: 10px;
+	margin: 10px;
+	float: left;
+}
+
+	.right ul{
+		list-style-type: none;
+	}
+
+	.right ul li{
+		display: block;
+	}
+
+	.right ul li a{
+		display: block;
+		border-bottom: 1px solid #dedede;
+		margin-bottom: 10px;
+		padding: 10px 5px;
+	}
+
+	.right ul li a:hover{
+		color: #461AF3;
+	}
+
+.footer{
+	clear: both;
+	border: 1px solid #dedede;
+	padding: 10px;
+	margin: 10px;
+	background: #9E9AFB;
+}
+
+@media screen and (max-width: 959px){
+	#container{
+		width: 100%;
+	}
+	#left-column{
+		width: 70%;
+	}
+	#right-column{
+		width: 30%;
+	}
+	img{
+		width: 100%;
+	}
+}
+
+/* MEDIA QUERIES (RESPONSIVE) */
+
+@media screen and (max-width: 1080px){
+	.container{
+		width: 100%;
+	}
+	.left{
+		width: 25%;
+		background: #D6CCFE;
+	}
+	.middle{
+		width: 68%;
+		float: right;
+	}
+	.right{
+		clear: both;
+		padding: 1% 4%;
+		width: auto;
+		float: none;
+		background: #D6CCFE;
+	}
+}
+
+/* UNTUK LAYAR700PX KEBAWAH */
+@media screem and (max-width: 780px){
+	.header,
+	.footer{
+		text-align: center;
+	}
+	.left{
+		width: auto;
+		float: none;
+	}
+	.middle{
+		width: auto;
+		float: none;
+	}
+	.right{
+		width: auto;
+		float: none;
+	}
+}
+	</style>
+</body>
+</html>
