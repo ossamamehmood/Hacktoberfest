@@ -1,5 +1,3 @@
-package com.rishabh.cyclic;
-
 import java.util.Arrays;
 
 public class Main {
