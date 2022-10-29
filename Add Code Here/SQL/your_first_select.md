@@ -1,0 +1,2 @@
+``` sql
+SELECT "Hello world"
