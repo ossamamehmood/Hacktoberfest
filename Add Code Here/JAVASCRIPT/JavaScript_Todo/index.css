@@ -1,0 +1,189 @@
+body {
+    background-color: black;
+}
+
+#header {
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#header.active {
+    filter: blur(6px);
+}
+
+.tasks {
+    font-size: 45px;
+    color: #FFFFFF;
+    font-weight: bolder;
+}
+
+.lists {
+    font-size: 45px;
+    font-weight: lighter;
+    color: #FFFFFF;
+    margin-left: 10px;
+}
+
+.add-list1 {
+    font-size: 30px; 
+    font-weight: lighter; 
+    color: #FFFFFF;
+}
+
+.sub1 {
+    margin-left: 13%;
+}
+
+.sub2 {
+    margin-right: 13%;
+}
+
+#p {
+    color: #FFFFFF;
+    margin-left: 13%;
+    margin-top: 15px;
+    font-size: 30px; 
+    font-weight: lighter;
+}
+
+#p.active {
+    filter: blur(6px);
+}
+
+#button {
+    background: none;
+    border: none;
+}
+
+/* First Popup */
+#popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border: 2px solid red;
+    border-radius: 10px;
+    background-color: white;
+    padding-right: 10%;
+    padding-left: 10%;
+    padding-top: 30px;
+    display: none;
+}
+
+#popup.active {
+    display: block;
+}
+
+.middle {
+    border: 1px solid black;
+    box-shadow: 2px 2px 5px grey;
+    margin-bottom: 10px;
+}
+
+.add-new-list {
+    color: red;
+    font-size: 25px;
+    padding-bottom: 5px;
+}
+
+/* Second Popup */
+#popup1 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border: 2px solid red;
+    border-radius: 10px;
+    background-color: white;
+    padding-right: 10%;
+    padding-left: 10%;
+    padding-top: 30px;
+    display: none;
+}
+
+#popup1.active {
+    display: block;
+}
+
+.middle1 {
+    border: 1px solid black;
+    box-shadow: 2px 2px 5px grey;
+    margin-bottom: 10px;
+}
+
+.add-new-list1 {
+    color: red;
+    font-size: 25px;
+    padding-bottom: 5px;
+}
+
+/* Card */
+.todo {
+    position: relative;
+    margin-top: 25px;
+    margin-left: 13%;
+    border: 1px solid;
+    border-color:red;
+    border-radius: 13px;
+    text-align: center;
+    width:225px;
+    height:350px;
+    align-content:space-between;
+    background: white;
+}
+
+#todo1 {
+    display: none;
+}
+
+#todo1.active {
+    display: block;
+}
+
+#todo1.act {
+    filter: blur(6px);
+}
+
+#head1 {
+    font-size: 30px;
+    margin-top: 5px;
+    font-weight: lighter;
+}
+
+.hr {
+
+}
+
+#delete-button {
+    background: none;
+    border: none;
+}
+
+#button1 {
+    background: none;
+    border: none;
+}
+
+.both-button {
+    position: absolute;
+    left: 130px;
+    top: 85%;
+}
+
+/* Card body */
+#cardbody {
+    
+}
+
+#strikethrough {
+    display: flex;
+    align-items: baseline;
+    flex-direction: row;
+    justify-content: center;
+}
+
