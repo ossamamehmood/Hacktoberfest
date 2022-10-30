@@ -1,0 +1,15 @@
+class Solution {
+    public int minimumSum(int num) {
+        int a = num%10;
+        num = num/10;
+        int b = num%10;
+        num = num/10;
+        int c = num%10;
+        int d = num/10;
+        
+        int arr[] = {a,b,c,d};
+        Arrays.sort(arr);
+        int e = (arr[0]*10 + arr[2]) + (arr[1]*10+arr[3]);
+        return e;
+    }
+}
