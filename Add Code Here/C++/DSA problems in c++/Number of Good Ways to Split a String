@@ -1,0 +1,26 @@
+class Solution {
+public:
+    int numSplits(string s) {
+        int lt[26]={0},rt[26]={0};
+        for(auto x:s)
+            rt[x-97]++;
+        int cnt=0,sum=0;
+        for(int i=0;i<26;i++)
+        if(rt[i])
+            cnt++;
+        int ans=0;
+        for(auto x:s)
+        {
+            if(lt[x-97]==0)
+                sum++;
+            lt[x-97]++;
+            rt[x-97]--;
+            if(rt[x-97]==0)
+                cnt--;
+            if(sum==cnt)
+                ans++;
+        }
+        return ans;
+        
+    }
+};
