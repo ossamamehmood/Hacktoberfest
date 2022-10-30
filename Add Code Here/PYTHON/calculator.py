@@ -1,64 +1,86 @@
+# pip install tkinter
 import tkinter as tk
-from tkinter import*
-calc = Tk()
-calc.geometry('350x350')
-calc.title('Calculator')
-calc.maxsize(width = 250, height = 320)
-# calc.minsize('200x200')
-ent = Entry(calc,  width = 15,borderwidth = 1,bg = '#f2ffff', font=("Franklin Gothic Demi",18), fg = "#000033", relief= SUNKEN)
-calc['bg']= '#6f6f6f'
-ent.grid(pady = 10,row=0,sticky ='w', padx =18 )
-def delete():
-    a = ent.get()
-    ent.delete(first=len(a)-1,last='end')
-def result():
-    if ent.get()=="":
-        pass 
-    elif ent.get()[0]=='0':
-        ent.delete(0, 'end')
-    else:
-        c_res = ent.get()
-        c_res = eval(c_res)
-        resf()
-        ent.insert('end', c_res)
-def resf():
-    ent.delete(0, 'end')
-clear = Button(calc, text = "C",font = ("Candara Light", 11, 'bold'), width= 3,command= resf, bg = '#FF6600', fg = "white", relief = RAISED)
-clear.grid(pady = 10,row=1,sticky ='w', padx =10)
-delete = Button(calc, text ="del", command = delete,font = ("Candara Light", 11, 'bold'), width= 3, bg = '#FF6600', fg = "white", relief = RAISED)
-delete.grid(pady = 10,row=1,sticky ='w', padx =65)
-modulus = Button(calc, text = "%",command = lambda: ent.insert("end", "%"),font = ("Candara Light", 11, 'bold'), width= 3, bg = '#FF0033', fg = "white", relief = RAISED )
-modulus.grid(pady = 10,row=1,sticky ='w', padx =120)
-divide = Button(calc, text = "/",command = lambda: ent.insert("end", "/"),font = ("Candara Light", 11, 'bold'), width= 3, bg = '#FF0033', fg = "white", relief = RAISED)
-divide.grid(pady = 10,row=1,sticky ='w', padx =175)
-seven = Button(calc, text = "7",command = lambda: ent.insert("end", "7"),font = ("Candara Light", 12, 'bold'), width= 3, bg = '#262626', fg = "#cccccc", relief = RAISED)
-seven.grid(pady = 10,row=2,sticky ='w', padx =10)
-eight = Button(calc, text = "8",command = lambda: ent.insert("end", "8"),font = ("Candara Light", 12, 'bold'), width= 3, bg = '#262626', fg = "#cccccc", relief = RAISED)
-eight.grid(pady = 10,row=2,sticky ='w', padx =65)
-nine= Button(calc, text = "9",command = lambda: ent.insert("end", "9"),font = ("Candara Light", 12, 'bold'), width= 3, bg = '#262626', fg = "#cccccc", relief = RAISED)
-nine.grid(pady = 10,row=2,sticky ='w', padx =120)
-multiply = Button(calc, text = "*",command = lambda: ent.insert("end", "*"),font = ("Candara Light", 11, 'bold'), width= 3, bg = '#FF0033', fg = "white", relief = RAISED )
-multiply.grid(pady = 10,row=2,sticky ='w', padx =175)
-four= Button(calc, text = "4",command = lambda: ent.insert("end", "4"),font = ("Candara Light", 12, 'bold'), width= 3, bg = '#262626', fg = "#cccccc", relief = RAISED)
-four.grid(pady = 10,row=3,sticky ='w', padx =10)
-five= Button(calc, text = "5",command = lambda: ent.insert("end", "5"),font = ("Candara Light", 12, 'bold'), width= 3, bg = '#262626', fg = "#cccccc", relief = RAISED)
-five.grid(pady = 10,row=3,sticky ='w', padx =65)
-six= Button(calc, text = "6",command = lambda: ent.insert("end", "6"),font = ("Candara Light", 12, 'bold'), width= 3, bg = '#262626', fg = "#cccccc", relief = RAISED)
-six.grid(pady = 10,row=3,sticky ='w', padx =120)
-subtract = Button(calc, text = "-",command = lambda: ent.insert("end", "-"),font = ("Candara Light", 11, 'bold'), width= 3, bg = '#FF0033', fg = "white", relief = RAISED )
-subtract.grid(pady = 10,row=3,sticky ='w', padx =175)
-one= Button(calc, text = "1",command = lambda: ent.insert("end", "1"),font = ("Candara Light", 12, 'bold'), width= 3, bg = '#262626', fg = "#cccccc", relief = RAISED)
-one.grid(pady = 10,row=4,sticky ='w', padx =10)
-two= Button(calc, text = "2",command = lambda: ent.insert("end", "2"),font = ("Candara Light", 12, 'bold'), width= 3, bg = '#262626', fg = "#cccccc", relief = RAISED)
-two.grid(pady = 10,row=4,sticky ='w', padx =65)
-three= Button(calc, text = "3",command = lambda: ent.insert("end", "3"),font = ("Candara Light", 12, 'bold'), width= 3, bg = '#262626', fg = "#cccccc", relief = RAISED)
-three.grid(pady = 10,row=4,sticky ='w', padx =120)
-add = Button(calc, text = "+",command = lambda: ent.insert("end", "+"),font = ("Candara Light", 11, 'bold'), width= 3, bg = '#FF0033', fg = "white", relief = RAISED )
-add.grid(pady = 10,row=4,sticky ='w', padx =175)
-zero= Button(calc, text = "0",command = lambda: ent.insert("end", "0"),font = ("Candara Light", 12, 'bold'), width= 3, bg = '#262626', fg = "#cccccc", relief = RAISED)
-zero.grid(pady = 10,row=5,sticky ='w', padx =10)
-point= Button(calc, text = ".",command = lambda: ent.insert("end", "."),font = ("Candara Light", 12, 'bold'), width= 3, bg = '#262626', fg = "white", relief = RAISED)
-point.grid(pady = 10,row=5,sticky ='w', padx =65)
-equal= Button(calc, text = "=",command =result,font = ("Candara Light", 12, 'bold'), width= 6, bg = '#FF6600', fg = "white", relief = RAISED)
-equal.grid(pady = 10,row=5,sticky ='w', padx =120)
-calc.mainloop()
+import tkinter.messagebox
+from tkinter.constants import SUNKEN
+
+window = tk.Tk()
+window.title('Calculator-GeeksForGeeks')
+frame = tk.Frame(master=window, bg="skyblue", padx=10)
+frame.pack()
+entry = tk.Entry(master=frame, relief=SUNKEN, borderwidth=3, width=30)
+entry.grid(row=0, column=0, columnspan=3, ipady=2, pady=2)
+
+
+def myclick(number):
+	entry.insert(tk.END, number)
+
+
+def equal():
+	try:
+		y = str(eval(entry.get()))
+		entry.delete(0, tk.END)
+		entry.insert(0, y)
+	except:
+		tkinter.messagebox.showinfo("Error", "Syntax Error")
+
+
+def clear():
+	entry.delete(0, tk.END)
+
+
+button_1 = tk.Button(master=frame, text='1', padx=15,
+					pady=5, width=3, command=lambda: myclick(1))
+button_1.grid(row=1, column=0, pady=2)
+button_2 = tk.Button(master=frame, text='2', padx=15,
+					pady=5, width=3, command=lambda: myclick(2))
+button_2.grid(row=1, column=1, pady=2)
+button_3 = tk.Button(master=frame, text='3', padx=15,
+					pady=5, width=3, command=lambda: myclick(3))
+button_3.grid(row=1, column=2, pady=2)
+button_4 = tk.Button(master=frame, text='4', padx=15,
+					pady=5, width=3, command=lambda: myclick(4))
+button_4.grid(row=2, column=0, pady=2)
+button_5 = tk.Button(master=frame, text='5', padx=15,
+					pady=5, width=3, command=lambda: myclick(5))
+button_5.grid(row=2, column=1, pady=2)
+button_6 = tk.Button(master=frame, text='6', padx=15,
+					pady=5, width=3, command=lambda: myclick(6))
+button_6.grid(row=2, column=2, pady=2)
+button_7 = tk.Button(master=frame, text='7', padx=15,
+					pady=5, width=3, command=lambda: myclick(7))
+button_7.grid(row=3, column=0, pady=2)
+button_8 = tk.Button(master=frame, text='8', padx=15,
+					pady=5, width=3, command=lambda: myclick(8))
+button_8.grid(row=3, column=1, pady=2)
+button_9 = tk.Button(master=frame, text='9', padx=15,
+					pady=5, width=3, command=lambda: myclick(9))
+button_9.grid(row=3, column=2, pady=2)
+button_0 = tk.Button(master=frame, text='0', padx=15,
+					pady=5, width=3, command=lambda: myclick(0))
+button_0.grid(row=4, column=1, pady=2)
+
+button_add = tk.Button(master=frame, text="+", padx=15,
+					pady=5, width=3, command=lambda: myclick('+'))
+button_add.grid(row=5, column=0, pady=2)
+
+button_subtract = tk.Button(
+	master=frame, text="-", padx=15, pady=5, width=3, command=lambda: myclick('-'))
+button_subtract.grid(row=5, column=1, pady=2)
+
+button_multiply = tk.Button(
+	master=frame, text="*", padx=15, pady=5, width=3, command=lambda: myclick('*'))
+button_multiply.grid(row=5, column=2, pady=2)
+
+button_div = tk.Button(master=frame, text="/", padx=15,
+					pady=5, width=3, command=lambda: myclick('/'))
+button_div.grid(row=6, column=0, pady=2)
+
+button_clear = tk.Button(master=frame, text="clear",
+						padx=15, pady=5, width=12, command=clear)
+button_clear.grid(row=6, column=1, columnspan=2, pady=2)
+
+button_equal = tk.Button(master=frame, text="=", padx=15,
+						pady=5, width=9, command=equal)
+button_equal.grid(row=7, column=0, columnspan=3, pady=2)
+
+window.mainloop()

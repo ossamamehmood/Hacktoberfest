@@ -1,3 +1,6 @@
+#Problem Statement:Find the majority element in the array. A majority element in an array A[]
+of size n is an element that appears more than n/2 times (and hence there is at most one such element). 
+
 // Java program to find Majority
 // element in an array
 
@@ -45,4 +48,5 @@ class GFG {
 		// Function calling
 		findMajority(arr, n);
 	}
+
 }
