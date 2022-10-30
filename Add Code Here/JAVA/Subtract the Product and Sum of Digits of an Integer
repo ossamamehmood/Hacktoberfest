@@ -1,0 +1,16 @@
+class Solution {
+    public int subtractProductAndSum(int n) {
+        int length = String.valueOf(n).length();
+        int arr[] = new int[length];
+        int sum=0;
+        int mul=1;
+        for(int i =0; i<length; i++){
+            arr[i] = n%10;
+            n = n/10;
+            sum += arr[i];
+            mul *= arr[i];
+        }       
+        
+        return mul-sum;
+    }
+}
