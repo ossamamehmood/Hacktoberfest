@@ -1,76 +1,49 @@
-#include<iostream>
+// A dynamic programming based
+// solution for 0-1 Knapsack problem
+#include <bits/stdc++.h>
 using namespace std;
-
-float knapsack(float p[], float w[], int W, int size);
-void bubbleSort(float p[], float w[], int n);
-
-
+ 
+// A utility function that returns
+// maximum of two integers
+int max(int a, int b)
+{
+    return (a > b) ? a : b;
+}
+ 
+// Returns the maximum value that
+// can be put in a knapsack of capacity W
+int knapSack(int W, int wt[], int val[], int n)
+{
+    int i, w;
+      vector<vector<int>> K(n + 1, vector<int>(W + 1));
+ 
+    // Build table K[][] in bottom up manner
+    for(i = 0; i <= n; i++)
+    {
+        for(w = 0; w <= W; w++)
+        {
+            if (i == 0 || w == 0)
+                K[i][w] = 0;
+            else if (wt[i - 1] <= w)
+                K[i][w] = max(val[i - 1] +
+                                K[i - 1][w - wt[i - 1]],
+                                K[i - 1][w]);
+            else
+                K[i][w] = K[i - 1][w];
+        }
+    }
+    return K[n][W];
+}
+ 
+// Driver Code
 int main()
 {
-    int n, W;
-    cout<<"Enter the number of products:\n";
-    cin>>n;
-    float p[n], w[n];
-    cout<<"Enter the total capacity of the knapsack:\n";
-    cin>>W;
-    cout<<"Enter the profits and weights of the products:\n";
-    for(int i=0;i<n;i++)
-    {
-        cin>>p[i]>>w[i];
-    }
-    bubbleSort(p, w, n);
-    cout<<"The total profit is "<<knapsack(p, w, W, n);
+    int val[] = { 60, 100, 120 };
+    int wt[] = { 10, 20, 30 };
+    int W = 50;
+    int n = sizeof(val) / sizeof(val[0]);
+     
+    cout << knapSack(W, wt, val, n);
+     
     return 0;
-}
-
-float knapsack(float p[], float w[], int W, int size)
-{
-    int weight = 0;
-    float x[size];
-    for(int i=0;i<size;i++)
-    {
-        x[i] = 0;
-    }
-    for(int i=0;i<size;i++)
-    {
-        if((weight+w[i]) <= W)
-        {
-            x[i] = 1;
-            weight += w[i];
-        }
-        else
-        {
-            x[i] = (W-weight)/w[i];
-            weight = W;
-            break;
-        }
-    }
-    float profit = 0;
-    for(int i=0;i<size;i++)
-    {
-        profit = profit + (p[i]*x[i]);
-    }
-    return profit;
-}
-
-void bubbleSort(float p[], float w[], int n)
-{
-    int i, j;
-    float ratio[n];
-    for(int i=0;i<n;i++)
-    {
-        ratio[i] = (p[i]/w[i]);
-    }
-    for(i=0;i<n;i++)
-    {
-        for(j=0;j<n-i-1; j++)
-        {
-            if(ratio[j] < ratio[j+1])
-            {
-                swap(ratio[j], ratio[j+1]);
-                swap(p[j], p[j+1]);
-                swap(w[j], w[j+1]);
-            }
-        }
-    }
 }

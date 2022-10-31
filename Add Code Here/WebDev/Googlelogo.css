@@ -1,0 +1,24 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: black;
+}
+.box {
+    width: 400px;
+    height: 400px;
+   
+    margin: 200px auto;
+}
+.box h1 {
+    background-image: conic-gradient(red 0deg,red 90deg,blue 90deg,blue 180deg,green 180deg,green 270deg,
+    yellow 270deg,yellow 360deg);
+    font-size: 400px;
+    text-align: center;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    padding-top: 15px;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}

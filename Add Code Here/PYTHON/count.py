@@ -1,12 +1,7 @@
-def count_range_in_list(li, min, max):
-	ctr = 0
-	for x in li:
-		if min <= x <= max:
-			ctr += 1
-	return ctr
-
-list1 = [10,20,30,40,40,40,70,80,99]
-print(count_range_in_list(list1, 40, 100))
-
-list2 = ['a','b','c','d','e','f']
-print(count_range_in_list(list2, 'a', 'e'))
+string=raw_input("Enter string:")
+vowels=0
+for i in string:
+      if(i=='a' or i=='e' or i=='i' or i=='o' or i=='u' or i=='A' or i=='E' or i=='I' or i=='O' or i=='U'):
+            vowels=vowels+1
+print("Number of vowels are:")
+print(vowels)

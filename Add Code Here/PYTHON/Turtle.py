@@ -1,46 +1,50 @@
+# Turtle Race Game using python
+
 import turtle
 import random
-s= turtle.getscreen()
-t = turtle.Turtle()
-t.speed(0.1)
-t.width(5)
 
-colors =["red","blue","green","yellow","pink","#4f06bd","#e30031","#eda200"]
-def up():
-    t.setheading(90)
-    t.forward(100)
+player_one = turtle.Turtle()
+player_one.color("green")
+player_one.shape("turtle")
+player_one.penup()
+player_one.goto(-200,100)
+player_two = player_one.clone()
+player_two.color("blue")
+player_two.penup()
+player_two.goto(-200,-100)
 
-def down():
-    t.setheading(270)
-    t.forward(100)
-    
-def left():
-    t.setheading(180)
-    t.forward(100)
-    
-def right():
-    t.setheading(0)
-    t.forward(100)
-    
-def clickleft(x,y):
-    t.color(random.choice(colors))
+player_one.goto(300,60)
+player_one.pendown()
+player_one.circle(40)
+player_one.penup()
+player_one.goto(-200,100)
+player_two.goto(300,-140)
+player_two.pendown()
+player_two.circle(40)
+player_two.penup()
+player_two.goto(-200,-100)
 
-def clickright(x,y):
-    t.clear()
-def home():
-    t.penup()
-    t.home()
-    t.pendown()
-turtle.listen()
+die = [1,2,3,4,5,6]
 
-turtle.onkey(up ,'w')
-turtle.onkey(down ,'s')
-turtle.onkey(left ,'a')
-turtle.onkey(right ,'d')
-turtle.onkey(home ,'space')
-
-turtle.onscreenclick(clickleft , 1)
-turtle.onscreenclick(clickright, 3)
-
-turtle.mainloop()
-
+for i in range(20):
+    if player_one.pos() >= (300,100):
+            print(" Green Wins!")
+            break
+    elif player_two.pos() >= (300,-100):
+            print(" Blue Wins!")
+            break
+    else:
+            player_one_turn = input("[GREEN'S TURN]Press Enter to roll the die ")
+            die_outcome = random.choice(die)
+            print("The result of the die roll is: ")
+            print(die_outcome)
+            print("The number of steps will be: ")
+            print(15*die_outcome)
+            player_one.fd(15*die_outcome)
+            player_two_turn = input("[BLUE'S TURN] Press Enter to roll the die ")
+            d = random.choice(die)
+            print("The result of the die roll is: ")
+            print(d)
+            print("The number of steps will be: ")
+            print(15*d)
+            player_two.fd(15*d)

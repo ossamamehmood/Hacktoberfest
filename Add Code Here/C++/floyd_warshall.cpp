@@ -1,18 +1,18 @@
 // C++ Program for Floyd Warshall Algorithm
 #include <bits/stdc++.h>
 using namespace std;
-
+ 
 // Number of vertices in the graph
 #define V 4
-
+ 
 /* Define Infinite as a large enough
 value.This value will be used for
 vertices not connected to each other */
 #define INF 99999
-
+ 
 // A function to print the solution matrix
 void printSolution(int dist[][V]);
-
+ 
 // Solves the all-pairs shortest path
 // problem using Floyd Warshall algorithm
 void floydWarshall(int graph[][V])
@@ -21,7 +21,7 @@ void floydWarshall(int graph[][V])
     that will finally have the shortest
     distances between every pair of vertices */
     int dist[V][V], i, j, k;
-
+ 
     /* Initialize the solution matrix same
     as input graph matrix. Or we can say
     the initial values of shortest distances
@@ -30,7 +30,7 @@ void floydWarshall(int graph[][V])
     for (i = 0; i < V; i++)
         for (j = 0; j < V; j++)
             dist[i][j] = graph[i][j];
-
+ 
     /* Add all vertices one by one to
     the set of intermediate vertices.
     ---> Before start of an iteration,
@@ -59,11 +59,11 @@ void floydWarshall(int graph[][V])
             }
         }
     }
-
+ 
     // Print the shortest distance matrix
     printSolution(dist);
 }
-
+ 
 /* A utility function to print solution */
 void printSolution(int dist[][V])
 {
@@ -81,7 +81,7 @@ void printSolution(int dist[][V])
         cout << endl;
     }
 }
-
+ 
 // Driver's code
 int main()
 {
@@ -98,7 +98,7 @@ int main()
                         { INF, 0, 3, INF },
                         { INF, INF, 0, 1 },
                         { INF, INF, INF, 0 } };
-
+ 
     // Function call
     floydWarshall(graph);
     return 0;
