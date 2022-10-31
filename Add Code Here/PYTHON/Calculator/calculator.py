@@ -30,19 +30,41 @@ def choice(d,m): #Function for choice between operations
         d = input("\nDO MORE OPERATION WITH THIS RESULT? (Y/N)\n")
         choice(d,m)
 
-while True: #Use a while loop to do calculations
-    print("\nCalculator starts..... ;)\n")
-    a = float(input("n >> "))
-    c = input("operator >> ")
-    b = float(input("n >> "))
-    if c == '+':
-        m = add(a,b)
-    if c == '-':
-        m = sub(a,b)
-    if c == '*':
-        m = mul(a,b)
-    if c == '/':
-        m = div(a,b)
-    print(">> ",m)
-    d = input("\nDO MORE OPERATION WITH THIS RESULT? (Y/N)\n")
-    choice(d,m)
+while True:
+    print("---- x ----")
+    print("1 - Addition")
+    print("2 - Subtraction")
+    print("3 - Multiplication")
+    print("4 - Division")
+    print("5 - Modulus")
+    print("6 - Power/Exponent")
+    choice = int(input("Enter your choice : "))
+    a = int(input("Enter first operand :"))
+    b = int(input("Enter second operand :"))
+    
+    if choice==1:
+        print(str(a)+" + "+str(b)+" = "+str(a+b))
+        
+    elif choice==2:
+        print(str(a)+" - "+str(b)+" = "+str(a-b))
+    
+    elif choice==3:
+        print(str(a)+" * "+str(b)+" = "+str(a*b))
+    
+    elif choice==4:
+        print(str(a)+"/ "+str(b)+" = "+str(a/b)) 
+        
+    elif choice==5:
+        print(str(a)+" % "+str(b)+" = "+str(a%b))
+    
+    elif choice==6:
+        print(str(a)+" to the power of  "+str(b)+" is "+str(pow(a,b)))
+    
+    else:
+        print("Invalid Input. Quitting Program...")
+        break
+    
+    ch=input("Continue?(Y/N) :")
+    if ch=="N":
+        break;
+    
