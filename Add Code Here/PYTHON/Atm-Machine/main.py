@@ -2,22 +2,27 @@ from bank import Bank
 
 bank = Bank()
 
-print("=======================> [ATM Machine] <===========================")
-print("1. Create account")
-print("2. Check balance")
-print("3. Withdraw")
-
 while True:
-    userInput = int(input("Choose an option: "))
+    print("=======================> [ATM Machine] <===========================")
+    print("1. Create account")
+    print("2. Check balance")
+    print("3. Withdraw")
+    print("4. Quit")
+
+    userInput = input("Choose an option: ")
+    
+    if userInput not in list(str(x) for x in range(1,5)):
+        print("Invalid option")
+        continue
+    userInput = int(userInput)
 
     if userInput == 1:
         nama = str(input("Enter your name: "))
-        pin = int(input("Enter your pin: "))
+        pin = ""
 
-        if len(str(pin)) != 6:
+        while len(str(pin)) != 6:
             print("Pin must be 6 digits")
             pin = int(input("Enter your pin: "))
-            continue
 
         rekening = bank.buatAkun(nama, pin)
         print("Your account has been created:")
@@ -67,5 +72,7 @@ while True:
         saldoAkhir = bank.kurangiSaldo(rekening, jumlah)
         print(f"Your balance is: {saldoAkhir}")
         continue
+    elif userInput == 4:
+        break
     else:
         print("Invalid option")
