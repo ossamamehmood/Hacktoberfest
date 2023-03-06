@@ -17,7 +17,7 @@
     "react-redux": "^7.2.5",
     "react-responsive-carousel": "^3.2.22",
     "react-router-dom": "^5.3.0",
-    "react-scripts": "4.0.3",
+    "react-scripts": "5.0.0",
     "redux": "^4.1.1",
     "redux-thunk": "^2.3.0",
     "semantic-ui-react": "^2.0.4",
