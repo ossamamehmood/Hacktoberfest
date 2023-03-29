@@ -1,2 +1,0 @@
-``` sql
-SELECT "Hello world"
