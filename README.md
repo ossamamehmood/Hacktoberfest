@@ -1,4 +1,4 @@
-# HacktoberFest 2022 `OPEN FIRST` Pull Request - `FREE T-SHIRT`🎉
+# HacktoberFest 2023 `OPEN FIRST` Pull Request - `FREE T-SHIRT`🎉
 ![HacktoberFest 2021](https://github.com/ossamamehmood/Hacktoberfest2022/raw/main/.github/logo.png)
 
 
