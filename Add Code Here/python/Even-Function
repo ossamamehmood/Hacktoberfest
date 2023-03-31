@@ -1,0 +1,12 @@
+def is_even(n):
+    """
+    Returns True if a number is even, False otherwise
+    """
+    if n % 2 == 0:
+        return True
+    else:
+        return False
+
+# Test the function
+print("Is 4 even?", is_even(4))
+print("Is 5 even?", is_even(5))
