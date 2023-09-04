@@ -14,7 +14,7 @@
 
 ## This Project Is Perfect For Your First Pull Request
 
-🗣 **Hacktoberfest encourages participation in the open source community, which grows bigger every year. Complete the challenge and earn a limited edition T-shirt.**
+🗣 **Hacktoberfest encourages participation in the open-source community, which grows bigger every year. Complete the challenge and earn a limited edition T-shirt.**
 
 📢 **Register [here](https://hacktoberfest.digitalocean.com) for Hacktoberfest and make four pull requests (PRs) between October 1st-31st to grab free SWAGS 🔥.**
 
@@ -26,7 +26,7 @@
 
 <a href="https://github.com/ossamamehmood/hacktoberfest2023/pulls"><img src="https://img.shields.io/github/issues-pr/ossamamehmood/hacktoberfest2023" alt="Pull Requests Badge"/></a>
 <a href="https://github.com/ossamamehmood/hacktoberfest2023/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/ossamamehmood/hacktoberfest2023?color=2b9348"></a>
-<a href="https://github.com/ossamamehmood/hacktoberfest2023/blob/master/LICENSE"><img src="https://img.shields.io/github/license/ossamamehmood/hacktoberfest2022?color=2b9348" alt="License Badge"/></a>
+<a href="https://github.com/ossamamehmood/hacktoberfest2023/blob/master/LICENSE"><img src="https://img.shields.io/github/license/ossamamehmood/hacktoberfest2023?color=2b9348" alt="License Badge"/></a>
 
 </div>
 
@@ -68,7 +68,7 @@ Copy the next template into your file, delete the boilerplate data and fill the 
 ---
 name: YOURNAME
 institution/company: INSTITUTION_NAME
-github:USERNAME
+github: USERNAME
 ---
 ```
 
