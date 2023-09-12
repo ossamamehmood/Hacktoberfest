@@ -1,4 +1,4 @@
-# HacktoberFest 2023 `OPEN FIRST` Pull Request - `FREE T-SHIRT`🎉
+# HacktoberFest 2023 `OPEN FIRST` Pull Request
 ![HacktoberFest 2023](https://github.com/ossamamehmood/Hacktoberfest2023/raw/main/.github/logo.png)
 
 
@@ -14,9 +14,9 @@
 
 ## This Project Is Perfect For Your First Pull Request
 
-🗣 **Hacktoberfest encourages participation in the open-source community, which grows bigger every year. Complete the challenge and earn a limited edition T-shirt.**
+🗣 **Hacktoberfest encourages participation in the open-source community, which grows bigger every year. Complete the challenge and get a tree planted on your name showing your love towards mother Earth 🌍**
 
-📢 **Register [here](https://hacktoberfest.digitalocean.com) for Hacktoberfest and make four pull requests (PRs) between October 1st-31st to grab free SWAGS 🔥.**
+📢 **Register [here](https://hacktoberfest.digitalocean.com) for Hacktoberfest and make four pull requests (PRs) between October 1st-31st 🔥.**
 
 <div align="center">
 
