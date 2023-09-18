@@ -1,5 +1,5 @@
 ---
 name: Mansi
 institution/company: INDIAN INSTITUTE OF TECHNOLOGY DELHI
-github: mannxxx
+github: https://github.com/Mannxxx
 ---
