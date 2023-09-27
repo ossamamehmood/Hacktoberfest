@@ -13,6 +13,5 @@ def url_shortener(url):
     short_url = shorten_url(url)
     return short_url
 
-#Creating an Interface to give inputs and display outputs
 iface = gr.Interface(fn=url_shortener, inputs="text", outputs="text", title="URL Shortener")
 iface.launch(share=True)
