@@ -1,5 +1,5 @@
 ---
 name: Ishan Khurana
-institution/company: GniM
+institution/company: Guru nanak istitute of management
 github: IshanKhurana12
 ---
