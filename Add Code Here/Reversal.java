@@ -12,6 +12,7 @@ public class Reversal {
         while(!s.isEmpty()) {
             q.add(s.pop());
         }
+        
     }
     public static void main(String args[]) {
         Queue<Integer> q = new LinkedList<>();
