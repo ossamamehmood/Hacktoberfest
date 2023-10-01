@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+int fact(int n){
+    int f=1;
+    for (int i=1;i<=n;i++){
+        f=f*i;
+
+    }
+    return f;
+
+}
+int main(){
+    int row;
+    cout<<"Enter number of rows to be displayed: ";
+    cin>>row;
+    for (int i=0;i<row;i++){
+        for (int j=0;j<(row-i);j++){
+            cout<<" ";
+        }
+        for (int j=0;j<=i;j++){
+            int a;
+            a=fact(i)/(fact(j)*fact(i-j));
+            cout << a <<" ";
+        }
+        cout<<endl;
+    }
+    return 0;
+}
