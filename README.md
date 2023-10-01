@@ -34,7 +34,7 @@
 
 - Fork this Repository using the button at the top on the right corner.
 - Clone your forked repository to your PC ( git clone "url from clone option.)
-- Create a new branch for your modifications (ie. `git branch new-user and check it out `git checkout new-user` or simply do `git checkout -b new-user`)
+- Create a new branch for your modifications (ie. `git branch new-user` and check it out  `git checkout new-user` or simply do `git checkout -b new-user`)
 - Add your profile image in `static/images/` ( use drag and drop option or upload by commands.)
 - Add your profile data in `content/participant/`
 - Add your files (`git add -A`), commit (`git commit -m "added myself"`) and push (`git push origin new-user`)
@@ -55,6 +55,8 @@ static/images/<YOUR-USERNAME>.png
 
 
 ## 2. Add your profile information
+### You also go [profile](https://github.com/ossamamehmood/Hacktoberfest2023/tree/main/profile)
+
 
 Create a markdown file in your folder following the convention `content/participant/<YOUR-USERNAME>.md`. Ex.
 
@@ -66,10 +68,35 @@ Copy the next template into your file, delete the boilerplate data and fill the 
 
 ```
 ---
-name: YOURNAME
-institution/company: INSTITUTION_NAME
-github: USERNAME
----
+# SURAJ KUMAR SHARMA
+
+### Location
+
+city / country
+
+### Academics
+-
+-
+### Interests
+
+-
+
+### Development
+
+- Example 1
+- Example 2
+-
+
+ 
+### Projects
+
+> Heading 
+- [project name](github repo link / project link)
+>
+### Profile Link
+
+Go to profile [userName](https://github.com/username/)
+
 ```
 
 <div align="center">
