@@ -1,11 +1,6 @@
-main
-message = "Hello World!"
-
-def display_msg(message):
-    print(message)
+def display_msg():
+    print("Hello World")
 
 if __name__ == '__main__':
-    display_msg(message)
-=======
-print("Hello World")
-main
+    display_msg()
+
