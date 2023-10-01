@@ -1,7 +1,5 @@
---------------------------------------------------
-Name : Vinay Pathak
-
-Institution : DIT University
-
-Github : https://github.com/vinaypathak07
---------------------------------------------------
+---
+name: Vinay Pathak
+institution/company: DIT
+github: https://github.com/vinaypathak07
+---
