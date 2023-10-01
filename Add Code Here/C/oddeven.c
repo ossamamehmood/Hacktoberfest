@@ -7,13 +7,13 @@ int oddeven(int num){
 }
 int main(){
         int a,res;
-        printf("Enter any number you want to check:",&a);
+        printf("Enter any number to check odd or even :",&a);
         scanf("%d",&a);
         res=oddeven(a);
         if(res==1)
-                printf("the number is add");
+                printf("The number is odd");
         else
-                printf("the number is even");
+                printf("The number is even");
 
         return 0;
 }
