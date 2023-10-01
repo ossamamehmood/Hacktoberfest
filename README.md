@@ -55,6 +55,8 @@ static/images/<YOUR-USERNAME>.png
 
 
 ## 2. Add your profile information
+### You also go [profile](https://github.com/ossamamehmood/Hacktoberfest2023/tree/main/profile)
+
 
 Create a markdown file in your folder following the convention `content/participant/<YOUR-USERNAME>.md`. Ex.
 
@@ -66,10 +68,35 @@ Copy the next template into your file, delete the boilerplate data and fill the 
 
 ```
 ---
-name: YOURNAME
-institution/company: INSTITUTION_NAME
-github: USERNAME
----
+# SURAJ KUMAR SHARMA
+
+### Location
+
+city / country
+
+### Academics
+-
+-
+### Interests
+
+-
+
+### Development
+
+- Example 1
+- Example 2
+-
+
+ 
+### Projects
+
+> Heading 
+- [project name](github repo link / project link)
+>
+### Profile Link
+
+Go to profile [userName](https://github.com/username/)
+
 ```
 
 <div align="center">
