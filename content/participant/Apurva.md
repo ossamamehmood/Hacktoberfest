@@ -1,5 +1,5 @@
 ---
-Name: Apurva Pragya
-institution/company: Indian Institute of Information Ropar
-github: https://github.com/PragyApurva
+Name: Chandan Mali
+institution/company: Mumbai University
+github: https://github.com/Chandanmali
 ---
