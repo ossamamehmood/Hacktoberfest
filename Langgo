@@ -1,0 +1,14 @@
+//provide the package main
+package main
+
+//import the packages
+import(
+  "fmt"
+)
+
+//Program execution starts here
+func main(){
+
+  //Print statement
+  fmt.Println("Hello, World")
+}
