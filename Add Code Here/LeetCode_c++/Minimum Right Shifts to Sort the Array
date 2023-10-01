@@ -1,0 +1,26 @@
+class Solution {
+public:
+    
+        bool check(vector<int>arr){
+            for(int i=0;i<arr.size()-1;i++){
+                if(arr[i]>arr[i+1]) return false;
+            }
+            return true;
+        }
+        int minimumRightShifts(vector<int>& nums) {
+        int cnt=0;
+            while(cnt < nums.size()){
+                if(check(nums)==true) {
+                    return cnt;
+                }
+                else{
+                    reverse(nums.begin(),nums.end());
+                    reverse(nums.begin()+1,nums.end());
+                }
+                
+                cnt++;
+            }
+            return -1;
+            
+    }
+};
