@@ -153,15 +153,15 @@ int optimal_pageFaults(int page_ref[], int pages, int frames){
 
 /* Driver Code */
 int main(){
-        int page_reference[10],frames = 4 ;
+        int page_reference[10], frames = 4 ;
         srand(time(0));
-        for (int i = 0; i < 10 ; i++)
+        int pages = 10;
+        for (int i = 0; i < pages ; i++)
         {  
             page_reference[i] = ((rand()%50)%30) % 10 ;
             cout<<page_reference[i]<<"\n";
         }
        
-        int pages = sizeof(page_reference)/sizeof(page_reference[0]);
         fifo_pageFaults(page_reference ,pages, frames);
         lru_pageFaults(page_reference,pages, frames);
         optimal_pageFaults(page_reference,pages, frames);
