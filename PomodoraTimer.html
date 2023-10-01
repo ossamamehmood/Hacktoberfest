@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pomodoro Timer</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Pomodoro Timer</h1>
+    <div id="timer">
+      <div id="time">25:00</div>
+    </div>
+    <button id="startButton" onclick="startTimer()">Start</button>
+    <button id="pauseButton" onclick="pauseTimer()">Pause</button>
+    <button id="resetButton" onclick="resetTimer()">Reset</button>
+  </div>
+
+  
+</body>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        background-color: aquamarine;
+      }
+      
+      .container {
+        text-align: center;
+      }
+      
+      h1 {
+        margin-bottom: 20px;
+      }
+      
+      #timer {
+        font-size: 48px;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+      
+      button {
+        margin: 5px;
+        font-size: 16px;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+      }
+      
+      button:focus {
+        outline: none;
+      }
+      
+</style>
+
+<script>
+
+    let timer;
+let isPaused = false;
+
+function startTimer() {
+  const timeElement = document.getElementById('time');
+  let time = 1500; // 25 minutes in seconds
+
+  timer = setInterval(() => {
+    if (!isPaused && time > 0) {
+      time--;
+      const minutes = Math.floor(time / 60);
+      const seconds = time % 60;
+      timeElement.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    } else if (time === 0) {
+      clearInterval(timer);
+      timeElement.textContent = '00:00';
+      alert('Time is up! Take a break.');
+    }
+  }, 1000);
+}
+
+function pauseTimer() {
+  isPaused = !isPaused;
+  const pauseButton = document.getElementById('pauseButton');
+  pauseButton.textContent = isPaused ? 'Resume' : 'Pause';
+}
+
+function resetTimer() {
+  clearInterval(timer);
+  const timeElement = document.getElementById('time');
+  timeElement.textContent = '25:00';
+  isPaused = false;
+  const pauseButton = document.getElementById('pauseButton');
+  pauseButton.textContent = 'Pause';
+}
+
+</script>
+</html>
