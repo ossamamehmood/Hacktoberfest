@@ -1,3 +1,5 @@
 name: Nithin N
-institution: sahyadri collage of engineering and management, 
-Chennai github: NITHIN3387
+
+institution: sahyadri collage of engineering and management, mangalore
+
+github: NITHIN3387
