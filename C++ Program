@@ -1,0 +1,103 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+//naive approach
+void findThePeakNaive(vector<int>& arr)
+{
+    cout << "..............Using naive search......\n";
+
+    //O(n) time complexity
+
+    int peakNumber = -1;
+    //if only one element
+    if (arr.size() == 1)
+        peakNumber = arr[0];
+    //if two elements
+    if (arr.size() == 2)
+        peakNumber = max(arr[0], arr[1]);
+    for (int i = 1; i < arr.size(); i++) {
+        if (arr[i] > arr[i + 1]) {
+            peakNumber = arr[i];
+            break;
+        }
+    }
+    if (peakNumber == -1)
+        cout << "There is no peak element in this array\n";
+    else
+        cout << "The peak element(maximum number) is " << peakNumber << "\n";
+
+    return;
+}
+
+//recursive binary search
+int findThePeakEfficientRecur(vector<int>& arr, int start, int end)
+{
+    //base cases
+    //only one element in array
+
+    if (start == end)
+        return arr[start];
+    //if two element
+    if (start + 1 == end) {
+        return max(arr[start], arr[end]);
+    }
+
+    int mid = start + (end - start) / 2;
+
+    //we got our peak
+    if (arr[mid] > arr[mid - 1] && arr[mid] > arr[mid + 1]) 
+        return arr[mid];
+    //pivot element is still in the increasing part
+    else if (arr[mid] > arr[mid - 1] && arr[mid] < arr[mid + 1]) { 
+        return findThePeakEfficientRecur(arr, mid + 1, end);
+    }
+    else
+        return findThePeakEfficientRecur(arr, start, mid - 1);
+}
+
+void findThePeakEfficient(vector<int>& arr)
+{
+    cout << "..............Using efficient approach(binary search)......\n";
+
+    //O(logn) time complexity
+
+    int peakNumber = findThePeakEfficientRecur(arr, 0, arr.size() - 1);
+
+    if (peakNumber == -1)
+        cout << "There is no peak element in this array\n";
+    else
+        cout << "The peak element(maximum number) is " << peakNumber << "\n";
+
+    return;
+}
+
+int main()
+{
+    cout << "Enter number of elements\n";
+    int n;
+    cin >> n;
+    vector<int> arr(n);
+    cout << "Enter the elements(increasing first &  then decreasing)\n";
+
+    for (int i = 0; i < n; i++)
+        cin >> arr[i];
+
+    //using navive approach
+    findThePeakNaive(arr);
+    //using binary search
+    findThePeakEfficient(arr);
+
+    return 0;
+}
+
+
+// Output
+
+Enter number of elements
+6
+Enter the elements(increasing first &  then decreasing)
+3 10 17 15 2 -3
+..............Using naive search......
+The peak element(maximum number) is 17
+..............Using efficient approach(binary search)......
+The peak element(maximum number) is 17
