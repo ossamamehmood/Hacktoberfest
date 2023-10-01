@@ -21,23 +21,4 @@ int bellmonFord(int n, int m, int src, int dest, vector<vector<int>> &edges) {
     return dis[dest];
 
 }
-            // to check -ve cycle  is present or not we perform comparison one more time to see if dis array is changed:-
-            //          int f=0;
-            //          for(int j=0;j<m;j++)
-            //          {
-            //             int u=edges[j][0];
-            //             int v=edges[j][1];
-            //             int w=edges[j][2];
-
-            // if(dis[u]!=1e9 && ((dis[u]+w)<dis[v]))
-            // {
-            //     dis[v]=dis[u]+w;
-            //     f=1;
-            //     break;
-            // }
-            // }
-
-            // if(f==1)
-            // "cycle present";
-
-            
+           
