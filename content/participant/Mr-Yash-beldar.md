@@ -4,14 +4,14 @@
 
 ### Location
 
-Jalgoan / India
+- Jalgoan / India
 
 ### Academics
--BTech
+- BTech
 ### Interests
 
-Coding
-GameDevelopment
+- Coding
+- GameDevelopment
 
 ### Development
 
@@ -20,7 +20,7 @@ GameDevelopment
 
 ### Projects
 
-> Heading 
+> Budget Management App 
 - [Budget Buddy](https://github.com/Mr-Yash-beldar/Budget_Buddy)
 >
 ### Profile Link
