@@ -1,0 +1,53 @@
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+        self.visited = False # to check if current node is visited or not
+
+# Function to detect and remove a loop in a linked list by modifying the structure
+def detect_and_remove_loop(head):
+
+    current = head
+
+    while current is not None:
+        # If the current node has been visited, then there is a loop
+        if current.visited:
+            # Remove the loop by setting the next of the previous node to None
+            prev.next = None
+            print("Loop detected and removed")
+            return
+
+        current.visited = True # mark current node as visited
+        prev = current
+        current = current.next
+
+    print("No loop found")
+
+def print_list(head):
+    # Function to print the linked list
+    current = head
+    while current:
+        print(current.data, end=" -> ")
+        current = current.next
+    print("None")
+
+
+# Creating a linked list with a loop for demonstration purposes
+node1 = Node(1)
+node2 = Node(2)
+node3 = Node(3)
+node4 = Node(4)
+node5 = Node(5)
+
+node1.next = node2
+node2.next = node3
+node3.next = node4
+node4.next = node5
+node5.next = node2  # Creating a loop
+
+
+# Detect and remove the loop
+detect_and_remove_loop(node1)
+
+# Print the modified linked list
+print_list(node1)
