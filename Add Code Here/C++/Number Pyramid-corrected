@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+int main(){
+    int n;
+    cout<<"Enter the number of rows required: ";
+    cin>>n;
+
+    for (int i=1;i<=n;i++){
+        int j;
+        for (j=1; j<=n-i;j++){
+            cout<<"  ";                    //print required number of spaces
+
+        }
+        int k=i;
+        for (;j<=n;j++) {
+            cout<<k--<<" ";                //first print k then lessen its value
+
+        }
+        k=2;
+        for (;j<=n+i-1;j++){
+            cout<<k++<<" ";                //increment value of  again
+        }
+
+        cout<<endl;
+    }
+    return 0;
+}
