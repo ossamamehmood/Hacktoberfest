@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 class Solution {
     public void solve(int [] nums, List<Integer> ds, List<List<Integer>>ans, boolean [] check){
         if(ds.size()==nums.length){
