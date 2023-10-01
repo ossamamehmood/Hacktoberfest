@@ -1,23 +1,3 @@
----
-# Karanjot Singh Dulay
-
-### Location
-
-Punjab/India
-
-### Interests
-
-JS
-Python
-Django
-Reactjs
-Nextjs
- 
-### Projects
-
-
-- [coderscore](https://github.com/Karanjot786/coderscore)
-
-### Profile Link
-
-Go to profile [Karanjot786](https://github.com/Karanjot786/)
+# My Name is Karanjot Singh. I am 18 years. I am student and full stack web developer 
+# My Github [link](https://github.com/Karanjot786)
+# My Website [link](https://karanjot.vercel.app)
