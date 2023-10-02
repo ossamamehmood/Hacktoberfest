@@ -11,11 +11,11 @@ United Kingdom/USA
 - Tech Writing
 
 ### Development
-
- 
-### Projects
 - [strapi](https://github.com/petipois/community-content)
 - [payload](https://github.com/petipois/payload)
+ 
+### Projects
+
 >
 ### Profile Link
 
