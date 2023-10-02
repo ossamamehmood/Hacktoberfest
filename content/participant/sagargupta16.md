@@ -1,5 +1,5 @@
 ---
 name: Sagar Gupta
-institution/company: National Institute of Technology , Warangal
+institution/company: National Institute Of Technology , Warangal
 github: Sagargupta16
 ---
