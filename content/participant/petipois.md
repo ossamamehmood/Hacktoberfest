@@ -14,9 +14,8 @@ United Kingdom/USA
 
  
 ### Projects
-
-> Heading 
 - [strapi](https://github.com/petipois/community-content)
+- [payload](https://github.com/petipois/payload)
 >
 ### Profile Link
 
