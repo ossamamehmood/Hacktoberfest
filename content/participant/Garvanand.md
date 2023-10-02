@@ -1,5 +1,5 @@
 ---
-name: YOURNAME
-institution/company: INSTITUTION_NAME
-github:USERNAME
+name: Garv Anand
+institution/company: Vellore Institute of Technology
+github:Garvanand
 ---
