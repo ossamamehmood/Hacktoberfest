@@ -1,5 +1,5 @@
 ---
 name: ABINANTHAN
 institution/company: SCT
-github: @Abinanthan47
+github: Abinanthan47
 ---
