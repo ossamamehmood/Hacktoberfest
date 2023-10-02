@@ -1,0 +1,68 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+/**
+ * @brief Finds the median of two sorted arrays.
+ * 
+ * This function calculates the median of two sorted arrays nums1 and nums2 using
+ * an optimized binary search approach.
+ * 
+ * @param nums1 First sorted array.
+ * @param nums2 Second sorted array.
+ * @return Median of the combined sorted arrays.
+ * @throw invalid_argument If input arrays are not sorted.
+ */
+double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
+    if (nums1.size() > nums2.size()) {
+        swap(nums1, nums2);
+    }
+
+    int x = nums1.size();
+    int y = nums2.size();
+
+    int low = 0;
+    int high = x;
+
+    while (low <= high) {
+        int partitionX = (low + high) / 2;
+        int partitionY = (x + y + 1) / 2 - partitionX;
+
+        int maxX = (partitionX == 0) ? INT_MIN : nums1[partitionX - 1];
+        int maxY = (partitionY == 0) ? INT_MIN : nums2[partitionY - 1];
+        int minX = (partitionX == x) ? INT_MAX : nums1[partitionX];
+        int minY = (partitionY == y) ? INT_MAX : nums2[partitionY];
+
+        if (maxX <= minY && maxY <= minX) {
+            if ((x + y) % 2 == 0) {
+                return (max(maxX, maxY) + min(minX, minY)) / 2.0;
+            } else {
+                return max(maxX, maxY);
+            }
+        } else if (maxX > minY) {
+            high = partitionX - 1;
+        } else {
+            low = partitionX + 1;
+        }
+    }
+
+    throw invalid_argument("Input arrays are not sorted.");
+}
+
+/**
+ * @brief Main function to test findMedianSortedArrays.
+ * 
+ * Modifies nums1 and nums2 arrays to test the findMedianSortedArrays function.
+ * 
+ * @return 0 upon successful execution.
+ */
+int main() {
+    vector<int> nums1 = {1, 3};
+    vector<int> nums2 = {2};
+
+    double median = findMedianSortedArrays(nums1, nums2);
+    cout << "Median: " << median << endl;
+
+    return 0;
+}
