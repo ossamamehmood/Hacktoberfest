@@ -1,0 +1,6 @@
+package main
+
+func main() {
+	name := "ss"
+	println(&name)
+}
