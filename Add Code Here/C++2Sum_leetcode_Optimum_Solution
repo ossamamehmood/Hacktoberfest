@@ -1,0 +1,31 @@
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        int i=0,j=0;
+        int size=nums.size();
+        vector<int>ans;
+        while(true){
+            int data=target-nums[i];
+            int start=i+1;
+            int last=size-1;
+            while(start<=last){
+                int mid=(start+last)/2;
+                if(nums[mid]==data){
+                    ans.push_back(i);
+                    ans.push_back(mid);
+                    break;
+                }
+                else if(nums[mid]>data){
+                    last=mid-1;
+                }
+                else{
+                    start=mid+1;
+                }
+            }
+            if(!ans.empty()){
+                break;
+            }
+        }
+        return ans;
+    }
+};
