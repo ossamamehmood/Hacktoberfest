@@ -1,7 +1,6 @@
-//Assignment:2 (STUDENT DATABASE MANAGEMENT)
+//STUDENT DATABASE MANAGEMENT
 //Name : SARVESH PRAMOD BIWALKAR
-//Roll no.: C23315
-//Batch : S-9 (div:3)
+
 
 
 
