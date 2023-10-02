@@ -1,3 +1,8 @@
+---
+name: Amarjit Singh Arora
+institution/company: Immortal Computer Lab Pvt. Ltd.
+github:asarora72
+---
 
     👋 Hi, I’m Amarjit Singh (@asarora72)
     👀 I’m interested in working on Java, JavaScript, React, MySQL, AWS, Git & Linux
