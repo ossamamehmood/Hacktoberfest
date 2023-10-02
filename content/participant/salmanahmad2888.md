@@ -1,5 +1,5 @@
 ---
 name: Salman Ahmad
 institution/company: PTCL
-github:salmanahmad2888
+github: salmanahmad2888
 ---
