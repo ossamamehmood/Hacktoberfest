@@ -1,55 +1,42 @@
-#include <iostream>
-#include<conio.h>
-#include<math.h>
-
+#include<iostream>
 using namespace std;
+int main()
+{
+    int a, b;
 
-// fungsi hello() digunkan untuk menampilkan kata 'Hello, World!'
-void hello(){
-    cout << "KALKULATOR";
-}
+    cout << "Enter the value of a : " << endl;
+    cin >> a;
 
-int main(){
+    cout << "Enter the value of b : " << endl;
+    cin >> b;
 
-    hello();
-    cout << endl;
+    char op;
+    cout << "Enter the operation which you want to perform : " << endl;
+    cin >> op;
 
-    int num1, num2, output;
-    char oprator;
-
-    cout << "Masukkan angka pertama: ";
-    cin >> num1;
-
-    cout << "Masukkan angka kedua: ";
-    cin >> num2;
-
-    cout << "Pilih operator(*, /, +, -, ^): ";
-    cin >> oprator;
-
-    switch(oprator){
-    // 'switch(huruf)' merupakan kondisi.
-    // kondisi berupa karakter huruf dari a-d.
+    switch(op) {
         case '+':
-            output = num1 + num2;
-            cout << output << endl;
-            break;
-        case '-':
-            output = num1 - num2;
-            cout << output << endl;
-            break;
-        case '*':
-            output = num1 * num2;
-            cout << output << endl;
-            break;
-        case '/':
-            output = num1 / num2;
-            cout << output << endl;
-            break;
-        case '^':
-            output = pow(num1, num2);
-            cout << output << endl;
-            break;
-    }
+        cout << (a + b) << endl;
+        break;
 
+        case '-':
+        cout << (a - b) << endl;
+        break;
+
+        case '*':
+        cout << (a * b) << endl;
+        break;
+
+        case '/':
+        cout << (a / b) << endl;
+        break;
+
+        case '%':
+        cout << (a % b) << endl;
+        break;
+
+        default:
+        cout << "Enter the valid operation!" << endl;
+    }
     return 0;
 }

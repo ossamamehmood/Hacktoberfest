@@ -1,8 +1,0 @@
-@tailwind base;
-@tailwind components;
-@layer components {
-  .recomend {
-    @apply rounded-md bg-gray-400 p-0 max-h-8 w-auto flex hover:underline hover:bg-zinc-300 overflow-hidden ;
-  }
-}
-@tailwind utilities;
