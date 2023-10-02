@@ -8,7 +8,6 @@ int main(int argc, char const *argv[])
     cout<<*(ptr)<<endl;
     cout<<*(ptr+1)<<endl;
     cout<<*(ptr+2)<<endl;
-    
-
+    cout<<*(ptr+3)<<endl;
     return 0;
 }

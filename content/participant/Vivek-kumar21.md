@@ -1,5 +1,28 @@
 ---
-Name: Vivek Kumar Mandal
-institution/company: Institute of Engineering and Management Kolkata
-github: https://github.com/Vivek-kumar21
----
+# VIVEK KUMAR MANDAL
+
+### Location
+
+Kolkata / India
+
+### Academics
+
+- Institute of Engineering and Management, Kolkata
+
+### Interests
+
+- Badminton
+- Chess
+- Sketching
+
+### Development
+
+- HTML
+- CSS
+- JavaScript
+- React
+- Tailwind
+
+### Profile Link
+
+Go to profile [Vivek-kumar21](https://github.com/Vivek-kumar21)
