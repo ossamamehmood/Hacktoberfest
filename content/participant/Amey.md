@@ -1,1 +1,5 @@
-name: Amey Managute institution/company: Mumbai university github: ameymn
+---
+Name: Amey
+institution/company: NAgpur University
+github: https://github.com/Amey-Chaudhari
+---
