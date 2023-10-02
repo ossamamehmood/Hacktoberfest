@@ -1,0 +1,36 @@
+int maxProfit(vector<int>& prices) {
+        //ony the diff is here we will maintain a cap of two transcations
+        int cap=2;
+        int buy=1;
+        int n = prices.size();
+        //let's tabulatew
+        vector<vector<vector<int>>> dp(n,vector<vector<int>>(2,vector<int>(3,0)));
+        for(int ind=n-1;ind>=0;ind--){
+            for(int buy=0;buy<2;buy++){
+                for(int cap=2;cap>0;cap--){
+                    int profit = 0;
+                    if(buy){
+                        int case1 = -prices[ind];
+                        int case2=0;
+                        if(ind+1<n){
+                            case1 += dp[ind+1][0][cap];
+                            case2 = dp[ind+1][1][cap];
+                        }
+                        profit = max(case1,case2);
+                    }
+                    else{
+                        int case1 = prices[ind];
+                        int case2=0;
+                        if(ind+1<n){
+                            case1 += dp[ind+1][1][cap-1];
+                            case2 = dp[ind+1][0][cap];
+                        }
+                        profit = max(case1,case2);
+                    }
+                    dp[ind][buy][cap] = profit;
+                }
+            }
+        }
+
+        return dp[0][buy][cap]; 
+    }
