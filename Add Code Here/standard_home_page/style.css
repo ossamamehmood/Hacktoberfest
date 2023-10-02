@@ -1,0 +1,62 @@
+body{
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.heading{
+  margin: 30px 0px;
+  color: #fafafa;
+}
+.para{
+  color: #757373;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+}
+.content{
+  margin: 220px 60px ;
+}
+.navbar-nav{
+  margin-top: 5px;
+  color: #fafafa;
+}
+.nav-link{
+  color: #fafafa !important;
+}
+.navbar-brand{
+  margin-left: 20px !important;
+  font-weight: lighter !important;
+}
+.main{
+  margin: 0 15px;
+  padding: 0px;
+}
+.rest{
+  font-size: 18px !important;
+  color: #c9bfbf !important;
+  margin-left: 190px;
+  margin-right: 0px !important;
+}
+.consult{
+  margin-left: 150px;
+  border-radius: 0 !important;
+  margin-right: 0px;
+  padding: 0 50px !important;
+}
+.handle{
+  padding-left: 0px !important;
+  margin-left: 10px !important;
+  font-size: 19px !important;
+}
+.bottom1{
+  border-radius: 0px !important;
+  margin-top: 20px !important;
+  padding: 8px 40px !important;
+}
+.bottom2{
+  border-radius: 0px !important;
+  margin-top: 20px !important;
+  margin-left: 5px !important;
+  border: 2px solid white!important;
+  color: #fafafa !important;
+  padding: 8px 40px !important;
+}
