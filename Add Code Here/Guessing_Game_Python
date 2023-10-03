@@ -1,0 +1,29 @@
+# Generate a random number between 1 and 100
+secret_number = random.randint(1, 100)
+
+# Function to play the game
+def play_game():
+    attempts = 0
+    guessed_number = 0
+
+    print("Welcome to the Number Guessing Game!")
+    print("I'm thinking of a number between 1 and 100. Can you guess it?")
+
+    while guessed_number != secret_number:
+        try:
+            guessed_number = int(input("Enter your guess: "))
+        except ValueError:
+            print("Invalid input. Please enter a number.")
+            continue
+
+        attempts += 1
+
+        if guessed_number < secret_number:
+            print("Too low! Try again.")
+        elif guessed_number > secret_number:
+            print("Too high! Try again.")
+        else:
+            print(f"Congratulations! You guessed the number in {attempts} attempts.")
+
+# Start the game
+play_game()
