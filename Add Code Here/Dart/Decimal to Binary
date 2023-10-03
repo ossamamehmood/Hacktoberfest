@@ -1,0 +1,12 @@
+void main() {
+  int decimal_value=10; //decimal value 
+  int binary_value = 0;
+  int i = 1;
+  while(decimal_value > 0)
+  {
+      binary_value = binary_value + (decimal_value % 2)*i;
+      decimal_value = (decimal_value/2).floor();
+      i = i * 10;
+  }
+  print("the binary value is $binary_value");
+}
