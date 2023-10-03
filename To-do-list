@@ -1,0 +1,41 @@
+// Create an array to store the tasks
+let tasks = [];
+
+// Create a function to add a new task
+function addTask() {
+  // Get the input element
+  let input = document.getElementById("task-input");
+  // Get the value of the input
+  let task = input.value;
+  // Check if the input is not empty
+  if (task) {
+    // Push the task to the array
+    tasks.push(task);
+    // Clear the input value
+    input.value = "";
+    // Update the display
+    displayTasks();
+  }
+}
+
+// Create a function to display the tasks
+function displayTasks() {
+  // Get the list element
+  let list = document.getElementById("task-list");
+  // Clear the list content
+  list.innerHTML = "";
+  // Loop through the tasks array
+  for (let i = 0; i < tasks.length; i++) {
+    // Create a list item element
+    let item = document.createElement("li");
+    // Set the text content of the item to the task
+    item.textContent = tasks[i];
+    // Append the item to the list
+    list.appendChild(item);
+  }
+}
+
+// Get the button element
+let button = document.getElementById("add-button");
+// Add a click event listener to the button
+button.addEventListener("click", addTask);
