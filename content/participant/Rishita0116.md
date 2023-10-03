@@ -1,5 +1,5 @@
 ---
 name: Rishita Saxena
-institution/company: MANIT, Bhopal
+institution/company: MANIT
 github: Rishita0116
 ---
