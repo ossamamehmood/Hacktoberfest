@@ -1,5 +1,5 @@
 ---
-Name: Kavisha
-institution/company: London Metropolitan University
-github: https://github.com/kavisha-nethmini
+name: Kavisha Subasinghe
+institution: London Metropolitan University
+github: kavisha-nethmini
 ---
