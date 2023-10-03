@@ -1,19 +1,22 @@
-class Solution{
-public List<Integer> getRow(int rowIndex) {
-    Integer[] ans = new Integer[rowIndex + 1];
-    Arrays.fill(ans, 1);
+import java.util.ArrayList;
+import java.util.List;
 
-    for (int i = 2; i < rowIndex + 1; ++i)
-      for (int j = 1; j < i; ++j)
-        ans[i - j] += ans[i - j - 1];
+class Solution {
+    public List<Integer> getRow(int rowIndex) {
+        List<Integer> row = new ArrayList<>();
+        row.add(1);
 
-    return Arrays.asList(ans);
-  }
+        for (int i = 1; i <= rowIndex; i++) {
+            long val = (long) row.get(i - 1) * (rowIndex - i + 1) / i;
+            row.add((int) val);
+        }
 
-public static void main(String args[]){
-  getrows(4);
+        return row;
+    }
+
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+        List<Integer> result = solution.getRow(4);
+        System.out.println(result);
+    }
 }
-  
-}
-
-

@@ -1,5 +1,5 @@
 ---
 Name: Agara
-institution/company: Delhi University
-github: https://github.com/agaramudhala
+Institution/company: Delhi University
+GitHub: https://github.com/agaramudhala
 ---

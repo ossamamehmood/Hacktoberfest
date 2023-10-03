@@ -1,0 +1,2 @@
+Generics works on class type.
+Generics does'nt work with Primitive type.

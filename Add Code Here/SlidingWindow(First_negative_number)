@@ -1,0 +1,48 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+	#ifndef ONLINE_JUDGE
+	freopen("input.txt","r",stdin);
+	freopen("output.txt","w",stdout);
+    #endif
+    // to find the first negative integer number in window of size of n
+    int n;
+    //size of the 
+    cin >> n;
+
+    int arr[] = {-8,2,3,-6,10};
+    
+
+    int i = 0,j = 0;
+    list<int>ans;
+    vector<int>negatives;
+    int size = sizeof(arr)/sizeof(arr[0]);
+    while(j < size){
+    	if(arr[j] < 0){
+    		ans.push_back(arr[j]);
+    	}
+    	if(j-i+1 == n){
+    		if(ans.size() == 0){
+    			negatives.push_back(0);
+    		}
+    		else{
+    			negatives.push_back(ans.front());
+    		}
+    		if(arr[i] == ans.front()){
+    			ans.pop_front();
+    		}
+    		i++;
+    		j++;
+    		continue;
+    	}
+    	
+    	j++;
+        
+    }
+
+    for(auto it : negatives){
+    	cout<<it<<" ";
+    }
+
+}
