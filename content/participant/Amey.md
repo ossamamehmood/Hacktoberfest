@@ -1,5 +1,1 @@
----
-Name: Amey
-institution/company: NAgpur University
-github: https://github.com/Amey-Chaudhari
----
+name: Amey Managute institution/company: Mumbai university github: ameymn
