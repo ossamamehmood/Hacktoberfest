@@ -16,7 +16,7 @@
 
 🗣 **Hacktoberfest encourages participation in the open source community, which grows bigger every year.**
 
-📢 **Register [here](https://hacktoberfest.digitalocean.com) for Hacktoberfest and make four pull requests (PRs) between October 1st-31st to grab free SWAGS 🔥.**
+📢 **Register [here](https://hacktoberfest.digitalocean.com) for Hacktoberfest and make four pull requests (PRs) between October 1st-31st to grab free DIGITAL-SWAGS 🔥.**
 
 <div align="center">
 
@@ -100,7 +100,7 @@ Always make more then 4 pull requests.
 Lets say you have made only 4 pull request to different projects,
 but one project is excluded from hackoctoberfest event then your pull request will not be counted and 
 then you have remaining 3 valid pull requests if these projects is not excluded.
-If you fail to make 4 pull requests then you can't get online-swags.
+If you fail to make 4 pull requests then you can't get digital-swags.
 I will recommend you to make pull request to your own repo which is very very safest side for you..
 keep in mind that repo has hacktoberfest topic..
 '''
