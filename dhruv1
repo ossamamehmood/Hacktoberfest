@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    Simple Clock
+</head>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,700&family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,700&family=Roboto:wght@500;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #2d2f38;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    /* width: 100vw; */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.time {
+    /* border: 2px solid red; */
+    display: flex;
+    background-color: rgba(14, 21, 37, 0.7);
+    padding: 20px;
+    width: 222px;
+    box-shadow: 5px 5px 10px brown, -5px -5px 10px brown;
+    border-radius: 70px 10px 70px 10px;
+
+
+}
+
+/* .time::before {
+    background: lianear-gradient(45deg, blue, orange, green);
+} */
+
+#hour {
+    font-size: 65px;
+    background: -webkit-linear-gradient(90deg, blue, white);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    /* margin: 20px; */
+}
+
+/* .time::before {
+    content: " ";
+    position: absolute;
+    background: linear-gradient(45deg, blue, orange, green);
+    background-size: 200% 200%;
+    top: -5px;
+    left: -5px;
+    bottom: -5px;
+    right: -5px;
+    z-index: -1;
+} */
+
+.right-side {
+    margin: 10px;
+    /* font-size: 25px; */
+}
+
+#dots {
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+#minute {
+    font-size: 35px;
+    background: -webkit-linear-gradient(90deg, orchid, white);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    /* margin: 20px; */
+}
+
+#right-down {
+    font-size: 20px;
+    /* margin-top: 5px; */
+    margin-left: 20px;
+
+}
+
+#shift {
+    color: orange;
+}
+</style>
+
+<script>
+        function clock() {
+            let hours = document.getElementById("hour");
+            let minutes = document.getElementById("minute");
+            let seconds = document.getElementById("second");
+            let shifts = document.getElementById("shift");
+            let h = new Date().getHours();
+            let m = new Date().getMinutes();
+            let s = new Date().getSeconds();
+            let ampm = h >= 12 ? "PM" : "AM";
+            if (h > 12) {
+                h -= 12;
+            }
+            h = h < 10 ? "0" + h : h;
+            m = m < 10 ? "0" + m : m;
+            s = s < 10 ? "0" + s : s;
+            hours.innerHTML = h;
+            minutes.innerHTML = m;
+            seconds.innerHTML = s;
+            shifts.innerHTML = ampm;
+        }
+
+        setInterval(clock, 1000);
+    </script>
+
+<body>
+    <div class="container">
+        <div class="Clock">
+            <div class="time">
+                <div class="left-side">
+                    <span id="hour">00</span>
+                </div>
+                <div class="right-side">
+                    <span id="dots">:</span>
+                    <span id="minute">00</span>
+                    <div id="right-down">
+                        <span id="shift">PM</span>
+                        <span id="second">00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
