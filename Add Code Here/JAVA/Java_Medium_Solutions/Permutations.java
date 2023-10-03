@@ -1,8 +1,12 @@
 // Problem Statement: Generate all possible permutations of the integers present in the array.
+import java.util.*;
 
 class Solution {
     List<List<Integer>> ans;
     public List<List<Integer>> permute(int[] nums) {
+        if (nums == null || nums.length == 0) {
+            throw new IllegalArgumentException("Input array cannot be null or empty.");
+        }
         ans = new ArrayList<>();
         solve(nums, nums.length, new ArrayList<Integer>(), new boolean[nums.length]);
         return ans;
