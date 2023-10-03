@@ -1,27 +1,18 @@
 #include<iostream>
 using namespace std;
 
-int getsum(int *arr, int size){
+int main(){
+    int array[] = {3,4,5,6,7};
+    int size = sizeof(array)/sizeof(array[0]);
+    int sum = 0;
+    for(int i = 0;i<size;i++){
+        sum+=array[i];
 
-    if(size == 0){
-        return 0;
     }
-    if(size == 1){
-        return arr[0];
-    }
+        
+    
+    cout<<sum<<endl;
 
-    int remainingpart = getsum(arr + 1, size - 1);
-    int sum = arr[0] + remainingpart;
-    return sum;
-}
-
-int main()
-{
-    int arr[5] = {1, 2, 3, 4, 5};
-    int size = 5;
-
-    int sum = getsum(arr, size);
-
-    cout << "Sum of the array is : " << sum << endl;
     return 0;
+
 }
