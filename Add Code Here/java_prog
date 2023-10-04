@@ -1,0 +1,36 @@
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class  OP{
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        String na = "";
+
+        System.out.println("Enter a string to check=");
+        try {
+            na = in.nextLine();
+            OP n = new OP();
+            n.isPalin(na);
+        } catch (InputMismatchException e) {
+            System.out.println("Invalid input. Please enter a valid string.");
+        }
+    }
+
+    public void isPalin(String na) {
+        String na3 = "";
+        int len = na.length();
+        char ch;
+        for (int i = len - 1; i >= 0; i--) {
+            ch = na.charAt(i);
+            na3 = na3 + ch;
+        }
+
+        if (na.equalsIgnoreCase(na3)) {
+            System.out.println("Palindrome: " + na + " " + na3);
+        } else {
+            System.out.println("Not a palindrome: " + na + ", reversed: " + na3);
+        }
+    }
+}
+
