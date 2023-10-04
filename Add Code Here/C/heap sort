@@ -1,0 +1,61 @@
+// Heap Sort in C language
+
+#include <stdio.h>
+
+void swapElement(int* a, int* b){
+	int temp = *a;
+	*a = *b;
+	*b = temp;
+}
+
+void heap(int array[], int size, int i){
+	int large = i;
+	int left = 2 * i + 1;
+	int right = 2 * i + 2;
+	
+	if (left < size && array[left] > array[large])
+		large = left;
+
+	if (right < size && array[right] > array[large])
+		large = right;
+
+	if (large != i) {
+		swapElement(&array[i], &array[large]);
+		heap(array, size, large);
+	}
+}
+
+void heapSort(int array[], int size){
+	for (int i = size / 2 - 1; i >= 0; i--)
+		heap(array, size, i);
+
+	for (int i = size - 1; i >= 0; i--) {
+		swapElement(&array[0], &array[i]);
+
+		heap(array, i, 0);
+	}
+}
+
+void printarray(int array[], int size)
+{
+	for (int i = 0; i < size; i++)
+		printf("%d ", array[i]);
+}
+
+int main()
+{
+	int size,i;
+	
+	printf("enter the size of array: ");
+	scanf("%d",&size);
+	
+	int array[size];
+
+	printf("enter the elements of array: \n");
+	for(i=0;i<size;i++)
+		scanf("%d",&array[i]);
+
+	heapSort(array, size);
+	printf("Sorted array is\n");
+	printarray(array, size);
+}
