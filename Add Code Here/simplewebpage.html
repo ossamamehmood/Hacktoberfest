@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
+    <title>Interactive Web Page</title>
+    <style>
+        /* Add your global CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        h1:hover {
+            font-weight: bold;
+        }
+
+        a:hover {
+            font-style: italic;
+            color: red;
+        }
+
+        a:focus {
+            color: red;
+        }
+
+        a:visited {
+            color: yellow;
+        }
+
+        img:hover {
+            transform: scale(1.1);
+        }
+        #calculator {
+            width: 300px;
+            margin: 20px auto;
+            padding: 10px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+        }
+        #calculator input[type="text"] {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        #calculator button {
+            width: 70px;
+            height: 40px;
+            font-size: 16px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+#quiz h2,li,p,button{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
+
+}
+
+
+
+        /* Calculator Interface */
+#calculator {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#calc-display {
+    font-size: 24px;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#calculator button {
+    width: 70px;
+    height: 40px;
+    font-size: 16px;
+    margin: 5px;
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+#color-picker{
+    margin: 10;
+    text-align: right;
+
+}
+/* Digital Clock */
+#clock {
+    font-size: 50px;
+    text-align:right;
+    margin-top: 20px;
+    color: #555;
+    
+}
+.color-mar{
+    color: red;
+
+
+}
+
+#button-table {
+    
+    text-align: center;
+    
+}
+#hl3{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: #ccc;/
+    
+}
+
+ </style>
+</head>
+<body>
+    <center>
+    <h1 id="hl3">Meanstack labsheet 3</h1>
+    </center>
+    <div id="clock"></div>
+    
+    <!-- Color Picker -->
+    <label for="color-picker">background:</label>
+    <input type="color" id="color-picker" onchange="changeBackgroundColor(this.value)">
+
+    <!-- Online Quiz -->
+<table border-color="white"><tr><td>
+
+<!-- Online Quiz Interface -->
+<table id="table-lab3" border-color:white>
+    <tr>
+    <td colspan="2">
+<div id="quiz">
+    <h2>Online Quiz</h2>
+</td>
+</tr>
+<tr>
+    <td>
+    <div class="question">
+        <p>1. What is the capital of France?</p>
+    </div>
+    <ul class="options">
+        <li>
+            <label>
+                <input type="radio" name="q1" value="Paris"> Paris
+            </label>
+        </li>
+        <li>
+            <label>
+                <input type="radio" name="q1" value="London"> London
+            </label>
+        </li>
+        <li>
+            <label>
+                <input type="radio" name="q1" value="Berlin"> Berlin
+            </label>
+        </li>
+    </ul>
+    </td>
+    
+        <td>
+    <div class="question">
+        <p>2. What is 2 + 2?</p>
+    </div>
+    <ul class="options">
+        <li>
+            <label>
+                <input type="radio" name="q2" value="3"> 3
+            </label>
+        </li>
+        <li>
+            <label>
+                <input type="radio" name="q2" value="4"> 4
+            </label>
+        </li>
+        <li>
+            <label>
+                <input type="radio" name="q2" value="5"> 5
+            </label>
+        </li>
+    </ul>
+    </td>
+    </tr>
+    <tr>
+        <td id="button-table" colspan="2">
+    <button class="quiz-button" onclick="calculateQuizScore()">Submit Quiz</button>
+</div>
+</td>
+</tr>
+
+</table>
+
+</td>
+<td>
+    <!-- User Registration Form -->
+    <h2>feedback</h2>
+    <p>Click to view Registration site<a href="construction.html" onclick="redirectToConstructionPage();">Click here</a></p>
+    <a href="#" onclick="showAlert(); return false;">Click me for an Alert</a>
+    <p>Alphabetical Order: <span id="month-list"></span></p>
+    <marquee id="color-mar"  direction="right"><a href="Registerlab3.html">Click here to Register</a></marquee>
+   
+    <form id="registration-form" onsubmit="registerUser(); return false;">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="full-name">Full Name:</label>
+            <input type="text" id="full-name" name="full-name" placeholder="John Doe" required>
+            <!-- Add more fields as needed -->
+        </fieldset>
+        <fieldset>
+            <legend>About You</legend>
+            <label for="bio">Tell us about yourself:</label>
+            <textarea id="bio" name="bio" rows="4" placeholder="Write a brief bio about yourself..."></textarea>
+        </fieldset>
+        <input type="submit" value="Submit Registration">
+    </form>
+    </td>
+    </tr>
+    </table>
+
+   <!-- Calculator Interface -->
+   <table border-color="white">
+    <tr><td>
+<div id="calculator">
+    <h2>Calculator</h2>
+    <input type="text" id="calc-display" readonly>
+    <div>
+        <button onclick="addToDisplay('1')">1</button>
+        <button onclick="addToDisplay('2')">2</button>
+        <button onclick="addToDisplay('3')">3</button>
+    </div>
+    <div>
+        <button onclick="addToDisplay('4')">4</button>
+        <button onclick="addToDisplay('5')">5</button>
+        <button onclick="addToDisplay('6')">6</button>
+    </div>
+    <div>
+        <button onclick="addToDisplay('7')">7</button>
+        <button onclick="addToDisplay('8')">8</button>
+        <button onclick="addToDisplay('9')">9</button>
+    </div>
+    <div>
+        <button onclick="addToDisplay('+')">+</button>
+        <button onclick="addToDisplay('-')">-</button>
+        <button onclick="addToDisplay('*')">*</button>
+
+
+
+    </div>
+    <div>
+        <button onclick="addToDisplay('0')">0</button>
+        <button onclick="clearDisplay()">Clear</button>
+        <button onclick="addToDisplay('/')">/</button>
+        <button onclick="calculateResult()">Ans</button>
+        
+    </div>
+</div>
+</td>
+
+<td>
+   <!-- Image Rollover -->
+    
+    <img src="https://www.wallpapers13.com/wp-content/uploads/2017/03/Avengers-Tony-Stark-Iron-Man-Movie-HD-Wallpaper-2880x1800-840x525.jpg" alt="Image 1" onmouseover="this.src='https://images.unsplash.com/photo-1635863138275-d9b33299680b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aXJvbiUyMG1hbnxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80'" onmouseout="this.src=https://www.wallpapers13.com/wp-content/uploads/2017/03/Avengers-Tony-Stark-Iron-Man-Movie-HD-Wallpaper-2880x1800-840x525.jpg''" ">
+</td></tr></table>
+    <!-- Advertisement Videos -->
+    <h2>Advertisements</h2>
+    <table border-color="white"><tr><td>
+    <div id="ads">
+        <video src="C:\Users\aswin\Downloads\Washing Powder Nirma – Historic ad – Edit 1.mp4"  height="350" width="250" autoplay muted></video>
+    </td>
+        <td><video src="C:\Users\aswin\Downloads\ad2.mp4"  height="350" width="250" autoplay muted></video></td>
+        <td><video src="C:\Users\aswin\Downloads\Mentos Evolution.mp4" height="350" width="250" autoplay muted ></video></td>
+    </div>
+    <td>
+        <p>Click the button to display the months in alphabetical order:</p>
+    <button onclick="displayMonthsAlphabetically()">Show Months</button>
+    <p>Alphabetical Order: <span id="month-list"></span></p>
+</tr>
+</table>
+    <!-- Task Schedule -->
+    <table border-color="white">
+    <tr><td>
+    <h2>Task Schedule</h2>
+    <button onclick="displayTask()">Show Task for Today</button>
+    <div id="task"></div>
+    </td> 
+<td>
+    <!-- Link with Alert -->
+   
+</td>
+<td><p>Copyright © Aswin J AM.EN.P2MCA22062</p></td></tr></table>
+    <!-- JavaScript Functions -->
+    <script>
+        
+        function changeBackgroundColor(color) {
+            document.body.style.backgroundColor = color;
+        }
+
+
+        function updateClock() {
+    const now = new Date();
+    const clock = document.getElementById("clock");
+    clock.textContent = now.toLocaleTimeString();
+}
+setInterval(updateClock, 1000);
+updateClock(); 
+        function displayTask() {
+            const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            const today = new Date().getDay();
+            const tasks = {
+                "Sunday": "Relax and recharge.",
+                "Monday": "Start your week with a plan.",
+                "Tuesday": "Focus on important tasks.",
+                "Wednesday": "Midweek check-in and prioritize.",
+                "Thursday": "Wrap up projects.",
+                "Friday": "Prepare for the weekend.",
+                "Saturday": "Enjoy your day off."
+            };
+            const todayTask = tasks[days[today]];
+            document.getElementById("task").textContent = `Task for today (${days[today]}): ${todayTask}`;
+        }
+
+        function showAlert() {
+            const userTitle = prompt("Please enter a title for the page:", "My Page Title");
+            if (userTitle) {
+                document.title = userTitle;
+            }
+            alert("This link was clicked.");
+        }
+
+        function redirectToConstructionPage() {
+            window.location.href = "construction.html"; // Replace "construction.html" with the URL of your construction page
+        }
+
+        // You already have the calculator and quiz functions in the previous response.
+
+
+
+
+          // JavaScript function to display months in alphabetical order
+          function displayMonthsAlphabetically() {
+            // Array of month names
+            var months = [
+                "January", "February", "March", "April",
+                "May", "June", "July", "August",
+                "September", "October", "November", "December"
+            ];
+
+            // Sort the array alphabetically
+            months.sort();
+
+            // Display the sorted months on the page
+            var result = months.join(", ");
+            document.getElementById("month-list").textContent = result;
+        }
+    </script>
+    <script src="scripts1.js"></script>
+</body>
+</html>
