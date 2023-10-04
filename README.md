@@ -79,7 +79,7 @@ github:USERNAME
 ## 3. Create / Upload Your Code / Algorithms
 
 Create/Upload your code in folder following the convention `Add Code Here`
-- Choose an extact lanaguage folder `drop your code`
+- Choose an exact lanaguage folder and `drop your code`
 - Below is `an example` to add file properly
 - You can follow up `any languages`
 ```
