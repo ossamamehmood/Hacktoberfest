@@ -1,7 +1,6 @@
 import tkinter as tk
 import tkinter.font as tkFont
 
-# from trial2 import *
 fr2 = 0
 lb_scorex, lb_scoreo = 0, 0
 scorex, scoreo = 0, 0
