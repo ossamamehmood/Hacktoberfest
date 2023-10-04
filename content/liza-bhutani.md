@@ -10,7 +10,11 @@ Pune / India
 
 ### Interests
 
-- Cloud Computing
+- Cloud Computing 
+
+### Current Role
+
+- Cloud facilitator @GDSC BVP and Cloud Lead @GDSC BVP 
 
 ### Development
 
