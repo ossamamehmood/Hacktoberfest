@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/Aman/Desktop/hacks/Hacktoberfest2023/content/participant",
-      "program": "c:/Users/Aman/Desktop/hacks/Hacktoberfest2023/content/participant/build/Debug/outDebug",
+      "cwd": "e:/Personal/Project/hacktoberfest/Hacktoberfest2023/content/participant",
+      "program": "e:/Personal/Project/hacktoberfest/Hacktoberfest2023/content/participant/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
