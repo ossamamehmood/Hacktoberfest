@@ -1,26 +1,22 @@
 from tkinter import*
 
 def sub():
-	n1= int(e1.get())
-	n2= int(e2.get())
+	n1,n2= int(e1.get()),int(e2.get())
 	res=n1-n2
 	r.set(res)
 
 def add():
-	n1=int(e1.get())
-	n2=int(e2.get())
+	n1,n2= int(e1.get()),int(e2.get())
 	res=n1+n2
 	r.set(res)
 	
 def multiply():
-	n1=int(e1.get())
-	n2=int(e2.get())
+	n1,n2= int(e1.get()),int(e2.get())
 	res=n1*n2
 	r.set(res)
 	
 def divide():
-	n1=int(e1.get())
-	n2=int(e2.get())
+	n1,n2= int(e1.get()),int(e2.get())
 	res=n1/n2
 	r.set(res)
 	
