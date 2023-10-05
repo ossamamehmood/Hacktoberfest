@@ -1,0 +1,56 @@
+// Comments are added so that any beginner would understand the logic of the code.
+#include <unordered_set> // The set is not in order but has unique elements.
+#include <queue> // It works on FIFO principle.
+#include <stdexcept>
+
+class PhoneDirectory {
+public:
+    // Constructor for the PhoneDirectory class.
+    // Initializes the phone directory with 'maxNumbers' available phone numbers.
+    // Complexity: O(maxNumbers)
+    PhoneDirectory(int maxNumbers) {
+        m_maxNumbers = maxNumbers;
+
+        // Initialize available numbers and the number queue.
+        for (int i = 0; i < m_maxNumbers; ++i) {
+            m_availableNumbers.insert(i);    // Mark 'i' as available.
+            m_numberQueue.push(i);           // Add 'i' to the queue.
+        }
+    }
+
+    // Get an available phone number. Returns -1 if no numbers are available.
+    // Complexity: O(1)
+    int get() {
+        if (m_availableNumbers.empty()) {
+            return INVALID_NUMBER;  // No available numbers.
+        }
+        int num = m_numberQueue.front();
+        m_numberQueue.pop();
+        m_availableNumbers.erase(num);  // Mark 'num' as used.
+        return num;
+    }
+
+    // Check if a specific number is available.
+    bool check(int number) {
+        return m_availableNumbers.count(number) > 0;
+    }
+
+    // Release a previously assigned number, making it available again.
+    // Throws exceptions for invalid input.
+    void release(int number) {
+        if (number < 0 || number >= m_maxNumbers) {
+            throw std::out_of_range("Invalid number");  // Handle out-of-range numbers.
+        }
+        if (m_availableNumbers.count(number) == 0) {
+            throw std::invalid_argument("Number is not in use");  // Handle invalid release.
+        }
+        m_availableNumbers.insert(number);  // Mark 'number' as available.
+        m_numberQueue.push(number);         // Add 'number' to the queue.
+    }
+
+private:
+    int m_maxNumbers;                    // Maximum allowed phone numbers.
+    std::unordered_set<int> m_availableNumbers; // Set to track available numbers.
+    std::queue<int> m_numberQueue;        // Queue to manage available numbers.
+    const int INVALID_NUMBER = -1;        // Use a named constant instead of -1.
+};
