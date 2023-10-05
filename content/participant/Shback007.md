@@ -14,7 +14,7 @@ I have a keen interest in two main areas:
 
 ## Projects
 Here are some of the projects I've worked on:
-1. [Project Name](https://shback007.github.io/Tic-Tac-Toe/):The Tic Tac Toe Game is a simple web-based implementation of the classic Tic Tac Toe game. It allows two players to take turns marking 'X' or 'O' on a 3x3 grid. The game determines the winner based on a line of three identical symbols in a row, column, or diagonal, or declares a draw when the grid is filled without a winner.
+1. [Tic-Tac-Toe](https://shback007.github.io/Tic-Tac-Toe/):The Tic Tac Toe Game is a simple web-based implementation of the classic Tic Tac Toe game. It allows two players to take turns marking 'X' or 'O' on a 3x3 grid. The game determines the winner based on a line of three identical symbols in a row, column, or diagonal, or declares a draw when the grid is filled without a winner.
 
 ## GitHub
 You can find more of my work on my GitHub profile:
