@@ -8,8 +8,8 @@ def calculate_pi(number):
 
     for _ in range(number):
         pi += operation * (4.0 / denominator)
-        denominator += 2.0
         operation *= -1.0
+        denominator += 2.0
     return pi
 
 
