@@ -30,7 +30,7 @@
 
 </div>
 
-## INSTRUCTIONS-
+## INSTRUCTION-
 
 - Fork this Repository using the button at the top on right corner.
 - Clone your forked repository to your pc ( git clone "url from clone option.)
@@ -38,8 +38,8 @@
 - Add your profile image in `static/images/` ( use drag and drop option or upload by commands.)
 - Add your profile data in `content/participant/`
 - Add your files (`git add -A`), commit (`git commit -m "added myself"`) and push (`git push origin new-user`)
-- Create a pull request
-- Star this repository
+- Create a pull request.
+- Star this repository.
 
 # How To Make Your First Pull Request
 
@@ -104,7 +104,7 @@ but one project is excluded from hackoctoberfest event then your pull request wi
 then you have remaining 3 valid pull requests if these projects is not excluded.
 If you fail to make 4 pull requests then you can't get digital-swags.
 I will recommend you to make pull request to your own repo which is very very safest side for you..
-keep in mind that repo has hacktoberfest topic..
+keep in mind that repository has hacktoberfest topic..
 '''
 ```
 
