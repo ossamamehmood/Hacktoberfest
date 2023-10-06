@@ -10,6 +10,12 @@
 
 ---
 
+---
+name: Christopher_Tavolazzi
+institution/company: AIECO
+github:ctavolazzi
+---
+
 <details>
   <summary>👨‍💼 My Work & 🌟 Highlights</summary>
 
