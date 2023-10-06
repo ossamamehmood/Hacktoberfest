@@ -12,14 +12,6 @@
   
   </div>
 
-  <div align="center">
-
-<a href="https://github.com/mukulamy/Hacktoberfest2023/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=ossamamehmood/Hacktoberfest2023" />
-</a>
-  
-  </div>
-
 ## This Project Is Perfect For Your First Pull Request
 
 🗣 **Hacktoberfest encourages participation in the open source community, which grows bigger every year.**
@@ -61,26 +53,29 @@ Add a picture picture of your choice in `static/images/`. Accepted files are **p
 static/images/<YOUR-USERNAME>.png
 
 ![owais](https://github.com/syedowaisalishah/Hacktoberfest2023/assets/113125582/29d03bdc-3d4f-42c6-a3ea-15197bd26440)
-
+```
 
 
 ## 2. Add your profile information
 
-Create a markdown file in your folder following the convention `content/participant/<syedowaisalishah>.md`. Ex.
+Create a markdown file in your folder following the convention `content/participant/<your-name>.md`. Ex.
 
 ```
-content/participant/<syedowaisalishah>.md
+  content/participant/syedowaisalishah.md
 ```
+
+
 
 Copy the next template into your file, delete the boilerplate data and fill the information with yours.
 
+
 ```
----
 name: Syed Owais Ali Shah
 institution/company: usman inistitute of technology
-github:[**syedowaisalishah**](https://github.com/syedowaisalishah) 
----
+github:[**syedowaisalishah**](https://github.com/syedowaisalishah)
+
 ```
+
 
 <div align="center">
 <h2> OR </h2>
