@@ -56,19 +56,19 @@ static/images/<YOUR-USERNAME>.png
 
 ## 2. Add your profile information
 
-Create a markdown file in your folder following the convention `content/participant/<YOUR-USERNAME>.md`. Ex.
+Create a markdown file in your folder following the convention `content/participant/<syedowaisalishah>.md`. Ex.
 
 ```
-content/participant/<YOUR-USERNAME>.md
+content/participant/<syedowaisalishah>.md
 ```
 
 Copy the next template into your file, delete the boilerplate data and fill the information with yours.
 
 ```
 ---
-name: YOURNAME
-institution/company: INSTITUTION_NAME
-github:USERNAME
+name: Syed Owais Ali Shah
+institution/company: usman inistitute of technology
+github:syedowaisalishah
 ---
 ```
 
@@ -83,10 +83,10 @@ Create/Upload your code in folder following the convention `Add Code Here`
 - Below is `an example` to add file properly
 - You can follow up `any languages`
 ```
-Add Code Here/PYTHON/<YOUR-FILERNAME>.py
+Add Code Here/verilog/<all_gate_opr>.v
 ```
 ```
-Add Code Here/C++/<YOUR-FILERNAME>.cpp
+Add Code Here/verilog/<test_all_gate_opr>.v
 ```
 You can follow any pathway a `code` or `profile information`
 
