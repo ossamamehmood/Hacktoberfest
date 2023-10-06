@@ -1,0 +1,74 @@
+
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(40, 40, 77);
+            flex-direction: column;
+            
+        }
+        #title{
+            display: flex;
+            justify-content:center ;
+            align-items: center;
+            color: azure;
+            font-size: 5rem;            
+            text-shadow: 2px 2px red;
+            padding-top: 100px;
+        }
+        .set{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            padding-top: 150px;
+            padding-bottom: 150px;
+
+        }
+        .set button{
+            height:100px;
+            width: 100px;
+            box-shadow: 2px 2px 2px rgb(209, 208, 208);
+            color: brown;
+            font-weight: bold;
+            font-size: 3rem;
+            text-shadow: 2px 2px rgb(230, 202, 202);
+        }
+        footer{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            color: azure;
+        }
+        .w{
+            background-size: 100%;
+            background-image: url("images/floor\ tom\ drum.jpg")
+            
+            
+        }
+        .a{
+            background-size: 100%;
+            background-image: url("images/medium\ tom\ drum.jpg ")
+        }
+        .s{
+            background-size: 100%;
+            background-image: url("images/small\ tom\ drum.jpg")
+        }
+        .d{
+            background-size: 100%;
+            background-image: url("images/bass.jpg")
+        }
+        .j{
+            background-size: 100%;
+            background-image: url("images/snear\ drum.jpg");
+        }
+        .k{
+            background-size: 100%;
+            background-image: url("images/crash\ cymbal.jpg");
+        }
+        .l{
+            background-size: 100%;
+            background-image: url("images/china\ cymbal.jpg");
+        }
