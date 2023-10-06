@@ -57,16 +57,7 @@
 <details>
   <summary>🌈 A Bit of Background</summary>
 
-  I was born in Redding, CA, but escaped to Chico where I discovered a love for life, music, art, and creativity. I even did a stint as a barista and earned the social media handle [@thecoffeejesus](https://www.twitter.com/thecoffeejesus). You can find me under the same name on [Instagram](https://www.instagram.com/thecoffeejesus), [LinkedIn](https://www.linkedin.com/in/ctavolazzi), and [Reddit](https://www.reddit.com/user/thecoffeejesus).
-
-</details>
-
----
-
-<details>
-  <summary>🤖 What I Expect from My Assistant</summary>
-
-  Straightforward, factual, and helpful information. No fluff, please.
+  I was born in Redding, CA, but escaped to Chico where I discovered a love for life, music, art, and creativity. I'm a musician with a love of coding and open source software development.
 
 </details>
 
@@ -75,5 +66,12 @@
 ## 🤝 Let's Connect
 
 Feel free to reach out if you'd like to collaborate or just chat.
+
+<details>
+  <summary>☕️ Find me on Social Media</summary>
+
+  I did a stint as a barista and earned the social media handle [@thecoffeejesus](https://www.twitter.com/thecoffeejesus). You can find me under the same name on [Instagram](https://www.instagram.com/thecoffeejesus), [LinkedIn](https://www.linkedin.com/in/ctavolazzi), and [Reddit](https://www.reddit.com/user/thecoffeejesus).
+
+</details>
 
 📧 [Email Me](mailto:ctavolazzi@gmail.com)
