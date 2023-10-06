@@ -51,7 +51,8 @@ Add a picture picture of your choice in `static/images/`. Accepted files are **p
 
 ```
 static/images/<YOUR-USERNAME>.png
-```![IMG_20221212_200800_070-1](https://github.com/syedowaisalishah/Hacktoberfest2023/assets/113125582/6733e900-a265-46ef-9a5e-79c2840f6370)
+
+![owais](https://github.com/syedowaisalishah/Hacktoberfest2023/assets/113125582/29d03bdc-3d4f-42c6-a3ea-15197bd26440)
 
 
 
@@ -69,7 +70,7 @@ Copy the next template into your file, delete the boilerplate data and fill the 
 ---
 name: Syed Owais Ali Shah
 institution/company: usman inistitute of technology
-github:syedowaisalishah
+github:[**syedowaisalishah**](https://github.com/syedowaisalishah) 
 ---
 ```
 
