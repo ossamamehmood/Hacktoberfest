@@ -1,5 +1,5 @@
-﻿---
+---
 name: Roopa Dharshini
-institution/company: SRM IST
-github:Rupa-Rd
+institution/company: SRM Institute of Science and Technology
+github: Rupa-Rd
 ---
