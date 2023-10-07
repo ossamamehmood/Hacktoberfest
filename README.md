@@ -84,14 +84,14 @@ github:[**username**](https://github.com/username)
 ## 3. Create / Upload Your Code / Algorithms
 
 Create/Upload your code in the folder following the convention `Add Code Here`
-- Choose an exact language folder and `drop your code`
+- Choose an extact lanaguage folder `drop your code`
 - Below is `an example` to add file properly
 - You can follow up `any languages`
 ```
-Add Code Here/verilog/<all_gate_opr>.v
+Add Code Here/PYTHON/<YOUR-FILERNAME>.py
 ```
 ```
-Add Code Here/verilog/<test_all_gate_opr>.v
+Add Code Here/C++/<YOUR-FILERNAME>.cpp
 ```
 You can follow any pathway a `code` or `profile information`
 
