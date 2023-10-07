@@ -1,5 +1,0 @@
----
-name: Komal Vishwakarma
-institution/company: Gl bajaj institute of technology and management
-github:komi14
----
