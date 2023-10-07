@@ -1,45 +1,25 @@
-/*
-structure of the node of the list is as
-struct Node
-{
-    int data;
-    struct Node* next;
-
-    Node(int x){
-        data = x;
-        next = NULL;
+class Solution {
+    public static int func(int i,int tar,int limit,int dp[][])
+    {
+        if(tar==0)
+        return 1;
+        if(i>=limit)
+        return 0;
+        if(dp[i][tar]!=-1)
+        return dp[i][tar];
+        int l=0;
+        if(tar-i>=0)
+        l=i*func(i,tar-i,limit,dp);
+        int r=func(i+1,tar,limit,dp);
+        return dp[i][tar]=Math.max(l,r);
     }
-};
-*/
-
-class Solution{
-  public:
-    // Should return head of the modified linked list
-     Node *sortedInsert(struct Node* head, int data) {
-        Node* newNode = new Node(data);
-        //before head
-        if(data < head->data){
-            newNode->next = head;
-            head = newNode;
-            return head;
-        }
-        
-        //in between list
-        Node* prev;
-        Node* cur = head->next;
-        prev = head;
-        while(cur){
-            if(data < cur->data){
-                prev->next = newNode;
-                newNode->next = cur;
-                return head;
-            }
-            prev = cur;
-            cur = cur->next;
-        }
-        
-        //after list
-        prev->next = newNode;
-        return head;
+    public int integerBreak(int n) {
+       int dp[][]=new int[n+1][n+1];
+       for(int i[]:dp)
+       {
+           Arrays.fill(i,-1);
+       }
+       return func(1,n,n,dp);
     }
-};
+}
+
