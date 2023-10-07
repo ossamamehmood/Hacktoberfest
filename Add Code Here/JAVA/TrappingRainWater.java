@@ -48,5 +48,5 @@ class Solution {
             trappedwater += (waterlevel - height[i]) * 1;
         }
         return trappedwater;
-    }e
+    }
 }
