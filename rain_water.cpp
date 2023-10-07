@@ -1,43 +1,46 @@
-// C++ implementation of the approach 
-
+// Iterative C++ program to reverse an array 
 #include <bits/stdc++.h> 
 using namespace std; 
 
-// Function to return the maximum 
-// water that can be stored 
-int maxWater(int arr[], int n) 
+/* Function to reverse arr[] from start to end*/
+void rvereseArray(int arr[], int start, int end) 
 { 
-	// To store the maximum water 
-	// that can be stored 
-	int res = 0; 
-
-	// For every element of the array 
-	for (int i = 1; i < n - 1; i++) { 
-
-		// Find the maximum element on its left 
-		int left = arr[i]; 
-		for (int j = 0; j < i; j++) 
-			left = max(left, arr[j]); 
-
-		// Find the maximum element on its right 
-		int right = arr[i]; 
-		for (int j = i + 1; j < n; j++) 
-			right = max(right, arr[j]); 
-
-		// Update the maximum water 
-		res = res + (min(left, right) - arr[i]); 
+	while (start < end) 
+	{ 
+		int temp = arr[start]; 
+		arr[start] = arr[end]; 
+		arr[end] = temp; 
+		start++; 
+		end--; 
 	} 
+}	 
 
-	return res; 
+/* Utility function to print an array */
+void printArray(int arr[], int size) 
+{ 
+for (int i = 0; i < size; i++) 
+cout << arr[i] << " "; 
+
+cout << endl; 
 } 
 
-// Driver code 
+/* Driver function to test above functions */
 int main() 
 { 
-	int arr[] = { 0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1 }; 
+	int arr[] = {1, 2, 3, 4, 5, 6}; 
+	
 	int n = sizeof(arr) / sizeof(arr[0]); 
 
-	cout << maxWater(arr, n); 
-
+	// To print original array 
+	printArray(arr, n); 
+	
+	// Function calling 
+	rvereseArray(arr, 0, n-1); 
+	
+	cout << "Reversed array is" << endl; 
+	
+	// To print the Reversed array 
+	printArray(arr, n); 
+	
 	return 0; 
-}
+} 
