@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class Program {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		int days = scanner.nextInt();
+   
+		int h= days*24;
+   int m=h*60;
+   int s=m*60;
+		//your code goes here
+	 {
+    System.out.println(s);
+}
+	}
+}
+
+
