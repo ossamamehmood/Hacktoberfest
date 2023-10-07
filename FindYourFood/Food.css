@@ -1,0 +1,111 @@
+/* Set the font family and size for the whole document */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+/* Set background color for the page */
+body {
+  background-color: #f7f7f7;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  font-family: "Open Sans", sans-serif;
+  color: #000;
+}
+
+h4{
+  color: #000;
+}
+
+/* Style the header */
+header {
+  background-color: #172d13;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Style the navigation menu */
+nav {
+  display: flex;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #D76F30;
+}
+
+
+/* Style the buttons for selecting food items */
+button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+
+
+  
+  .Food {
+    gap: 20px;
+    padding: 20px;
+    
+  }
+  
+ 
+  .foodite {
+    display: inline-block;
+    margin: 20px;
+    width: 300px;
+  }
+  
+  .card {
+    height: 450px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    overflow: hidden;
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  .container {
+    padding: 2px 16px;
+  }
+  /* Set specific styles for each food item card */
+.foodite {
+  background-color: #e6ffe6;
+}
