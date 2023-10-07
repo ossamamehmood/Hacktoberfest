@@ -1,31 +1,40 @@
-#include <iostream>
-
-void insertionSort(int arr[], int n) {
-    for (int i = 1; i < n; i++) {
-        int key = arr[i];
-        int j = i - 1;
-
-        
-        while (j >= 0 && arr[j] > key) {
-            arr[j + 1] = arr[j];
-            j--;
-        }
-
-        arr[j + 1] = key;
-    }
+#include <bits/stdc++.h>
+using namespace std;
+void print (int *arr, int size)
+{
+  for (int i=0; i<size; i++)
+  {
+    cout << arr[i] << " ";
+  }
+  cout << endl;
 }
-
-int main() {
-    int arr[] = {12, 11, 13, 5, 6};
-    int n = sizeof(arr) / sizeof(arr[0]);
-
-    insertionSort(arr, n);
-
-    std::cout << "Sorted array: ";
-    for (int i = 0; i < n; i++) {
-        std::cout << arr[i] << " ";
+void insertionSort (int *arr, int size)
+{
+  int key, j;
+  for (int i=1; i<size; i++)
+  {
+    key = arr[i];
+    j = i;
+    while (j>0 && arr[j-1]>key)
+    {
+      arr[j] = arr[j-1];
+      j--;
     }
-    std::cout << std::endl;
-
-    return 0;
+    arr[j] = key;
+   }
+}
+int main() 
+{
+  int n;
+  cin >> n;
+  int a[n];
+  for (int i=0; i<n; i++)
+  {
+    cin >> a[i];
+  }
+  cout << "Array before Sorting : ";
+  print(a, n);
+  insertionSort(a, n);
+  cout << "Array after Sorting : ";
+  print(a, n);
 }
