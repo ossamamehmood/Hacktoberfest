@@ -1,1 +1,0 @@
-static/images/jasper1467.jpg[owais](https://avatars.githubusercontent.com/u/33604621?s=400&u=6a53fc5b950b2e1efd1a4f611916359291900a80&v=4)
