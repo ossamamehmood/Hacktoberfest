@@ -1,0 +1,231 @@
+.tooltip{
+    font-family: Roboto, Arial;
+}
+
+.header {
+    height: 70px;
+
+    z-index: 100;
+    display: flex;
+    flex-direction: row;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(240, 240, 240);
+    justify-content: space-between;
+
+    background-color: white;
+}
+  
+.left-section {
+    width: 250px;
+    display: flex;
+    align-items: center;
+}
+
+.menu{
+    margin:0 40px 0 24px;
+    height: 30px;
+    padding: 9px;
+    cursor: pointer;
+}
+
+.menu:hover{
+    background-color: rgb(235, 235, 235);
+    border-radius: 30px;
+}
+
+.yt-logo{
+    height: 27px;
+    cursor: pointer;
+}
+
+.middle-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    margin-left:0 35px 0 70px;
+    max-width: 650px;
+}
+
+.search-bar{
+    width: 0;
+    flex: 1;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 16px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(192, 192, 192);
+    border-radius: 2px;
+    box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
+}
+
+.search-bar::placeholder{
+    font-family: Roboto, Arial;
+    font-size: 16px;
+}
+
+.search-button{
+    height: 44px;
+    width: 66px;
+    background-color: rgb(240, 240, 240);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(192, 192, 192);
+    margin: 0 8px 0 -1px;
+    cursor: pointer;
+    position: relative;
+}
+
+.search-button .tooltip{
+    position: absolute;
+    background-color: rgb(97, 97, 97);
+    color: white;
+    font-size: 12px;
+    padding : 4px 8px;
+    bottom: -30px;
+    border-radius: 2px;
+    opacity: 0;
+    transition: opacity 0.15s;
+}
+
+.search-button:hover .tooltip{
+    opacity: 1;
+}
+
+.search{
+    height: 25px;
+}
+
+.voice-search-button{
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    border-style: none;
+    background-color: rgb(245, 245, 245);
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.voice-search{
+    height: 24px;
+    margin-top: 4px;
+}
+ 
+.voice-search-button .tooltip{
+    position: absolute;
+    background-color: rgb(97, 97, 97);
+    color: white;
+    font-size: 12px;
+    padding: 4px 8px;
+    bottom: -19px;
+    border-radius: 2px;
+    opacity: 0;
+    transition: opacity 0.15s;
+}
+
+.voice-search-button:hover .tooltip{
+    opacity: 1;
+}
+
+.right-section {
+    display: flex;
+    width: 350px;
+    align-items: center;
+    justify-content: space-around;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.upload-logo{
+    height: 30px;
+    cursor: pointer;
+}
+
+.upload .tooltip{
+    position: absolute;
+    background-color: rgb(97, 97, 97);
+    color: white;
+    font-size: 12px;
+    padding: 4px 8px;
+    bottom: -13px;
+    border-radius: 2px;
+    opacity: 0;
+    transition: opacity 0.15s;
+}
+
+.upload:hover .tooltip{
+    opacity: 1;
+}
+
+.yt-apps-logo{
+    height: 30px;
+    cursor: pointer;
+}
+
+.yt-apps .tooltip{
+    position: absolute;
+    background-color: rgb(97, 97, 97);
+    color: white;
+    font-size: 12px;
+    padding: 4px 8px;
+    bottom: -10px;
+    right: 200px;
+    border-radius: 2px;
+    opacity: 0;
+    transition: opacity 0.15s;
+}
+
+.yt-apps:hover .tooltip{
+    opacity: 1;
+}
+
+.notification{
+    position: relative;
+}
+
+.notification-logo{
+    height: 30px;
+    cursor: pointer;
+}
+
+.notification .tooltip{
+    position: absolute;
+    background-color: rgb(97, 97, 97);
+    color: white;
+    font-size: 12px;
+    padding: 4px 8px;
+    bottom: -30px;
+    left: -10px;
+    border-radius: 2px;
+    opacity: 0;
+    transition: opacity 0.15s;
+}
+
+.notification:hover .tooltip{
+    opacity: 1;
+}
+
+.notification-count{
+    padding: 2px 5px;
+    border-radius: 10px;
+    font-size: 11px;
+    background-color: rgb(200, 0, 0);
+    color: white;
+    font-family: Roboto,Arial;
+
+    position: absolute;
+    top: -2px;
+    right: -5px;
+}
+
+.user-channel-logo{
+    height: 32px;
+    cursor: pointer;
+}
