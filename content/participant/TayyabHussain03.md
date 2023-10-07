@@ -1,3 +1,5 @@
+---
 name: Tayyab Hussain
-institution: NED University Pakistan
-github: TayyabHussain03
+institution: NED University of Engineering and Technology
+github:tayyabhussain03
+---

@@ -1,3 +1,3 @@
-name: Ishaanvi reet
-institution/company: J.C. Boseuniversity of science and technology
-github:[**IshaanviReet**](https://github.com/IshaanviReet)
+name: Ishaanvi Reet
+institution/company: J.C. Bose university of Science and technology, ymmca
+github:[**IshaanviReet**](https://github.com/ishaanvireet)
