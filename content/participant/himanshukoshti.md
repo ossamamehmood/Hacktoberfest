@@ -1,5 +1,5 @@
 ---
 name: Himanshu Koshti
 institution/company: Samrat Ashok Technological Institute
-github: https://github.com/himanshukoshti
+github: [**himanshukoshti**]https://github.com/himanshukoshti
 ---
