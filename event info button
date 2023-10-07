@@ -1,0 +1,92 @@
+fixes #5970
+
+font-family: 'Nunito', sans-serif;
+background-color: #ffffff;
+/* White background */
+margin: 0;
+padding: 0;
+background-image: url(techtitans/event-info-background.jpg);
+background-size: cover;
+background-position: center;
+}
+
+.event-container {
+max-width: 800px;
+margin: 0 auto;
+padding: 20px;
+background-color: rgba(255, 255, 255, 0.8);
+/* Semi-transparent white background */
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.event-image {
+max-width: 100%;
+border-radius: 10px;
+box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.event-details {
+margin-top: 20px;
+}
+
+.event-name {
+font-size: 24px;
+font-family: 'Nunito', sans-serif;
+margin-bottom: 10px;
+color: #1d62b9;
+/* Dark blue for headings */
+}
+
+.event-description {
+font-size: 16px;
+font-family: 'Nunito', sans-serif;
+color: #666;
+}
+
+/* Style topics with different color /
+.topic {
+font-size: 20px;
+font-family: 'Nunito', sans-serif;
+color: #ff6b6b;
+/ Coral color for topics */
+margin-top: 15px;
+}
+
+/* Add more styles as needed /
+/* Add this to your existing style.css file */
+.event-info-button {
+  background-color: cyan;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  font-family: 'Nunito', sans-serif;
+}
+/* Added event info button to your code */
+
+.event-info-button:hover {
+background-color: #00a3cc;
+/* Darker shade of cyan on hover */
+}
+
+/* Inside your "event-info.css" file */
+.register-button {
+background-color: cyan;
+color: white;
+border: none;
+padding: 10px 20px;
+cursor: pointer;
+}
+
+.popup {
+display: flex;
+justify-content: center;
+text-align: center;
+}
