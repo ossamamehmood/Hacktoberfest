@@ -14,7 +14,7 @@
 
 ## This Project Is Perfect For Your First Pull Request
 
-🗣 **Hacktoberfest encourages participation in the open source community, which grows bigger every year.**
+🗣 **Hacktoberfest encourages participation in the open-source community, which grows bigger every year.**
 
 📢 **Register [here](https://hacktoberfest.digitalocean.com) for Hacktoberfest and make four pull requests (PRs) between October 1st-31st to grab free DIGITAL-SWAGS 🔥.**
 
@@ -32,12 +32,12 @@
 
 ## INSTRUCTION-
 
-- Fork this Repository using the button at the top on right corner.
-- Clone your forked repository to your pc ( git clone "url from clone option.)
+- Fork this Repository using the button at the top on the right corner.
+- Clone your forked repository to your PC ( git clone "url from clone option.)
 - Create a new branch for your modifications (ie. `git branch new-user` and check it out `git checkout new-user` or simply do `git checkout -b new-user`)
 - Add your profile image in `static/images/` ( use drag and drop option or upload by commands.)
 - Add your profile data in `content/participant/`
-- Add your files (`git add -A`), commit (`git commit -m "added myself"`) and push (`git push origin new-user`)
+- Add your files (`git add -A`), commit (`git commit -m "added myself"`), and push (`git push origin new-user`)
 - Create a pull request.
 - Star this repository.
 
@@ -47,32 +47,35 @@ Replace `<YOUR-USERNAME>` with your GitHub username in this guide.
 
 ## 1. Add your profile picture to the folder
 
-Add a picture picture of your choice in `static/images/`. Accepted files are **png** and **jpg**, should be squared and minimum size 544x544 pixels. Ex.
+Add a picture of your choice in `static/images/`. Accepted files are **png** and **jpg**, should be squared and minimum size 544x544 pixels. Ex.
 
 ```
 static/images/<YOUR-USERNAME>.png
 
 ![owais](https://github.com/syedowaisalishah/Hacktoberfest2023/assets/113125582/29d03bdc-3d4f-42c6-a3ea-15197bd26440)
-
+```
 
 
 ## 2. Add your profile information
 
-Create a markdown file in your folder following the convention `content/participant/<syedowaisalishah>.md`. Ex.
+Create a markdown file in your folder following the convention `content/participant/<your-name>.md`. Ex.
 
 ```
-content/participant/<syedowaisalishah>.md
+  content/participant/USERNAME.md
 ```
 
-Copy the next template into your file, delete the boilerplate data and fill the information with yours.
+
+
+Copy the next template into your file, delete the boilerplate data, and fill in the information with yours.
+
 
 ```
----
-name: Syed Owais Ali Shah
-institution/company: usman inistitute of technology
-github:[**syedowaisalishah**](https://github.com/syedowaisalishah) 
----
+name: Your Name
+institution/company: Your Company Name or Institute
+github:[**username**](https://github.com/username)
+
 ```
+
 
 <div align="center">
 <h2> OR </h2>
@@ -80,15 +83,15 @@ github:[**syedowaisalishah**](https://github.com/syedowaisalishah)
 
 ## 3. Create / Upload Your Code / Algorithms
 
-Create/Upload your code in folder following the convention `Add Code Here`
-- Choose an exact lanaguage folder and `drop your code`
+Create/Upload your code in the folder following the convention `Add Code Here`
+- Choose an extract language folder `drop your code`
 - Below is `an example` to add file properly
 - You can follow up `any languages`
 ```
-Add Code Here/verilog/<all_gate_opr>.v
+Add Code Here/PYTHON/<YOUR-FILERNAME>.py
 ```
 ```
-Add Code Here/verilog/<test_all_gate_opr>.v
+Add Code Here/C++/<YOUR-FILERNAME>.cpp
 ```
 You can follow any pathway a `code` or `profile information`
 
@@ -98,13 +101,13 @@ You can follow any pathway a `code` or `profile information`
 
 ```py
 '''
-Always make more then 4 pull requests.
-Lets say you have made only 4 pull request to different projects,
+Always make more than 4 pull requests.
+Let's say you have made only 4 pull requests to different projects,
 but one project is excluded from hackoctoberfest event then your pull request will not be counted and 
-then you have remaining 3 valid pull requests if these projects is not excluded.
-If you fail to make 4 pull requests then you can't get digital-swags.
-I will recommend you to make pull request to your own repo which is very very safest side for you..
-keep in mind that repository has hacktoberfest topic..
+then you have the remaining 3 valid pull requests if these projects are not excluded.
+If you fail to make 4 pull requests then you can't get digital swags.
+I will recommend you make a pull request to your own repo which is very very safe for you.
+keep in mind that the repository has hacktoberfest topics.
 '''
 ```
 
@@ -116,6 +119,10 @@ To get approval of the pull request much quicker and faster (`Follow Me`)🚀
 '''
 ```
 
-<tr><td align="center"><a href="https://github.com/ossamamehmood"><kbd><img src="https://avatars3.githubusercontent.com/ossamamehmood?size=100" width="100px;" alt=""/></kbd><br /><sub><b>Ossama Mehmood</b></sub></a><br /></td>
-
-</tr>
+  <a href="https://github.com/ossamamehmood">
+    <kbd>
+      <img src="https://avatars3.githubusercontent.com/ossamamehmood?size=100" width="100px;" alt=""/>
+    </kbd>
+    <br />
+    <sub><b>Ossama Mehmood</b></sub>
+  </a>

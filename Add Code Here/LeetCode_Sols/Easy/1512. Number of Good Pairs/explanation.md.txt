@@ -1,0 +1,13 @@
+Algorithm:
+
+1)Use a count array to store the frequency of each number in the input array.
+2)Iterate through the count array.
+3)For each frequency n, calculate the number of identical pairs as n*(n-1)/2.
+4)Keep adding this to the answer.
+5)Return the answer.
+
+The reason we can calculate the number of identical pairs as n*(n-1)/2 is because we are counting each pair twice. For example, if we have two identical numbers, we can count them as a pair once for each index. But this means that we have counted them twice, so we need to divide by 2 to get the correct number of pairs.
+
+Time complexity: O(n) where n is the length of the input array. We traverse the input array only once to populate the count array. Then we traverse the count array which has size 101. So the overall time complexity is O(n).
+
+Space complexity: O(1) as we use a constant size count array.

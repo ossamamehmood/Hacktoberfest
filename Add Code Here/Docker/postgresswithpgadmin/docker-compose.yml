@@ -1,0 +1,24 @@
+version: '3.1'
+
+services:
+  db:
+    container_name: postgresslocal
+    image: postgres
+    restart: on-failure
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin123
+      PGPASSWORD: admin123
+    ports:
+      - 5432:5432
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    restart: on-failure
+    environment:
+      PGADMIN_DEFAULT_EMAIL: fake@example.com
+      PGADMIN_DEFAULT_PASSWORD: Admin123
+    ports:
+      - 9443:443
+      - 9001:80
+  

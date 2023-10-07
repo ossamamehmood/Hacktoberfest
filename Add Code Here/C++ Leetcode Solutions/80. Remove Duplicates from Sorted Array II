@@ -1,0 +1,26 @@
+class Solution {
+public:
+    int removeDuplicates(vector<int>& nums) {
+        // GENERAL SOLUTION FOR REMOVE DUPLICATES
+        // max_dup represents the maximum number of duplicates that can be kept
+        int i{1},j{1},count{1},max_dup{2};
+        bool flag{true};
+        while(i<nums.size()){
+            if(nums[i] == nums[i-1]){
+                if(count<max_dup){
+                    nums[j] = nums[i];
+                    j++;
+                }
+                count++;
+            }else{
+                nums[j] = nums[i];
+                j++;
+                count = 1;
+            }
+
+            i++;
+        }
+
+        return j;
+    }
+};
