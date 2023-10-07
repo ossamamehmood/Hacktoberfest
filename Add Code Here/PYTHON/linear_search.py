@@ -1,18 +1,15 @@
-def linear_Search(list1, n, key):  
-  
-    # Searching list1 sequentially  
-    for i in range(0, n):  
-        if (list1[i] == key):  
-            return i  
-    return -1  
-  
-  
-list1 = [1 ,3, 5, 4, 7, 9]  
-key = 7  
-  
-n = len(list1)  
-res = linear_Search(list1, n, key)  
-if(res == -1):  
-    print("Element not found")  
-else:  
-    print("Element found at index: ", res)  
+def linear_search(arr, target):
+    for i in range(len(arr)):
+        if arr[i] == target:
+            return i  # Return the index where the target element is found
+    return -1  # Return -1 if the target element is not in the list
+
+# Example usage:
+my_list = [10, 23, 45, 7, 15, 56, 89]
+target_element = 15
+result = linear_search(my_list, target_element)
+
+if result != -1:
+    print(f"Element {target_element} found at index {result}")
+else:
+    print(f"Element {target_element} not found in the list")

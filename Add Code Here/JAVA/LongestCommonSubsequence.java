@@ -1,38 +1,47 @@
-import java.util.*;
-public class Solution 
-{
-    public static int longcommonsequence(int index1,int index2,String a,String b,int[][]dp)
-    {
-        //Base Case
-        if(index1<0 || index2<0)
-        { 
-            return 0;
-        }
-        if(dp[index1][index2]!=-1)
-        {
-            return dp[index1][index2];
-        }
-        //Match Condition
-        if(a.charAt(index1)==b.charAt(index2))
-        {
-            return dp[index1][index2]=1+longcommonsequence(index1-1,index2-1,a,b,dp);
-        }
-        
-        //Not Match Condition
-        
-        return dp[index1][index2]=0+Math.max(longcommonsequence(index1-1,index2,a,b,dp),longcommonsequence(index1,index2-1,a,b,dp));
-    }
-    public static int lcs(String s, String t) 
-    {
-        //Your code goes here
-        //Dp Solution
-        //Match and Dont Match Concept
-        int[][]dp=new int[s.length()][t.length()];
-        for (int i = 0; i < s.length(); i++) 
-        {
-            Arrays.fill(dp[i], -1);
-        }
-        return longcommonsequence(s.length()-1,t.length()-1,s,t,dp);
-    }
+class Solution {
+    public int longestCommonSubsequence(String text1, String text2) {
 
+        int n1 = text1.length();
+        int n2 = text2.length();
+
+
+
+            int dp[][] = new int[n1+1][n2+1];
+
+           
+            for(int i=0; i<n1; i++){
+                for(int j=0; j<n2; j++){
+                    if(i == 0 || j == 0){
+                        dp[i][j] = 0;
+                    }
+                }
+            }
+
+           
+
+            for(int i=1; i<n1+1; i++){
+                for(int j=1; j<n2+1; j++){
+
+                    
+
+                    if(text1.charAt(i-1) == text2.charAt(j-1)){
+                        dp[i][j] = dp[i-1][j-1] + 1;
+                    }
+
+                    
+
+                    else{
+
+                        int ans1 = dp[i-1][j];
+                        int ans2 = dp[i][j-1];
+
+                        dp[i][j] = Math.max(ans1, ans2);
+ 
+                    }
+                }
+            }
+
+            return dp[n1][n2];
+        
+    }
 }

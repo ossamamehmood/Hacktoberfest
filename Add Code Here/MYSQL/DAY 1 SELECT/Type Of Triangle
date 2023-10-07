@@ -1,1 +1,0 @@
-select case when A=B and B=C and A=C then 'Equilateral' when (A=B or B=C or A=C) and ((A+B>C) and (B+C>A) and (C+A>B)) then 'Isosceles' when (A!=B and B!=C and C!=A) and ((A+B>C) and (B+C>A) and (C+A>B)) then 'Scalene' else 'Not A Triangle' end from triangles;

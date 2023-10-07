@@ -1,4 +1,0 @@
-name = input("Enter your Name ")
-age = int(input("Enter your age "))
-x = (100 - age) + 2022
-print("You will be 100 years old after", x, "years")

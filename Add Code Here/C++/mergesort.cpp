@@ -1,82 +1,104 @@
+// C++ program for Merge Sort
 #include <bits/stdc++.h>
-#define vi vector<int>
 using namespace std;
-void merge(vi &v,int e,int b,int a,int c,int r)
+
+// Merges two subarrays of array[].
+// First subarray is arr[begin..mid]
+// Second subarray is arr[mid+1..end]
+void merge(int array[], int const left, int const mid,
+		int const right)
 {
-    vi v1,v2,v3,v4;
-    for(int i=0;i<b-e+1;i++)
-    v1.push_back(v[e+i]);
-    for(int j=0;j<a-b;j++)
-    v2.push_back(v[b+j+1]);
-    for(int j=0;j<c-a;j++)
-    v3.push_back(v[j+a+1]);
-    for(int j=0;j<r-c;j++)
-    v4.push_back(v[c+j+1]);
+	int const subArrayOne = mid - left + 1;
+	int const subArrayTwo = right - mid;
 
+	// Create temp arrays
+	auto *leftArray = new int[subArrayOne],
+		*rightArray = new int[subArrayTwo];
 
-    v1.push_back(INT_MAX);
-    v2.push_back(INT_MAX);
-    v3.push_back(INT_MAX);
-    v4.push_back(INT_MAX);
+	// Copy data to temp arrays leftArray[] and rightArray[]
+	for (auto i = 0; i < subArrayOne; i++)
+		leftArray[i] = array[left + i];
+	for (auto j = 0; j < subArrayTwo; j++)
+		rightArray[j] = array[mid + 1 + j];
 
-    int i=0,j=0,k=0,l=0;
-    vector<int> x;
-    while(i<v1.size() && j<v2.size() && k<v3.size() && l<v4.size())
-    {
-        if(v1[i]==INT_MAX && v2[j]==INT_MAX && v3[k]==INT_MAX  && v4[l]==INT_MAX)
-        break;
-        else if(v1[i]<v2[j] && v1[i]<v3[k] && v1[i]<v4[l])
-       { x.push_back(v1[i]);
-i++;
-       }
-        else if(v1[i]>v2[j] && v2[j]<v3[k] && v2[j]<v4[l])
-      {  x.push_back(v2[j]);
-j++;
-      }
-      else if(v1[i]>v3[k] && v2[j]>v3[k] && v4[l]>v3[k])
-      {
-        x.push_back(v3[k]);
-        k++;
+	auto indexOfSubArrayOne = 0, indexOfSubArrayTwo = 0;
+	int indexOfMergedArray = left;
 
-      }
-      else
-      {
-        x.push_back(v4[l]);
-        l++;
-      }
+	// Merge the temp arrays back into array[left..right]
+	while (indexOfSubArrayOne < subArrayOne
+		&& indexOfSubArrayTwo < subArrayTwo) {
+		if (leftArray[indexOfSubArrayOne]
+			<= rightArray[indexOfSubArrayTwo]) {
+			array[indexOfMergedArray]
+				= leftArray[indexOfSubArrayOne];
+			indexOfSubArrayOne++;
+		}
+		else {
+			array[indexOfMergedArray]
+				= rightArray[indexOfSubArrayTwo];
+			indexOfSubArrayTwo++;
+		}
+		indexOfMergedArray++;
+	}
 
-    }
-  
-   for(int i=0;i<x.size();i++)
-   {
-    v[e+i]=x[i];
+	// Copy the remaining elements of
+	// left[], if there are any
+	while (indexOfSubArrayOne < subArrayOne) {
+		array[indexOfMergedArray]
+			= leftArray[indexOfSubArrayOne];
+		indexOfSubArrayOne++;
+		indexOfMergedArray++;
+	}
 
-   }
+	// Copy the remaining elements of
+	// right[], if there are any
+	while (indexOfSubArrayTwo < subArrayTwo) {
+		array[indexOfMergedArray]
+			= rightArray[indexOfSubArrayTwo];
+		indexOfSubArrayTwo++;
+		indexOfMergedArray++;
+	}
+	delete[] leftArray;
+	delete[] rightArray;
 }
-void mergesort(vi &v,int l,int h)
+
+// begin is for left index and end is right index
+// of the sub-array of arr to be sorted
+void mergeSort(int array[], int const begin, int const end)
 {
-    if(l<h)
-    {
-        int a=(l+h)/2;
-        int b=(a+l)/2;
-        int c=(a+h)/2;
+	if (begin >= end)
+		return;
 
-       
-        mergesort(v,l,b);
-        mergesort(v,b+1,a);
-        mergesort(v,a+1,c);
-        mergesort(v,c+1,h);
-        merge(v,l,b,a,c,h);
-
-    }
+	int mid = begin + (end - begin) / 2;
+	mergeSort(array, begin, mid);
+	mergeSort(array, mid + 1, end);
+	merge(array, begin, mid, end);
 }
-int main(int argc, char const *argv[])
+
+// UTILITY FUNCTIONS
+// Function to print an array
+void printArray(int A[], int size)
 {
-
-vector<int> v={23,1,100,987,-100,0,56};
-mergesort(v,0,v.size()-1);
-for(int i=0;i<v.size();i++)
-cout<<v[i]<<" ";
-
-    return 0;
+	for (int i = 0; i < size; i++)
+		cout << A[i] << " ";
+	cout << endl;
 }
+
+// Driver code
+int main()
+{
+	int arr[] = { 12, 11, 13, 5, 6, 7 };
+	int arr_size = sizeof(arr) / sizeof(arr[0]);
+
+	cout << "Given array is \n";
+	printArray(arr, arr_size);
+
+	mergeSort(arr, 0, arr_size - 1);
+
+	cout << "\nSorted array is \n";
+	printArray(arr, arr_size);
+	return 0;
+}
+
+// This code is contributed by Mayank Tyagi
+// This code was revised by Joshua Estes

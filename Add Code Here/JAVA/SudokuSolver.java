@@ -1,110 +1,88 @@
-/*=======Implementation of Sudoku solver in JAVA========*/
-
-
 public class SudokuSolver {
+
     public static void main(String[] args) {
-        int[][] board = new int[][]{
-                {3, 0, 6, 5, 0, 8, 4, 0, 0},
-                {5, 2, 0, 0, 0, 0, 0, 0, 0},
-                {0, 8, 7, 0, 0, 0, 0, 3, 1},
-                {0, 0, 3, 0, 1, 0, 0, 8, 0},
-                {9, 0, 0, 8, 6, 3, 0, 0, 5},
-                {0, 5, 0, 0, 9, 0, 6, 0, 0},
-                {1, 3, 0, 0, 0, 0, 2, 5, 0},
-                {0, 0, 0, 0, 0, 0, 0, 7, 4},
-                {0, 0, 5, 2, 0, 6, 3, 0, 0}
+        int[][] sudokuBoard = {
+                {5, 3, 0, 0, 7, 0, 0, 0, 0},
+                {6, 0, 0, 1, 9, 5, 0, 0, 0},
+                {0, 9, 8, 0, 0, 0, 0, 6, 0},
+                {8, 0, 0, 0, 6, 0, 0, 0, 3},
+                {4, 0, 0, 8, 0, 3, 0, 0, 1},
+                {7, 0, 0, 0, 2, 0, 0, 0, 6},
+                {0, 6, 0, 0, 0, 0, 2, 8, 0},
+                {0, 0, 0, 4, 1, 9, 0, 0, 5},
+                {0, 0, 0, 0, 8, 0, 0, 7, 9}
         };
 
-        if (solve(board)) {
-            display(board);
+        if (solveSudoku(sudokuBoard)) {
+            printSudoku(sudokuBoard);
         } else {
-            System.out.println("Cannot solve");
+            System.out.println("No solution exists.");
         }
-
     }
 
-    static boolean solve(int[][] board) {
-        int n = board.length;
-        int row = -1;
-        int col = -1;
+    private static boolean solveSudoku(int[][] board) {
+        for (int row = 0; row < 9; row++) {
+            for (int col = 0; col < 9; col++) {
+                if (board[row][col] == 0) {
+                    for (int num = 1; num <= 9; num++) {
+                        if (isSafe(board, row, col, num)) {
+                            board[row][col] = num;
 
-        boolean emptyLeft = true;
+                            if (solveSudoku(board)) {
+                                return true;
+                            }
 
-        // this is how we are replacing the r,c from arguments
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                if (board[i][j] == 0) {
-                    row = i;
-                    col = j;
-                    emptyLeft = false;
-                    break;
+                            board[row][col] = 0;
+                        }
+                    }
+                    return false;
                 }
             }
-            // if you found some empty element in row, then break
-            if (emptyLeft == false) {
-                break;
+        }
+        return true;
+    }
+
+    private static boolean isSafe(int[][] board, int row, int col, int num) {
+        return !usedInRow(board, row, num) &&
+                !usedInColumn(board, col, num) &&
+                !usedInBox(board, row - row % 3, col - col % 3, num);
+    }
+
+    private static boolean usedInRow(int[][] board, int row, int num) {
+        for (int col = 0; col < 9; col++) {
+            if (board[row][col] == num) {
+                return true;
             }
         }
+        return false;
+    }
 
-        if (emptyLeft == true) {
-            return true;
-            // soduko is solved
+    private static boolean usedInColumn(int[][] board, int col, int num) {
+        for (int row = 0; row < 9; row++) {
+            if (board[row][col] == num) {
+                return true;
+            }
         }
+        return false;
+    }
 
-        // backtrack
-        for (int number = 1; number <= 9; number++) {
-            if (isSafe(board, row, col, number)) {
-                board[row][col] = number;
-                if (solve(board)) {
-                    // found the answer
+    private static boolean usedInBox(int[][] board, int startRow, int startCol, int num) {
+        for (int row = 0; row < 3; row++) {
+            for (int col = 0; col < 3; col++) {
+                if (board[row + startRow][col + startCol] == num) {
                     return true;
-                } else {
-                    // backtrack
-                    board[row][col] = 0;
                 }
             }
         }
         return false;
     }
 
-    private static void display(int[][] board) {
-        for(int[] row : board) {
-            for(int num : row) {
-                System.out.print(num + " ");
+    private static void printSudoku(int[][] board) {
+        for (int row = 0; row < 9; row++) {
+            for (int col = 0; col < 9; col++) {
+                System.out.print(board[row][col] + " ");
             }
             System.out.println();
         }
-    }
-
-
-    static boolean isSafe(int[][] board, int row, int col, int num) {
-        // check the row
-        for (int i = 0; i < board.length; i++) {
-            // check if the number is in the row
-            if (board[row][i] == num) {
-                return false;
-            }
-        }
-
-        // check the col
-        for (int[] nums : board) {
-            // check if the number is in the col
-            if (nums[col] == num) {
-                return false;
-            }
-        }
-
-        int sqrt = (int)(Math.sqrt(board.length));
-        int rowStart = row - row % sqrt;
-        int colStart = col - col % sqrt;
-
-        for (int r = rowStart; r < rowStart + sqrt; r++) {
-            for (int c = colStart; c < colStart + sqrt; c++) {
-                if (board[r][c] == num) {
-                    return false;
-                }
-            }
-        }
-        return true;
     }
 }

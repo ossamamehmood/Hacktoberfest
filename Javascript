@@ -1,0 +1,34 @@
+<!-- MATH WITH JAVASCRIPT -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MATH</title>
+</head>
+
+<body>
+    <script>
+        let atBats = 300;
+        let hits = 65;
+        let singles = 50;
+        let doubles = 5;
+        let triples = 3;
+        let homeruns = 7;
+        let walks = 22;
+
+        let BattingAverage = hits / (atBats - walks);
+        let OnBasePercentage = (hits + walks) / atBats;
+        let TotalBases = singles + (doubles * 2) + (triples * 3) + (homeruns * 4);
+
+        console.log(BattingAverage);
+        console.log(OnBasePercentage);
+        console.log(TotalBases);
+
+    </script>
+</body>
+
+</html>

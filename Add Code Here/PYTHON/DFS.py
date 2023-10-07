@@ -1,37 +1,57 @@
-class Node:
-    def __init__(self,data):
-        self.left = None;
-        self.right = None;
-        self.data = data;
-            
-    def preorder(self,root):
-        if root is None:
-            return
-        print (root.data)
-        return self.preorder(root.left), self.preorder(root.right)
-    
-    def inorder(self,root):
-        if root is None:
-            return
-        if self.inorder(root.left)!= None:
-            print(self.inorder(root.left)) 
-        print(root.data)  
-        if self.inorder(root.right):            
-            print(self.inorder(root.right))   
-            
-    def postorder(self,root):
-        if root is None:
-            return
-        if self.inorder(root.left)!= None:
-            print(self.inorder(root.left))  
-        if self.inorder(root.right):            
-            print(self.inorder(root.right)) 
-        print(root.data) 
+from collections import defaultdict
 
-root = Node(1)
-root.left = Node(2)
-root.right = Node(3)
+class Graph:
 
-root.preorder(root)
-root.inorder(root)
-root.postorder(root)
+	def __init__(self):
+
+		# default dictionary to store graph
+		self.graph = defaultdict(list)
+
+	# function to add an edge to graph
+	def addEdge(self,u,v):
+		self.graph[u].append(v)
+
+	# A function used by DFS
+	def DFSUtil(self, v, visited):
+
+		# Mark the current node as visited and print it
+		visited[v]= True
+		print v,
+
+		# Recur for all the vertices adjacent to
+		# this vertex
+		for i in self.graph[v]:
+			if visited[i] == False:
+				self.DFSUtil(i, visited)
+
+
+	# The function to do DFS traversal. It uses
+	# recursive DFSUtil()
+	def DFS(self):
+		V = len(self.graph) #total vertices
+
+		# Mark all the vertices as not visited
+		visited =[False]*(V)
+
+		# Call the recursive helper function to print
+		# DFS traversal starting from all vertices one
+		# by one
+		for i in range(V):
+			if visited[i] == False:
+				self.DFSUtil(i, visited)
+
+
+# Driver code
+if __name__ == '__main__':
+	# Create a graph 
+	g = Graph()
+	g.addEdge(0, 1)
+	g.addEdge(0, 2)
+	g.addEdge(1, 2)
+	g.addEdge(2, 0)
+	g.addEdge(2, 3)
+	g.addEdge(3, 3)
+	
+	print "Following is Depth First Traversal"
+	g.DFS()
+

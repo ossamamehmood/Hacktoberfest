@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="theme-color" content="#3F51B5">
+
+    <title>Coin Flipper</title>
+    
+    <meta name="description" content="A simple coin flipper.">
+
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <style>
+    
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20em;
+            height: 100vh;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        .container .coin {
+            cursor: pointer;
+            background-color: transparent;
+            border: 0;
+            -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+        }
+        
+        .container .coin:focus {
+            outline: 0;
+        }
+        
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <button class="coin">🌕</button>
+    </div>
+
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+
+    <script>
+        if (window.matchMedia("(prefers-color-scheme: dark)").matches || window.matchMedia("(-ms-high-contrast: white-on-black)").matches || new Date().getHours() >= 6 && new Date().getHours() >= 20) $("body").css("background-color", "#263238");
+        var sides = ["🌑", "🌒", "🌓", "🌔", "🌕", "🌖", "🌗", "🌘"];
+
+        var delay = function delay(ms, cb) {
+            return setTimeout(cb, ms);
+        };
+
+        Array.prototype.next = function(item) {
+            var currentIndex = this.indexOf(item);
+            if (currentIndex === -1) return undefined;
+            if (this.length - currentIndex === 1) return this[0];
+            return this[currentIndex + 1];
+        };
+
+        Array.prototype.back = function(item) {
+            var currentIndex = this.indexOf(item);
+            if (currentIndex === -1) return undefined;
+            if (currentIndex === 0) return this[this.length - 1];
+            return this[currentIndex - 1];
+        };
+
+        function randint(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        $(".coin").click(function() {
+            flipCoin(randint(3, 10));
+        });
+
+        function flipCoin(cycles) {
+            $(".coin").attr("disabled", "disabled");
+            $(".coin").css("cursor", "auto");
+            var direction = randint(1, 2) === 1 ? "back" : "next";
+            var total = cycles * 4;
+            var done = 0;
+            var emojiLoop = setInterval(function() {
+                $(".coin").html(sides[direction]($(".coin").html()));
+                done++;
+
+                if (done === total) {
+                    clearInterval(emojiLoop);
+                    $(".coin").attr("disabled", false);
+                    $(".coin").css("cursor", "pointer");
+                }
+            }, 50);
+        }
+        
+        flipCoin(10);
+    </script>
+
+</body>
+
+</html>

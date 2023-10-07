@@ -1,5 +1,0 @@
-num = int(input("Enter a number "))
-if (num % 2 == 0):
-    print("The Entered number is even")
-else:
-    print("The Entered number is odd")

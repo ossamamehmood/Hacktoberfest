@@ -1,5 +1,5 @@
 ---
 name: Aachal Pardeshi
-institution/company: S.S.C college Junnar, pune.
+institution/company: IICMR, Nigdi, Pune.
 github: aachal28
 ---

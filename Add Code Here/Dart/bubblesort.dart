@@ -1,32 +1,27 @@
-import 'dart:math' show Random;
+void bubbleSort(List<int> arr) {
+  int n = arr.length;
+  bool swapped;
 
-//main function,the program start
-void main() {
-  final seed = 100, rnd = Random(), length = 100;
-  var list =
-      List<int>.generate(length, (i) => rnd.nextInt(seed), growable: false);
-  print('before sorting:');
-  print(list);
-  print('---------------------------------------------');
-  print('After sorting:');
-  bubbleSort(list);
-  print(list);
-}
-
-void bubbleSort(List<int> a) {
-  for (var i = 0, length = a.length; i < length - 1; ++i) {
-    bool swapped = false;
-    for (var j = 0; j < length - 1 - i; ++j) {
-      if (a[j] > a[j + 1]) {
-        /* swap */
-        var temp = a[j];
-        a[j] = a[j + 1];
-        a[j + 1] = temp;
+  do {
+    swapped = false;
+    for (int i = 0; i < n - 1; i++) {
+      if (arr[i] > arr[i + 1]) {
+        // Swap arr[i] and arr[i + 1]
+        int temp = arr[i];
+        arr[i] = arr[i + 1];
+        arr[i + 1] = temp;
         swapped = true;
       }
     }
-    if (!swapped) {
-      break; /* array has been sorted */
-    }
-  }
+  } while (swapped);
+}
+
+void main() {
+  List<int> numbers = [64, 34, 25, 12, 22, 11, 90];
+
+  print("Original list: $numbers");
+
+  bubbleSort(numbers);
+
+  print("Sorted list: $numbers");
 }
