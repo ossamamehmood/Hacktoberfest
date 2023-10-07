@@ -14,7 +14,7 @@
 
 ## This Project Is Perfect For Your First Pull Request
 
-🗣 **Hacktoberfest encourages participation in the open source community, which grows bigger every year.**
+🗣 **Hacktoberfest encourages participation in the open-source community, which grows bigger every year.**
 
 📢 **Register [here](https://hacktoberfest.digitalocean.com) for Hacktoberfest and make four pull requests (PRs) between October 1st-31st to grab free DIGITAL-SWAGS 🔥.**
 
@@ -32,12 +32,12 @@
 
 ## INSTRUCTION-
 
-- Fork this Repository using the button at the top on right corner.
-- Clone your forked repository to your pc ( git clone "url from clone option.)
+- Fork this Repository using the button at the top on the right corner.
+- Clone your forked repository to your PC ( git clone "url from clone option.)
 - Create a new branch for your modifications (ie. `git branch new-user` and check it out `git checkout new-user` or simply do `git checkout -b new-user`)
 - Add your profile image in `static/images/` ( use drag and drop option or upload by commands.)
 - Add your profile data in `content/participant/`
-- Add your files (`git add -A`), commit (`git commit -m "added myself"`) and push (`git push origin new-user`)
+- Add your files (`git add -A`), commit (`git commit -m "added myself"`), and push (`git push origin new-user`)
 - Create a pull request.
 - Star this repository.
 
@@ -84,7 +84,7 @@ github:[**username**](https://github.com/username)
 ## 3. Create / Upload Your Code / Algorithms
 
 Create/Upload your code in the folder following the convention `Add Code Here`
-- Choose an extact lanaguage folder `drop your code`
+- Choose an extract language folder `drop your code`
 - Below is `an example` to add file properly
 - You can follow up `any languages`
 ```
@@ -119,7 +119,6 @@ To get approval of the pull request much quicker and faster (`Follow Me`)🚀
 '''
 ```
 
-<div align="center">
   <a href="https://github.com/ossamamehmood">
     <kbd>
       <img src="https://avatars3.githubusercontent.com/ossamamehmood?size=100" width="100px;" alt=""/>
@@ -127,5 +126,3 @@ To get approval of the pull request much quicker and faster (`Follow Me`)🚀
     <br />
     <sub><b>Ossama Mehmood</b></sub>
   </a>
-</div>
-
