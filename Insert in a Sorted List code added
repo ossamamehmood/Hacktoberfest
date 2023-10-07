@@ -1,0 +1,45 @@
+/*
+structure of the node of the list is as
+struct Node
+{
+    int data;
+    struct Node* next;
+
+    Node(int x){
+        data = x;
+        next = NULL;
+    }
+};
+*/
+
+class Solution{
+  public:
+    // Should return head of the modified linked list
+     Node *sortedInsert(struct Node* head, int data) {
+        Node* newNode = new Node(data);
+        //before head
+        if(data < head->data){
+            newNode->next = head;
+            head = newNode;
+            return head;
+        }
+        
+        //in between list
+        Node* prev;
+        Node* cur = head->next;
+        prev = head;
+        while(cur){
+            if(data < cur->data){
+                prev->next = newNode;
+                newNode->next = cur;
+                return head;
+            }
+            prev = cur;
+            cur = cur->next;
+        }
+        
+        //after list
+        prev->next = newNode;
+        return head;
+    }
+};
