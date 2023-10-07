@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="mainBox">
+        <h1>SUDOKU SOLVER</h1>
+        <div id="mainGrid"></div>
+      </div>
+
+      <div class="inputBox">
+        <div>
+          <textarea name="input" id="input" cols="16" rows="9"></textarea>
+        </div>
+        <div>
+          <div class="delayContainer">
+            <p>SPEED</p>
+            <div class="delayBox">
+              <div class="delayBar"></div>
+              <div class="delayButton"></div>
+            </div>
+          </div>
+          <button class="submit" onclick="setInit()">Submit</button>
+          <button class="solve" onclick="runSolve()">Solve</button>
+          <button class="reset" onclick="reset()">Reset</button>
+          
+        </div>
+      </div>
+    </div>
+
+
+    <div class="modal">
+      <h1 class="popUp">
+          Solved
+      </h1>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
