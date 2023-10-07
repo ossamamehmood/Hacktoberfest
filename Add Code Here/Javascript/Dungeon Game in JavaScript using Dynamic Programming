@@ -1,0 +1,44 @@
+function calculateMinimumHP(dungeon) {
+    const m = dungeon.length;
+    const n = dungeon[0].length;
+
+    // Create a 2D DP array to store minimum health required
+    const dp = new Array(m);
+
+    for (let i = 0; i < m; i++) {
+        dp[i] = new Array(n);
+    }
+
+    // Initialize the bottom-right cell
+    dp[m - 1][n - 1] = Math.max(1, 1 - dungeon[m - 1][n - 1]);
+
+    // Fill the last row and last column of the DP table
+    for (let i = m - 2; i >= 0; i--) {
+        dp[i][n - 1] = Math.max(dp[i + 1][n - 1] - dungeon[i][n - 1], 1);
+    }
+    for (let j = n - 2; j >= 0; j--) {
+        dp[m - 1][j] = Math.max(dp[m - 1][j + 1] - dungeon[m - 1][j], 1);
+    }
+
+    // Fill the rest of the DP table
+    for (let i = m - 2; i >= 0; i--) {
+        for (let j = n - 2; j >= 0; j--) {
+            const minOnRight = Math.max(dp[i][j + 1] - dungeon[i][j], 1);
+            const minOnDown = Math.max(dp[i + 1][j] - dungeon[i][j], 1);
+            dp[i][j] = Math.min(minOnRight, minOnDown);
+        }
+    }
+
+    // Minimum health required at the start
+    return dp[0][0];
+}
+
+// Example dungeon
+const dungeon = [
+    [-2, -3, 3],
+    [-5, -10, 1],
+    [10, 30, -5]
+];
+
+const minimumHealthRequired = calculateMinimumHP(dungeon);
+console.log(`Minimum health required: ${minimumHealthRequired}`);

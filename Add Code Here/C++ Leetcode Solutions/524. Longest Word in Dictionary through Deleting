@@ -1,0 +1,22 @@
+class Solution {
+public:
+    string findLongestWord(string s, vector<string>& dictionary) {
+        string max{""};
+        for(auto word:dictionary){
+            int i{0},j{0};
+            while(i<word.size() && j<s.size()){
+                if(word[i] == s[j]){
+                    i++;j++;
+                }else{
+                    j++;
+                }
+            }
+            if(i==word.size()){
+                if(word.size() > max.size() || (word.size() == max.size() && word < max))
+                    max = word;
+            }
+        }
+
+        return max;
+    }
+};

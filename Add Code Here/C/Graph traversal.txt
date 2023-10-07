@@ -1,0 +1,150 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <malloc.h>
+struct node* create(struct node*,int);
+struct node* search(struct node*,int);
+struct node* preorder(struct node*);
+struct node* inorder(struct node*);
+struct node* postorder(struct node*);
+void countnode(struct node*);
+struct node* min(struct node*);
+ struct node
+ {
+     int data;
+     struct node *llink,*rlink;
+ };
+ int count=0;
+
+ int main()
+{
+    int i,n,ch,data;
+    struct node *root;
+    while(1)
+    {
+        printf("\nenter the choice\n");
+        printf("1.insertion of data in tree\n");
+        printf("2.search for a element\n");
+        printf("3.inorder\n4.postorder\n5.preorder\n");
+        printf("6.count the no of nodes\n");
+        printf("7.minimum\n8.exit\n");
+        scanf("%d",&ch);
+        switch(ch)
+        {
+            case 1 : printf("enter th range\n");
+                     scanf("%d",&n);
+                     root=NULL;
+                     for(i=0;i<n;i++)
+                     {
+                       printf("enter the data to be inserted\n");
+                       scanf("%d",&data);
+                       root=create(root,data);
+                     }
+                     break;
+            case 2 : printf("enter the data to be inserted\n");
+                     scanf("%d",&data);
+                     root= search(root,data);
+                     break;
+            case 3 : printf("inorder traversal is\n");
+                     inorder(root);
+                     break;
+            case 4 : printf("postorder traversal is\n");
+                     postorder(root);
+                     break;
+            case 5 : printf("preorder traversal is\n");
+                     preorder(root);
+                     break;
+            case 6 : countnode(root);
+                     printf("no of nodes are %d",count);
+                     break;
+            case 7 : printf("minimum is %d",min(root));
+                     break;
+            default : exit(0);
+
+        }
+    }
+    return 0;
+}
+
+struct node* create(struct node* node,int data)
+{
+    if(node==NULL)
+    {
+        struct node *temp;
+        temp = (struct node*)malloc(sizeof(struct node));
+        temp->data=data;
+        temp->llink=temp->rlink=NULL;
+        return temp;
+    }
+    if(data<node->data)
+    {
+        node->llink=create(node->llink,data);
+    }
+    if(data>node->data)
+    {
+        node->rlink=create(node->rlink,data);
+    }
+    return node;
+}
+
+struct node* search(struct node* node,int data)
+{
+    if(node==NULL)
+    {
+        printf("element not found\n");
+    }
+    else if(data<node->data)
+    {
+        node->llink=search(node->llink,data);
+    }
+    else if(data>node->data)
+    {
+        node->rlink=search(node->rlink,data);
+    }
+    else
+    {
+        printf("element found %d\n",node->data);
+    }
+    return node;
+}
+struct node* inorder(struct node* node)
+{
+    if(node==NULL)
+    return NULL;
+    inorder(node->llink);
+    printf("%d\t",node->data);
+    inorder(node->rlink);
+}
+struct node* postorder(struct node* node)
+{
+    if(node==NULL)
+    return NULL;
+    inorder(node->llink);
+    inorder(node->rlink);
+    printf("%d\t",node->data);
+}
+struct node* preorder(struct node* node)
+{
+    if(node==NULL)
+    return NULL;
+    printf("%d\t",node->data);
+    inorder(node->llink);
+    inorder(node->rlink);
+}
+void countnode(struct node* node)
+{
+    if(node!=NULL)
+    {
+        countnode(node->llink);
+    count++;
+    countnode(node->rlink);
+    }
+}
+struct node* min(struct node* node)
+{
+    if(node==NULL)
+        return NULL;
+    if(node->llink)
+        return min(node->llink);
+    else
+return (node->data);
+}
