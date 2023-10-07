@@ -1,0 +1,48 @@
+#include <iostream>
+using namespace std;
+
+// Function to perform selection sort on the given array
+void selectionSort(int arr[], int n) {
+    // Traverse through all array elements
+    for (int i = 0; i < n - 1; i++) {
+        // Find the minimum element in the unsorted portion of the array
+        int min_idx = i;
+        for (int j = i + 1; j < n; j++) {
+            if (arr[j] < arr[min_idx]) {
+                min_idx = j;
+            }
+        }
+        // Swap the found minimum element with the first element
+        if (min_idx != i) {
+            swap(arr[i], arr[min_idx]);
+        }
+    }
+}
+
+int main() {
+    // Ask the user to input the number of elements
+    int n;
+    cout << "Enter the number of elements: ";
+    cin >> n;
+
+    // Initialize an array of size 'n'
+    int arr[n];
+
+    // Ask the user to input 'n' elements for the array
+    cout << "Enter " << n << " elements: ";
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
+    }
+
+    // Call the selectionSort function to sort the array
+    selectionSort(arr, n);
+
+    // Display the sorted array to the user
+    cout << "Sorted array: ";
+    for (int i = 0; i < n; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+
+    return 0;
+}

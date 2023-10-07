@@ -1,0 +1,156 @@
+{
+  "project_info": {
+    "project_number": "1021676779959",
+    "firebase_url": "https://iot-smart-irrigation-356e7-default-rtdb.firebaseio.com",
+    "project_id": "iot-smart-irrigation-356e7",
+    "storage_bucket": "iot-smart-irrigation-356e7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1021676779959:android:0d2ebaf5fabe4720b49032",
+        "android_client_info": {
+          "package_name": "com.example.ibais"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1021676779959-2mfnrbk2103ul5pchp54qpn1c7f456so.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdyhTg0jm8XbmXNgUOtsTLl-LyqGO47Y8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1021676779959-2mfnrbk2103ul5pchp54qpn1c7f456so.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1021676779959:android:688a7449d8487b31b49032",
+        "android_client_info": {
+          "package_name": "com.example.ibsis"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1021676779959-2mfnrbk2103ul5pchp54qpn1c7f456so.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdyhTg0jm8XbmXNgUOtsTLl-LyqGO47Y8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1021676779959-2mfnrbk2103ul5pchp54qpn1c7f456so.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1021676779959:android:85d2621c90d1d38fb49032",
+        "android_client_info": {
+          "package_name": "com.example.iot"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1021676779959-2mfnrbk2103ul5pchp54qpn1c7f456so.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdyhTg0jm8XbmXNgUOtsTLl-LyqGO47Y8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1021676779959-2mfnrbk2103ul5pchp54qpn1c7f456so.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1021676779959:android:0a3bf2b167d8c429b49032",
+        "android_client_info": {
+          "package_name": "com.example.smartirrigation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1021676779959-2mfnrbk2103ul5pchp54qpn1c7f456so.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdyhTg0jm8XbmXNgUOtsTLl-LyqGO47Y8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1021676779959-2mfnrbk2103ul5pchp54qpn1c7f456so.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1021676779959:android:3c06a5922e124a20b49032",
+        "android_client_info": {
+          "package_name": "com.example.test"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1021676779959-2mfnrbk2103ul5pchp54qpn1c7f456so.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdyhTg0jm8XbmXNgUOtsTLl-LyqGO47Y8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1021676779959-2mfnrbk2103ul5pchp54qpn1c7f456so.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
