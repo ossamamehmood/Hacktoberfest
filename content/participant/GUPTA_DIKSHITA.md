@@ -1,5 +1,0 @@
----
-name: DIKSHITA GUPTA
-institution/company: GURU NANAK DEV ENGINEERING COLLEGE
-github:GUPTA-DIKSHITA
----

@@ -1,5 +1,0 @@
----
-name: Erick Leon
-institution/company: N/A
-github:erickleon88
----
