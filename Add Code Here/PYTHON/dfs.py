@@ -1,46 +1,57 @@
-import networkx as nx
-import matplotlib.pyplot as plt
-from matplotlib.animation import FuncAnimation
-import cv2
+from collections import defaultdict
 
-# Create a grid graph
-G = nx.grid_2d_graph(5, 5)
+class Graph:
 
-# Create DFS traversal generator
-def dfs_traversal(G, start):
-    visited = set()
-    stack = [start]
-    while stack:
-        node = stack.pop()
-        if node not in visited:
-            visited.add(node)
-            yield node
-            neighbors = list(G.neighbors(node))
-            neighbors.reverse()  # Reverse the order for visualization
-            stack.extend(n for n in neighbors if n not in visited)
+	def __init__(self):
 
-# Create an animation of DFS traversal
-fig, ax = plt.subplots()
-pos = {node: node for node in G.nodes()}
-visited_nodes = []
+		# default dictionary to store graph
+		self.graph = defaultdict(list)
 
-def update(frame):
-    ax.clear()
-    node = frame
-    visited_nodes.append(node)
-    nx.draw(G, pos, ax=ax, node_color='b', node_size=100)
-    nx.draw(G.subgraph(visited_nodes), pos, ax=ax, node_color='r', node_size=100)
-    ax.set_title(f'DFS Traversal Step {frame}')
+	# function to add an edge to graph
+	def addEdge(self,u,v):
+		self.graph[u].append(v)
 
-ani = FuncAnimation(fig, update, frames=dfs_traversal(G, (0, 0)), repeat=False)
-plt.show()
+	# A function used by DFS
+	def DFSUtil(self, v, visited):
 
-# Save the animation as a video
-writer = cv2.VideoWriter('dfs_traversal.mp4', cv2.VideoWriter_fourcc(*'mp4v'), 5, (400, 400))
-for frame in range(len(list(dfs_traversal(G, (0, 0))))):
-    update(frame)
-    fig.canvas.draw()
-    image = np.frombuffer(fig.canvas.tostring_rgb(), dtype='uint8').reshape(400, 400, 3)
-    writer.write(image)
+		# Mark the current node as visited and print it
+		visited[v]= True
+		print v,
 
-writer.release()
+		# Recur for all the vertices adjacent to
+		# this vertex
+		for i in self.graph[v]:
+			if visited[i] == False:
+				self.DFSUtil(i, visited)
+
+
+	# The function to do DFS traversal. It uses
+	# recursive DFSUtil()
+	def DFS(self):
+		V = len(self.graph) #total vertices
+
+		# Mark all the vertices as not visited
+		visited =[False]*(V)
+
+		# Call the recursive helper function to print
+		# DFS traversal starting from all vertices one
+		# by one
+		for i in range(V):
+			if visited[i] == False:
+				self.DFSUtil(i, visited)
+
+
+# Driver code
+if __name__ == '__main__':
+	# Create a graph 
+	g = Graph()
+	g.addEdge(0, 1)
+	g.addEdge(0, 2)
+	g.addEdge(1, 2)
+	g.addEdge(2, 0)
+	g.addEdge(2, 3)
+	g.addEdge(3, 3)
+	
+	print "Following is Depth First Traversal"
+	g.DFS()
+
