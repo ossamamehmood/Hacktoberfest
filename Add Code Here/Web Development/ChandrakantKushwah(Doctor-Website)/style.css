@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Roboto", sans-serif;
+}
+
+.color-1 {
+    color: #4faac7 !important;
+}
+
+.back-color-1 {
+    background-color: #4faac7;
+}
+
+.color-2 {
+    color: #dfd9ea;
+}
+
+.white {
+    color: white;
+}
+
+.red {
+    border: red solid 1px;
+}
+
+
+/* header  */
+
+ul {
+    list-style-type: none;
+}
+
+.radius {
+    border-radius: 3px;
+}
+
+a {
+    color: black;
+}
+
+.burger {
+    display: none;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+
+/* header media query  */
+
+@media only screen and (max-width: 1032px) {
+    .hidden {
+        display: none;
+    }
+    .burger {
+        display: inline-block;
+    }
+}
+
+
+/* section 1  */
+
+a:active {
+    color: #4faac7;
+}
+
+
+/* banner   */
+
+.back-1 {
+    background-image: url("images/banner.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+}
+
+.h1 {
+    font-size: 3rem;
+}
+
+.row-mar {
+    padding: 0px !important;
+}
+
+.back-white {
+    background-color: white;
+    color: #4faac7;
+}
+
+
+/* <!-- after banner content  --> */
+
+.box-1 {
+    background-color: #2b2251;
+    color: white;
+}
+
+.box-2 {
+    background-color: #4faac7;
+    color: white;
+}
+
+.box-3 {
+    background-color: white;
+    color: black;
+}
+
+
+/* section 4  */
+
+.image-back {
+    background-image: url("images/team.jpg");
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.605);
+    background-blend-mode: multiply;
+}
