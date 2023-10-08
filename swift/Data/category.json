@@ -1,0 +1,82 @@
+[
+  {
+    "id" : 1,
+    "name" : "Beard",
+    "image" : "90"
+  },
+  {
+    "id" : 2,
+    "name" : "Face Wash",
+    "image" : "91"
+  },
+  {
+    "id" : 3,
+    "name" : "Hair Wax",
+    "image" : "92"
+  },
+  {
+    "id" : 4,
+    "name" : "Soap",
+    "image" : "93"
+  },
+  {
+    "id" : 5,
+    "name" : "T-Shirt",
+    "image" : "94"
+  },
+  {
+    "id" : 6,
+    "name" : "Fragrance",
+    "image" : "95"
+  },
+  {
+    "id" : 7,
+    "name" : "Hair Growth",
+    "image" : "96"
+  },
+  {
+    "id" : 8,
+    "name" : "Powder Wax",
+    "image" : "97"
+  },
+  {
+    "id" : 9,
+    "name" : "Serum",
+    "image" : "98"
+  },
+  {
+    "id" : 10,
+    "name" : "Perfume Roll",
+    "image" : "99"
+  },
+  {
+    "id" : 11,
+    "name" : "Hair Growth Cream",
+    "image" : "100"
+  },
+  {
+    "id" : 12,
+    "name" : "LIP Lightener",
+    "image" : "101"
+  },
+  {
+    "id" : 13,
+    "name" : "Styling Gun",
+    "image" : "102"
+  },
+  {
+    "id" : 14,
+    "name" : "Hair Shampoo",
+    "image" : "103"
+  },
+  {
+    "id" : 15,
+    "name" : "Ball Sack Spray",
+    "image" : "104"
+  },
+  {
+    "id" : 16,
+    "name" : "MustaChee & Beard Wax",
+    "image" : "105"
+  }
+]
