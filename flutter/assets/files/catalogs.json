@@ -1,0 +1,115 @@
+{
+    "products" : [
+
+      {
+        "id": 1,
+        "name": "Fresho Potato - Chandramukhi, 1 kg",
+        "desc":"Chandramukhi Variety of potato is a very good diet for those who have mouth ulcers." ,
+        "price": 30.0,
+        "color": "#3e097b",
+        "image":"https://www.bigbasket.com/media/uploads/p/s/40048448_5-fresho-potato-chandramukhi.jpg",
+        "img":"https://udaipur.dshans.com/wp-content/uploads/2021/09/40120174-2_5-fortune-chakki-fresh-atta-100-atta-0-maida.jpg"
+      },
+
+      {
+        "id": 2,
+        "name": "Colgate Strong Teeth",
+        "desc":"Colgate 500 g (250 g x 2 N)" ,
+        "price": 206.00,
+        "color": "#3e097b",
+        "image":"https://www.bigbasket.com/media/uploads/p/l/40186855_11-colgate-strong-teeth-anticavity-toothpaste-with-amino-shakti-formula-provides-fresher-breath.jpg",
+        "img":"https://udaipur.dshans.com/wp-content/uploads/2021/09/40120174-2_5-fortune-chakki-fresh-atta-100-atta-0-maida.jpg"
+      },
+
+      {
+        "id": 3,
+        "name": "Red Label Tea, 1 Kg",
+        "desc":"Red Label Natural Care; which has a mix of 5 Ayurvedic ingredients, namely Tulsi, Ashwagandha, Mulethi, Ginger and Cardamom." ,
+        "price": 458.50,
+        "color": "#3e097b",
+        "image":"https://www.bigbasket.com/media/uploads/p/s/102871_11-red-label-tea.jpg",
+        "img":"https://udaipur.dshans.com/wp-content/uploads/2021/09/40120174-2_5-fortune-chakki-fresh-atta-100-atta-0-maida.jpg"
+      },
+      {
+        "id": 4,
+        "name": "Horlicks",
+        "desc":"Horlicks Health & Nutrition Drink - Classic Malt, 900 g Pouch" ,
+        "price": 469.0,
+        "color": "#3e097b",
+        "image":"https://www.bigbasket.com/media/uploads/p/l/100006552_4-horlicks-health-drink-original.jpg",
+        "img":"https://udaipur.dshans.com/wp-content/uploads/2021/09/40120174-2_5-fortune-chakki-fresh-atta-100-atta-0-maida.jpg"
+      },
+      {
+                "id": 5,
+                "name": "Tomato Ketchup",
+                "desc":"Kissan Fresh Tomato Ketchup - Tasty, Yummy & Healthy, 1.1 kg Pouch" ,
+                "price": 125.0,
+                "color": "#3e097b",
+                "image":"https://www.bigbasket.com/media/uploads/p/s/40226027_5-kissan-fresh-tomato-ketchup-tasty-yummy-healthy.jpg",
+                "img":"https://udaipur.dshans.com/wp-content/uploads/2021/09/40120174-2_5-fortune-chakki-fresh-atta-100-atta-0-maida.jpg"
+              },
+              {
+                "id": 6,
+                "name": "Harpic",
+                "desc":"Harpic Disinfectant Toilet Cleaner Liquid, Original, 1 L" ,
+                "price": 178.0,
+                "color": "#3e097b",
+                "image":"https://www.bigbasket.com/media/uploads/p/l/298290_14-harpic-power-plus-disinfectant-toilet-cleaner-original.jpg",
+                "img":"https://udaipur.dshans.com/wp-content/uploads/2021/09/40120174-2_5-fortune-chakki-fresh-atta-100-atta-0-maida.jpg"
+              },
+              {
+                "id": 7,
+                "name": "StayFree Secure Cottony XL",
+                "desc":"Sanitary Pads For Women,80 pcs" ,
+                "price": 459.80,
+                "color": "#3e097b",
+                "image":"https://www.bigbasket.com/media/uploads/p/l/1215820_1-stayfree-secure-cottony-xl-sanitary-pads-for-women.jpg",
+                "img":"https://udaipur.dshans.com/wp-content/uploads/2021/09/40120174-2_5-fortune-chakki-fresh-atta-100-atta-0-maida.jpg"
+              },
+              {
+                "id": 8,
+                "name": "Eveready Battery",
+                "desc":"Eveready Carbon Zinc Battery Red HD AA 1015, 2 x 10 pcs Multipack" ,
+                "price": 253.98,
+                "color": "#3e097b",
+                "image":"https://www.bigbasket.com/media/uploads/p/l/1214632_2-eveready-carbon-zinc-battery-red-hd-aa-1015.jpg",
+                "img":"https://udaipur.dshans.com/wp-content/uploads/2021/09/40120174-2_5-fortune-chakki-fresh-atta-100-atta-0-maida.jpg"
+              },
+              {
+                "id": 9,
+                "name": "ZANDU Balm",
+                "desc":"ZANDU Balm -Effective Relief From Headache 8 ml Bottle" ,
+                "price": 31.50,
+                "color": "#3e097b",
+                "image":"https://www.bigbasket.com/media/uploads/p/l/20004412_2-zandu-balm-effective-relief-from-headache-body-pain-sprain-cold.jpg",
+                "img":"https://udaipur.dshans.com/wp-content/uploads/2021/09/40120174-2_5-fortune-chakki-fresh-atta-100-atta-0-maida.jpg"
+              },
+              {
+                "id": 10,
+                "name": "Dettol",
+                "desc":"Dettol Antiseptic Liquid for First Aid 1L" ,
+                "price": 313.0,
+                "color": "#3e097b",
+                "image":"https://www.bigbasket.com/media/uploads/p/l/40124254_9-dettol-antiseptic-disinfectant-liquid.jpg",
+                "img":"https://udaipur.dshans.com/wp-content/uploads/2021/09/40120174-2_5-fortune-chakki-fresh-atta-100-atta-0-maida.jpg"
+              },
+              {
+                "id": 11,
+                "name": "Good knight",
+                "desc":"Low Smoke Mosquito Coil with Power Formula,10 Coils" ,
+                "price": 30.0,
+                "color": "#3e097b",
+                "image":"https://www.bigbasket.com/media/uploads/p/l/250630_1-good-knight-activ-low-smoke-mosquito-coil-with-power-formula.jpg",
+                "img":"https://udaipur.dshans.com/wp-content/uploads/2021/09/40120174-2_5-fortune-chakki-fresh-atta-100-atta-0-maida.jpg"
+              },
+              {
+                "id": 12,
+                "name": "ACT II Instant Popcorn ",
+                "desc":"Classic Salted Flavour, 120 g Pouch" ,
+                "price": 36.0,
+                "color": "#3e097b",
+                "image":"https://www.bigbasket.com/media/uploads/p/l/304511_5-act-ii-popcorn-classic-salted.jpg",
+                "img":"https://udaipur.dshans.com/wp-content/uploads/2021/09/40120174-2_5-fortune-chakki-fresh-atta-100-atta-0-maida.jpg"
+              }
+    ]
+    }
