@@ -1,3 +1,3 @@
 name: Batkhuleg
 institution/company: N\A
-github:[**username**](https://github.com/jeikeibnaa)
+github:[**jeikeibnaa**](https://github.com/jeikeibnaa)
