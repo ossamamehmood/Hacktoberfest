@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clock</title>
+
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #000;
+        color: #fff;
+        font-size: 3rem;
+      }
+
+      .timer {
+        padding: 20px;
+        border: 2px solid #fff;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="timer" id="timer">
+      <span id="hours">00</span> : <span id="minutes">00</span> :
+      <span id="seconds">00</span>
+    </div>
+
+    <script>
+      function updateTimer() {
+        const currentTime = new Date();
+        const hours = currentTime.getHours().toString().padStart(2, "0");
+        const minutes = currentTime.getMinutes().toString().padStart(2, "0");
+        const seconds = currentTime.getSeconds().toString().padStart(2, "0");
+        const hexCode = `#${hours}${minutes}${seconds}`;
+
+        document.getElementById("hours").innerText = hours;
+        document.getElementById("minutes").innerText = minutes;
+        document.getElementById("seconds").innerText = seconds;
+
+        document.body.style.backgroundColor = hexCode;
+      }
+
+      setInterval(updateTimer, 1000);
+    </script>
+  </body>
+</html>
