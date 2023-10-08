@@ -1,0 +1,171 @@
+#include<stdio.h>
+#include<stdlib.h>
+struct node
+{
+	int data;
+	struct node *next;
+};
+typedef struct node NODE;
+NODE *s;
+void init();
+void insertf(int x);
+void inserts(int x,int pos);
+void insertl(int x);
+int deletef();
+int deletel();
+int size();
+void display();
+void main()
+{
+	int i,ch,x,y,pos;
+	printf("MENU \n");
+	printf("\n1.insertf \n 2.insert specific \n 3.insertl \n 4.size \n 5.display \n 6.deletef \n 7.deletem \n 8.deletel \n 9. init \n 10.exit \n");
+	do{
+
+	printf("Enter your choice:");
+	scanf("%d",&ch);
+	switch(ch)
+	{
+		case 1:printf("Enter the value you want to be inserted:");
+		      scanf("%d",&y);
+		      insertf(y);
+		      break;
+		case 2:printf("Enter the value you want to be inserted:");
+		      scanf("%d",&y);
+		      printf("\n enter position");
+		      scanf("%d",&pos);
+		      inserts(y,pos);
+		      break;
+	   case 3:printf("Enter the value to be inserted:");
+		      scanf("%d",&y);
+		      insertl(y);
+		      break;
+		case 4:x=size();
+		       printf("The size of the linked list: %d \n",x);
+		       break;
+		case 5: display();
+		       printf("\n");
+		       break;
+	    case 6:y=deletef();
+	           printf("Deleted elements =%d\n",y);
+	           break;
+	    case 8: y=deletel();
+	           printf("Deleted elements =%d\n",y);
+	            break;
+		case 9: init();
+		       break;
+		case 10:exit(0);
+
+	}
+}	while(ch!=11);
+}
+
+void init()
+{
+	s=NULL;
+}
+void insertf(int x)
+{
+	NODE *temp;
+	temp=(NODE*)malloc(sizeof(NODE));
+	temp->data=x;
+	temp->next=NULL;
+	if(s==NULL)
+	s=temp;
+	else
+	{
+		temp->next=s;
+		s=temp;
+	}
+}
+void insertl(int x)
+{
+		NODE *temp,*p;
+	temp=(NODE*)malloc(sizeof(NODE));
+	temp->data=x;
+	temp->next=NULL;
+	if(s==NULL)
+	s=temp;
+	else
+	{
+		for(p=s;p->next!=NULL;p=p->next);
+		p->next=temp;
+	}
+}
+int size()
+{
+ NODE *p;
+ int i;
+ for(p=s,i=0;p!=NULL;p=p->next,i++);
+ return(i);
+}
+void inserts(int x,int pos)
+{
+	int l,i;
+	NODE *p,*t,*temp;
+	l=size();
+	if(pos==1)
+	{
+		insertf(x);
+		return;
+	}
+	if(pos==(l+1))
+	{
+		insertl(x);
+		return;
+	}
+	if(pos>1 &&pos<=1)
+	{
+		for(p=s,i=1;i<(pos-1);i++,p=p->next);
+		t=p->next;
+		p->next=temp;
+		temp->next=t;
+	}
+}
+void display()
+{
+	if(s==NULL)
+	printf("\n empty");
+	else
+	{
+	 NODE *p;
+	 for(p=s;p!=NULL;p=p->next)	
+	 printf("%d",p->data);
+	}
+}
+int deletef()
+{
+	if(s==NULL)
+	{
+		printf("empty");
+
+	}
+	else
+	{
+		NODE *p;
+		p=s;
+		{
+			s=p->next;
+			int x =p->data;
+			return(x);
+			free(p);
+		}
+
+	}
+}
+int deletel()
+{
+	if(s==NULL)
+	{
+		printf("empty");
+	}
+	else
+	{
+		NODE *p,*t;
+		for(p=s;p->next!=NULL;t=p,p->next)
+		t->next=NULL;
+		int x = p->data;
+		free(p);
+		return(x);
+	}
+}
