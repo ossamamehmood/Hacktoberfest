@@ -1,0 +1,25 @@
+class Solution {
+    public static int func(int i,int tar,int limit,int dp[][])
+    {
+        if(tar==0)
+        return 1;
+        if(i>=limit)
+        return 0;
+        if(dp[i][tar]!=-1)
+        return dp[i][tar];
+        int l=0;
+        if(tar-i>=0)
+        l=i*func(i,tar-i,limit,dp);
+        int r=func(i+1,tar,limit,dp);
+        return dp[i][tar]=Math.max(l,r);
+    }
+    public int integerBreak(int n) {
+       int dp[][]=new int[n+1][n+1];
+       for(int i[]:dp)
+       {
+           Arrays.fill(i,-1);
+       }
+       return func(1,n,n,dp);
+    }
+}
+
