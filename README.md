@@ -131,6 +131,7 @@ To get approval of the pull request much quicker and faster (`Follow Me`)🚀
 
 <div align="right">
   hii
+  <a href="#scroll-to-top" align="right">Go to Top</a>
 </div>
-<a href="#scroll-to-top" align="right">Go to Top</a>
+
 
