@@ -129,4 +129,6 @@ To get approval of the pull request much quicker and faster (`Follow Me`)🚀
     <sub><b>Ossama Mehmood</b></sub>
   </a>
 
-[Go to Top](#scroll-to-top)
+<div style="position: fixed; bottom: 20px; right: 20px;">
+  <a href="#scroll-to-top">Go to Top</a>
+</div>
