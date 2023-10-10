@@ -1,0 +1,39 @@
+import time
+
+class ChatApp:
+    def __init__(self):
+        self.messages = []
+
+    def send_message(self, sender, message):
+        timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
+        self.messages.append((timestamp, sender, message))
+
+    def view_messages(self):
+        for timestamp, sender, message in self.messages:
+            print(f"{timestamp} - {sender}: {message}")
+
+    def run(self):
+        while True:
+            print("1. Send Message")
+            print("2. View Messages")
+            print("3. Quit")
+            choice = input("Enter your choice: ")
+
+            if choice == "1":
+                sender = input("Enter your name: ")
+                message = input("Enter your message: ")
+                self.send_message(sender, message)
+                print("Message sent!\n")
+            elif choice == "2":
+                print("\n--- Messages ---")
+                self.view_messages()
+                print("-----------------\n")
+            elif choice == "3":
+                print("Goodbye!")
+                break
+            else:
+                print("Invalid choice. Please try again.\n")
+
+if __name__ == "__main__":
+    chat_app = ChatApp()
+    chat_app.run()
