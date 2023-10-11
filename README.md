@@ -1,13 +1,13 @@
-# HacktoberFest 2023 `OPEN FIRST` Pull Request 🎉 
-![HacktoberFest 2021](https://github.com/ossamamehmood/Hacktoberfest2023/raw/main/.github/logo.png)
+# HacktoberFest  `OPEN FIRST` Pull Request 🎉 
+![HacktoberFest 2021](https://github.com/ossamamehmood/Hacktoberfest/raw/main/.github/logo.png)
 
 
-## Contributors of `Hacktoberfest 2023`
+## Contributors of `Hacktoberfest`
 
 <div align="center">
 
-<a href="https://github.com/ossamamehmood/Hacktoberfest2023/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=ossamamehmood/Hacktoberfest2023" />
+<a href="https://github.com/ossamamehmood/Hacktoberfest/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=ossamamehmood/Hacktoberfest" />
 </a>
   
   </div>
@@ -20,13 +20,13 @@
 
 <div align="center">
 
-<img src="https://img.shields.io/badge/hacktoberfest-2023-blueviolet" alt="Hacktober Badge"/>
+<img src="https://img.shields.io/badge/hacktoberfest--blueviolet" alt="Hacktober Badge"/>
  <img src="https://img.shields.io/static/v1?label=%F0%9F%8C%9F&message=If%20Useful&style=style=flat&color=BC4E99" alt="Star Badge"/>
  <a href="https://github.com/ossamamehmood" ><img src="https://img.shields.io/badge/Contributions-welcome-violet.svg?style=flat&logo=git" alt="Contributions" /></a>
 
-<a href="https://github.com/ossamamehmood/hacktoberfest2023/pulls"><img src="https://img.shields.io/github/issues-pr/ossamamehmood/hacktoberfest2023" alt="Pull Requests Badge"/></a>
-<a href="https://github.com/ossamamehmood/hacktoberfest2023/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/ossamamehmood/hacktoberfest2023?color=2b9348"></a>
-<a href="https://github.com/ossamamehmood/hacktoberfest2023/blob/master/LICENSE"><img src="https://img.shields.io/github/license/ossamamehmood/hacktoberfest2023?color=2b9348" alt="License Badge"/></a>
+<a href="https://github.com/ossamamehmood/hacktoberfest/pulls"><img src="https://img.shields.io/github/issues-pr/ossamamehmood/hacktoberfest" alt="Pull Requests Badge"/></a>
+<a href="https://github.com/ossamamehmood/hacktoberfest/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/ossamamehmood/hacktoberfest?color=2b9348"></a>
+<a href="https://github.com/ossamamehmood/hacktoberfest/blob/master/LICENSE"><img src="https://img.shields.io/github/license/ossamamehmood/hacktoberfest?color=2b9348" alt="License Badge"/></a>
 
 </div>
 
@@ -52,7 +52,7 @@ Add a picture of your choice in `static/images/`. Accepted files are **png** and
 ```
 static/images/<YOUR-USERNAME>.png
 
-![owais](https://github.com/syedowaisalishah/Hacktoberfest2023/assets/113125582/29d03bdc-3d4f-42c6-a3ea-15197bd26440)
+![owais](https://github.com/syedowaisalishah/Hacktoberfest/assets/113125582/29d03bdc-3d4f-42c6-a3ea-15197bd26440)
 ```
 
 
