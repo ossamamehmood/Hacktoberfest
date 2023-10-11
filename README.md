@@ -1,5 +1,5 @@
 # HacktoberFest  `OPEN FIRST` Pull Request 🎉 
-![HacktoberFest 2021](https://github.com/ossamamehmood/Hacktoberfest/raw/main/.github/logo.png)
+![HacktoberFest](https://github.com/ossamamehmood/Hacktoberfest/raw/main/.github/logo.png)
 
 
 ## Contributors of `Hacktoberfest`
@@ -16,7 +16,7 @@
 
 🗣 **Hacktoberfest encourages participation in the open-source community, which grows bigger every year.**
 
-📢📢 **Register [here](https://hacktoberfest.digitalocean.com) for Hacktoberfest and make four pull requests (PRs) between October 1st-31st to grab free DIGITAL-SWAGS 🔥.**
+📢📢 **Register [here](https://hacktoberfest.digitalocean.com) for and make four pull requests (PRs) between October 1st-31st to grab free DIGITAL-SWAGS 🔥.**
 
 <div align="center">
 
