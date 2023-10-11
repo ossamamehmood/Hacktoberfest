@@ -1,0 +1,24 @@
+# Use an official Python runtime as a parent image
+FROM python:3.9-slim
+
+# Set the working directory to /app
+WORKDIR /app
+
+# Install required Python packages without cache
+RUN pip install --no-cache-dir ipykernel && \
+    python -m ipykernel install --sys-prefix && \
+    pip install --no-cache-dir SQLite4 pandas numpy jupyter
+
+# Install SQLite3 and create a sample database
+RUN apt-get update && apt-get install -y sqlite3 && apt-get clean && rm -rf /var/lib/apt/lists/*
+RUN sqlite3 /app/sample.db "CREATE TABLE random_data (id INTEGER PRIMARY KEY, data TEXT); INSERT INTO random_data (data) VALUES ('Hello, world');"
+
+# Create a Jupyter config file with no token for security (You can change this for production use)
+RUN jupyter notebook --generate-config && \
+    echo "c.NotebookApp.token = ''" >> ~/.jupyter/jupyter_notebook_config.py
+
+# Expose Jupyter Notebook port
+EXPOSE 8888
+
+# Start Jupyter Notebook
+CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root"]
