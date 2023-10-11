@@ -1,0 +1,33 @@
+# Use an official R runtime as a parent image
+FROM rocker/r-ver:4.1.1
+
+# Set the working directory to /app
+WORKDIR /app
+
+# Install system dependencies required for R packages and Jupyter
+RUN apt-get update && apt-get install -y \
+    libcurl4-openssl-dev \
+    libssl-dev \
+    libxml2-dev \
+    jupyter \
+    && apt-get clean && rm -rf /var/lib/apt/lists/*
+
+# Install required R packages for data science
+RUN R -e "install.packages(c('tidyverse', 'ggplot2', 'dplyr', 'readr', 'stringr', 'reshape2'), repos='https://cran.rstudio.com/')"
+
+# Install Jupyter
+RUN R -e "install.packages('IRkernel', repos='https://cran.rstudio.com/')"
+
+# Set up Jupyter for the non-root user
+RUN R -e "IRkernel::installspec(user = FALSE)"
+
+# Start Jupyter Notebook
+#CMD ["R", "-e", "IRkernel::main()", "--notebook-dir=/app", "--ip=0.0.0.0", "--port=8888", "--no-browser"]
+RUN jupyter notebook --generate-config && \
+    echo "c.NotebookApp.token = ''" >> ~/.jupyter/jupyter_notebook_config.py
+
+# Expose Jupyter Notebook port
+EXPOSE 8888
+
+# Start Jupyter Notebook
+CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root"]
