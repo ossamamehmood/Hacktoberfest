@@ -1,7 +1,7 @@
 
-## This Repository is Excluded from Hacktoberfest 2023
+## This Repository is Excluded from Hacktoberfest
 
-📢 This repository is not eligible for Hacktoberfest 2023. If you're looking for a repository to contribute to and participate in Hacktoberfest, please check out our [new repository](https://github.com/ossamamehmood/Hacktoberfest2023) to make your contributions count!
+📢 This repository is not eligible for Hacktoberfest. If you're looking for a repository to contribute to and participate in Hacktoberfest, please check out our [new repository](https://github.com/ossamamehmood/Hacktoberfest2023) to make your contributions count!
 
 ### [Link to New Hacktoberfest-Eligible Repository](https://github.com/ossamamehmood/Hacktoberfest2023)
 
