@@ -3,7 +3,7 @@ click==8.0.3
 colorama==0.4.4
 flake8==4.0.1
 mccabe==0.6.1
-mpmath==1.2.1
+mpmath==1.3.0
 mypy-extensions==0.4.3
 pathspec==0.9.0
 platformdirs==2.4.0
