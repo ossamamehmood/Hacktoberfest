@@ -1,3 +1,6 @@
+#Here's a code for binary search in Python
+
+
 class Binary_Search:
     def __init__(self, array, key):
         self.array=array
