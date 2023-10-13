@@ -1,0 +1,19 @@
+#include<iostream>
+using namespace std;
+int main(){
+    int arr[]={25,65,47,80,12,67,78};
+    int i, j;
+    int size=sizeof(arr)/sizeof(arr[0]);
+    for(i=0;i<size-1;i++){
+        for(j=i+1;j<size;j++){
+            if(arr[i]>arr[j]){
+                swap(arr[i],arr[j]);
+            }
+        }
+    }
+    cout<<"Sorted array"<<endl;
+    int k;
+    for(k=0;k<size;k++){
+        cout<<arr[k]<<' ';
+    }
+}
