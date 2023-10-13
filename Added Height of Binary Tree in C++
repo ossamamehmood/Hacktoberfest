@@ -1,0 +1,25 @@
+/*
+struct Node
+{
+    int data;
+    struct Node* left;
+    struct Node* right;
+    
+    Node(int x){
+        data = x;
+        left = right = NULL;
+    }
+};
+*/
+class Solution{
+    public:
+    //Function to find the height of a binary tree.
+    int height(struct Node* node){
+         return solve(node);
+    }
+    
+    int solve(struct Node* root){
+        if(root==NULL)  return 0;
+        return max(1 + solve(root->right),1 + solve(root->left));
+    }
+};
