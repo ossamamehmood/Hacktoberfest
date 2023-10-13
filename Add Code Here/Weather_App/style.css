@@ -1,0 +1,357 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --colorDark1: #112D4E;
+    --colorDark2: #3F72AF;
+    --colorLight1: #DBE2EF;
+    --colorLight2: #F9F7F7;
+}
+
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    /* overflow-y: hidden; */
+}
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    color: var(--colorLight2);
+    /* background-image: linear-gradient(160deg, #112d4e 0%, #3f72af 100%);; */
+    background-image: url(assets/image.jpg);
+    background-position: center;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    position: relative
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 7px;
+    padding: 2.4vw;
+}
+
+.tab-container {
+    width: 90%;
+    max-width: 550px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: 1.2vw;
+}
+
+.tab {
+    cursor: pointer;
+    padding: 5px 8px;
+    font-size: 1rem;
+    letter-spacing: 0.1vw;
+}
+
+.tab.current-tab {
+    background-color: rgb(219, 226, 239, 0.5);
+    border-radius: 4px;
+}
+
+.weather-conatiner {
+    margin-block: 4rem;
+
+}
+
+.sub-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grant-location-container {
+    display: none;
+}
+
+.grant-location-container.active {
+    display:flex;
+    z-index: -10;
+}
+
+.grant-location-container img {
+    margin: -12px 0;
+    margin-bottom: 6px;
+    width: 7vw;
+    height: 7vw;
+}
+
+.grant-location-container p:first-of-type {
+    font-size: 2vw;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #F9F7F7;
+}
+
+.grant-location-container p:last-of-type {
+    font-size: 1.8vw;
+    letter-spacing: .2vw;
+    margin: 1.2vw 1vw;
+    color: rgb(233, 75, 58);
+    text-shadow: 20px 10px 10px black;
+}
+
+.btn {
+    all: unset;
+    /* appearance: none;
+    border:none;
+    color: white; */
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background-color: #1c1c1ccc;
+    cursor: pointer;
+    padding: 10px 30px;
+    margin-bottom: 10px;
+    box-shadow: 17px 2px 15px #2f2e2e;
+}
+
+.loading-container {
+    display: none;
+}
+
+.loading-container.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loading-container p {
+    text-transform: uppercase;
+    font-size: 2vw;
+}
+
+.user-info-container {
+    display: none;
+}
+
+.user-info-container.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -1.7vw;
+    z-index: -2;
+}
+
+.name {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    gap: 0 2vw;
+}
+
+.name p {
+    font-size: 2.5vw;
+    font-weight: 300;
+    line-height: 12px;
+    margin-left: 9vw;
+}
+
+.name img {
+    width: 9%;
+}
+
+.user-info-container h3 {
+    font-size: 1vw;
+    margin-top: 1rem;
+    font-weight: 800;
+    letter-spacing: .1vw;
+}
+
+.user-info-container .images {
+    width: 5vw;
+}
+
+.user-info-container h4 {
+    margin-top: -1vw;
+    font-size: 3.4vw;
+}
+
+.parameter-container {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5vw;
+    margin-top: .8rem;
+    gap: 10px 40px;
+}
+
+.parameter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    max-width: 200px;
+    background-color: rgba(219, 226, 239, 0.5);;
+    border-radius: 5px;
+    gap: 5px 0;
+
+}
+
+.parameter img {
+    width: 4vw;
+}
+
+.parameter p {
+    font-size: 1.6vw;
+    font-weight: 800;
+    letter-spacing: .1vw;
+}
+
+.form-container {
+    display: none;
+    width: 90%;
+    max-width: 550px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    gap: 0 10px;
+    margin-bottom: 3rem;
+}
+
+.form-container.active {
+    display: flex;
+}
+
+.form-container input {
+    all: unset;
+    width: calc(100% - 80px);
+    height: 40px;
+    padding: 0 20px;
+    background-color: rgba(219, 226, 239, 0.5);
+    border-radius: 10px;
+}
+
+.form-container input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.form-container input:focus {
+    outline: 3px solid rgba(255, 255, 255, 0.7);
+}
+
+.form-container .secand_btn {
+    all: unset;
+    padding: .3vw;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    margin-bottom: 1px;
+    background-color: var(--colorDark2);
+
+}
+
+#page {
+    opacity: 1;
+}
+
+#page404 {
+   position: absolute;
+   top: 50%;
+   left: 37%;
+   opacity: 0;
+   z-index: -1;
+}
+
+#page404 img {
+    width: 25vw;
+    border-radius: 12px;
+    box-shadow: -5px -5px 10px 10px #112d4eb8;
+}
+
+
+@media (max-width:640px) {
+   h1 {
+    padding: 90px 0px;
+    font-size: 9vw;
+   }
+   .tab-container {
+    margin-top: -32px;
+   }
+   .tab {
+    font-size: 5vw;
+   }
+   .grant-location-container img{
+    margin-top: -12px;
+    width: 20vw;
+    height: 20vw;
+    margin-bottom: 5vw;
+   }
+   .grant-location-container p:first-of-type {
+    font-size: 5vw;
+   }
+   .grant-location-container p:last-of-type {
+    font-size: 3vw;
+    font-weight: bolder;
+    margin-bottom:7vw;
+   }
+  .btn {
+    padding: 5vw;
+    border-radius: 3vw;
+  } 
+  #page404 {
+    position: absolute;
+    top: 50%;
+    left: 15%;
+  }
+  #page404 img {
+    width: 70vw;
+  }
+  .name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 27px;
+    margin-bottom: 1vw;
+  }
+  .name p {
+    font-size: 8vw;
+   font-weight: 700;
+  }
+  .user-info-container h3 {
+   font-size: 5vw;
+  }
+  .user-info-container .images {
+    width: 15vw;
+  }
+  .user-info-container h4 {
+    font-size: 8vw;
+  }
+.parameter-container {
+    width: 80%;
+    gap: 22px;
+    margin: 4vw 1vw;
+}
+.parameter  {
+width: 40%;
+gap: 2vw;
+}
+
+.parameter img {
+    margin-top: 6px;
+    width: 14vw;
+}
+.parameter p{
+    font-size: 4vw;
+}
+
+
+}
