@@ -1,2 +1,0 @@
-Version: 1.5.1
-Arguments: ['C:\\Users\\runneradmin\\AppData\\Local\\Temp\\cibw-run-p1fny6_b\\cp311-win_amd64\\build\\venv\\Scripts\\delvewheel', 'repair', '-w', 'C:\\Users\\runneradmin\\AppData\\Local\\Temp\\cibw-run-p1fny6_b\\cp311-win_amd64\\repaired_wheel', 'C:\\Users\\runneradmin\\AppData\\Local\\Temp\\cibw-run-p1fny6_b\\cp311-win_amd64\\built_wheel\\pandas-2.1.1-cp311-cp311-win_amd64.whl']
