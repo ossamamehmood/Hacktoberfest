@@ -1,7 +1,4 @@
-<a name="scroll-to-top"></a>
-
 # HacktoberFest 2023 `OPEN FIRST` Pull Request 🎉 
-<img src="/_next/static/media/logo-hacktoberfest--horizontal.ebc5fdc8.svg" alt="Hacktoberfest 2023">
 
 ## This Repository is Excluded from Hacktoberfest
 
