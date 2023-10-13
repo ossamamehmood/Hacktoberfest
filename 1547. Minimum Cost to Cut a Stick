@@ -1,0 +1,20 @@
+//problem link: https://leetcode.com/problems/minimum-cost-to-cut-a-stick/
+class Solution {
+public:
+    unordered_map<string,int> mp;
+    int solve(int i,int j,vector<int> &cuts){
+        if(i>=j)return 0;
+        if(i+1==j)return 0;
+        string st = to_string(i)+'$'+to_string(j);
+        if(mp.find(st)!=mp.end())return mp[st];
+        int ans = INT_MAX;
+        for(auto it: cuts){
+            if(it>i && it<j)
+            ans = min(ans,((j-i)+solve(i,it,cuts)+solve(it,j,cuts)));
+        }
+        return mp[st] = ans==INT_MAX?0:ans;
+    }
+    int minCost(int n, vector<int>& cuts) {
+        return solve(0,n,cuts);
+    }
+};

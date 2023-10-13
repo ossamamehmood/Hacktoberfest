@@ -1,0 +1,24 @@
+# Use an official Python runtime as a parent image
+FROM python:3.9-slim
+
+# Set the working directory to /app
+WORKDIR /app
+
+# Install required Python packages without cache and remove unnecessary files
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        build-essential \
+        && rm -rf /var/lib/apt/lists/* \
+        && pip install --no-cache-dir numpy pandas matplotlib seaborn pillow jupyter \
+        && apt-get remove -y build-essential \
+        && apt-get autoremove -y \
+        && apt-get clean
+
+# Create a Jupyter config file with no token for security (You can change this for production use)
+RUN jupyter notebook --generate-config && \
+    echo "c.NotebookApp.token = ''" >> ~/.jupyter/jupyter_notebook_config.py
+
+# Expose Jupyter Notebook port
+EXPOSE 8888
+
+# Start Jupyter Notebook
+CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root"]
