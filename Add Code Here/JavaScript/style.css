@@ -1,0 +1,93 @@
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", Arial,
+    sans-serif;
+  background-image: url("bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  font-weight: bold;
+  color: white;
+  text-align: center; 
+}
+
+.main {
+  position: absolute;
+  top: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 60vh;
+  width: 25%;
+  background: rgba(0, 0, 0, 0.32);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1), 0 0 20px 5px rgb(90, 86, 86);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  border: 1px solid rgba(255, 255, 255, 0.027);
+}
+
+@media screen and (max-width: 500px){
+  .main{
+    /* height: ; */
+    width: 75%;
+  }
+}
+
+
+.heading {
+  margin-top: 30px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-shadow: 2px 0px 4px #761212, 2px 0px 4px #b6a6a6;
+  letter-spacing: 3px;
+  font-size: 50px;
+  font-weight: 800;
+  color: goldenrod;
+}
+
+p {
+  font-size: 18px;
+  color: white;
+}
+
+#message-el {
+  font-style: italic;
+}
+
+button {
+  color: #016f32;
+  height: 40px;
+  width: 170px;
+  font-size: 15px;
+  background: goldenrod;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  font-weight: bolder;
+  border: none;
+  border-radius: 3px;
+  margin-bottom: 2px;
+  margin-top: 2px;
+}
+
+button:hover {
+  border: 3px solid #ffffff;
+}
+
+#player-el {
+  width: 100%;
+  background-color: rgb(56, 54, 54);
+  box-shadow: 0 1px 15px 5px rgb(245, 236, 236);
+  font-size: large;
+  text-transform: capitalize;
+}
+
+.rules {
+  color: rgb(255, 255, 255);
+  font-size: 12px;
+  padding: 10px;
+}
