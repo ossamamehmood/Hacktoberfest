@@ -1,0 +1,34 @@
+public class MaxSubstringLength {
+
+    // Function to find the maximum substring length
+    public static int findMaxSubstringLength(String str) {
+        int maxLength = 0;
+        int currentLength = 0;
+
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) != ' ') {
+                currentLength++;
+            } else {
+                if (currentLength > maxLength) {
+                    maxLength = currentLength;
+                }
+                currentLength = 0;
+            }
+        }
+
+        // Check for the last word
+        if (currentLength > maxLength) {
+            maxLength = currentLength;
+        }
+
+        return maxLength;
+    }
+
+    public static void main(String[] args) {
+        String inputString = "This is an example sentence with some words.";
+
+        int maxSubstringLength = findMaxSubstringLength(inputString);
+
+        System.out.println("Maximum Substring Length: " + maxSubstringLength);
+    }
+}
