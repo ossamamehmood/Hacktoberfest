@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+   <com.google.android.material.card.MaterialCardView
+       android:id="@+id/card_view"
+       android:layout_width="match_parent"
+       android:layout_height="260dp"
+       app:cardBackgroundColor="@color/app_theme">
+
+      <com.google.android.material.floatingactionbutton.FloatingActionButton
+          android:id="@+id/floatingActionButton"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:backgroundTint="@color/white"
+          android:layout_marginTop="12dp"
+          app:tint="@color/app_theme"
+          android:layout_marginLeft="12dp"
+          android:clickable="true"
+          app:srcCompat="@drawable/baseline_arrow_back_ios_24" />
+
+      <TextView
+          android:layout_width="250dp"
+          android:layout_height="match_parent"
+          android:layout_below="@id/floatingActionButton"
+          android:layout_marginLeft="10dp"
+          android:layout_marginTop="125dp"
+          android:text="Welcome Back "
+          android:textColor="@color/white"
+          android:textSize="50dp"
+          android:textStyle="italic" />
+
+   </com.google.android.material.card.MaterialCardView>
+
+   <EditText
+       android:id="@+id/name"
+       android:layout_width="350dp"
+       android:layout_height="50dp"
+       android:layout_below="@id/card_view"
+       android:layout_centerHorizontal="true"
+       android:layout_marginTop="50dp"
+       android:background="@drawable/edit_text_background"
+       android:drawableLeft="@drawable/baseline_email_24"
+       android:hint="Email or Username"
+       android:padding="8dp" />
+
+   <EditText
+       android:id="@+id/pass"
+       android:layout_width="350dp"
+       android:layout_height="50dp"
+       android:layout_below="@id/name"
+       android:layout_centerHorizontal="true"
+       android:layout_marginLeft="60dp"
+       android:layout_marginTop="20dp"
+       android:background="@drawable/edit_text_background"
+       android:drawableLeft="@drawable/baseline_lock_24"
+       android:hint="Password"
+       android:padding="8dp" />
+
+   <TextView
+       android:id="@+id/forgot"
+       android:layout_width="130dp"
+       android:layout_height="wrap_content"
+       android:layout_below="@id/pass"
+       android:layout_alignEnd="@id/card_view"
+       android:layout_marginTop="20dp"
+       android:text="Forgot Password?"
+       android:textColor="@color/app_theme" />
+   <Button
+       android:layout_width="300dp"
+       android:layout_height="50dp"
+       android:id="@+id/signin"
+      android:layout_below="@id/forgot"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="70dp"
+      android:text="SIGN IN"
+      android:backgroundTint="@color/app_theme"/>
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:id="@+id/donthaveaccount"
+      android:layout_below="@id/signin"
+       android:layout_marginTop="110dp"
+      android:text="Don't have an account?"
+       android:layout_marginLeft="90dp"
+      />
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_below="@id/signin"
+      android:layout_toEndOf="@id/donthaveaccount"
+       android:textStyle="bold"
+       android:layout_marginTop="110dp"
+      android:text="Sign Up"
+      android:textColor="@color/app_theme"/>
+
+</RelativeLayout>
