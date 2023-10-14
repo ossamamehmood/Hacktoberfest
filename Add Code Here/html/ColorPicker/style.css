@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  font-size: 20px;
+}
+.main {
+  height: 300px;
+  width: 250px;
+  background: #353030;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  border-radius: 15px;
+}
+#colorPicker {
+  background-color: none;
+  outline: none;
+  border: none;
+  height: 40px;
+  width: 60px;
+  cursor: pointer;
+}
+#box {
+  outline: none;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  height: 40px;
+  width: 120px;
+  padding: 0 4px;
+}
+input {
+  font-size: large;
+  font-weight: bold;
+}
