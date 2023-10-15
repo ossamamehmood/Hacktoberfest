@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What is BMI | Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet" />
+      <style>
+        *{
+            
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            font-family: 'Poppins', sans-serif;
+        }
+        .navigation{
+            display: flex;
+            justify-content: space-around;
+            height: 90px;
+            align-items: center;
+            background-color: rgba(221, 210, 210, 0.697);
+            position: sticky;
+
+        }
+        .navbar{
+            display: flex;
+            justify-content: space-between;
+            list-style-type: none;
+            gap: 100px;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+        .navbar a:hover{
+            color: yellowgreen;
+            text-decoration: underline;
+            transition: ease-in 1s;
+        }
+        .navbar a{
+            text-decoration: none;
+            color: inherit;
+        }
+        .navigation h1:hover{
+            color: yellowgreen;
+            transition: ease-in 1s;
+            cursor: pointer;
+        }
+        .content_container{
+            margin-top: 70px;
+            background-image: url(IMG02.png);
+            background-repeat: no-repeat;
+            display: flex;
+            height: 800px;
+        }
+        .content{
+            border: 1px solid yellowgreen;
+            padding: 25px;
+            margin: 20px 20px 0px 20px;
+            width: 50%;
+            border-radius: 20px 0px 20px 0px;
+            background-color: rgba(153, 205, 50, 0.651);
+            height: 150px;
+            position: relative;
+            left: 652px;
+            top: 160px;
+        }
+        #btn{
+            height: 40px;
+            width: 110px;
+            position: relative;
+            top: 400px;
+            left: 149px;
+            border-radius: 10px;
+            cursor: pointer;
+            background-color: rgba(153, 205, 50, 0.651);
+            font-weight: bold;
+            color: rgba(255, 255, 255, 0.974);
+        }
+        #btn:hover{
+            background-color: rgb(170, 255, 0);
+            font-weight: bold;
+            color: rgb(0, 0, 0);
+            transition: ease-in 0.4s;
+        }
+    </style>
+</head>
+<body>
+    <div class="navigation">
+        <h1>BMI Project</h1>
+        <nav class="navbar">
+            <li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">BMI</a></li>
+            <li><a href="#">Contributors</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="content_container">
+        <div class="content">
+            <h2>What is BMI (Body Mass Index)?</h2>
+            <p>Body Mass Index (BMI) is a person’s weight in kilograms (or pounds) divided by the square of height in meters (or feet). A high BMI can indicate high body fatness. BMI screens for weight categories that may lead to health problems, but it does not diagnose the body fatness or health of an individual.</p>
+        </div>
+        <a href="index.html"> <button id="btn">Calculate BMI</button></a>
+        
+    </div>
+</body>
+</html>
