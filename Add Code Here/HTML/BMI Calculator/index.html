@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI | Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .container {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+      }
+      body {
+        background-color: #eeeeee8f;
+        text-align: center;
+        font-family: "Poppins", sans-serif;
+        background-image: url(IMG01.jpg);
+        background-repeat: no-repeat;
+        
+      }
+
+      button {
+        background-color: rgba(0, 0, 0, 0);
+        outline: none;
+      }
+
+      h2 {
+        margin-bottom: 10px;
+      }
+      h2:hover{
+        text-decoration: underline;
+        color: rgb(19, 33, 14);
+        transition: 0.5s;
+        cursor: pointer;
+        text-shadow: 1px 1px 4px green;
+      }
+      input {
+        width: 92%;
+        padding: 5px 14px;
+        border: 2px solid #201f1d;
+        margin-bottom: 10px;
+        background-color: rgba(0, 0, 0, 0.4);
+        outline: none;
+        color: #fff;
+        font-size: 14px;
+      }
+
+      input:focus {
+        border: 2px solid rgba(0, 0, 0, 0.4);
+        background-color: rgb(60, 60, 60);
+      }
+      .panel {
+        position: relative;
+        visibility: hidden;
+        border: 1px solid black;
+        background-color: #fff;
+        box-shadow: 10px 10px 60px 30px rgba(81, 255, 0, 0.785);
+        margin-top: 130px;
+        width: 472px;
+        height: 450px;
+        border-radius: 35px;
+        animation-name: Slidein;
+        animation-duration: 4s;
+        animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
+        animation-delay: 1s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+      }
+      @keyframes Slidein {
+        from{
+            visibility: visible;
+            left: 452px;
+            top: -700px;
+        }
+        to{ visibility: visible;
+            left: 452px;
+            top: 150px;
+        }
+      }
+
+      form {
+        padding: 20px;
+        color: #000;
+      }
+
+      form p {
+        margin: 20px 20px;
+      }
+
+      form p:nth-child(1) {
+        margin-top: 0;
+      }
+
+      .panel {
+        margin-top: 20px;
+        float: none;
+      }
+      form button {
+        background-color: rgba(68, 255, 0, 0.596);
+        height: 28px;
+        width: 115px;
+        margin-top: 50px;
+        border-radius: 14px;
+        color: rgba(0, 0, 0, 0.701);
+      }
+      form button:hover {
+        background-color: rgba(68, 255, 0, 0.919);
+        font-weight: bolder;
+        color: rgb(4, 4, 4);
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="panel">
+        <h2 class="text-center">Check your BMI</h2>
+
+        <p id="introText" class="text-center">
+          Enter your weight and height below to check your BMI results
+        </p>
+
+        <form>
+          <div id="weightInput">
+            <p>Put your weight in here (KG)</p>
+            <input id="weight" type="number" />
+          </div>
+          <div id="heightInput">
+            <p>And your height in here (CM)</p>
+            <input id="height" type="number" />
+          </div>
+          <button type="button" class="btn">Calculate BMI</button>
+        </form>
+        <div id="results" class="text-center">
+          Your BMI results will appear here
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
