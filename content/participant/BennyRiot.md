@@ -1,3 +1,0 @@
-BennyRiot
-USA
-Computer Person

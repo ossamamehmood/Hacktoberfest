@@ -1,5 +1,0 @@
----
-name: SUDHIR HANUMANTU
-institution/company: VEER SURENDRA SAI UNIVERSITY OF TECHNOLOGY
-github:Sudhir21
----

@@ -1,0 +1,81 @@
+#include <iostream>
+#include <vector>
+
+// Function to merge two sorted subarrays into one sorted array
+void merge(std::vector<int>& arr, int left, int middle, int right) {
+    int n1 = middle - left + 1;
+    int n2 = right - middle;
+
+    // Create temporary arrays
+    std::vector<int> leftArr(n1);
+    std::vector<int> rightArr(n2);
+
+    // Copy data to temporary arrays leftArr[] and rightArr[]
+    for (int i = 0; i < n1; i++)
+        leftArr[i] = arr[left + i];
+    for (int i = 0; i < n2; i++)
+        rightArr[i] = arr[middle + 1 + i];
+
+    // Merge the two arrays back into arr[l..r]
+    int i = 0;
+    int j = 0;
+    int k = left;
+
+    while (i < n1 && j < n2) {
+        if (leftArr[i] <= rightArr[j]) {
+            arr[k] = leftArr[i];
+            i++;
+        } else {
+            arr[k] = rightArr[j];
+            j++;
+        }
+        k++;
+    }
+
+    // Copy the remaining elements of leftArr[], if any
+    while (i < n1) {
+        arr[k] = leftArr[i];
+        i++;
+        k++;
+    }
+
+    // Copy the remaining elements of rightArr[], if any
+    while (j < n2) {
+        arr[k] = rightArr[j];
+        j++;
+        k++;
+    }
+}
+
+// Function to perform merge sort on the entire array
+void mergeSort(std::vector<int>& arr, int left, int right) {
+    if (left < right) {
+        // Same as (left+right)/2, but avoids overflow for large left and right
+        int middle = left + (right - left) / 2;
+
+        // Sort the first and second halves
+        mergeSort(arr, left, middle);
+        mergeSort(arr, middle + 1, right);
+
+        // Merge the sorted halves
+        merge(arr, left, middle, right);
+    }
+}
+
+int main() {
+    std::vector<int> arr = {12, 11, 13, 5, 6, 7};
+    int arr_size = arr.size();
+
+    std::cout << "Given array is:\n";
+    for (int i = 0; i < arr_size; i++)
+        std::cout << arr[i] << " ";
+
+    // Perform merge sort
+    mergeSort(arr, 0, arr_size - 1);
+
+    std::cout << "\nSorted array is:\n";
+    for (int i = 0; i < arr_size; i++)
+        std::cout << arr[i] << " ";
+
+    return 0;
+}

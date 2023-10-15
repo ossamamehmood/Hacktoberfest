@@ -8,7 +8,7 @@
 # We have attempted to detect the languages in your repository. Please check
 # the `language` matrix defined below to confirm you have the correct set of
 # supported CodeQL languages.
-#
+##
 name: "CodeQL"
 
 on:
@@ -32,7 +32,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        language: [  ]
+        language: []
         # CodeQL supports [ 'cpp', 'csharp', 'go', 'java', 'javascript', 'python', 'ruby', rust ]
         # Learn more about CodeQL language support at https://aka.ms/codeql-docs/language-support
 

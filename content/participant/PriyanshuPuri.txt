@@ -1,5 +1,0 @@
----
-Name: Priyanshu Puri
-institution/company: Madan Mohan Malaviya University of Technology
-github: Priyanshupuri0
----

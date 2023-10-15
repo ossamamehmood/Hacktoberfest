@@ -1,5 +1,0 @@
----
-name: SUBHRANSU SEKHAR PANDA
-institution/company: VEER SURENDRA SAI UNIVERSITY OF TECHNOLOGY
-github:Subhransu02
----

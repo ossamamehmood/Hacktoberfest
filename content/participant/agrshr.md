@@ -1,1 +1,0 @@
-name: Shreyansh Agarwal institution/company: DTU github: shreyansh-agrawal
