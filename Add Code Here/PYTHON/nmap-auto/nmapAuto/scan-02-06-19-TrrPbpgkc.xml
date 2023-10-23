@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="nmap-bootstrap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Sun Jun  2 12:35:57 2019 as: nmap -oX - -&#45;system-dns -sS -p22 -&#45;stylesheet nmap-bootstrap.xsl 127.0.0.1 -->
+<nmaprun scanner="nmap" args="nmap -oX - -&#45;system-dns -sS -p22 -&#45;stylesheet nmap-bootstrap.xsl 127.0.0.1" start="1559453757" startstr="Sun Jun  2 12:35:57 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="22"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1559453757" endtime="1559453757"><status state="up" reason="localhost-response" reason_ttl="0"/>
+<address addr="127.0.0.1" addrtype="ipv4"/>
+<hostnames>
+<hostname name="localhost" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="22"><state state="closed" reason="reset" reason_ttl="64"/><service name="ssh" method="table" conf="3"/></port>
+</ports>
+<times srtt="122" rttvar="5000" to="100000"/>
+</host>
+<runstats><finished time="1559453757" timestr="Sun Jun  2 12:35:57 2019" elapsed="0.33" summary="Nmap done at Sun Jun  2 12:35:57 2019; 1 IP address (1 host up) scanned in 0.33 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>
