@@ -23,7 +23,7 @@ class AlgebraSolver:
             else:
                 req = kernS(exp[1])
         except SyntaxError:
-            return "Not a valid expression"
+            return "Given expression is Not a valid"
         return sy.solveset(sy.Eq(sy_exp, req))
 
     def render(self):
