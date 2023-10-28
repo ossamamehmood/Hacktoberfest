@@ -22,9 +22,6 @@ public class HollowRectangle{
                 } else{
                    System.out.print(" ");
                 }
-                
-               
-
             }
             System.out.println();
         }
