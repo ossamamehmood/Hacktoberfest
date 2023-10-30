@@ -8,7 +8,7 @@ int main()
     cin >> key;
     while (l < h)
     {
-        mid = (l + h) / 2;
+        mid = l+ (h-l) / 2;
         if (A[mid] == key)
         {
             cout << "Found at " << mid << endl;
