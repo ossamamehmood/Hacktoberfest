@@ -1,74 +1,93 @@
-// Given an array of N integers, count the inversion of the array
+/**
+ * Count inversions such that i<j and arr[i]>arr[j]
+ * */
 
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 
-int merge(vector<int> &arr, int low, int mid, int high) {
-    vector<int> temp; // temporary array
-    int left = low;      // starting index of left half of arr
-    int right = mid + 1;   // starting index of right half of arr
+#ifndef ONLINE_JUDGE
+#define debug(x) cerr << #x <<" "; _print(x); cerr << endl;
+#else
+#define debug(x)
+#endif
 
-    //Modification 1: cnt variable to count the pairs:
-    int cnt = 0;
+typedef long long ll;
+typedef unsigned long long ull;
+typedef long double lld;
 
-    //storing elements in the temporary array in a sorted manner//
+void _print(ll t) {cerr << t;}
+void _print(int t) {cerr << t;}
+void _print(string t) {cerr << t;}
+void _print(char t) {cerr << t;}
+void _print(lld t) {cerr << t;}
+void _print(double t) {cerr << t;}
+void _print(ull t) {cerr << t;}
 
-    while (left <= mid && right <= high) {
-        if (arr[left] <= arr[right]) {
-            temp.push_back(arr[left]);
-            left++;
-        }
-        else {
-            temp.push_back(arr[right]);
-            cnt += (mid - left + 1); //Modification 2
-            right++;
-        }
-    }
+template <class T, class V> void _print(pair <T, V> p);
+template <class T> void _print(vector <T> v);
+template <class T> void _print(set <T> v);
+template <class T, class V> void _print(map <T, V> v);
+template <class T> void _print(multiset <T> v);
+template <class T, class V> void _print(pair <T, V> p) {cerr << "{"; _print(p.ff); cerr << ","; _print(p.ss); cerr << "}";}
+template <class T> void _print(vector <T> v) {cerr << "[ "; for (T i : v) {_print(i); cerr << " ";} cerr << "]";}
+template <class T> void _print(set <T> v) {cerr << "[ "; for (T i : v) {_print(i); cerr << " ";} cerr << "]";}
+template <class T> void _print(multiset <T> v) {cerr << "[ "; for (T i : v) {_print(i); cerr << " ";} cerr << "]";}
+template <class T, class V> void _print(map <T, V> v) {cerr << "[ "; for (auto i : v) {_print(i); cerr << " ";} cerr << "]";}
 
-    // if elements on the left half are still left //
+template<class T> fin(vector<T> &v){ int n=v.size(); for(int i=0; i<n; i++) cin>>v[i];}
+template<class T> fin(vector<vector<T>> &v){ int n=v.size(); int m=v[0].size(); for(int i=0; i<n; i++) for(int j=0; j<m; j++) cin>>v[i][j];}
 
-    while (left <= mid) {
-        temp.push_back(arr[left]);
-        left++;
-    }
+void task();
 
-    //  if elements on the right half are still left //
-    while (right <= high) {
-        temp.push_back(arr[right]);
-        right++;
-    }
+int main() {
+#ifndef ONLINE_JUDGE
+	freopen("Error.txt", "w", stderr);
+#endif
+  	int t=1;
+  	// cin>>t;
+	while(t--)
+  	task();
+	return 0;
+}
+int merge(vector<int> &arr, vector<int> &temp, int start, int end){
+	int cnt=0;
+	int mid = start + (end-start)/2;
+	int i=start, j=mid+1;
+	int k=start;
+	while(i<=mid && j<=end){
+		if(arr[i]<=arr[j]){
+			temp[k++] = arr[i++];
+		}else{
+			cnt += mid-i+1;
+			temp[k++] = arr[j++];
+		}
+	}
+	while(i<=mid) temp[k++] = arr[i++];
+	while(j<=end) temp[k++] = arr[j++];
 
-    // transfering all elements from temporary to arr //
-    for (int i = low; i <= high; i++) {
-        arr[i] = temp[i - low];
-    }
-
-    return cnt; // Modification 3
+	for(int i=start; i<=end; i++) arr[i] = temp[i];
+	return cnt;
 }
 
-int mergeSort(vector<int> &arr, int low, int high) {
-    int cnt = 0;
-    if (low >= high) return cnt;
-    int mid = (low + high) / 2 ;
-    cnt += mergeSort(arr, low, mid);  // left half
-    cnt += mergeSort(arr, mid + 1, high); // right half
-    cnt += merge(arr, low, mid, high);  // merging sorted halves
-    return cnt;
+int count_inversion(vector<int> &v, vector<int> &temp, int start, int end){
+	int cnt=0;
+	if(start<end){
+		int mid = start + (end-start)/2;
+		cnt += count_inversion(v, temp, start, mid);
+		cnt += count_inversion(v, temp, mid+1, end);
+		cnt += merge(v, temp, start, end);
+	}
+	return cnt;
 }
 
-int numberOfInversions(vector<int>&a, int n) {
 
-    // Count the number of pairs:
-    return mergeSort(a, 0, n - 1);
+void task(){
+	int n;
+	cin>>n;
+	vector<int> v(n);
+	fin(v);
+	vector<int> temp(n);
+	int ans = count_inversion(v, temp, 0, n-1);
+	cout<<"Number of inversions: "<<ans<<endl;
+	debug(v)
 }
-
-int main()
-{
-    vector<int> a = {5, 4, 3, 2, 1};
-    int n = 5;
-    int cnt = numberOfInversions(a, n);
-    cout << "The number of inversions are: "
-         << cnt << endl;
-    return 0;
-}
-
