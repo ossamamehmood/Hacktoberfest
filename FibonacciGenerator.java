@@ -13,19 +13,21 @@ public class FibonacciGenerator {
     }
 
     public static void generateFibonacci(int numTerms) {
-        int[] fibonacciSequence = new int[numTerms];
-        fibonacciSequence[0] = 0;
+        int a = 0, b = 1;
+        System.out.println("Fibonacci sequence up to " + numTerms + " terms:");
+        System.out.print(a + " "); // Print the first term
+
         if (numTerms > 1) {
-            fibonacciSequence[1] = 1;
+            System.out.print(b + " "); // Print the second term
         }
 
         for (int i = 2; i < numTerms; i++) {
-            fibonacciSequence[i] = fibonacciSequence[i - 1] + fibonacciSequence[i - 2];
+            int next = a + b;
+            System.out.print(next + " "); // Print the next term
+            a = b;
+            b = next;
         }
 
-        System.out.println("Fibonacci sequence up to " + numTerms + " terms:");
-        for (int i = 0; i < numTerms; i++) {
-            System.out.print(fibonacciSequence[i] + " ");
-        }
+        System.out.println(); // Print a newline at the end
     }
 }
