@@ -1,0 +1,88 @@
+import java.util.*;
+class Bank 
+{
+    String name;
+    long acc;
+    String type;
+    double balance;
+    void initializeData() 
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter Account Holder's Name: ");
+        name = sc.nextLine();
+        System.out.println("Account Type: ");
+        type = sc.next();
+        System.out.println("Enter Account Balance: ");
+        do {
+            balance = sc.nextDouble();
+            if(balance < 1000) {
+                System.out.println("Balance is Less than 1000, Try Again.");
+                System.out.println("Enter Account Balance: ");
+            }
+        }while(balance < 1000);
+        acc = (long)(Math.random() * 100000);
+    }
+
+    void deposite(double money) {
+        if(money < 1000) {
+            System.out.print("Minimum Deposite Value is 1,000/-");
+        }
+        else {
+            System.out.println(money + " Money credited to your Account Number " + acc);
+            System.out.println("Current Account Balance: " + balance);
+            balance += money;
+        }
+    }
+
+    void withdraw(double money) {
+        if(balance < 1000) {
+            System.out.println("25 Money is debited from your Account Number " + acc);
+            balance -= 25;
+        }
+        if(money > balance) {
+            System.out.println("Insufficient Balance. Try Again.");
+        }
+        else {
+            System.out.println(money + " Money debited from your Account Number " + acc);
+            balance -= money;
+        }
+    }
+
+    void display() {
+        System.out.println("Account Number: " + acc);
+        System.out.println("Account Holder's Name: " + name);
+        System.out.println("Account Type: " + type);
+        System.out.println("Account Balance: " + balance);
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter Number of Account Holder: ");
+        int n = sc.nextInt();
+        Bank[] arr = new Bank[n];
+        for(int i=0;i<n;i++) {
+            arr[i] = new Bank();
+            arr[i].initializeData();
+        }
+        System.out.print("Enter 1 for Withdraw 2 for Deposite 3 for Display Details 4 for Exit: ");
+        int choice;
+        sc = new Scanner(System.in);
+        do {
+            System.out.print("Enter Choice: ");
+            choice = sc.nextInt();
+            if(choice == 1) {
+                System.out.println("Enter Amount to WithDraw: ");
+                double val = sc.nextDouble();
+                arr[0].withdraw(val);
+            }
+            if(choice == 2) {
+                System.out.println("Enter Amount to Deposite: ");
+                double val = sc.nextDouble();
+                arr[0].deposite(val);
+            }
+            if(choice == 3) {
+                arr[0].display();
+            }
+        }while(choice != 4);
+    }
+}
