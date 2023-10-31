@@ -1,0 +1,123 @@
+import os
+import re
+import PyPDF2
+import tkinter as tk
+from tkinter import filedialog, scrolledtext
+
+class PDFSorterGUI:
+    def __init__(self, root):
+        self.root = root
+        self.root.title("PDF Sorter")
+        self.root.geometry("600x400")
+
+        # Initialize variables
+        self.keyword_to_directory_map = {}
+        self.min_size_bytes = 0
+        self.start_page = 1
+        self.end_page = 1
+
+        # Create UI elements
+        self.create_ui()
+
+    def create_ui(self):
+        # Labels and Textboxes
+        folder_label = tk.Label(self.root, text="Select Folder:")
+        folder_label.pack()
+        self.folder_entry = tk.Entry(self.root)
+        self.folder_entry.pack()
+
+        keywords_label = tk.Label(self.root, text="Keywords (comma-separated):")
+        keywords_label.pack()
+        self.keywords_entry = tk.Entry(self.root)
+        self.keywords_entry.pack()
+
+        size_label = tk.Label(self.root, text="Minimum Size (bytes):")
+        size_label.pack()
+        self.size_entry = tk.Entry(self.root)
+        self.size_entry.pack()
+
+        page_range_label = tk.Label(self.root, text="Page Range (e.g., 1-5):")
+        page_range_label.pack()
+        self.page_range_entry = tk.Entry(self.root)
+        self.page_range_entry.pack()
+
+        # Sort button
+        sort_button = tk.Button(self.root, text="Sort PDFs", command=self.sort_pdfs)
+        sort_button.pack()
+
+        # Log area
+        self.log_text = scrolledtext.ScrolledText(self.root, wrap=tk.WORD, width=50, height=10)
+        self.log_text.pack()
+
+    def sort_pdfs(self):
+        folder_path = self.folder_entry.get()
+        keywords = self.keywords_entry.get()
+        size_str = self.size_entry.get()
+        page_range_str = self.page_range_entry.get()
+
+        # Parse keywords
+        keyword_list = [kw.strip() for kw in keywords.split(',')]
+        self.keyword_to_directory_map.clear()
+        for keyword in keyword_list:
+            self.keyword_to_directory_map[keyword] = "/path/to/sorted/directory"  # Replace with actual directory paths
+
+        # Parse minimum size
+        try:
+            self.min_size_bytes = int(size_str)
+        except ValueError:
+            self.log_text.insert(tk.END, "Invalid minimum size value.\n")
+            return
+
+        # Parse page range
+        page_range = page_range_str.split('-')
+        if len(page_range) != 2:
+            self.log_text.insert(tk.END, "Invalid page range format.\n")
+            return
+        try:
+            self.start_page = int(page_range[0])
+            self.end_page = int(page_range[1])
+        except ValueError:
+            self.log_text.insert(tk.END, "Invalid page range values.\n")
+            return
+
+        # Sort the PDFs
+        self.sort_pdfs_by_criteria(folder_path)
+
+    def sort_pdfs_by_criteria(self, folder_path):
+        for root, _, files in os.walk(folder_path):
+            for file in files:
+                if file.endswith(".pdf"):
+                    pdf_file_path = os.path.join(root, file)
+
+                    try:
+                        with open(pdf_file_path, "rb") as pdf_file:
+                            pdf_reader = PyPDF2.PdfFileReader(pdf_file)
+                            file_size = os.path.getsize(pdf_file_path)
+                            num_pages = pdf_reader.getNumPages()
+
+                            if file_size < self.min_size_bytes:
+                                continue
+
+                            if not (self.start_page <= num_pages <= self.end_page):
+                                continue
+
+                            text = ""
+                            for page_num in range(num_pages):
+                                page = pdf_reader.getPage(page_num)
+                                text += page.extractText()
+
+                            for keyword, destination_directory in self.keyword_to_directory_map.items():
+                                if re.search(keyword, text, re.IGNORECASE):
+                                    destination_file = os.path.join(destination_directory, file)
+                                    os.rename(pdf_file_path, destination_file)
+                                    self.log_text.insert(tk.END, f"Moved {file} to {destination_directory}\n")
+                                    break
+
+                    except Exception as e:
+                        self.log_text.insert(tk.END, f"Error processing PDF: {file}\n")
+                        print(e)
+
+if __name__ == "__main__":
+    root = tk.Tk()
+    app = PDFSorterGUI(root)
+    root.mainloop()
