@@ -1,11 +1,8 @@
 import java.io.*;
-//import java.util.*;
 
 public class MissingNumberInArray {
     public static void main(String[] args) throws IOException {
-        BufferedReader br =
-            new BufferedReader(new InputStreamReader(System.in));
-
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int t = Integer.parseInt(br.readLine().trim());
         while (t-- > 0) {
             int n = Integer.parseInt(br.readLine().trim());
