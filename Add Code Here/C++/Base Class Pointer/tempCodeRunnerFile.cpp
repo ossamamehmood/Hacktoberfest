@@ -1,1 +1,0 @@
-cout<<"chal chaL ave "<< endl;

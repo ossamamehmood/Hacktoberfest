@@ -1,6 +1,0 @@
-for requirement in freeze(local_only=True): 
-    ...:     print(requirement)
-
-a = platform.linux_distribution()
-
-a = subprocess.check_output("pacman -Qe", shell=True)
