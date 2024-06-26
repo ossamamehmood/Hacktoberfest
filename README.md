@@ -51,7 +51,7 @@
 - Create a pull request.
 - Star this repository.
 
-# How To Make Your First Pull Request
+# How To Make Your First Pull Request on Github
 
 Replace `<YOUR-USERNAME>` with your GitHub username in this guide.
 
