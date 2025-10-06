@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <h1>Hello, I'm [Your Name]</h1>
+        <p>Welcome to my portfolio website</p>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I'm a passionate web developer skilled in HTML, CSS, and JavaScript.</p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Project 1</h3>
+            <p>Details about the first project.</p>
+        </div>
+        <div class="project">
+            <h3>Project 2</h3>
+            <p>Details about the second project.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: example@example.com</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 [Your Name]</p>
+    </footer>
+</body>
+</html>
+ /////////////////////////////////
+////////////CSS//////////////////
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+header ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+header li {
+    margin: 0 15px;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header a:hover {
+    color: #ffa500;
+}
+
+#hero {
+    text-align: center;
+    padding: 50px;
+    background-color: #f4f4f4;
+}
+
+#about, #projects, #contact {
+    padding: 50px;
+    text-align: center;
+}
+
+.project {
+    margin-bottom: 20px;
+}
+
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
