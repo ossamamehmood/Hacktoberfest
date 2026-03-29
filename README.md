@@ -4,7 +4,7 @@
 
 📢 This repository is not eligible for Hacktoberfest. If you're looking for a repository to contribute to and participate in Hacktoberfest, please check out our [new repository](https://github.com/ossamamehmood/Hacktoberfest2023) to make your contributions count!
 
-### [Link to New Hacktoberfest-Eligible Repository](https://github.com/ossamamehmood/Hacktoberfest2023)
+### [Link to New Hacktoberfest-Eligible Repository](https://github.com/ossamamehmood/Hacktoberfest2026)
 
 ---
 
@@ -19,7 +19,6 @@
 <a href="https://github.com/ossamamehmood/Hacktoberfest/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=ossamamehmood/Hacktoberfest" />
 </a>
-  
   </div>
 
 ## This Project Is Perfect For Your First Pull Request
